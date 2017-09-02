@@ -1,7 +1,7 @@
 {
-  "name": "carterhearts",
+  "name": "mbti",
   "version": "1.0.0",
-  "description": "A Hearts game app that uses the superior Carter family rules.  Originally buily in jQuery in the fall of 2016 and thhen rebuilt using the MEAN stack in January 2017.",
+  "description": "A meyers-briggs personality test website.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/Carter-Hearts.git"
+    "url": "git+https://github.com/MugsyCarter/mbti.git"
   },
     "devDependencies": {
     "angular-mocks": "^1.5.9",
@@ -63,7 +63,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MugsyCarter/Carter-Hearts/issues"
+    "url": "https://github.com/MugsyCarter/mbti/issues"
   },
-  "homepage": "https://github.com/MugsyCarter/Carter-Hearts#readme"
+  "homepage": "https://github.com/MugsyCarter/mbti#readme"
 }

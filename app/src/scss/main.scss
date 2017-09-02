@@ -15,8 +15,16 @@ font-family: 'Dosis', sans-serif;
   font-size: 4vh;
 }
 
+.trait-table{
+   border: 1vh solid $black;
+}
 .trait-table-letter{
+   display: inline-block;
+    min-height: 20vw;
+    min-width: 20vw;
    font-size: 8vh;
+   border: 1vh solid $black;
+   color: $blue;
 }
 
 @media only screen and (min-width: 1600px) {

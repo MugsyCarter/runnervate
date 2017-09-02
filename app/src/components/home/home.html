@@ -3,21 +3,19 @@
     <h1 class="title">MBTI Personality Test</h1>
     <h2 class="subtitle">Find yourself, here.</h1>
     <br>
-    <table class="trait-table">
-      
+    <table class="trait-table"> 
       <th>
-        <tb class="trait-table-letter">I</tb>
-        <tb class="trait-table-letter">S</tb>
-        <tb class="trait-table-letter">F</tb>
-        <tb class="trait-table-letter">J</tb>
+        <tb ng-repeat="letter in $ctrl.letters"><div class="trait-table-letter">{{letter}}</div></tb>
+        <!-- <tb><div class="trait-table-letter">S</div></tb>
+        <tb><div class="trait-table-letter">F</div></tb>
+        <tb><div class="trait-table-letter">J</div></tb> -->
       </th>
-      <tr>
-        <tb class="trait-table-letter">E</tb>
-        <tb class="trait-table-letter">N</tb>
-        <tb class="trait-table-letter">T</tb>
-        <tb class="trait-table-letter">P</tb>
-
-      </tr>
+      <!-- <th>
+        <tb><div class="trait-table-letter">E</div></tb>
+        <tb><div class="trait-table-letter">N</div></tb>
+        <tb><div class="trait-table-letter">T</div></tb>
+        <tb><div class="trait-table-letter">P</div></tb>
+      </th> -->
     </table>
     <br>
     <br>

@@ -5,6 +5,22 @@
 font-family: 'Dosis', sans-serif;
 }
 
+a{
+  text-decoration: none;
+}
+// navbar and app stuff 
+.main-nav{
+}
+
+.link{
+  display: inline-block;
+  color: $blue;
+  padding: 0 10vw 0 10vw; 
+}
+
+.active-link{
+  color: $yellow;
+}
 // home page stuff
 
 .title{

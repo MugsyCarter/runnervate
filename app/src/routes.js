@@ -10,24 +10,10 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'play',
-        url: '/play',
+        name: 'test',
+        url: '/test',
         data: { public: true },
-        component: 'play' 
-    });
-
-    $stateProvider.state({
-        name: 'rules',
-        url: '/rules',
-        data: { public: true },
-        component: 'rules' 
-    });
-
-    $stateProvider.state({
-        name: 'settings',
-        url: '/settings',
-        data: { public: true },
-        component: 'settings' 
+        component: 'test' 
     });
 
     $stateProvider.state({

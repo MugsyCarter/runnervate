@@ -19,10 +19,12 @@ font-family: 'Dosis', sans-serif;
    border: 1vh solid $black;
 }
 .trait-table-letter{
+    text-align: center;
+    vertical-align: center;
    display: inline-block;
-    min-height: 20vw;
-    min-width: 20vw;
-   font-size: 8vh;
+    min-height: 10vw;
+    min-width: 10vw;
+   font-size: 7vw;
    border: 1vh solid $black;
    color: $blue;
 }

@@ -1,6 +1,6 @@
 @import 'colors';
 
-.button{
+button{
   margin: 1vw;
   font-weight:700;
   border:none;
@@ -11,12 +11,12 @@
   //border: 1vh solid $blue;
 }
 
-.button:active {
+button:active {
   background-color: $black;
   cursor: pointer;
 }
 
-.button:hover {
+button:hover {
   background-color: $yellow;
   color:$blue;
   cursor: pointer;

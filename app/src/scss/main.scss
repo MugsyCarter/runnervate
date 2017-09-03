@@ -3,10 +3,16 @@
 
 * {
 font-family: 'Dosis', sans-serif;
+text-align: center; 
 }
+
 
 a{
   text-decoration: none;
+  padding: 1vw;
+  &:hover{
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }
 // navbar and app stuff 
 .main-nav{
@@ -24,7 +30,9 @@ a{
 // home page stuff
 
 .title{
-  font-size: 10vh;  
+  font-size: 16vh;
+  margin: 4vh;  
+  color: $blue;
 }
 
 .subtitle{
@@ -32,18 +40,56 @@ a{
 }
 
 .trait-table{
-   border: 1vh solid $black;
+   width: 60%;
+   margin-left: 20%;
+   margin-right: 20%;
+   background-color: white;
 }
 .trait-table-letter{
-    text-align: center;
+  background-color: white;
     vertical-align: center;
    display: inline-block;
     min-height: 10vw;
     min-width: 10vw;
    font-size: 7vw;
-   border: 1vh solid $black;
    color: $blue;
 }
+
+.I{
+  color: white;
+  background-color: $yellow;
+}
+
+.E{
+   color: white;
+   background-color: $blue;   
+}
+
+.N{
+  color: $blue;
+  background-color: pink;
+}
+
+.T{
+   color:$blue;
+   background-color: $green;
+}
+
+.F{
+  color: $blue;
+  background-color:$yellow;
+}
+
+.P{
+  color: pink;
+  background-color: $blue;
+}
+
+.J{
+  color: $yellow;
+  background-color: $blue;
+}
+//footer 
 
 @media only screen and (min-width: 1600px) {
   /* Minor styling: larger image and fonts to match largest screen size */

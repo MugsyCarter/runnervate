@@ -1,11 +1,11 @@
 
 <section class ="page" id="home-page">
     <h1 class="title">MBTI Personality Test</h1>
-    <h2 class="subtitle">Find yourself, here.</h1>
+    <h2 class="subtitle">Find yourself here.</h1>
     <br>
     <table class="trait-table"> 
       <th>
-        <tb ng-repeat="letter in $ctrl.letters"><div class="trait-table-letter">{{letter}}</div></tb>
+        <tb ng-repeat="letter in $ctrl.letters"><div class="trait-table-letter" ng-class=letter>{{letter}}</div></tb>
         <!-- <tb><div class="trait-table-letter">S</div></tb>
         <tb><div class="trait-table-letter">F</div></tb>
         <tb><div class="trait-table-letter">J</div></tb> -->
@@ -21,6 +21,6 @@
     <br>
     <button class="button" id="takeTestButton" ui-sref="test"><h1 id="testMessage">Take the Test!</h1></button>
     <footer>
-      <p class="footerText"><span class="branding">&copy; Mugsy Carter, 2017</span></p>
+      <p class="footer-text"><span class="branding">&copy; Mugsy Carter, 2017</span></p>
     </footer>
 </section>

@@ -1,11 +1,12 @@
 
  <section class ="page" id="test-page">
     <div>
-        <h1>Question {{$ctrl.number}}</h1>
-        <h2>{{$ctrl.questions[$ctrl.number -1].text}}</h2>
-        <button ng-repeat="option in $ctrl.questions[$ctrl.number -1].options" 
+        <h1 >Question {{$ctrl.number}}</h1>
+        <h2 class="question-text">{{$ctrl.questions[$ctrl.number -1].text}}</h2>
+        <button id="answer-button" ng-repeat="option in $ctrl.questions[$ctrl.number -1].options" 
         ng-click="$ctrl.answer(option.points)">{{option.text}}</button>
-        <h1 ng-if="$ctrl.type.length>0">$ctrl.type</h1>
+        <h1 ng-if="$ctrl.type.length>0">{{$ctrl.type}}</h1>
+        <h1 ng-if="$ctrl.type.length>0">{{$ctrl.result}}</h1>
     </div>
 
 </section>

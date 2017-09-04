@@ -25,7 +25,7 @@ function controller(timeout) {
                 },
                 {
                     text: 'JK Rowling',
-                    points: [0,2,1,0]
+                    points: [0,2,-1,0]
                 },
                 {
                     text: 'neither, I don\'t like reading fantasy books',
@@ -46,7 +46,162 @@ function controller(timeout) {
                     points: [2,0,0,0]
                 }
             ]
+        },
+        {
+            number: 3,
+            text: 'What are your politics?',
+            options: [
+                {
+                    text: 'conservative',
+                    points: [0,0,1,2]
+                },
+                {
+                    text: 'liberatarian',
+                    points: [0,0,2,-2]
+                },
+                {
+                    text: 'progressive',
+                    points: [0,0,-2,-1]
+                }
+            ]
+        },
+        {
+            number: 4,
+            text: 'Which of these occupations would you prefer?',
+            options: [
+                {
+                    text: 'ER Nurse',
+                    points: [0,-1,-2,2]
+                },
+                {
+                    text: 'computer programmer',
+                    points: [-1,1,2,-1]
+                },
+                {
+                    text: 'high school teacher',
+                    points: [1,2,0,0]
+                }
+              
+            ]
+        },
+        {
+            number: 5,
+            text: 'When do you feel better?',
+            options: [
+                {
+                    text: 'when a descision has been made',
+                    points: [0,0,0,2]
+                },
+                {
+                    text: 'when your options are still open',
+                    points: [0,0,0,-2]
+                }
+              
+            ]
+        },
+        {
+            number: 6,
+            text: 'Which of these best describes your typical contribution to group work?',
+            options: [
+                {
+                    text: 'generate ideas',
+                    points: [0,1,0,-1]
+                },
+                {
+                    text: 'lead and direct the group',
+                    points: [2,0,1,2]
+                },
+                {
+                    text: 'make sure all voices are head',
+                    points: [0,0,2,1]
+                },
+                {  
+                    text: 'make sure the work gets done',
+                    points: [0,-2,0,2]
+                }
+            ]
+        },
+        {
+            number: 7,
+            text: 'What do  people dislike about you?',
+            options: [
+                {
+                    text: 'your thin skin',
+                    points: [0,0,-2,0]
+                },
+                {
+                    text: 'your shyness',
+                    points: [-2,0,0,0]
+                },
+                {
+                    text: 'your inability to make a descision',
+                    points: [0,0,0,2]
+                },
+                {  
+                    text: 'your lack of empathy',
+                    points: [0,0,2,0]
+                }
+            ]
+        },
+        {
+            number: 8,
+            text: 'What do  people like about you?',
+            options: [
+                {
+                    text: 'your intellect',
+                    points: [0,0,2,0]
+                },
+                {
+                    text: 'your compassion',
+                    points: [0,0,-2,0]
+                },
+                {
+                    text: 'your work ethic',
+                    points: [0,-2,0,2]
+                },
+                {  
+                    text: 'your open mind',
+                    points: [0,2,0,-2]
+                }
+            ]
+        },
+        {
+            number: 9,
+            text: 'Are you naturally skilled at sports or hands-on skills?',
+            options: [
+                {
+                    text: 'yes',
+                    points: [0,-2,0,0]
+                },
+                {
+                    text: 'no',
+                    points: [0,2,0,0]
+                }
+            ]
+        },
+        {
+            number: 10,
+            text: 'Which of these pasttimes would you most enjoy?',
+            options: [
+                {
+                    text: 'first person shooter video games',
+                    points: [0,-2,2,1]
+                },
+                {
+                    text: 'getting food or drinks with friends',
+                    points: [2,0,-2,0] 
+                },
+                {
+                    text: 'turn-based strategy computer games',
+                    points: [-1,1,2,-1]
+                },
+                {
+                    text: 'watching tv',
+                    points: [-1,-1,0,0]
+                }
+            ]
         }
+
     ];
 
     this.finish = ()=>{

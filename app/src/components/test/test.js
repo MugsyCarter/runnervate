@@ -12,7 +12,7 @@ function controller(timeout) {
     //this coresponds to the personality values 'ENTJ' in order
     
     this.number = 1;
-    this.type = '';
+    this.type = [];
 
     this.questions= [
         {
@@ -206,30 +206,30 @@ function controller(timeout) {
 
     this.finish = ()=>{
         console.log('finishing up, these are the points ', this.result);
-        this.type = '';
+        this.type = [];
         if (this.result[0] > 0 ){
-            this.type += 'E';
+            this.type.push('E');
         }
         else{
-            this.type += 'I';
+            this.type.push('I');
         }
         if (this.result[1]> 0){
-            this.type += 'N';
+            this.type.push('N');
         }
         else {
-            this.type += 'S';
+            this.type.push('S');
         }
         if (this.result[2] > 0){
-            this.type += 'T';
+            this.type.push('T');
         }
         else {
-            this.type += 'F';
+            this.type.push('F');
         }
         if (this.result[3] > 0){
-            this.type += 'J';
+            this.type.push('J');
         }
         else{
-            this.type += 'P';
+            this.type.push('P');
         }
         console.log(this.type);
     };

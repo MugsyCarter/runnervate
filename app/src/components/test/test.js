@@ -57,7 +57,7 @@ function controller(timeout) {
                     points: [0,0,1,2]
                 },
                 {
-                    text: 'liberatarian',
+                    text: 'libertarian',
                     points: [0,0,2,-2]
                 },
                 {
@@ -81,6 +81,10 @@ function controller(timeout) {
                 {
                     text: 'high school teacher',
                     points: [1,2,0,0]
+                },
+                {
+                    text: 'police office',
+                    points: [0,-1,2,2]
                 }
               
             ]

@@ -56,19 +56,19 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	var _services = __webpack_require__(24);
+	var _services = __webpack_require__(20);
 	
 	var _services2 = _interopRequireDefault(_services);
 	
-	var _angularUiRouter = __webpack_require__(28);
+	var _angularUiRouter = __webpack_require__(24);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _routes = __webpack_require__(29);
+	var _routes = __webpack_require__(25);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	__webpack_require__(30);
+	__webpack_require__(26);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -33613,9 +33613,7 @@
 		"./about/about.js": 12,
 		"./app/app.js": 14,
 		"./home/home.js": 16,
-		"./play/play.js": 18,
-		"./rules/rules.js": 20,
-		"./settings/settings.js": 22
+		"./test/test.js": 18
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -33659,7 +33657,7 @@
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class =\"page\" id=\"about-page\">\n    <image id=aboutImage src=\"./images/olympicCoast.png\">\n    <h2 id=\"aboutTitle\">About Carter Hearts</h2>\n \n     <p class=\"tab\"> This app was made out of an apprection of Hearts, the preferred card game of the Carter Family.  Carter Hearts was developed by Mugsy Carter, using the the javascript MEAN stack.  You can send any comments or questions to <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a>. <p class=\"tab\"></p> \n \n    <p class=\"tab\">Mugsy has the traditional Carter Family love of hearts, the outdoors, science, literature, good company, and bad taste.  The Carters depicted in this game are real people, and are much better at hearts, and much worse at polite converation, in person.</p>\n    <!--image here?  -->\n    <footer>\n      <p class=\"footerText\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>";
+	module.exports = "<section class =\"page\" id=\"about-page\">\n    <image id=aboutImage src=\"./images/olympicCoast.png\">\n    <h2 id=\"aboutTitle\">About Carter Hearts</h2>\n \n     <p class=\"tab\"> This app was made out of an apprection of Hearts, the preferred card game of the Carter Family.  Carter Hearts was developed by Mugsy Carter, using the the javascript MEAN stack.  You can send any comments or questions to <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a>. <p class=\"tab\"></p> \n \n    <p class=\"tab\">Mugsy has the traditional Carter Family love of hearts, the outdoors, science, literature, good company, and bad taste.  The Carters depicted in this game are real people, and are much better at hearts, and much worse at polite converation, in person.</p>\n    <!--image here?  -->\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>";
 
 /***/ },
 /* 14 */
@@ -33705,10 +33703,8 @@
 	
 	    this.link = {
 	        home: true,
-	        play: false,
-	        rules: false,
-	        about: false,
-	        settings: false
+	        test: false,
+	        about: false
 	
 	    };
 	
@@ -33717,10 +33713,8 @@
 	            console.log('updating link');
 	            _this.link = {
 	                home: false,
-	                play: false,
-	                rules: false,
-	                about: false,
-	                settings: false
+	                test: false,
+	                about: false
 	            };
 	            _this.link[page] = true;
 	        }
@@ -33731,7 +33725,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = " <section>\n    <header>\n       \n        <nav class=\"main-nav\">\n            <image id=\"menuIcon\" src=\"./images/menu.png\">\n            <ul>\n                <li class=\"link\"><a ui-sref=\"home\" id=\"home-link\"  ng-class='{\"activeLink\":$ctrl.link[\"home\"]===true}' ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                <li class=\"link\"><a ui-sref=\"play\" id=\"play-link\" ng-class='{\"activeLink\":$ctrl.link[\"play\"]===true}' ng-click=\"$ctrl.clicked('play')\">Play Now</a></li>\n                <li class=\"link\"><a ui-sref=\"rules\" id=\"rules-link\"  ng-class='{\"activeLink\":$ctrl.link[\"rules\"]===true}' ng-click=\"$ctrl.clicked('rules')\">Rules</a></li>\n                <li class=\"link\"><a ui-sref=\"settings\" id=\"settings-link\"  ng-class='{\"activeLink\":$ctrl.link[\"settings\"]===true}' ng-click=\"$ctrl.clicked('settings')\">Useless Settings</a></li>\n                <li class=\"link\"><a ui-sref=\"about\" id=\"about-link\"  ng-class='{\"activeLink\":$ctrl.link[\"about\"]===true}' ng-click=\"$ctrl.clicked('about')\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n  \n    <div class=\"main-content\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
+	module.exports = " <section>\n    <header>\n       \n        <nav class=\"main-nav\">\n            <image id=\"menuIcon\" src=\"./images/menu.png\">\n            <ul>\n                <li class=\"link\"><a ui-sref=\"home\" id=\"home-link\"  ng-class='{\"activeLink\":$ctrl.link[\"home\"]===true}' ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                <li class=\"link\"><a ui-sref=\"test\" id=\"test-link\" ng-class='{\"activeLink\":$ctrl.link[\"test\"]===true}' ng-click=\"$ctrl.clicked('test')\">Take Test</a></li>\n                <li class=\"link\"><a ui-sref=\"about\" id=\"about-link\"  ng-class='{\"activeLink\":$ctrl.link[\"about\"]===true}' ng-click=\"$ctrl.clicked('about')\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n  \n    <div class=\"main-content\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
 
 /***/ },
 /* 16 */
@@ -33755,13 +33749,35 @@
 	};
 	
 	
-	function controller() {};
+	controller.$inject = ['$timeout'];
+	
+	function controller($timeout) {
+	    var _this = this;
+	
+	    this.letterOptions = [['I', 'E'], ['N', 'S'], ['T', 'F'], ['J', 'P']];
+	    this.letters = [];
+	
+	    this.letters = [];
+	    this.count = 0;
+	
+	    this.update = function () {
+	        if (_this.count < 1000) {
+	            for (var i = 0; i < _this.letterOptions.length; i++) {
+	                _this.letters[i] = _this.letterOptions[i][Math.round(Math.random())];
+	            }
+	            _this.count++;
+	            $timeout(_this.update, 2000);
+	        }
+	    };
+	
+	    this.update();
+	};
 
 /***/ },
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 id=\"homeTitle\">Carter Hearts</h1>\n    <h1 class=\"gameMessage\" id=\"homeSubtitle\">Just like normal hearts, but in poor taste.</h1>\n    <br>\n    <image id='goatImage' src=\"./images/goat.png\">\n    <br>\n    <br>\n    <button class=\"button\" id=\"playGameButton\" ui-sref=\"play\"><h1 id=\"playMessage\">Play Now</h1></button>\n    <footer>\n      <p class=\"footerText\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">MBTI Personality Test</h1>\n    <h2 class=\"subtitle\">Find yourself here.</h1>\n    <br>\n    <table class=\"trait-table\"> \n      <th>\n        <tb ng-repeat=\"letter in $ctrl.letters\"><div class=\"trait-table-letter\" ng-class=letter>{{letter}}</div></tb>\n        <!-- <tb><div class=\"trait-table-letter\">S</div></tb>\n        <tb><div class=\"trait-table-letter\">F</div></tb>\n        <tb><div class=\"trait-table-letter\">J</div></tb> -->\n      </th>\n      <!-- <th>\n        <tb><div class=\"trait-table-letter\">E</div></tb>\n        <tb><div class=\"trait-table-letter\">N</div></tb>\n        <tb><div class=\"trait-table-letter\">T</div></tb>\n        <tb><div class=\"trait-table-letter\">P</div></tb>\n      </th> -->\n    </table>\n    <br>\n    <br>\n    <button id=\"takeTestButton\" ui-sref=\"test\"><h1 id=\"testMessage\">Take the Test!</h1></button>\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017</span></p>\n    </footer>\n</section>\n";
 
 /***/ },
 /* 18 */
@@ -33773,591 +33789,233 @@
 	    value: true
 	});
 	
-	var _play = __webpack_require__(19);
+	var _test = __webpack_require__(19);
 	
-	var _play2 = _interopRequireDefault(_play);
+	var _test2 = _interopRequireDefault(_test);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	    template: _play2.default,
+	    template: _test2.default,
 	    controller: controller
 	};
 	
 	
-	controller.$inject = ['shuffleService', 'aiService', '$timeout', '$rootScope'];
+	controller.$inject = ['$timeout', '$rootScope'];
 	
-	function controller(shuffle, ai, timeout) {
+	function controller(timeout) {
 	    var _this = this;
 	
-	    this.playerSelect = false;
-	    this.opponentSelect = false;
-	    this.beginning = true;
-	    this.showDeal = true;
-	    this.handStart = false;
-	    this.passReady = false;
-	    this.selectedCard = false;
-	    this.passCompleted = false;
-	    this.turnOver = false;
-	    this.playReady = false;
-	    this.playTwo = false;
-	    this.playerTurn = false;
-	    this.suitError = false;
-	    this.firstHandError = false;
-	    this.twoError = false;
-	    this.heartLeadError = false;
-	    this.passTarget = 0;
-	    this.lead = 0;
-	    this.run = 5;
-	    this.trickPoints = 0;
-	    this.firstLead = false;
-	    this.holdHand = false;
-	    this.gameOver = false;
-	    this.cardPlayed = false;
-	    this.smoking = false;
-	    this.whomp = false;
-	    this.runFlag = 0;
-	    this.lowScore = 99;
-	    this.lowMan = '';
-	    this.turnOrder = [];
-	    this.playedCards = [];
-	    this.highCard = {};
-	    this.passFlag = [];
-	    this.counted = {
-	        CLUBS: 0,
-	        HEARTS: 0,
-	        DIAMONDS: 0,
-	        SPADES: 0
-	    };
-	    this.events = {
-	        queen: false,
-	        ten: false,
-	        heartsBroken: false
-	    };
+	    this.result = [0, 0, 0, 0];
+	    //this coresponds to the personality values 'ENTJ' in order
 	
-	    this.playerGallery = [{ name: 'Denny', src: './images/dennycarter.png', difficulty: 'hard' }, { name: 'Dunc', src: './images/dunc.png', difficulty: 'hard' }, { name: 'Dale', src: './images/dalecarter.png', difficulty: 'hard' }, { name: 'Darrel', src: './images/darrel.png', difficulty: 'hard' }, { name: 'Dwight', src: './images/dwight2.png', difficulty: 'hard' }, { name: 'Debbie', src: './images/debbie.png', difficulty: 'hard' }, { name: 'Marianne', src: './images/marianne.png', difficulty: 'easy' }, { name: 'Dan', src: './images/dan.png', difficulty: 'easy' }, { name: 'Mugs', src: './images/mugs.png', difficulty: 'easy' }, { name: 'Sultan', src: './images/sultan.png', difficulty: 'easy' }, { name: 'Suzy', src: './images/suzy.png', difficulty: 'easy' }, { name: 'Aileen', src: './images/aileencole.png', difficulty: 'easy' }, { name: 'Teege', src: './images/tj.png', difficulty: 'easy' }];
+	    this.number = 1;
+	    this.type = [];
+	    this.showLetter = false;
 	
-	    this.players = [this.playerGallery[11], this.playerGallery[0], this.playerGallery[1], this.playerGallery[2]];
-	    this.playerScores = [0, 0, 0, 0];
-	    this.playerSemis = [0, 0, 0, 0];
+	    this.questions = [{
+	        number: 1,
+	        text: 'Which fantasy author would you rather read?',
+	        options: [{
+	            text: 'JRR Tolkein',
+	            points: [0, 2, 1, 0]
+	        }, {
+	            text: 'JK Rowling',
+	            points: [0, 2, -1, 0]
+	        }, {
+	            text: 'neither, I don\'t like reading fantasy books',
+	            points: [0, -2, 0, 0]
+	        }]
+	    }, {
+	        number: 2,
+	        text: 'Where would you rather hang out?',
+	        options: [{
+	            text: 'at home',
+	            points: [-2, 0, 0, 0]
+	        }, {
+	            text: 'at a social gathering',
+	            points: [2, 0, 0, 0]
+	        }]
+	    }, {
+	        number: 3,
+	        text: 'What are your politics?',
+	        options: [{
+	            text: 'conservative',
+	            points: [0, 0, 1, 2]
+	        }, {
+	            text: 'libertarian',
+	            points: [0, 0, 2, -2]
+	        }, {
+	            text: 'progressive',
+	            points: [0, 0, -2, -1]
+	        }]
+	    }, {
+	        number: 4,
+	        text: 'Which of these occupations would you prefer?',
+	        options: [{
+	            text: 'ER Nurse',
+	            points: [0, -1, -2, 2]
+	        }, {
+	            text: 'computer programmer',
+	            points: [-1, 1, 2, -1]
+	        }, {
+	            text: 'high school teacher',
+	            points: [1, 2, 0, 0]
+	        }, {
+	            text: 'police office',
+	            points: [0, -1, 2, 2]
+	        }]
+	    }, {
+	        number: 5,
+	        text: 'When do you feel better?',
+	        options: [{
+	            text: 'when a descision has been made',
+	            points: [0, 0, 0, 2]
+	        }, {
+	            text: 'when your options are still open',
+	            points: [0, 0, 0, -2]
+	        }]
+	    }, {
+	        number: 6,
+	        text: 'Which of these best describes your typical contribution to group work?',
+	        options: [{
+	            text: 'generate ideas',
+	            points: [0, 1, 0, -1]
+	        }, {
+	            text: 'lead and direct the group',
+	            points: [2, 0, 1, 2]
+	        }, {
+	            text: 'make sure all voices are head',
+	            points: [0, 0, 2, 1]
+	        }, {
+	            text: 'make sure the work gets done',
+	            points: [0, -2, 0, 2]
+	        }]
+	    }, {
+	        number: 7,
+	        text: 'What do  people dislike about you?',
+	        options: [{
+	            text: 'your thin skin',
+	            points: [0, 0, -2, 0]
+	        }, {
+	            text: 'your shyness',
+	            points: [-2, 0, 0, 0]
+	        }, {
+	            text: 'your inability to make a descision',
+	            points: [0, 0, 0, 2]
+	        }, {
+	            text: 'your lack of empathy',
+	            points: [0, 0, 2, 0]
+	        }]
+	    }, {
+	        number: 8,
+	        text: 'What do  people like about you?',
+	        options: [{
+	            text: 'your intellect',
+	            points: [0, 0, 2, 0]
+	        }, {
+	            text: 'your compassion',
+	            points: [0, 0, -2, 0]
+	        }, {
+	            text: 'your work ethic',
+	            points: [0, -2, 0, 2]
+	        }, {
+	            text: 'your open mind',
+	            points: [0, 2, 0, -2]
+	        }]
+	    }, {
+	        number: 9,
+	        text: 'Are you naturally skilled at sports or hands-on skills?',
+	        options: [{
+	            text: 'yes',
+	            points: [0, -2, 0, 0]
+	        }, {
+	            text: 'no',
+	            points: [0, 2, 0, 0]
+	        }]
+	    }, {
+	        number: 10,
+	        text: 'Which of these pasttimes would you most enjoy?',
+	        options: [{
+	            text: 'first person shooter video games',
+	            points: [0, -2, 2, 1]
+	        }, {
+	            text: 'getting food or drinks with friends',
+	            points: [2, 0, -2, 0]
+	        }, {
+	            text: 'turn-based strategy computer games',
+	            points: [-1, 1, 2, -1]
+	        }, {
+	            text: 'watching tv',
+	            points: [-1, -1, 0, 0]
+	        }]
+	    }, {
+	        number: 11,
+	        text: 'What does fairness mean to you?',
+	        options: [{
+	            text: 'holding everyone to the same standard',
+	            points: [0, 0, 2, 0]
+	        }, {
+	            text: 'considering the needs and experiences of everyone invloved',
+	            points: [0, 0, -2, 0]
+	        }]
+	    }, {
+	        number: 12,
+	        text: 'Which of the following best describes your relationship to finishing a task?',
+	        options: [{
+	            text: 'once I finish the task, I can relax and play',
+	            points: [0, 0, 0, 2]
+	        }, {
+	            text: 'I can play and work at the same time',
+	            points: [0, 0, 0, -2]
+	        }]
+	    }, {
+	        number: 13,
+	        text: 'Which of the following best describes your relationship to finishing a task?',
+	        options: [{
+	            text: 'once I finish the task, I can relax and play',
+	            points: [0, 0, 0, 2]
+	        }, {
+	            text: 'I can play and work at the same time',
+	            points: [0, 0, 0, -2]
+	        }]
+	    }];
 	
-	    this.changePlayers = function () {
-	        _this.playerSelect = true;
-	        _this.showDeal = false;
-	    };
-	
-	    this.selectPlayer = function (player) {
-	        if (_this.playerSelect === true) {
-	            _this.players[0] = player;
-	        }
-	    };
-	
-	    this.playerSelected = function () {
-	        // this.playerSelect = false;
-	        _this.opponentSelect = true;
-	    };
-	
-	    this.selectOpponent = function (player) {
-	        var index = _this.players.indexOf(player);
-	        if (index === -1) {
-	            _this.players.push(player);
-	            if (_this.players.length > 4) {
-	                _this.players.splice(1, 1);
-	            }
-	            console.log(_this.players);
+	    this.finish = function () {
+	        console.log('finishing up, these are the points ', _this.result);
+	        _this.type = [];
+	        if (_this.result[0] > 0) {
+	            _this.type.push('E');
 	        } else {
-	            _this.players.splice(index, 1);
-	            console.log(_this.players);
+	            _this.type.push('I');
 	        }
-	    };
-	
-	    this.opponentsSelected = function () {
-	        if (_this.players.length !== 4) {
-	            _this.playersLengthError = true;
-	            timeout(function () {
-	                _this.playersLengthError = false;
-	            }, 3000);
+	        if (_this.result[1] > 0) {
+	            _this.type.push('N');
 	        } else {
-	            _this.opponentSelect = false;
-	            _this.playerSelect = false;
-	            _this.showDeal = true;
+	            _this.type.push('S');
 	        }
-	    };
-	
-	    this.newGame = function () {
-	        _this.passTarget = 0;
-	        _this.playerScores = [0, 0, 0, 0];
-	        _this.playerSemis = [0, 0, 0, 0];
-	        _this.lowScore = 99;
-	        _this.lowMan = '';
-	        _this.dealCards();
-	    };
-	
-	    this.dealCards = function () {
-	        _this.players[0].name = 'You';
-	        _this.cardPlayed = false;
-	        _this.playedCards = [];
-	        _this.turnOrder = [];
-	        _this.highCard = {};
-	        _this.trickPoints = 0;
-	        _this.runFlag = 0;
-	        _this.counted = {
-	            CLUBS: 0,
-	            HEARTS: 0,
-	            DIAMONDS: 0,
-	            SPADES: 0
-	        };
-	        _this.events = {
-	            queen: false,
-	            ten: false,
-	            heartsBroken: false
-	        };
-	        _this.turnOver = false;
-	        _this.runMessage = false;
-	        _this.whomp = false;
-	        _this.gameOver = false;
-	        _this.sortedHand = [];
-	        _this.run = 5;
-	        _this.beginning = false;
-	        _this.showDeal = false;
-	        _this.handStart = false;
-	        _this.playerSemis = [0, 0, 0, 0];
-	        _this.playAgain = false;
-	        _this.passTarget++;
-	        _this.passFlag[_this.passTarget] = true;
-	        _this.passPlayer = _this.players[_this.passTarget];
-	        if (_this.passTarget === 4) {
-	            _this.passTarget = 0;
-	            _this.holdHand = true;
-	            _this.playReady = true;
+	        if (_this.result[2] > 0) {
+	            _this.type.push('T');
 	        } else {
-	            _this.passReady = true;
+	            _this.type.push('F');
 	        }
-	
-	        shuffle.getNewHand().then(function (cards) {
-	            console.log(cards);
-	            //    get a shuffled deck from the API, parse it, and take only the cards
-	            var deck = cards.cards;
-	            // res.send(deck);
-	            console.log('deck is ', deck);
-	            var finalDeck = [];
-	            //for each card, create an object to save in the newDeck
-	            deck.forEach(function (card) {
-	
-	                if (card.value === 'JACK') {
-	                    card.value = '11';
-	                } else if (card.value === 'QUEEN') {
-	                    card.value = '12';
-	                } else if (card.value === 'KING') {
-	                    card.value = '13';
-	                } else if (card.value === 'ACE') {
-	                    card.value = '14';
-	                }
-	                if (card.code === 'QS') {
-	                    card.points = 13;
-	                } else if (card.code === '0H') {
-	                    card.points = 10;
-	                } else if (card.suit === 'HEARTS') {
-	                    card.points = 1;
-	                } else {
-	                    card.points = 0;
-	                }
-	
-	                var newCardEntry = {
-	                    code: card.code,
-	                    image: card.image,
-	                    suit: card.suit,
-	                    number: parseInt(card.value),
-	                    points: card.points,
-	                    toggled: false
-	                };
-	
-	                finalDeck.push(newCardEntry);
-	            });
-	            //deal hands
-	            _this.hands = [];
-	            while (finalDeck.length > 0) {
-	                var tempHand = finalDeck.splice(0, 13);
-	                _this.hands.push(tempHand);
-	            }
-	            _this.hand = _this.sortHand(_this.hands[0]);
-	            _this.hands[1] = _this.sortHand(_this.hands[1]);
-	            _this.hands[2] = _this.sortHand(_this.hands[2]);
-	            _this.hands[3] = _this.sortHand(_this.hands[3]);
-	            _this.passArray = [];
-	        });
-	    };
-	
-	    this.sortHand = function (hand) {
-	        //sort player hand numerically
-	        hand.sort(function (a, b) {
-	            return a.number - b.number;
-	        });
-	        //Sort player hand into suit arrays
-	        var playerClubs = hand.filter(function (card) {
-	            return card.suit === 'CLUBS';
-	        });
-	        var playerHearts = hand.filter(function (card) {
-	            return card.suit === 'HEARTS';
-	        });
-	        var playerSpades = hand.filter(function (card) {
-	            return card.suit === 'SPADES';
-	        });
-	        var playerDiamonds = hand.filter(function (card) {
-	            return card.suit === 'DIAMONDS';
-	        });
-	
-	        //combine suit arrays to make final sorted player hand
-	        var sortedHand = playerClubs.concat(playerHearts).concat(playerSpades).concat(playerDiamonds);
-	        return sortedHand;
-	    };
-	
-	    this.passCards = function () {
-	        console.log('pass cards clicked, passTarget is ', _this.passTarget);
-	        if (_this.passArray.length === 3) {
-	            console.log('passing these 3 cards ', _this.passArray) + ' to this person ' + _this.passPlayer;
-	            //remove the pass cards from the player hand.
-	            _this.hand = _this.hand.filter(function (card) {
-	                return card !== _this.passArray[0] && card !== _this.passArray[1] && card !== _this.passArray[2];
-	            });
-	            //run the algorithim from the aiService to get the pass from the computer player.  It returns an object with the new full player hand and the new computer hand which has had its pass removed. 
-	            var passObject = ai.pass(_this.hands[_this.passTarget], _this.hand, _this.players[_this.passTarget].difficulty);
-	            console.log(passObject);
-	            _this.hands[_this.passTarget] = passObject.compHand;
-	            //add the pass to the computer's hand
-	            _this.hands[_this.passTarget].push(_this.passArray[0]);
-	            _this.hands[_this.passTarget].push(_this.passArray[1]);
-	            _this.hands[_this.passTarget].push(_this.passArray[2]);
-	            console.log('computer hand is ', _this.hands[_this.passTarget]);
-	            //re-sort the player's hand and the computer Hand
-	            _this.hand = _this.sortHand(passObject.playerHand);
-	            _this.hands[_this.passTarget] = _this.sortHand(_this.hands[_this.passTarget]);
-	            _this.passReady = false;
-	            _this.passCompleted = true;
-	            _this.playReady = true;
-	            _this.passFlag[_this.passTarget] = false;
-	            //put the start play function call here once written
+	        if (_this.result[3] > 0) {
+	            _this.type.push('J');
 	        } else {
-	            _this.badPass = true;
-	            timeout(function () {
-	                _this.badPass = false;
-	            }, 3000);
-	            console.log('not enough cards');
+	            _this.type.push('P');
 	        }
+	        console.log(_this.type);
 	    };
 	
-	    this.startPlay = function () {
-	        _this.holdHand = false;
-	        _this.playReady = false;
-	        _this.cardPlayed = false;
-	        _this.playedCards = [];
-	        _this.turnOrder = [];
-	        //find the two of CLUBS
-	        for (var i = 1; i < 4; i++) {
-	            if (_this.hands[i][0].code === '2C') {
-	                var two = _this.hands[i][0];
-	                _this.lead = i;
-	                _this.playCard(two, i);
-	                return;
-	            }
+	    this.answer = function (points) {
+	        console.log(points);
+	        for (var i = 0; i < points.length; i++) {
+	            _this.result[i] += points[i];
 	        }
-	        //if not, then the player has the 2, have them play it
-	        if (_this.playedCards.length === 0) {
-	            //show two message
-	            _this.playerTurn = true;
-	            _this.playTwo = true;
-	            _this.playedCard = false;
-	            _this.lead = 0;
-	            _this.firstLead = true;
-	            _this.hand[0].toggled = true;
-	            return;
+	        _this.number++;
+	        if (_this.number > _this.questions.length) {
+	            _this.finish();
 	        }
-	    };
-	
-	    this.clicked = function (card) {
-	        console.log('clicked');
-	        console.log('card is ', card);
-	        if (_this.cardPlayed === false) {
-	            //adds or removes player cards to be passed
-	            if (_this.passReady === true) {
-	                if (card.toggled === true) {
-	                    card.toggled = false;
-	                    _this.passArray.splice(_this.passArray.indexOf(card), 1);
-	                } else {
-	                    card.toggled = true;
-	                    _this.selectedCard = true;
-	                    _this.passArray.push(card);
-	                }
-	            }
-	            //else, play cards
-	            else if (_this.playerTurn === true) {
-	                    //first hand options
-	                    if (_this.firstLead === true && card.code !== '2C') {
-	                        //if its the first hand and the player must play the two 
-	                        _this.twoError = true;
-	                        timeout(function () {
-	                            _this.twoError = false;
-	                        }, 3000);
-	                    } else if (_this.firstLead === true && card.code === '2C') {
-	                        _this.playTwo = false;
-	                        _this.playCard(card, 0);
-	                        _this.firstLead = false;
-	                        _this.leadCard = card;
-	                    }
-	                    //player lead options
-	                    else if (_this.lead === 0) {
-	                            //player can lead anything but hearts
-	                            if (card.suit !== 'HEARTS') {
-	                                //non-pointers are OK
-	                                _this.playCard(card, 0);
-	                                _this.leadCard = card;
-	                            } else {
-	                                if (_this.events.heartsBroken === true) {
-	                                    //if hearts have been broken, its OK
-	                                    _this.playCard(card, 0);
-	                                    _this.leadCard = card;
-	                                } else {
-	                                    var playerNonHearts = _this.hand.filter(function (card) {
-	                                        return card.suit !== 'HEARTS';
-	                                    });
-	                                    if (playerNonHearts.length < 1) {
-	                                        //if player has no non-hearts, the play is OK
-	                                        _this.playCard(card, 0);
-	                                        _this.leadCard = card;
-	                                    } else {
-	                                        //invalid play
-	                                        _this.heartLeadError = true;
-	                                        timeout(function () {
-	                                            _this.heartLeadError = false;
-	                                        }, 5000);
-	                                    }
-	                                }
-	                            }
-	                        }
-	                        //player play options
-	                        else if (card.suit === _this.playedCards[_this.lead].suit) {
-	                                //if the suit matches its a valid play
-	                                _this.playCard(card, 0);
-	                            } else {
-	                                //check to see if player is voided 
-	                                _this.leadSuit = _this.playedCards[_this.lead].suit;
-	                                var suitMatches = _this.hand.filter(function (thisCard) {
-	                                    return thisCard.suit === _this.leadSuit;
-	                                });
-	                                if (suitMatches.length > 0) {
-	                                    //player is not yet voided
-	                                    _this.playerSuit = card.suit;
-	                                    _this.suitError = true;
-	                                    timeout(function () {
-	                                        _this.suitError = false;
-	                                    }, 3000);
-	                                }
-	                                //check to see if its the first hand and the player is trying to play a point card
-	                                else if (_this.playedCards[_this.lead].code === '2C' && card.points > 0) {
-	                                        _this.firstHandError = true;
-	                                        timeout(function () {
-	                                            _this.firstHandError = false;
-	                                        }, 3000);
-	                                    }
-	                                    //otherwise the play is valid
-	                                    else {
-	                                            _this.playCard(card, 0);
-	                                        }
-	                            }
-	                }
-	        }
-	    };
-	
-	    this.playCard = function (card, player) {
-	        //this function play a card and removesit from the player's hand
-	        _this.playedCards[player] = card;
-	        if (_this.turnOrder.length < 1) {
-	            _this.leadCard = card;
-	            console.log('lead is ', _this.leadCard);
-	        }
-	        _this.turnOrder.push(player);
-	        if (player === 0) {
-	            _this.cardPlayed = true;
-	            _this.hand = _this.hand.filter(function (eachCard) {
-	                return eachCard.code !== card.code;
-	            });
-	            _this.playerTurn = false;
-	        } else {
-	            _this.hands[player] = _this.hands[player].filter(function (eachCard) {
-	                return eachCard.code !== card.code;
-	            });
-	        }
-	        //check for smoking
-	        console.log(_this.leadCard);
-	        if (_this.leadCard.suit === 'SPADES' && _this.leadCard.number < 12 && _this.events.queen === false) {
-	            _this.smoking = true;
-	        }
-	        //count the card
-	        _this.counted[card.suit]++;
-	        //add trick points
-	        _this.trickPoints += card.points;
-	        //check for special events
-	        if (card.code === 'QS') {
-	            _this.events.queen = true;
-	            _this.smoking = false;
-	            _this.whomp = true;
-	        } else if (card.points === 10) {
-	            _this.events.ten = true;
-	            _this.events.heartsBroken = true;
-	            _this.whomp = true;
-	        } else if (card.points === 1) {
-	            _this.events.heartsBroken = true;
-	        }
-	        //check to see if this is the new high card
-	        var suited = _this.playedCards.filter(function (card) {
-	            return card.suit === _this.playedCards[_this.lead].suit;
-	        });
-	        var sortedSuited = suited.sort(function (a, b) {
-	            return b.number - a.number;
-	        });
-	        _this.highCard = sortedSuited[0];
-	        _this.high = _this.playedCards.indexOf(_this.highCard);
-	
-	        //call the next player
-	        timeout(function () {
-	            _this.nextPlayer();
-	        }, 500);
-	    };
-	
-	    this.nextPlayer = function () {
-	        console.log('in nextPlayer');
-	        //if not last play 
-	        // while(this.turnOrder.length < 4){
-	        var lastPlayer = _this.turnOrder[_this.turnOrder.length - 1];
-	        var currentPlayer = lastPlayer + 1;
-	        //if all players have played resolve the trick
-	        if (_this.turnOrder.length > 3) {
-	            console.log('end of trick');
-	            //all players have played so resolve the points
-	            _this.playedCards.forEach(function (card) {
-	                _this.playerScores[_this.high] += card.points;
-	                _this.playerSemis[_this.high] += card.points;
-	            });
-	            //check for run scoring
-	            //show newHand button and trick message
-	            _this.turnOver = true;
-	            _this.smoking = false;
-	            //count cards to check if hand is over
-	            _this.totalCards = _this.counted.HEARTS + _this.counted.SPADES + _this.counted.DIAMONDS + _this.counted.CLUBS;
-	            if (_this.totalCards === 52) {
-	                //hand is over
-	                _this.newHand();
-	            }
-	            return;
-	        }
-	        //else figure out it its the user or the AI
-	        else {
-	                if (currentPlayer === 4) {
-	                    currentPlayer = 0;
-	                    _this.playerTurn = true;
-	                    console.log('HEY, ', _this.turnOrder[_this.turnOrder.length - 1]);
-	                    return;
-	                    //let the Player Play
-	                } else {
-	                    //its the AIs turn.  Let the AI play.
-	                    var aiPlay = ai.play(_this.playedCards, _this.lead, _this.hands[currentPlayer], _this.counted, _this.events, _this.highCard, _this.trickPoints, _this.runFlag, _this.players[currentPlayer].difficulty);
-	                    _this.playCard(aiPlay, currentPlayer);
-	                }
-	            }
-	    };
-	
-	    this.newTrick = function () {
-	        console.log('turnOrder is ', _this.turnOrder);
-	        _this.whomp = false;
-	        _this.lead = _this.high;
-	        _this.turnOver = false;
-	        _this.turnOrder = [];
-	        _this.playedCards = [];
-	        _this.trickPoints = 0;
-	        _this.cardPlayed = false;
-	        //check to see is anyone is trying to/should run it
-	        var total = 0;
-	        _this.playerSemis.forEach(function (score) {
-	            total += score;
-	        });
-	        for (var i = 0; i < 5; i++) {
-	            if (_this.playerSemis[i] > 13 && total === _this.playerSemis[i]) {
-	                //player has high score and may be trying to run it
-	                _this.runFlag = 1;
-	            } else if (_this.playerSemis[i] > 0 && total !== _this.playerSemis[i]) {
-	                //someone has some points, but less than the total so the run has been broken
-	                _this.runFlag = 0;
-	            }
-	        }
-	
-	        if (_this.lead === 0) {
-	            _this.playerTurn = true;
-	        } else {
-	            _this.leadCard = ai.lead(_this.hands[_this.lead], _this.counted, _this.events, _this.runFlag);
-	            _this.playedCards[_this.lead] = _this.leadCard;
-	            console.log(_this.leadCard, ' this is the leadCard');
-	            _this.playCard(_this.leadCard, _this.lead);
-	        }
-	    };
-	
-	    this.newHand = function () {
-	        //check for run scoring
-	        for (var i = 0; i < _this.playerSemis.length; i++) {
-	            if (_this.playerSemis[i] === 35) {
-	                _this.run = i;
-	            }
-	        }
-	        //if run, adjust scores
-	        if (_this.run !== 5) {
-	            _this.runMessage = true;
-	            for (var j = 0; j < _this.playerSemis.length; j++) {
-	                if (j === _this.run) {
-	                    _this.playerSemis[j] = 0;
-	                    _this.playerScores[j] -= 35;
-	                } else {
-	                    _this.playerSemis[j] = 35;
-	                    _this.playerScores[j] += 35;
-	                }
-	            }
-	        }
-	        _this.turnOver = false;
-	        _this.showDeal = true;
-	        _this.handStart = true;
-	        _this.lowScore = 99;
-	        for (var i = 0; i < 4; i++) {
-	            if (_this.playerScores[i] < _this.lowScore && i !== 0) {
-	                _this.lowMan = 'Whomp on ' + _this.players[i].name + '!';
-	                _this.lowScore = _this.playerScores[i];
-	                _this.high = 5;
-	            }
-	
-	            if (_this.playerScores[i] > 99) {
-	                _this.endGame();
-	                return;
-	            }
-	        }
-	        console.log('lowMan is ', _this.lowMan);
-	    };
-	
-	    this.endGame = function () {
-	        _this.winner = 0;
-	        // timeout(()=>{
-	        for (var i = 1; i < 4; i++) {
-	            if (_this.playerScores[i] < _this.playerScores[_this.winner]) {
-	                _this.winner = i;
-	            }
-	        }
-	        if (_this.winner === 0) {
-	            _this.winMessage = 'You won Carter Hearts!';
-	        } else {
-	            _this.winMessage = _this.players[_this.winner].name + ' has won the game.  You can\'t win them all.';
-	        }
-	        _this.gameOver = true;
-	        _this.playAgain = true;
-	        _this.handStart = false;
-	        _this.showDeal = false;
-	        _this.playedCards = [];
-	        // }, 200);
 	    };
 	};
 
@@ -34365,77 +34023,10 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n <section class =\"page\" id=\"play-page\">\n    <div>\n        <image id=\"player0Image\" ng-if=\"$ctrl.beginning===false && $ctrl.gameOver===false\" src={{$ctrl.players[0].src}} \n             ng-class=\"{'currentPlayerImage' : $ctrl.high===0, 'playerImage' : $ctrl.high!==0,'hiddenPlayArea': $ctrl.handStart===true}\">\n        <h2 ng-if=\"$ctrl.beginning===true\" id=\"playMessage\">Play Carter Hearts!</h2>\n        <!--<h1 id=\"phoneMessage\" ng-if=\"$ctrl.beginning===true\">Turn your phone sideways.</h1>    -->\n        <h2 id=\"nextHandMessage\" ng-if=\"$ctrl.handStart===true\">Deal Next Hand</h2>\n        <h1 ng-if=\"$ctrl.gameOver===true\">Game Over</h1>\n        <h1 class = \"gameMessage\" ng-if=\"$ctrl.gameOver===true\">{{$ctrl.winMessage}}</h1>\n        <div class=\"banner\">\n             <h1 class='gameMessage' id=\"player-select-message\" ng-if=\"$ctrl.playerSelect===true && $ctrl.opponentSelect===false\">Select your player.\n             <button class=\"button\" id=\"player-select-button\" ng-click=\"$ctrl.playerSelected()\" ng-if=\"$ctrl.playerSelect===true && $ctrl.opponentSelect===false\"><h1 id=\"buttonMessage\">Done</h1></button></h1>\n            <h1 class ='errorMessage' id=\"no-player-message\" ng-if=\"$ctrl.playerChoice==={}\">Choose a player from the images below.</h1>\n\n            <h1 class='gameMessage' id=\"opponent-select-message\" ng-if=\"$ctrl.opponentSelect===true\">Select three opponents.\n             <button class=\"button\" id=\"opponent-select-button\" ng-click=\"$ctrl.opponentsSelected()\" ng-if=\"$ctrl.opponentSelect===true\"><h1 id=\"buttonMessage\">Done</h1></button>\n            <h1 class ='errorMessage' id=\"no-player-message\" ng-if=\"$ctrl.playersLengthError\">Choose three opponents from the images below.</h1></h1>\n\n            <button class=\"button\" id=\"deal-button\" ng-click=\"$ctrl.dealCards()\" ng-if=\"$ctrl.showDeal===true\"><h1 id=\"bigButtonMessage\">Deal</h1></button>\n\n            <button class=\"button\" id=\"change-players-button\" ng-click=\"$ctrl.changePlayers()\" ng-if=\"$ctrl.beginning===true && $ctrl.playerSelect===false\"><h1 id=\"bigButtonMessage\">Change Players</h1></button>\n\n           \n            <h1 class='gameMessage' id=\"passing-message\" ng-if=\"$ctrl.passReady===true\">Select three cards to pass.<br>Your target is {{$ctrl.passPlayer.name}}.</h1>\n            <h1 class='gameMessage' id=\"low-man-message\" ng-if=\"$ctrl.passReady===true\">{{$ctrl.lowMan}}</h1>\n            <h1 class ='gameMessage' id=\"hold-hand-message\" ng-if=\"$ctrl.holdHand===true\">It's a Hold Hand!<br>No passing.</h1>\n            <h1 class ='gameMessage' id=\"twoMessage\" ng-if=\"$ctrl.playTwo===true\">Play the two of clubs.</h1>\n             <h1 class='gameMessage' id=\"your-play-message\" ng-if=\"$ctrl.playerTurn===true\">Your play.</h1>\n            <h1 class='gameMessage' id=\"smoking-message\" ng-if=\"$ctrl.smoking===true\">Smoke 'em if you got 'em.</h1>\n             <h1 class='gameMessage' id=\"whomp-message\" ng-if=\"$ctrl.whomp===true\">Bam!</h1>\n            <h1 class ='gameMessage' id=\"trickMessage\" ng-if=\"$ctrl.turnOver===true\">{{$ctrl.players[$ctrl.high].name}} took the trick.</h1>\n            <h1 class ='gameMessage' id=\"runMessage\" ng-if=\"$ctrl.runMessage===true\">{{$ctrl.players[$ctrl.run].name}} successfully shot the moon!</h1>\n            <h1 class ='errorMessage' id=\"small-pass-message\" ng-if=\"$ctrl.badPass===true\">You must select exactly 3 cards to pass to {{$ctrl.passPlayer.name}}.<br>You have {{$ctrl.passArray.length}} cards selected.</h1>\n            <h1 class ='errorMessage' id=\"notVoidedMessage\" ng-if=\"$ctrl.suitError===true\">The lead was {{$ctrl.leadSuit}}.  <br>You cannot play {{$ctrl.playerSuit}} while you still <br>have {{$ctrl.leadSuit}} in your hand.  <br>Nice try!</h1>\n            <h1 class ='errorMessage' id=\"firstHandMessage\" ng-if=\"$ctrl.firstHandError===true\">You cannot play any point card <br>(a Heart or the Queen of Spades) on the first hand.<br>Amateur!</h1>\n            <h1 class ='errorMessage' id=\"twoErrorMessage\" ng-if=\"$ctrl.twoError===true\">If you have the deuce, <br>you've gotta play the deuce.</h1>\n            <h1 class ='errorMessage' id=\"heartsBrokenMessage\" ng-if=\"$ctrl.heartLeadError===true\">You cannot lead a heart until they've been broken<br> (or unless you have nothing else).</h1>\n            <button class = \"button\" id=\"pass-button\" ng-if=\"$ctrl.passReady===true\" ng-click=\"$ctrl.passCards()\"><h1 id=\"buttonMessage\">Pass</h1></button>\n            <button class=\"button\" id=\"playButton\" ng-if=\"$ctrl.playReady===true\" ng-click=\"$ctrl.startPlay()\"><h1 id=\"playMessage\" >Begin Play!</h1></button>\n            <button class=\"button\" id=\"playButton\" ng-if=\"$ctrl.playAgain===true\" ng-click=\"$ctrl.newGame()\"><h1 id=\"playMessage\" >Play Again</h1></button>\n            <div class=\"phaseImages\" ng-if=\"$ctrl.gameOver===true\">\n                <img class=\"winImage\" ng-if=\"$ctrl.winner===0\" src=\"{{$ctrl.players[0].src}}\" id=\"winImage\">\n                <img class=\"winImage\" ng-if=\"$ctrl.winner!==0\" src=\"{{$ctrl.players[$ctrl.winner].src}}\"  id=\"loseImage\">\n            </div> \n        </div>\n\n<!--player gallery-->\n        <div id=\"playerGallery\" ng-if=\"$ctrl.playerSelect === true && $ctrl.opponentSelect===false\">\n              <li class=\"playerGalleryItem\" ng-repeat=\"player in $ctrl.playerGallery\">\n                    <button  ng-click=\"$ctrl.selectPlayer(player)\" ng-class=\"{'playerButton' : $ctrl.players[0]===player, 'galleryButton' : $ctrl.players[0]!==player}\">\n                        <img id=\"galleryImage\"src=\"{{player.src}}\" >\n                        <p class=\"playerLabel\">{{player.name}}</p>\n                    </button>\n            </li>\n        </div>\n\n<!--2nd player gallery-->\n        <div id=\"playerGallery\" ng-if=\"$ctrl.opponentSelect === true\">\n              <li class=\"playerGalleryItem\" ng-repeat=\"player in $ctrl.playerGallery\">\n                <div clas=\"galleryDiv\">\n                    <button ng-if=\"$ctrl.players[0]!==player\" class=\"galleryButton\" ng-click=\"$ctrl.selectOpponent(player)\" ng-class=\"{'playerButton' : $ctrl.players[0]===player, 'opponentButton' : $ctrl.players.indexOf(player)!==-1}\">\n                        <p ng-class=\"{'easyLabel' : player.difficulty==='easy', 'hardLabel' : player.difficulty==='hard'}\">{{player.difficulty}}</p>\n                        <img id=\"galleryImage\" src=\"{{player.src}}\" >\n                        <p class=\"playerLabel\">{{player.name}}</p>\n                    </button>\n                </div>        \n            </li>\n        </div>\n\n<!--scoreboard-->\n        <div ng-if=\"$ctrl.beginning === false\" ng-class=\"{'scoreboard': $ctrl.handStart===true, 'hiddenScoreboard': $ctrl.handStart===false}\">\n            <table>\n                <th>\n                    <td>{{$ctrl.players[0].name}}</td>\n                    <td>{{$ctrl.players[1].name}}</td>\n                    <td>{{$ctrl.players[2].name}}</td>\n                    <td>{{$ctrl.players[3].name}}</td>\n                </th>\n\n                <tr>\n                    <td id=\"semitotal\">Hand Points</td>\n                    <td id=\"semitotal\"> {{$ctrl.playerSemis[0]}}</td>\n                    <td id=\"semitotal\"> {{$ctrl.playerSemis[1]}}</td>\n                    <td id=\"semitotal\"> {{$ctrl.playerSemis[2]}}</td>\n                    <td id=\"semitotal\"> {{$ctrl.playerSemis[3]}}</td>\n                </tr>\n\n                <tr>\n                    <td>Total Points</td>\n                    <td id=\"score\"> {{$ctrl.playerScores[0]}}</td>\n                    <td id=\"score\"> {{$ctrl.playerScores[1]}}</td>\n                    <td id=\"score\"> {{$ctrl.playerScores[2]}}</td>\n                    <td id=\"score\"> {{$ctrl.playerScores[3]}}</td>\n                </tr>\n              \n            </table>\n        </div>\n\n        <div class=\"playArea\" ng-class=\"{'hiddenPlayArea': $ctrl.handStart===true}\">\n            <image id=\"player0Card\" ng-if=\"$ctrl.playedCards[0]\" src=\"{{$ctrl.playedCards[0].image}}\" ng-class=\"{'leadCardImage': $ctrl.lead === 0}\">\n            <image id=\"player1Image\" ng-if=\"$ctrl.beginning===false && $ctrl.gameOver===false\" src={{$ctrl.players[1].src}} ng-class=\"{'currentPlayerImage' : $ctrl.high===1, 'playerImage' : $ctrl.high!==1, 'passPlayerImage' : $ctrl.passFlag[1]}\">\n            <image id=\"player1Card\" ng-if=\"$ctrl.playedCards[1]\" src=\"{{$ctrl.playedCards[1].image}}\" ng-class=\"{'leadCardImage': $ctrl.lead === 1}\">\n             <image ng-class=\"{'currentPlayerImage' : $ctrl.high===2, 'playerImage' : $ctrl.high!==2, 'passPlayerImage' : $ctrl.passFlag[2]}\"id=\"player2Image\" ng-if=\"$ctrl.beginning===false && $ctrl.gameOver===false\" src={{$ctrl.players[2].src}} >\n            <image id=\"player2Card\" ng-if=\"$ctrl.playedCards[2]\" src=\"{{$ctrl.playedCards[2].image}}\" ng-class=\"{'leadCardImage': $ctrl.lead === 2}\">\n            <image ng-class=\"{'currentPlayerImage' : $ctrl.high===3, 'playerImage' : $ctrl.high!==3, 'passPlayerImage' : $ctrl.passFlag[3]}\" id=\"player3Image\" ng-if=\"$ctrl.beginning===false && $ctrl.gameOver===false\" src={{$ctrl.players[3].src}} >\n            <image id=\"player3Card\" ng-if=\"$ctrl.playedCards[3]\" src=\"{{$ctrl.playedCards[3].image}}\" ng-class=\"{'leadCardImage': $ctrl.lead === 3}\">  \n            <button class=\"button\" id=\"newTrickButton\" ng-if=\"$ctrl.turnOver===true\" ng-click=\"$ctrl.newTrick()\"><h1 id=\"buttonMessage\">Next Trick</h1></button>\n        </div>\n\n        <!--<div class=\"compHand\">\n            <ul class=\"comp1Hand\">\n                <li class=\"comp1Card\" ng-repeat=\"compCard in $ctrl.hands[1]\" >\n                    <img src=\"{{compCard.image}}\" >\n                </li>\n            </ul>\n        </div>\n        <div class=\"compHand2\">\n        </div>\n        <div class=\"compHand3\">\n        </div>-->\n       \n      \n        <div class=\"playerHand\">\n            <ul class=\"hand\">\n                <li class=\"playerCard\" ng-repeat=\"card in $ctrl.hand\" >\n                    <button ng-click=\"$ctrl.clicked(card)\" ng-class=\"{'selectedCard' : card.toggled, 'cardButton' : !card.toggled}\"><img src=\"{{card.image}}\" ></button>\n                </li>\n            </ul>\n        </div>\n\n\n  \n\n\n    </div>\n</section>\n";
+	module.exports = "\n <section class =\"page\" id=\"test-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n        <h1 ng-if=\"$ctrl.type.length>0\">{{$ctrl.type}}</h1>\n        <h1 ng-if=\"$ctrl.type.length>0\">{{$ctrl.result}}</h1>\n        <table class=\"trait-table\"> \n            <th>\n                <tb ng-mouseover=\"$ctrl.showLetter=true\" ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter>{{letter}}</div></tb>\n                <!-- <tb><div class=\"trait-table-letter\">S</div></tb>\n                <tb><div class=\"trait-table-letter\">F</div></tb>\n                <tb><div class=\"trait-table-letter\">J</div></tb> -->\n            </th>\n        </table>\n    </div>\n\n</section>\n";
 
 /***/ },
 /* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _rules = __webpack_require__(21);
-	
-	var _rules2 = _interopRequireDefault(_rules);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _rules2.default,
-	    controller: controller
-	};
-	
-	
-	function controller() {};
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class =\"page\" id=\"rules-page\">\n    <h1 class=\"gameMessage\">Rules</h2>\n    <br>\n    <h1 class=\"rulesMessage\">  For hearts beginners, please see <a class=\"rulesLink\" href=\"http://www.bicyclecards.com/how-to-play/hearts/\">basic hearts rules</a></h1>\n    <h1 class=\"rulesMessage\">The ten of hearts counts as 10 points, this is the Carter Family rule.</h1>   <image class=\"rulesImage\" src=\"./images/10H.png\">\n   <h1 class=\"rulesMessage\">All other hearts count as 1 point.<image class=\"rulesImage\" src=\"./images/7H.png\"></h1>\n    <h1 class=\"rulesMessage\">The queen of spades hits for 13 points! <image class=\"rulesImage\" src=\"./images/QS.png\"></h1>\n    <h1 class=\"rulesMessage\">  Every other card is worth zero points.<image class=\"rulesImage\" src=\"./images/4S.png\"></h1>\n    <br>\n    <h1 class=\"rulesMessage\">  There are a total of <em>35</em> points per hand.</h1>\n    <footer>\n      <p class=\"footerText\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>\n  ";
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _settings = __webpack_require__(23);
-	
-	var _settings2 = _interopRequireDefault(_settings);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _settings2.default,
-	    controller: controller
-	};
-	
-	
-	function controller() {
-	    this.mode = function (difficulty) {
-	        localStorage.setItem('mode', difficulty);
-	        console.log('changed mode to ', difficulty);
-	    };
-	
-	    this.deadly = false;
-	};
-
-/***/ },
-/* 23 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class =\"page\" id=\"settings-page\">\n    <h1 id=\"settingsTitle\">Settings</h2>\n    <div id=\"settingsDiv\">\n    <h3>Dave Jokes</h3>\n    <form>\n        <input type=\"radio\" name=\"daveJokes\" value=\"on\" checked> <h4>off</h4><br>\n        <input type=\"radio\" name=\"daveJokes\" value=\"off\"> <h4> on (impolite company only) </h4><br>\n    </form>\n    <br>\n\n    <h3>Farts</h3>\n    <form>\n        <input type=\"radio\" name=\"farts\" ng-value=\"false\" ng-model=\"$ctrl.deadly\" checked> <h4> Audible (recomended)</h4> <br>\n        <input type=\"radio\" name=\"farts\" ng-value=\"true\" ng-model=\"$ctrl.deadly\"> <h4> Deadly </h4><br>\n        <h4 ng-if=\"$ctrl.deadly===true\">    What's wrong with you???</h4>\n    </form>\n    <br>\n    <image id=\"settingsImage\" src=\"./images/wallowas.png\">\n\n    <footer>\n      <p class=\"footerText\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>";
-
-/***/ },
-/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34459,7 +34050,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// .context is a method webpack adds to require 
-	var context = __webpack_require__(25);
+	var context = __webpack_require__(21);
 	
 	// create the module to put the resources in,
 	// in this case directives
@@ -34478,12 +34069,12 @@
 	exports.default = _module.name;
 
 /***/ },
-/* 25 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./ai-service.js": 26,
-		"./shuffle-service.js": 27
+		"./ai-service.js": 22,
+		"./shuffle-service.js": 23
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -34496,11 +34087,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 25;
+	webpackContext.id = 21;
 
 
 /***/ },
-/* 26 */
+/* 22 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34978,7 +34569,7 @@
 	};
 
 /***/ },
-/* 27 */
+/* 23 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35000,7 +34591,7 @@
 	}
 
 /***/ },
-/* 28 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -43349,7 +42940,7 @@
 	//# sourceMappingURL=angular-ui-router.js.map
 
 /***/ },
-/* 29 */
+/* 25 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43370,24 +42961,10 @@
 	    });
 	
 	    $stateProvider.state({
-	        name: 'play',
-	        url: '/play',
+	        name: 'test',
+	        url: '/test',
 	        data: { public: true },
-	        component: 'play'
-	    });
-	
-	    $stateProvider.state({
-	        name: 'rules',
-	        url: '/rules',
-	        data: { public: true },
-	        component: 'rules'
-	    });
-	
-	    $stateProvider.state({
-	        name: 'settings',
-	        url: '/settings',
-	        data: { public: true },
-	        component: 'settings'
+	        component: 'test'
 	    });
 	
 	    $stateProvider.state({
@@ -43401,7 +42978,7 @@
 	}
 
 /***/ },
-/* 30 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!

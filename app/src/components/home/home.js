@@ -10,8 +10,8 @@ controller.$inject = ['$timeout'];
 
 function controller($timeout) {
 
-    this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
     this.letters=[];
+    this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
 
     this.letters = [];
     this.count = 0;

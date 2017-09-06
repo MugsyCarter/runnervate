@@ -13,8 +13,15 @@ function controller(timeout) {
     
     this.number = 1;
     this.type = [];
+    this.typeOptions = [['Extroversion', 'Introversion'],['iNtuiting', 'Sensing'],['Thinking','Feeling'],['Judging','Perceiving']];
     this.showLetter = false;
     this.strengths = ['strong', 'moderate', 'weak'];
+    this.typeDescriptions = [
+        ['recharge your energy by spending time with people.', 'recharge your energy by spending time alone.'],
+        ['experience the world through concepts and abstractions.', 'experience the world directly with your senses.'],
+        ['process information by thinking about it logically.', 'process information by determining how you feel about it emotionally.'],
+        ['make descisions and move on.', 'delay making descisions and keep all of your options open.']
+    ];
 
     this.questions= [
         {
@@ -268,7 +275,21 @@ function controller(timeout) {
                 this.type[i].strength = 'weak';
             }
         }
-        console.log(this.type);
+        this.addDescriptions();
+    };
+
+    this.addDescriptions = ()=>{
+        for (let i=0; i < this.type.length; i++){
+            this.type[i].text = 'You have a ' + this.type[i].strength + ' preference for ';
+            if (this. result[i] > 0){
+                this.type[i].text += this.typeOptions[i][0] + ' over ' + this.typeOptions[i][1] + '. You prefer to ' + this.typeDescriptions[i][0];
+
+
+            }
+            else{
+                this.type[i].text += this.typeOptions[i][1] + ' over ' + this.typeOptions[i][0] + '. You prefer to ' + this.typeDescriptions[i][1];
+            }
+        }
     };
 
     this.finish = ()=>{

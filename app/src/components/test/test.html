@@ -5,8 +5,10 @@
         <h2 class="question-text">{{$ctrl.questions[$ctrl.number -1].text}}</h2>
         <button id="answer-button" ng-repeat="option in $ctrl.questions[$ctrl.number -1].options" 
         ng-click="$ctrl.answer(option.points)">{{option.text}}</button>
-        <h1 ng-if="$ctrl.type.length>0">{{$ctrl.type}}</h1>
-        <h1 ng-if="$ctrl.type.length>0">{{$ctrl.result}}</h1>
+    </div>
+    <div class="results-area" ng-if="$ctrl.type.length>0">
+        <h1>{{$ctrl.type}}</h1>
+        <h1>{{$ctrl.result}}</h1>
         <table class="trait-table"> 
             <tr>
                 <td ng-repeat="letter in $ctrl.type"><div class="trait-table-letter" ng-class=letter.letter>{{letter.letter}}</div></td>                
@@ -15,6 +17,13 @@
                 <td ng-repeat="strength in $ctrl.type"><div class="strength" ng-class=strength.strength>{{strength.strength}}</div></td>
             </tr>
         </table>
-    </div>
+
+    <table class=results-descriptions>
+        <tr ng-repeat="type in $ctrl.type">
+            <td>
+                <h1>{{type.text}}<h1>
+            </td>
+        </tr>
+    </table>
 
 </section>

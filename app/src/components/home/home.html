@@ -5,7 +5,10 @@
     <br>
     <table class="trait-table"> 
       <th>
-        <tb ng-repeat="letter in $ctrl.letters"><div class="trait-table-letter" ng-class=letter>{{letter}}</div></tb>
+        <tb ng-repeat="letter in $ctrl.letters"><div class="trait-table-letter" ng-class=letter.letter>{{letter.letter}}</div></tb>
+        </th>
+      <th>
+         <tb ng-repeat="strength in $ctrl.letters"><div class="strength" ng-class=strength.strength>{{strength.strength}}</div></tb>
         <!-- <tb><div class="trait-table-letter">S</div></tb>
         <tb><div class="trait-table-letter">F</div></tb>
         <tb><div class="trait-table-letter">J</div></tb> -->

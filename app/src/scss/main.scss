@@ -99,6 +99,23 @@ a{
   font-size: 4vh;
 }
 
+//results 
+.strength{
+  color: $black;
+}
+
+.strong{
+  color: $blue;
+}
+
+.moderate{
+  color: $green; 
+}
+
+.weak{
+     color: pink; 
+}
+
 //footer 
 
 @media only screen and (min-width: 1600px) {

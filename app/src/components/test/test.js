@@ -13,6 +13,7 @@ function controller(timeout) {
     
     this.number = 1;
     this.type = [];
+    this.showLetter = false;
 
     this.questions= [
         {
@@ -198,6 +199,48 @@ function controller(timeout) {
                 {
                     text: 'watching tv',
                     points: [-1,-1,0,0]
+                }
+            ]
+        },
+        {
+            number: 11,
+            text: 'What does fairness mean to you?',
+            options: [
+                {
+                    text: 'holding everyone to the same standard',
+                    points: [0,0,2,0]
+                },
+                {
+                    text: 'considering the needs and experiences of everyone invloved',
+                    points: [0,0,-2,0] 
+                }
+            ]
+        },
+        {
+            number: 12,
+            text: 'Which of the following best describes your relationship to finishing a task?',
+            options: [
+                {
+                    text: 'once I finish the task, I can relax and play',
+                    points: [0,0,0,2]
+                },
+                {
+                    text: 'I can play and work at the same time',
+                    points: [0,0,0,-2] 
+                }
+            ]
+        },
+        {
+            number: 13,
+            text: 'Which of the following best describes your relationship to finishing a task?',
+            options: [
+                {
+                    text: 'once I finish the task, I can relax and play',
+                    points: [0,0,0,2]
+                },
+                {
+                    text: 'I can play and work at the same time',
+                    points: [0,0,0,-2] 
                 }
             ]
         }

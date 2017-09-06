@@ -280,14 +280,20 @@ function controller(timeout) {
 
     this.addDescriptions = ()=>{
         for (let i=0; i < this.type.length; i++){
-            this.type[i].text = 'You have a ' + this.type[i].strength + ' preference for ';
+           // this.type[i].text = 'You have a ' + this.type[i].strength + ' preference for ';
             if (this. result[i] > 0){
-                this.type[i].text += this.typeOptions[i][0] + ' over ' + this.typeOptions[i][1] + '. You prefer to ' + this.typeDescriptions[i][0];
+                this.type[i].myType = this.typeOptions[i][0];
+                this.type[i].notType = this.typeOptions[i][1];
+                //this.type[i].text += this.typeOptions[i][0] + ' over ' + this.typeOptions[i][1] + '. You prefer to ' + this.typeDescriptions[i][0];
+                this.type[i].text = '. You prefer to ' + this.typeDescriptions[i][0];
 
 
             }
             else{
-                this.type[i].text += this.typeOptions[i][1] + ' over ' + this.typeOptions[i][0] + '. You prefer to ' + this.typeDescriptions[i][1];
+                this.type[i].myType = this.typeOptions[i][1];
+                this.type[i].notType = this.typeOptions[i][0];
+                //this.type[i].text += this.typeOptions[i][1] + ' over ' + this.typeOptions[i][0] + '. You prefer to ' + this.typeDescriptions[i][1];
+                this.type[i].text = '. You prefer to ' + this.typeDescriptions[i][1];
             }
         }
     };

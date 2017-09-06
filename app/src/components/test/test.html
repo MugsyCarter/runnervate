@@ -7,11 +7,12 @@
         ng-click="$ctrl.answer(option.points)">{{option.text}}</button>
     </div>
     <div class="results-area" ng-if="$ctrl.type.length>0">
-        <h1>{{$ctrl.type}}</h1>
-        <h1>{{$ctrl.result}}</h1>
         <table class="trait-table"> 
             <tr>
                 <td ng-repeat="letter in $ctrl.type"><div class="trait-table-letter" ng-class=letter.letter>{{letter.letter}}</div></td>                
+            </tr>
+            <tr>
+                <td ng-repeat="type in $ctrl.type"><div class="type-name" ng-class=type.myType>{{type.myType}}</div></td>
             </tr>
             <tr>
                 <td ng-repeat="strength in $ctrl.type"><div class="strength" ng-class=strength.strength>{{strength.strength}}</div></td>
@@ -21,7 +22,7 @@
     <table class=results-descriptions>
         <tr ng-repeat="type in $ctrl.type">
             <td>
-                <h1>{{type.text}}<h1>
+                <h1>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>
             </td>
         </tr>
     </table>

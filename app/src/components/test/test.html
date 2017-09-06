@@ -8,12 +8,12 @@
         <h1 ng-if="$ctrl.type.length>0">{{$ctrl.type}}</h1>
         <h1 ng-if="$ctrl.type.length>0">{{$ctrl.result}}</h1>
         <table class="trait-table"> 
-            <th>
-                <tb ng-mouseover="$ctrl.showLetter=true" ng-repeat="letter in $ctrl.type"><div class="trait-table-letter" ng-class=letter>{{letter}}</div></tb>
-                <!-- <tb><div class="trait-table-letter">S</div></tb>
-                <tb><div class="trait-table-letter">F</div></tb>
-                <tb><div class="trait-table-letter">J</div></tb> -->
-            </th>
+            <tr>
+                <td ng-repeat="letter in $ctrl.type"><div class="trait-table-letter" ng-class=letter.letter>{{letter.letter}}</div></td>                
+            </tr>
+            <tr>
+                <td ng-repeat="strength in $ctrl.type"><div class="strength" ng-class=strength.strength>{{strength.strength}}</div></td>
+            </tr>
         </table>
     </div>
 

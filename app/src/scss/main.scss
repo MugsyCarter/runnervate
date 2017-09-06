@@ -14,6 +14,12 @@ a{
     box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
+
+td, th{
+  padding: none;
+  margin: none;
+}
+
 // navbar and app stuff 
 .main-nav{
 }
@@ -39,6 +45,7 @@ a{
   font-size: 4vh;
 }
 
+//trait table stuff
 .trait-table{
    width: 60%;
    margin-left: 20%;

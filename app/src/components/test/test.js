@@ -14,6 +14,7 @@ function controller(timeout) {
     this.number = 1;
     this.type = [];
     this.showLetter = false;
+    this.strengths = ['strong', 'moderate', 'weak'];
 
     this.questions= [
         {
@@ -71,7 +72,7 @@ function controller(timeout) {
             text: 'Which of these occupations would you prefer?',
             options: [
                 {
-                    text: 'ER Nurse',
+                    text: 'Nurse',
                     points: [0,-1,-2,2]
                 },
                 {
@@ -255,34 +256,49 @@ function controller(timeout) {
 
     ];
 
+    this.addStrength = ()=>{
+        for (let i =0; i < this.result.length; i ++){
+            if(this.result[i]>7 || this.result[i]<-7){
+                this.type[i].strength = 'strong';
+            }
+            else if (this.result[i] > 2 || this.result[i] <-2 ){
+                this.type[i].strength = 'moderate';
+            } 
+            else{
+                this.type[i].strength = 'weak';
+            }
+        }
+        console.log(this.type);
+    };
+
     this.finish = ()=>{
         console.log('finishing up, these are the points ', this.result);
         this.type = [];
         if (this.result[0] > 0 ){
-            this.type.push('E');
+            this.type.push({letter: 'E'});
         }
         else{
-            this.type.push('I');
+            this.type.push({letter: 'I'});
         }
         if (this.result[1]> 0){
-            this.type.push('N');
+            this.type.push({letter: 'N'});
         }
         else {
-            this.type.push('S');
+            this.type.push({letter: 'S'});
         }
         if (this.result[2] > 0){
-            this.type.push('T');
+            this.type.push({letter: 'T'});
         }
         else {
-            this.type.push('F');
+            this.type.push({letter: 'F'});
         }
         if (this.result[3] > 0){
-            this.type.push('J');
+            this.type.push({letter: 'J'});
         }
         else{
-            this.type.push('P');
+            this.type.push({letter: 'P'});
         }
-        console.log(this.type);
+        this.addStrength();
     };
 
     this.answer = (points)=>{

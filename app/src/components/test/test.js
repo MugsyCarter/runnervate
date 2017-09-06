@@ -128,7 +128,7 @@ function controller(timeout) {
         },
         {
             number: 7,
-            text: 'What do  people dislike about you?',
+            text: 'What might people dislike about you?',
             options: [
                 {
                     text: 'your thin skin',
@@ -150,7 +150,7 @@ function controller(timeout) {
         },
         {
             number: 8,
-            text: 'What do  people like about you?',
+            text: 'What might people like about you?',
             options: [
                 {
                     text: 'your intellect',
@@ -236,15 +236,19 @@ function controller(timeout) {
         },
         {
             number: 13,
-            text: 'Which of the following best describes your relationship to finishing a task?',
+            text: 'What is the first thing you notice about a painting?',
             options: [
                 {
-                    text: 'once I finish the task, I can relax and play',
-                    points: [0,0,0,2]
+                    text: 'the details of the image',
+                    points: [0,-2,0,0]
                 },
                 {
-                    text: 'I can play and work at the same time',
-                    points: [0,0,0,-2] 
+                    text: 'the significance of the image',
+                    points: [0,2,0,0] 
+                },
+                {
+                    text: 'uggg, art is so boring',
+                    points: [1,-1,0,0] 
                 }
             ]
         }

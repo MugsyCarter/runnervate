@@ -117,7 +117,7 @@ function controller(timeout) {
                     points: [2,0,1,2]
                 },
                 {
-                    text: 'make sure all voices are head',
+                    text: 'make sure all voices are heard',
                     points: [0,0,2,1]
                 },
                 {  
@@ -186,7 +186,7 @@ function controller(timeout) {
         },
         {
             number: 10,
-            text: 'Which of these pasttimes would you most enjoy?',
+            text: 'Which of these pastimes would you most enjoy?',
             options: [
                 {
                     text: 'first person shooter video games',

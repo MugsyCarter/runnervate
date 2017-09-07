@@ -113,16 +113,33 @@ td, th{
 
 .strong{
   color: $blue;
+  font-size: 7vh;
 }
 
 .moderate{
-  color: $green; 
+  color: $green;
+  font-size: 5vh;
 }
 
 .weak{
      color: pink; 
+     font-size: 3vh;
 }
 
+.results-descriptions{
+  width: 90vw;
+  padding: 0 5vw;
+}
+
+.results-description-row{
+  text-align: left;
+
+}
+
+.result-description{
+  text-align: left;
+  margin-left: 5vw;
+}
 //footer 
 
 @media only screen and (min-width: 1600px) {

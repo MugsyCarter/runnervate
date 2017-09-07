@@ -13,7 +13,7 @@ function controller(timeout) {
     
     this.number = 1;
     this.type = [];
-    this.typeOptions = [['Extroversion', 'Introversion'],['iNtuiting', 'Sensing'],['Thinking','Feeling'],['Judging','Perceiving']];
+    this.typeOptions = [['Extroversion', 'Introversion'],['Intuiting', 'Sensing'],['Thinking','Feeling'],['Judging','Perceiving']];
     this.showLetter = false;
     this.strengths = ['strong', 'moderate', 'weak'];
     this.typeDescriptions = [

@@ -21,8 +21,8 @@
 
     <table class=results-descriptions>
         <tr ng-repeat="type in $ctrl.type">
-            <td>
-                <h1>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>
+            <td ng-class=type.letter>
+                <h1 class='result-description'>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>
             </td>
         </tr>
     </table>

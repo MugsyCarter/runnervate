@@ -56,19 +56,19 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	var _services = __webpack_require__(20);
+	var _services = __webpack_require__(22);
 	
 	var _services2 = _interopRequireDefault(_services);
 	
-	var _angularUiRouter = __webpack_require__(24);
+	var _angularUiRouter = __webpack_require__(26);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _routes = __webpack_require__(25);
+	var _routes = __webpack_require__(27);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	__webpack_require__(26);
+	__webpack_require__(28);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -33613,7 +33613,8 @@
 		"./about/about.js": 12,
 		"./app/app.js": 14,
 		"./home/home.js": 16,
-		"./test/test.js": 18
+		"./test/test.js": 18,
+		"./typical/typical.js": 20
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -33657,7 +33658,7 @@
 /* 13 */
 /***/ function(module, exports) {
 
-	module.exports = "<section class =\"page\" id=\"about-page\">\n    <image id=aboutImage src=\"./images/olympicCoast.png\">\n    <h2 id=\"aboutTitle\">About Carter Hearts</h2>\n \n     <p class=\"tab\"> This app was made out of an apprection of Hearts, the preferred card game of the Carter Family.  Carter Hearts was developed by Mugsy Carter, using the the javascript MEAN stack.  You can send any comments or questions to <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a>. <p class=\"tab\"></p> \n \n    <p class=\"tab\">Mugsy has the traditional Carter Family love of hearts, the outdoors, science, literature, good company, and bad taste.  The Carters depicted in this game are real people, and are much better at hearts, and much worse at polite converation, in person.</p>\n    <!--image here?  -->\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2016</span></p>\n    </footer>\n</section>";
+	module.exports = "<section class =\"page\" id=\"about-page\">\n    <!-- <image id=aboutImage src=\"./images/olympicCoast.png\"> -->\n    <h2 id=\"about-title\">About The Meyers-Briggs Type Indicator</h2>\n \n     <p class=\"tab\">Meyers-Briggs Type Indicator, or MBTI for short, was developed by a mother/daugher team of psycologists in the 1940's, working off of Carl Jung's typological theory.  It consists of a binary system of 4 traits, that combine to make a total of 16 personality types. <p class=\"tab\"></p> \n \n    <p class=\"tab\"> In every society the proportions of each type in the general population are varied and some types appear to be quite common, and others very rare.</p>\n    <!--image here?  -->\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2016 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>";
 
 /***/ },
 /* 14 */
@@ -33705,7 +33706,6 @@
 	        home: true,
 	        test: false,
 	        about: false
-	
 	    };
 	
 	    this.clicked = function (page) {
@@ -33725,7 +33725,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = " <section>\n    <header>\n       \n        <nav class=\"main-nav\">\n            <image id=\"menuIcon\" src=\"./images/menu.png\">\n            <ul>\n                <li class=\"link\"><a ui-sref=\"home\" id=\"home-link\"  ng-class='{\"activeLink\":$ctrl.link[\"home\"]===true}' ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                <li class=\"link\"><a ui-sref=\"test\" id=\"test-link\" ng-class='{\"activeLink\":$ctrl.link[\"test\"]===true}' ng-click=\"$ctrl.clicked('test')\">Take Test</a></li>\n                <li class=\"link\"><a ui-sref=\"about\" id=\"about-link\"  ng-class='{\"activeLink\":$ctrl.link[\"about\"]===true}' ng-click=\"$ctrl.clicked('about')\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n  \n    <div class=\"main-content\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
+	module.exports = " <section>\n    <header>\n       \n        <nav class=\"main-nav\">\n            <image id=\"menuIcon\" src=\"./images/menu.png\">\n            <ul>\n                <li class=\"link\"><a ui-sref=\"home\" id=\"home-link\"  ng-class='{\"activeLink\":$ctrl.link[\"home\"]===true}' ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                <li class=\"link\"><a ui-sref=\"test\" id=\"test-link\" ng-class='{\"activeLink\":$ctrl.link[\"test\"]===true}' ng-click=\"$ctrl.clicked('test')\">Find My Type</a></li>\n                <!-- <li class=\"link\"><a ui-sref=\"typical\" id=\"typical-link\" ng-class='{\"activeLink\":$ctrl.link[\"typical\"]===true}' ng-click=\"$ctrl.clicked('typical')\">See How Typical I Am</a></li> -->\n                <li class=\"link\"><a ui-sref=\"about\" id=\"about-link\"  ng-class='{\"activeLink\":$ctrl.link[\"about\"]===true}' ng-click=\"$ctrl.clicked('about')\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n  \n    <div class=\"main-content\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
 
 /***/ },
 /* 16 */
@@ -33754,8 +33754,8 @@
 	function controller($timeout) {
 	    var _this = this;
 	
-	    this.letterOptions = [['I', 'E'], ['N', 'S'], ['T', 'F'], ['J', 'P']];
 	    this.letters = [];
+	    this.letterOptions = [['I', 'E'], ['N', 'S'], ['T', 'F'], ['J', 'P']];
 	
 	    this.letters = [];
 	    this.count = 0;
@@ -33763,10 +33763,10 @@
 	    this.update = function () {
 	        if (_this.count < 1000) {
 	            for (var i = 0; i < _this.letterOptions.length; i++) {
-	                _this.letters[i] = _this.letterOptions[i][Math.round(Math.random())];
+	                _this.letters[i] = { letter: _this.letterOptions[i][Math.round(Math.random())] };
 	            }
 	            _this.count++;
-	            $timeout(_this.update, 2000);
+	            $timeout(_this.update, 1000);
 	        }
 	    };
 	
@@ -33777,7 +33777,7 @@
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">MBTI Personality Test</h1>\n    <h2 class=\"subtitle\">Find yourself here.</h1>\n    <br>\n    <table class=\"trait-table\"> \n      <th>\n        <tb ng-repeat=\"letter in $ctrl.letters\"><div class=\"trait-table-letter\" ng-class=letter>{{letter}}</div></tb>\n        <!-- <tb><div class=\"trait-table-letter\">S</div></tb>\n        <tb><div class=\"trait-table-letter\">F</div></tb>\n        <tb><div class=\"trait-table-letter\">J</div></tb> -->\n      </th>\n      <!-- <th>\n        <tb><div class=\"trait-table-letter\">E</div></tb>\n        <tb><div class=\"trait-table-letter\">N</div></tb>\n        <tb><div class=\"trait-table-letter\">T</div></tb>\n        <tb><div class=\"trait-table-letter\">P</div></tb>\n      </th> -->\n    </table>\n    <br>\n    <br>\n    <button id=\"takeTestButton\" ui-sref=\"test\"><h1 id=\"testMessage\">Take the Test!</h1></button>\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017</span></p>\n    </footer>\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">MBTI Personality Test</h1>\n    <h2 class=\"subtitle\">Find yourself here.</h1>\n    <br>\n    <table class=\"trait-table\"> \n      <th>\n        <tb ng-repeat=\"letter in $ctrl.letters\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></tb>\n      </th>\n    </table>\n    <br>\n    <br>\n    <button id=\"takeTestButton\" ui-sref=\"test\"><h1 id=\"testMessage\">Take the Test!</h1></button>\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>\n";
 
 /***/ },
 /* 18 */
@@ -33811,7 +33811,10 @@
 	
 	    this.number = 1;
 	    this.type = [];
+	    this.typeOptions = [['Extroversion', 'Introversion'], ['Intuiting', 'Sensing'], ['Thinking', 'Feeling'], ['Judging', 'Perceiving']];
 	    this.showLetter = false;
+	    this.strengths = ['strong', 'moderate', 'weak'];
+	    this.typeDescriptions = [['recharge your energy by spending time with people.', 'recharge your energy by spending time alone.'], ['experience the world through concepts and abstractions.', 'experience the world directly with your senses.'], ['process information by thinking about it logically.', 'process information by determining how you feel about it emotionally.'], ['make descisions and move on.', 'delay making descisions and keep all of your options open.']];
 	
 	    this.questions = [{
 	        number: 1,
@@ -33853,7 +33856,7 @@
 	        number: 4,
 	        text: 'Which of these occupations would you prefer?',
 	        options: [{
-	            text: 'ER Nurse',
+	            text: 'Nurse',
 	            points: [0, -1, -2, 2]
 	        }, {
 	            text: 'computer programmer',
@@ -33885,7 +33888,7 @@
 	            text: 'lead and direct the group',
 	            points: [2, 0, 1, 2]
 	        }, {
-	            text: 'make sure all voices are head',
+	            text: 'make sure all voices are heard',
 	            points: [0, 0, 2, 1]
 	        }, {
 	            text: 'make sure the work gets done',
@@ -33893,7 +33896,7 @@
 	        }]
 	    }, {
 	        number: 7,
-	        text: 'What do  people dislike about you?',
+	        text: 'What might people dislike about you?',
 	        options: [{
 	            text: 'your thin skin',
 	            points: [0, 0, -2, 0]
@@ -33909,7 +33912,7 @@
 	        }]
 	    }, {
 	        number: 8,
-	        text: 'What do  people like about you?',
+	        text: 'What might people like about you?',
 	        options: [{
 	            text: 'your intellect',
 	            points: [0, 0, 2, 0]
@@ -33935,7 +33938,7 @@
 	        }]
 	    }, {
 	        number: 10,
-	        text: 'Which of these pasttimes would you most enjoy?',
+	        text: 'Which of these pastimes would you most enjoy?',
 	        options: [{
 	            text: 'first person shooter video games',
 	            points: [0, -2, 2, 1]
@@ -33971,40 +33974,73 @@
 	        }]
 	    }, {
 	        number: 13,
-	        text: 'Which of the following best describes your relationship to finishing a task?',
+	        text: 'What is the first thing you notice about a painting?',
 	        options: [{
-	            text: 'once I finish the task, I can relax and play',
-	            points: [0, 0, 0, 2]
+	            text: 'the details of the image',
+	            points: [0, -2, 0, 0]
 	        }, {
-	            text: 'I can play and work at the same time',
-	            points: [0, 0, 0, -2]
+	            text: 'the significance of the image',
+	            points: [0, 2, 0, 0]
+	        }, {
+	            text: 'uggg, art is so boring',
+	            points: [1, -1, 0, 0]
 	        }]
 	    }];
+	
+	    this.addStrength = function () {
+	        for (var i = 0; i < _this.result.length; i++) {
+	            if (_this.result[i] > 7 || _this.result[i] < -7) {
+	                _this.type[i].strength = 'strong';
+	            } else if (_this.result[i] > 2 || _this.result[i] < -2) {
+	                _this.type[i].strength = 'moderate';
+	            } else {
+	                _this.type[i].strength = 'weak';
+	            }
+	        }
+	        _this.addDescriptions();
+	    };
+	
+	    this.addDescriptions = function () {
+	        for (var i = 0; i < _this.type.length; i++) {
+	            // this.type[i].text = 'You have a ' + this.type[i].strength + ' preference for ';
+	            if (_this.result[i] > 0) {
+	                _this.type[i].myType = _this.typeOptions[i][0];
+	                _this.type[i].notType = _this.typeOptions[i][1];
+	                //this.type[i].text += this.typeOptions[i][0] + ' over ' + this.typeOptions[i][1] + '. You prefer to ' + this.typeDescriptions[i][0];
+	                _this.type[i].text = '. You prefer to ' + _this.typeDescriptions[i][0];
+	            } else {
+	                _this.type[i].myType = _this.typeOptions[i][1];
+	                _this.type[i].notType = _this.typeOptions[i][0];
+	                //this.type[i].text += this.typeOptions[i][1] + ' over ' + this.typeOptions[i][0] + '. You prefer to ' + this.typeDescriptions[i][1];
+	                _this.type[i].text = '. You prefer to ' + _this.typeDescriptions[i][1];
+	            }
+	        }
+	    };
 	
 	    this.finish = function () {
 	        console.log('finishing up, these are the points ', _this.result);
 	        _this.type = [];
 	        if (_this.result[0] > 0) {
-	            _this.type.push('E');
+	            _this.type.push({ letter: 'E' });
 	        } else {
-	            _this.type.push('I');
+	            _this.type.push({ letter: 'I' });
 	        }
 	        if (_this.result[1] > 0) {
-	            _this.type.push('N');
+	            _this.type.push({ letter: 'N' });
 	        } else {
-	            _this.type.push('S');
+	            _this.type.push({ letter: 'S' });
 	        }
 	        if (_this.result[2] > 0) {
-	            _this.type.push('T');
+	            _this.type.push({ letter: 'T' });
 	        } else {
-	            _this.type.push('F');
+	            _this.type.push({ letter: 'F' });
 	        }
 	        if (_this.result[3] > 0) {
-	            _this.type.push('J');
+	            _this.type.push({ letter: 'J' });
 	        } else {
-	            _this.type.push('P');
+	            _this.type.push({ letter: 'P' });
 	        }
-	        console.log(_this.type);
+	        _this.addStrength();
 	    };
 	
 	    this.answer = function (points) {
@@ -34023,10 +34059,44 @@
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n <section class =\"page\" id=\"test-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n        <h1 ng-if=\"$ctrl.type.length>0\">{{$ctrl.type}}</h1>\n        <h1 ng-if=\"$ctrl.type.length>0\">{{$ctrl.result}}</h1>\n        <table class=\"trait-table\"> \n            <th>\n                <tb ng-mouseover=\"$ctrl.showLetter=true\" ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter>{{letter}}</div></tb>\n                <!-- <tb><div class=\"trait-table-letter\">S</div></tb>\n                <tb><div class=\"trait-table-letter\">F</div></tb>\n                <tb><div class=\"trait-table-letter\">J</div></tb> -->\n            </th>\n        </table>\n    </div>\n\n</section>\n";
+	module.exports = "\n <section class =\"page\" id=\"test-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n    </div>\n    <div class=\"results-area\" ng-if=\"$ctrl.type.length>0\">\n        <table class=\"trait-table\"> \n            <tr>\n                <td ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></td>                \n            </tr>\n            <tr>\n                <td ng-repeat=\"type in $ctrl.type\"><div class=\"type-name\" ng-class=type.myType>{{type.myType}}</div></td>\n            </tr>\n            <tr>\n                <td ng-repeat=\"strength in $ctrl.type\"><div class=\"strength\" ng-class=strength.strength>{{strength.strength}}</div></td>\n            </tr>\n        </table>\n\n    <table class=results-descriptions>\n        <tr ng-repeat=\"type in $ctrl.type\">\n            <td ng-class=type.letter>\n                <h1 class='result-description'>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>\n            </td>\n        </tr>\n    </table>\n\n</section>\n";
 
 /***/ },
 /* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _typical = __webpack_require__(21);
+	
+	var _typical2 = _interopRequireDefault(_typical);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _typical2.default,
+	    controller: controller
+	};
+	
+	
+	controller.$inject = ['$timeout', '$rootScope'];
+	
+	function controller(timeout) {
+	    this.options = {};
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = "\n <section class =\"page\" id=\"typical-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n    </div>\n    <div class=\"results-area\" ng-if=\"$ctrl.type.length>0\">\n        <table class=\"trait-table\"> \n            <tr>\n                <td ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></td>                \n            </tr>\n            <tr>\n                <td ng-repeat=\"type in $ctrl.type\"><div class=\"type-name\" ng-class=type.myType>{{type.myType}}</div></td>\n            </tr>\n            <tr>\n                <td ng-repeat=\"strength in $ctrl.type\"><div class=\"strength\" ng-class=strength.strength>{{strength.strength}}</div></td>\n            </tr>\n        </table>\n\n    <table class=results-descriptions>\n        <tr ng-repeat=\"type in $ctrl.type\">\n            <td ng-class=type.letter>\n                <h1 class='result-description'>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>\n            </td>\n        </tr>\n    </table>\n\n</section>\n";
+
+/***/ },
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34050,7 +34120,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// .context is a method webpack adds to require 
-	var context = __webpack_require__(21);
+	var context = __webpack_require__(23);
 	
 	// create the module to put the resources in,
 	// in this case directives
@@ -34069,12 +34139,12 @@
 	exports.default = _module.name;
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./ai-service.js": 22,
-		"./shuffle-service.js": 23
+		"./ai-service.js": 24,
+		"./shuffle-service.js": 25
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -34087,11 +34157,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 21;
+	webpackContext.id = 23;
 
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34569,7 +34639,7 @@
 	};
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34591,7 +34661,7 @@
 	}
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -42940,7 +43010,7 @@
 	//# sourceMappingURL=angular-ui-router.js.map
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42968,6 +43038,13 @@
 	    });
 	
 	    $stateProvider.state({
+	        name: 'typical',
+	        url: '/typical',
+	        data: { public: true },
+	        component: 'typical'
+	    });
+	
+	    $stateProvider.state({
 	        name: 'about',
 	        url: '/about',
 	        data: { public: true },
@@ -42978,7 +43055,7 @@
 	}
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!

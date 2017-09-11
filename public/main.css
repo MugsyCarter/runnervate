@@ -27,10 +27,14 @@ a {
   a:hover {
     box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
+td, th {
+  padding: none;
+  margin: none; }
+
 .link {
   display: inline-block;
   color: #012a36;
-  padding: 0 10vw 0 10vw; }
+  padding: 0 5vw 0 5vw; }
 
 .active-link {
   color: #e6af2e; }
@@ -92,10 +96,39 @@ a {
 #answer-button {
   font-size: 4vh; }
 
+.strength {
+  color: #0a0908; }
+
+.strong {
+  color: #012a36;
+  font-size: 7vh; }
+
+.moderate {
+  color: #8aea92;
+  font-size: 5vh; }
+
+.weak {
+  color: pink;
+  font-size: 3vh; }
+
+.results-descriptions {
+  width: 90vw;
+  padding: 0 5vw; }
+
+.results-description-row {
+  text-align: left; }
+
+.result-description {
+  text-align: left;
+  margin-left: 5vw; }
+
+.about-title {
+  font-size: 10vh; }
+
 @media only screen and (min-width: 1600px) {
   /* Minor styling: larger image and fonts to match largest screen size */
   .link {
-    padding: 1% 8%; }
+    padding: 1% 1%; }
   .icon-menu {
     font-size: 3.6vh; } }
 

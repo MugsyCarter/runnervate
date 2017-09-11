@@ -17,6 +17,13 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
+        name: 'typical',
+        url: '/typical',
+        data: { public: true },
+        component: 'typical' 
+    });
+
+    $stateProvider.state({
         name: 'about',
         url: '/about',
         data: { public: true },

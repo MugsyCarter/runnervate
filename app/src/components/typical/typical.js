@@ -8,4 +8,7 @@ export default {
 controller.$inject = ['$timeout', '$rootScope'];
 
 function controller(timeout) {
+    this.options = {
+        
+    };
 }

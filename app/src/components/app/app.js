@@ -28,7 +28,7 @@ function controller() {
         home: true,
         test: false,
         about: false,
-
+        //typical: false
     };
 
     this.clicked = (page)=>{
@@ -38,6 +38,7 @@ function controller() {
                 home: false,
                 test: false,
                 about: false,
+                //typical: false
             };
             this.link[page] = true;
         }

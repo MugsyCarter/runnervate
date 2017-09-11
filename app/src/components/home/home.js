@@ -24,7 +24,7 @@ function controller($timeout) {
                 this.letters[i]= {letter: this.letterOptions[i][Math.round(Math.random())]};
             }
             this.count ++;
-            $timeout(this.update, 20000);
+            $timeout(this.update, 1000);
         }
     };
 

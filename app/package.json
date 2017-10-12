@@ -1,7 +1,7 @@
 {
   "name": "backpackingPNW",
   "version": "1.0.0",
-  "description": "The frontend of the backpackingPNW personality calculator.",
+  "description": "The frontend of the backpackingPNW site.",
   "main": "index.js",
   "scripts": {
     "test": "karma start",

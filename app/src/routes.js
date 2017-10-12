@@ -13,7 +13,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
         name: 'user',
         url: '/user',
         data: { public: true },
-        component: 'user' 
+        component: 'portfolio' 
     });
 
     $stateProvider.state({

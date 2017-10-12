@@ -33725,7 +33725,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = " <section>\n    <header>\n       \n        <nav class=\"main-nav\">\n            <image id=\"menuIcon\" src=\"./images/menu.png\">\n            <ul>\n                <li class=\"link\"><a ui-sref=\"home\" id=\"home-link\"  ng-class='{\"activeLink\":$ctrl.link[\"home\"]===true}' ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                <li class=\"link\"><a ui-sref=\"test\" id=\"test-link\" ng-class='{\"activeLink\":$ctrl.link[\"test\"]===true}' ng-click=\"$ctrl.clicked('test')\">Find My Type</a></li>\n                <!-- <li class=\"link\"><a ui-sref=\"typical\" id=\"typical-link\" ng-class='{\"activeLink\":$ctrl.link[\"typical\"]===true}' ng-click=\"$ctrl.clicked('typical')\">See How Typical I Am</a></li> -->\n                <li class=\"link\"><a ui-sref=\"about\" id=\"about-link\"  ng-class='{\"activeLink\":$ctrl.link[\"about\"]===true}' ng-click=\"$ctrl.clicked('about')\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n  \n    <div class=\"main-content\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
+	module.exports = " <section>     \n\n        <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" href=\"#\">BackpackingPNW</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\"  class=\"active\" ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                    <li><a ui-sref=\"trips\" ng-click=\"$ctrl.clicked('trips')\">Trips</a></li>\n                    <li><a ui-sref=\"about\" ng-click=\"$ctrl.clicked('about')\">About</a></li>\n                    <li><a ui-sref=\"Me\" ng-click=\"$ctrl.clicked('Me')\">My Page</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Trips\">\n                                <div class=\"input-group-btn\">\n                                    <button class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>         \n                  </ul>\n                  <ul class=\"nav navbar-nav navbar-right\">\n                        <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n                        <li><a href=\"#\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a></li>\n                      </ul>\n                </div>\n              </nav>\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
 
 /***/ },
 /* 16 */
@@ -33777,7 +33777,7 @@
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">Backpacking PNW</h1>\n    <h2 class=\"subtitle\">Adventures in the beautiful Pacific Northwewst</h1>\n    <br>\n  \n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n  <div class=\"jumbotron\">\n    <h1 class=\"title\">Backpacking PNW</h1>\n    <h2 class=\"subtitle\">Adventures in the beautiful Pacific Northwewst</h1>\n  </div>\n  \n    <div class=\"container-fluid\">\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </div>\n</section>\n";
 
 /***/ },
 /* 18 */
@@ -42536,6 +42536,13 @@
 	        url: '/trips',
 	        data: { public: true },
 	        component: 'trips'
+	    });
+	
+	    $stateProvider.state({
+	        name: 'trip',
+	        url: '/trip',
+	        data: { public: true },
+	        component: 'trip'
 	    });
 	
 	    $stateProvider.state({

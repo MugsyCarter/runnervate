@@ -24,6 +24,13 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
+        name: 'trip',
+        url: '/trip',
+        data: { public: true },
+        component: 'trip' 
+    });
+
+    $stateProvider.state({
         name: 'about',
         url: '/about',
         data: { public: true },

@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "The express server for level-up-chemistry",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MugsyCarter/Level-Up-Chemistry.git"
+  },
+  "author": "Mugsy Carter",
+  "license": "ISC",
+  "bugs": {
+   "url": "https://github.com/MugsyCarter/Level-Up-Chemistry/issues"
+  },
+  "homepage": "git+https://github.com/MugsyCarter/Level-Up-Chemistry#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
+    "mongoose": "^4.7.2",
+    "morgan": "^1.7.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.11.1",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}

@@ -10,10 +10,10 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'portfolio',
-        url: '/portfolio',
+        name: 'user',
+        url: '/user',
         data: { public: true },
-        component: 'portfolio' 
+        component: 'user' 
     });
 
     $stateProvider.state({

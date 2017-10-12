@@ -79,7 +79,7 @@ function controller(timeout) {
             text: 'Which of these occupations would you prefer?',
             options: [
                 {
-                    text: 'Nurse',
+                    text: 'nurse',
                     points: [0,-1,-2,2]
                 },
                 {
@@ -93,8 +93,11 @@ function controller(timeout) {
                 {
                     text: 'police office',
                     points: [0,-1,2,2]
+                },
+                {
+                    text: 'elementary school teacher',
+                    points: [0,0,-2,1]
                 }
-              
             ]
         },
         {

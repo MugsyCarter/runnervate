@@ -24,12 +24,9 @@ app.use((req, res, next) => {
 
 app.use(express.static('./public'));
 
-app.use('/api/questions', questions);
+app.use('/api/trips', trips);
 app.use('/api/auths', auths);
 app.use('/api/users', users);
-app.use('/api/courses', courses);
-app.use('/api/elements', elements);
-app.use('/api/lessons', lessons);
 
 app.use(errorHandler);
 

@@ -1,4 +1,4 @@
-import template from './typical.html';
+import template from './trip.html';
 
 export default {
     template,

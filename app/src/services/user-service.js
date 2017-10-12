@@ -1,7 +1,7 @@
 
 userService.$inject = ['$http', 'apiUrl'];
 
-export default function userFoodsService($http, apiUrl) {
+export default function userService($http, apiUrl) {
     return {
         get() {
             return $http.get(`${apiUrl}/users`)

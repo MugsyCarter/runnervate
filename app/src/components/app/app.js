@@ -6,7 +6,9 @@ export default {
 };
 
 
-function controller() {
+controller.$inject = ['$state', '$rootScope'];
+
+function controller($state, rootScope) {
     rootScope.$on('login', (event, user)=>{
         // console.log('after Logged in, useris ', user.user);
         console.log('user logged in as ', user);

@@ -1,0 +1,44 @@
+<section class="signup-box">
+   	<h2 id="signup-header">Sign up for a user account</h2>
+	<form name="auth" ng-submit="$ctrl.authenticate()">
+		<div>
+			<label id="username">
+				Username: <input required ng-model="$ctrl.credentials.username">
+			</label>
+		</div>
+
+		<div>
+			<label id="name">
+				Name<br>       
+				First: <input type="text" ng-model="$ctrl.first">
+				Last: <input type="text" ng-model="$ctrl.last">
+			</label>
+		</div>
+
+		<div>
+			<label id="password">
+				Password: <input required type="password" ng-model="$ctrl.credentials.password">
+			</label>
+		</div>
+
+		<div>
+			<label id="email">
+				Email: <input type="email" ng-model="$ctrl.credentials.email">
+			</label>
+		</div>
+
+        <div id="gender">
+            Gender:
+	        <input type="radio" name="gender" value="male" ng-model="$ctrl.credentials.gender"> Male
+            <input type="radio" name="gender" value="female" ng-model="$ctrl.credentials.gender"> Female
+            <input type="radio" name="gender" value="non-binary" ng-model="$ctrl.credentials.gender"> Non-binary
+		</div>
+
+          <div id="dob">
+			Date of Birth: <input type="date" ng-model="$ctrl.credentials.dob">
+		</div>
+
+		<button type="submit">Sign Up</button>
+	</form>
+	<div class="error" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>
+</section>

@@ -1,7 +1,7 @@
 {
-  "name": "mbti",
+  "name": "backpackingPNW",
   "version": "1.0.0",
-  "description": "A meyers-briggs personality test website.",
+  "description": "A backpacking trip planner.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/mbti.git"
+    "url": "git+https://github.com/MugsyCarter/backpackingPNW.git"
   },
     "devDependencies": {
     "angular-mocks": "^1.5.9",
@@ -63,7 +63,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MugsyCarter/mbti/issues"
+    "url": "https://github.com/MugsyCarter/backpackingPNW/issues"
   },
-  "homepage": "https://github.com/MugsyCarter/mbti#readme"
+  "homepage": "https://github.com/MugsyCarter/backpackingPNW#readme"
 }

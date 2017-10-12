@@ -1,16 +1,11 @@
- <section>
-    <header>
-       
-        <nav class="main-nav">
-            <image id="menuIcon" src="./images/menu.png">
-            <ul>
-                <li class="link"><a ui-sref="home" id="home-link"  ng-class='{"activeLink":$ctrl.link["home"]===true}' ng-click="$ctrl.clicked('home')">Home</a></li>
-                <li class="link"><a ui-sref="test" id="test-link" ng-class='{"activeLink":$ctrl.link["test"]===true}' ng-click="$ctrl.clicked('test')">Find My Type</a></li>
-                <!-- <li class="link"><a ui-sref="typical" id="typical-link" ng-class='{"activeLink":$ctrl.link["typical"]===true}' ng-click="$ctrl.clicked('typical')">See How Typical I Am</a></li> -->
-                <li class="link"><a ui-sref="about" id="about-link"  ng-class='{"activeLink":$ctrl.link["about"]===true}' ng-click="$ctrl.clicked('about')">About</a></li>
-            </ul>
-        </nav>
-    </header>
+ <section>     
+    <div class="navbar davbar-default navbar-fixed-top">
+        <ul>
+            <li><a ui-sref="home"  ng-click="$ctrl.clicked('home')">Home</a></li>
+            <li><a ui-sref="test" ng-click="$ctrl.clicked('test')">Find My Type</a></li>
+            <li><a ui-sref="about" ng-click="$ctrl.clicked('about')">About</a></li>
+        </ul>
+    </div>
   
     <div class="main-content">
         <ui-view></ui-view>

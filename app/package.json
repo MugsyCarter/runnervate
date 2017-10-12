@@ -1,7 +1,7 @@
 {
-  "name": "mbti",
+  "name": "backpackingPNW",
   "version": "1.0.0",
-  "description": "The frontend of the mbti personality calculator.",
+  "description": "The frontend of the backpackingPNW personality calculator.",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/mbti.git"
+    "url": "git+https://github.com/MugsyCarter/backpackingPNW.git"
   },
   "author": "Mugsy Carter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MugsyCarter/mbti/issues"
+    "url": "https://github.com/MugsyCarter/backpackingPNW/issues"
   },
-  "homepage": "https://github.com/MugsyCarter/mbti#readme",
+  "homepage": "https://github.com/MugsyCarter/backpackingPNW#readme",
   "devDependencies": {
     "angular-mocks": "^1.5.9",
     "babel-core": "^6.18.2",

@@ -33777,7 +33777,7 @@
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">MBTI Personality Test</h1>\n    <h2 class=\"subtitle\">Find yourself here.</h1>\n    <br>\n    <table class=\"trait-table\"> \n      <th>\n        <tb ng-repeat=\"letter in $ctrl.letters\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></tb>\n      </th>\n\n    \n    </table>\n    <br>\n    <br>\n    <button id=\"takeTestButton\" ui-sref=\"test\"><h1 id=\"testMessage\">Take the Test!</h1></button>\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n    <h1 class=\"title\">Backpacking PNW</h1>\n    <h2 class=\"subtitle\">Adventures in the beautiful Pacific Northwewst</h1>\n    <br>\n  \n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>\n";
 
 /***/ },
 /* 18 */
@@ -42525,17 +42525,17 @@
 	    });
 	
 	    $stateProvider.state({
-	        name: 'test',
-	        url: '/test',
+	        name: 'portfolio',
+	        url: '/portfolio',
 	        data: { public: true },
-	        component: 'test'
+	        component: 'portfolio'
 	    });
 	
 	    $stateProvider.state({
-	        name: 'typical',
-	        url: '/typical',
+	        name: 'trips',
+	        url: '/trips',
 	        data: { public: true },
-	        component: 'typical'
+	        component: 'trips'
 	    });
 	
 	    $stateProvider.state({

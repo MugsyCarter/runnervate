@@ -10,17 +10,17 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'test',
-        url: '/test',
+        name: 'portfolio',
+        url: '/portfolio',
         data: { public: true },
-        component: 'test' 
+        component: 'portfolio' 
     });
 
     $stateProvider.state({
-        name: 'typical',
-        url: '/typical',
+        name: 'trips',
+        url: '/trips',
         data: { public: true },
-        component: 'typical' 
+        component: 'trips' 
     });
 
     $stateProvider.state({

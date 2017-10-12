@@ -37,5 +37,27 @@ export default function routes($stateProvider, $urlRouterProvider) {
         component: 'about' 
     });
 
+    $stateProvider.state({
+        name: 'login',
+        url: '/login',
+        data: { public: true },
+        component: 'login' 
+    });
+
+    $stateProvider.state({
+        name: 'logout',
+        url: '/logout',
+        data: { public: true },
+        component: 'logout' 
+    });
+
+    $stateProvider.state({
+        name: 'signup',
+        url: '/signup',
+        data: { public: true },
+        component: 'signup' 
+    });
+
+
     $urlRouterProvider.otherwise('/');
 }

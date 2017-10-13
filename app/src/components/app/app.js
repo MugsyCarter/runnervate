@@ -11,6 +11,7 @@ controller.$inject = ['$state', '$rootScope'];
 function controller($state, rootScope) {
     rootScope.$on('login', (event, user)=>{
         // console.log('after Logged in, useris ', user.user);
+        rootScope.user = user.user;
         console.log('user logged in as ', user);
         $state.go('user');
     });

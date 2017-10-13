@@ -17,13 +17,10 @@ function controller(authSvc, $state, rootScope) {
         name: '',
         password: '',
         dob: '',
-        gender: '',
         email: '',
-        level: 0,
         role: 'user',
-        unknown: [],
-        learning: [],
-        solid: []
+        friends: [],
+        trips: []
     };
 
     this.authenticate = () => {
@@ -34,7 +31,7 @@ function controller(authSvc, $state, rootScope) {
                 console.log('user is ', user);
                 localStorage.setItem('user', JSON.stringify(user));
                 rootScope.$emit('signin', {user: user});
-                $state.go('courses');
+                $state.go('home');
             })
             .catch(error => {
                 this.error = error;

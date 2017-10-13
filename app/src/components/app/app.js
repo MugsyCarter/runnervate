@@ -12,7 +12,7 @@ function controller($state, rootScope) {
     rootScope.$on('login', (event, user)=>{
         // console.log('after Logged in, useris ', user.user);
         console.log('user logged in as ', user);
-        this.getUser(user);
+        $state.go('user');
     });
 
     rootScope.$on('logout', (event)=>{

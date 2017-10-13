@@ -12,8 +12,6 @@ const app = angular.module('myApp', [components, services, uiRouter]);
 
 app.value('apiUrl', 'http://localhost:3000/api');
 
-// const apiUrl = 'https://carter-magic.herokuapp.com/';
-
 app.config(routes);
 
 //route debugger

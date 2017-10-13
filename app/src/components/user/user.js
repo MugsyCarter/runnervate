@@ -5,15 +5,9 @@ export default {
     controller
 };
 
-controller.$inject = ['$timeout', '$rootScope'];
+controller.$inject = ['userService', '$timeout', '$rootScope'];
 
-function controller(timeout) {
-    
-    this.user = {
-        name: 'Mugsy Carter',
-        birthdate: '9/18/1982',
-        trips: [],
-        favorite: 'trip id here'    
-    };
+function controller(userSvc, timeout, rootScope) {
+
    
 };

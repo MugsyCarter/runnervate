@@ -5,10 +5,11 @@ export default {
     controller
 };
 
-controller.$inject = ['$timeout', '$rootScope'];
+controller.$inject = ['tripService', '$timeout', '$rootScope'];
 
-function controller(timeout) {
-    this.options = {
-        
-    };
+function controller(tripSvc, timeout, rootScope) {
+    return tripSvc.get()
+    .then((trip) => {
+        console.log('trip is ', trip);
+    });
 }

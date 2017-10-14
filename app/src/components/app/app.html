@@ -6,9 +6,10 @@
                     <a class="navbar-brand" ui-sref="home">BackpackingPNW</a>
                   </div>
                   <ul class="nav navbar-nav">
-                    <li><a ui-sref="home" class="active">Home</a></li>
-                    <li><a ui-sref="user">My Page</a></li>
-                    <li><a ui-sref="trips">Trips</a></li>
+                    <li><a ui-sref="home" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li><a ui-sref="user"><span class="glyphicon glyphicon-user"></span>My Page</a></li>
+                    <li><a ui-sref="trips"><span class="glyphicon glyphicon-globe"></span>Browse Trips</a></li>
+                    <li><a ui-sref="addTrip"><span class="glyphicon glyphicon-plus"></span>Add Trip</a></li>
                     <li><a ui-sref="about">About</a></li>
                     <form class="navbar-form navbar-left">
                         <div class="input-group">
@@ -22,8 +23,9 @@
                     </form>         
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                        <li><a ui-sref="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li ng-if='$ctrl.loggedIn===false'><a ui-sref="signup"><span class="glyphicon glyphicon-pencil"></span> Sign Up</a></li>
+                        <li ng-if='$ctrl.loggedIn===false'><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li ng-if='$ctrl.loggedIn===true'><a ui-sref="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                       </ul>
                 </div>
               </nav>

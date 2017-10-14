@@ -12,4 +12,6 @@ function controller(tripSvc, timeout, rootScope) {
     .then((trip) => {
         console.log('trip is ', trip);
     });
+
+    this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 }

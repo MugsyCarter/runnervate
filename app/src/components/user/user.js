@@ -16,6 +16,7 @@ function controller(userSvc, timeout, rootScope) {
         .then((user) => {
             console.log('user is ', user[0]);
             this.user = user[0];
+            console.log('user is ', this.user);
         });
 
 

@@ -15,7 +15,7 @@ function controller(rootScope, authSvc, $state) {
                 console.log('user is ', user);
                 localStorage.setItem('user', JSON.stringify(user));
                 rootScope.$emit('login', {user: user});
-                $state.go('courses');
+                $state.go('home');
             })
             .catch(error => {
                 this.error = error;

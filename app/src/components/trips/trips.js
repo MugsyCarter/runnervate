@@ -13,5 +13,17 @@ function controller(tripSvc, timeout, rootScope) {
         console.log('trip is ', trip);
     });
 
-    this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+    newFunction();
 }
+function newFunction() {
+    this.myMap =() => {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+            center: new google.maps.LatLng(51.5, -0.2),
+            zoom: 10
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        console.log('initializing this map', map);
+    };
+}
+

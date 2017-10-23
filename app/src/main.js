@@ -14,6 +14,14 @@ app.value('apiUrl', 'http://localhost:3000/api');
 
 app.config(routes);
 
+// app.config(routes, function(uiGmapGoogleMapApiProvider) {
+//     uiGmapGoogleMapApiProvider.configure({
+//         key: 'AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY',
+//         v: '3.20', //defaults to latest 3.X anyhow
+//         libraries: 'weather,geometry,visualization'
+//     });
+// });
+
 //route debugger
 app.run(function($rootScope) {
     $rootScope.$on('$stateChangeError', console.log.bind(console));

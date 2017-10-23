@@ -51,6 +51,8 @@
   },
   "dependencies": {
     "angular": "^1.5.9",
+    "angular-google-maps": "^2.4.1",
+    "angular-google-places-map": "^1.2.1",
     "angular-ui-router": "^1.0.0-beta.3",
     "camelcase": "^4.0.0"
   },

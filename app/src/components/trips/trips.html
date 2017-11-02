@@ -1,6 +1,17 @@
 
-<section ng-init="$ctrl.myMap();">
-
-<div id="map" style="width:400px;height:400px;">
-
+<section>
+        <h2>Browse Trips</h2>
+        <ul id="trip-list">
+                <li ng-repeat="trip in $ctrl.trips">
+                        <h1>{{trip.name}}</h1>
+                                <p>{{trip.name}}</p>
+                                <h2>Name is</h2>
+                </li>
+                <!-- <li>
+                        <div>
+                                <h2>Trip Name</h2>
+                                <h4>Trip Dates</h4>
+                        </div>
+                </li> -->
+        </ul>
 </section>

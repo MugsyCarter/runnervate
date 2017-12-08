@@ -1,7 +1,7 @@
 
-tripService.$inject = ['$http', 'apiUrl'];
+lynchService.$inject = ['$http', 'apiUrl'];
 
-export default function tripService($http, apiUrl) {
+export default function lynchService($http, apiUrl) {
     return {
         get() {
             return $http.get(`${apiUrl}/trips`)
@@ -18,9 +18,9 @@ export default function tripService($http, apiUrl) {
             .then(res => res.data);
         },
 
-        addTrip(trip){
-            console.log('In trip service, adding this trip ', trip);
-            return $http.post(`${apiUrl}/trips`, trip)
+        addIncident(incident){
+            console.log('In lynch service, adding this incident ', incident);
+            return $http.post(`${apiUrl}/incidents`, incident)
                 .then(res => res.data);
         },
 

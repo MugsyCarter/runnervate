@@ -17,24 +17,24 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'trips',
-        url: '/trips',
+        name: 'incidents',
+        url: '/incidents',
         data: { public: true },
-        component: 'trips' 
+        component: 'incidents' 
     });
 
     $stateProvider.state({
-        name: 'trip',
-        url: '/trip',
+        name: 'incident',
+        url: '/incident',
         data: { public: true },
-        component: 'trip' 
+        component: 'incident' 
     });
 
     $stateProvider.state({
-        name: 'addTrip',
-        url: '/addTrip',
+        name: 'addIncident',
+        url: '/addIncident',
         data: { public: true },
-        component: 'addTrip' 
+        component: 'addIncident' 
     });
 
     $stateProvider.state({

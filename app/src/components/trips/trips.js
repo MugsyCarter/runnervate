@@ -14,7 +14,6 @@ function controller(tripSvc, timeout, rootScope) {
         console.log('trip is ', trip);
         console.log(this.trips[0].name);
     });
-
 }
 
 

@@ -6,16 +6,21 @@ const requiredString = {type: String, required: true};
 //trip
 const tripSchema = new Schema({
     name: requiredString,
-    start: requiredString,
-    end: requiredString,
-    days: Number,
+    type: requiredString,
+    description: requiredString,
+    startDate: Date,
+    endDate: Date,
     mileage: Number,
+    startLocation:requiredString,
+    endLocation: String,
     people: [],
     fun: Number,
     scenery: Number,
     difficulty: Number,
-    overall: Number
-
+    overall: Number,
+    comments: [],
+    photos: [],
+    activities: []
 });
 
 

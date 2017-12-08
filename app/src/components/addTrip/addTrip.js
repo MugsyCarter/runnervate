@@ -29,10 +29,10 @@ function controller(rootScope, tripSvc, $state) {
   
     this.addThisTrip= ()=>{
         console.log('adding this trip ', this.trip);
-        // return tripSvc.addTrip(this.trip)
-        //     .then((trip)=>{
-        //         console.log('this trip was added to the DB ', trip);
-        //     });
+        tripSvc.addTrip(this.trip)
+            .then((trip)=>{
+                console.log('this trip was added to the DB ', trip);
+            });
     };
 
           

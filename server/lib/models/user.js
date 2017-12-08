@@ -13,13 +13,10 @@ const userSchema = new Schema({
     password: requiredString,
     name: requiredString,
     email: requiredString,
-    gender: String,
     dob: Date,
-    level: Number,
-    bio: [],
-    chem: [],
-    phys: [],
-    role: String
+    friends: [],
+    role: String,
+    trips: [],
 });
 
 //when user signs in - hash generated from password

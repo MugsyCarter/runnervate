@@ -52,23 +52,23 @@
 	
 	__webpack_require__(3);
 	
-	var _components = __webpack_require__(7);
+	var _components = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	var _services = __webpack_require__(22);
+	var _services = __webpack_require__(7);
 	
 	var _services2 = _interopRequireDefault(_services);
 	
-	var _angularUiRouter = __webpack_require__(24);
+	var _angularUiRouter = __webpack_require__(12);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _routes = __webpack_require__(25);
+	var _routes = __webpack_require__(13);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	__webpack_require__(26);
+	__webpack_require__(14);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -33115,18 +33115,19 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	// .context is a method webpack adds to require 
 	var context = __webpack_require__(11);
 	
 	// create the module to put the resources in,
 	// in this case directives
-	var _module = _angular2.default.module('components', []);
+	var _module = _angular2.default.module('services', []);
 	
 	// iterate each of the found required contexts (files)
 	context.keys().forEach(function (key) {
 	    // convert kabob to camel, eg list-item -> listItem
 	    var name = (0, _camelcase2.default)(_path2.default.basename(key, '.js'));
 	    // add the component to the components module
-	    _module.component(name, context(key).default);
+	    _module.factory(name, context(key).default);
 	});
 	
 	// export the name of the module for 
@@ -33607,542 +33608,6 @@
 
 /***/ },
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./about/about.js": 12,
-		"./app/app.js": 14,
-		"./home/home.js": 16,
-		"./test/test.js": 18,
-		"./typical/typical.js": 20
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 11;
-
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _about = __webpack_require__(13);
-	
-	var _about2 = _interopRequireDefault(_about);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _about2.default,
-	    controller: controller
-	};
-	
-	
-	function controller() {};
-
-/***/ },
-/* 13 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class =\"page\" id=\"about-page\">\n    <!-- <image id=aboutImage src=\"./images/olympicCoast.png\"> -->\n    <h2 id=\"about-title\">About The Meyers-Briggs Type Indicator</h2>\n \n     <p class=\"tab\">Meyers-Briggs Type Indicator, or MBTI for short, was developed by a mother/daugher team of psycologists in the 1940's, working off of Carl Jung's typological theory.  It consists of a binary system of 4 traits, that combine to make a total of 16 personality types. <p class=\"tab\"></p> \n \n    <p class=\"tab\"> In every society the proportions of each type in the general population are varied and some types appear to be quite common, and others very rare.</p>\n    <!--image here?  -->\n    <footer>\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2016 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </footer>\n</section>";
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _app = __webpack_require__(15);
-	
-	var _app2 = _interopRequireDefault(_app);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _app2.default,
-	    controller: controller
-	};
-	
-	
-	function controller() {
-	    var _this = this;
-	
-	    //this code prevents scrolldown on an iphone
-	    var xStart,
-	        yStart = 0;
-	
-	    document.addEventListener('touchstart', function (e) {
-	        xStart = e.touches[0].screenX;
-	        yStart = e.touches[0].screenY;
-	    });
-	
-	    document.addEventListener('touchmove', function (e) {
-	        var xMovement = Math.abs(e.touches[0].screenX - xStart);
-	        var yMovement = Math.abs(e.touches[0].screenY - yStart);
-	        if (yMovement * 3 > xMovement) {
-	            e.preventDefault();
-	        }
-	    });
-	
-	    this.link = {
-	        home: true,
-	        test: false,
-	        about: false
-	    };
-	
-	    this.clicked = function (page) {
-	        if (_this.link[page] === false) {
-	            console.log('updating link');
-	            _this.link = {
-	                home: false,
-	                test: false,
-	                about: false
-	            };
-	            _this.link[page] = true;
-	        }
-	    };
-	};
-
-/***/ },
-/* 15 */
-/***/ function(module, exports) {
-
-	module.exports = " <section>     \n\n        <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" href=\"#\">BackpackingPNW</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\"  class=\"active\" ng-click=\"$ctrl.clicked('home')\">Home</a></li>\n                    <li><a ui-sref=\"trips\" ng-click=\"$ctrl.clicked('trips')\">Trips</a></li>\n                    <li><a ui-sref=\"about\" ng-click=\"$ctrl.clicked('about')\">About</a></li>\n                    <li><a ui-sref=\"Me\" ng-click=\"$ctrl.clicked('Me')\">My Page</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Trips\">\n                                <div class=\"input-group-btn\">\n                                    <button class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>         \n                  </ul>\n                  <ul class=\"nav navbar-nav navbar-right\">\n                        <li><a href=\"#\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a></li>\n                        <li><a href=\"#\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a></li>\n                      </ul>\n                </div>\n              </nav>\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _home = __webpack_require__(17);
-	
-	var _home2 = _interopRequireDefault(_home);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _home2.default,
-	    controller: controller
-	};
-	
-	
-	controller.$inject = ['$timeout'];
-	
-	function controller($timeout) {
-	    var _this = this;
-	
-	    this.letters = [];
-	    this.letterOptions = [['I', 'E'], ['N', 'S'], ['T', 'F'], ['J', 'P']];
-	
-	    this.letters = [];
-	    this.count = 0;
-	
-	    this.update = function () {
-	        if (_this.count < 1000) {
-	            for (var i = 0; i < _this.letterOptions.length; i++) {
-	                _this.letters[i] = { letter: _this.letterOptions[i][Math.round(Math.random())] };
-	            }
-	            _this.count++;
-	            $timeout(_this.update, 1000);
-	        }
-	    };
-	
-	    this.update();
-	};
-
-/***/ },
-/* 17 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n  <div class=\"jumbotron\">\n    <h1 class=\"title\">Backpacking PNW</h1>\n    <h2 class=\"subtitle\">Adventures in the beautiful Pacific Northwewst</h1>\n  </div>\n  \n    <div class=\"container-fluid\">\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </div>\n</section>\n";
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _test = __webpack_require__(19);
-	
-	var _test2 = _interopRequireDefault(_test);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _test2.default,
-	    controller: controller
-	};
-	
-	
-	controller.$inject = ['$timeout', '$rootScope'];
-	
-	function controller(timeout) {
-	    var _this = this;
-	
-	    this.result = [0, 0, 0, 0];
-	    //this coresponds to the personality values 'ENTJ' in order
-	
-	    this.number = 1;
-	    this.type = [];
-	    this.typeOptions = [['Extroversion', 'Introversion'], ['Intuiting', 'Sensing'], ['Thinking', 'Feeling'], ['Judging', 'Perceiving']];
-	    this.showLetter = false;
-	    this.strengths = ['strong', 'moderate', 'weak'];
-	    this.typeDescriptions = [['recharge your energy by spending time with people.', 'recharge your energy by spending time alone.'], ['experience the world through concepts and abstractions.', 'experience the world directly with your senses.'], ['process information by thinking about it logically.', 'process information by determining how you feel about it emotionally.'], ['make descisions and move on.', 'delay making descisions and keep all of your options open.']];
-	
-	    this.questions = [{
-	        number: 1,
-	        text: 'Which fantasy author would you rather read?',
-	        options: [{
-	            text: 'JRR Tolkein',
-	            points: [0, 2, 1, 0]
-	        }, {
-	            text: 'JK Rowling',
-	            points: [0, 2, -1, 0]
-	        }, {
-	            text: 'neither, I don\'t like reading fantasy books',
-	            points: [0, -2, 0, 0]
-	        }]
-	    }, {
-	        number: 2,
-	        text: 'Where would you rather hang out?',
-	        options: [{
-	            text: 'at home',
-	            points: [-2, 0, 0, 0]
-	        }, {
-	            text: 'at a social gathering',
-	            points: [2, 0, 0, 0]
-	        }]
-	    }, {
-	        number: 3,
-	        text: 'What are your politics?',
-	        options: [{
-	            text: 'conservative',
-	            points: [0, 0, 1, 2]
-	        }, {
-	            text: 'libertarian',
-	            points: [0, 0, 2, -2]
-	        }, {
-	            text: 'progressive',
-	            points: [0, 0, -2, -1]
-	        }]
-	    }, {
-	        number: 4,
-	        text: 'Which of these occupations would you prefer?',
-	        options: [{
-	            text: 'nurse',
-	            points: [0, -1, -2, 2]
-	        }, {
-	            text: 'computer programmer',
-	            points: [-1, 1, 2, -1]
-	        }, {
-	            text: 'high school teacher',
-	            points: [1, 2, 0, 0]
-	        }, {
-	            text: 'police office',
-	            points: [0, -1, 2, 2]
-	        }, {
-	            text: 'elementary school teacher',
-	            points: [0, 0, -2, 1]
-	        }]
-	    }, {
-	        number: 5,
-	        text: 'When do you feel better?',
-	        options: [{
-	            text: 'when a descision has been made',
-	            points: [0, 0, 0, 2]
-	        }, {
-	            text: 'when your options are still open',
-	            points: [0, 0, 0, -2]
-	        }]
-	    }, {
-	        number: 6,
-	        text: 'Which of these best describes your typical contribution to group work?',
-	        options: [{
-	            text: 'generate ideas',
-	            points: [0, 1, 0, -1]
-	        }, {
-	            text: 'lead and direct the group',
-	            points: [2, 0, 1, 2]
-	        }, {
-	            text: 'make sure all voices are heard',
-	            points: [0, 0, 2, 1]
-	        }, {
-	            text: 'make sure the work gets done',
-	            points: [0, -2, 0, 2]
-	        }]
-	    }, {
-	        number: 7,
-	        text: 'What might people dislike about you?',
-	        options: [{
-	            text: 'your thin skin',
-	            points: [0, 0, -2, 0]
-	        }, {
-	            text: 'your shyness',
-	            points: [-2, 0, 0, 0]
-	        }, {
-	            text: 'your inability to make a descision',
-	            points: [0, 0, 0, 2]
-	        }, {
-	            text: 'your lack of empathy',
-	            points: [0, 0, 2, 0]
-	        }]
-	    }, {
-	        number: 8,
-	        text: 'What might people like about you?',
-	        options: [{
-	            text: 'your intellect',
-	            points: [0, 0, 2, 0]
-	        }, {
-	            text: 'your compassion',
-	            points: [0, 0, -2, 0]
-	        }, {
-	            text: 'your work ethic',
-	            points: [0, -2, 0, 2]
-	        }, {
-	            text: 'your open mind',
-	            points: [0, 2, 0, -2]
-	        }]
-	    }, {
-	        number: 9,
-	        text: 'Are you naturally skilled at sports or hands-on skills?',
-	        options: [{
-	            text: 'yes',
-	            points: [0, -2, 0, 0]
-	        }, {
-	            text: 'no',
-	            points: [0, 2, 0, 0]
-	        }]
-	    }, {
-	        number: 10,
-	        text: 'Which of these pastimes would you most enjoy?',
-	        options: [{
-	            text: 'first person shooter video games',
-	            points: [0, -2, 2, 1]
-	        }, {
-	            text: 'getting food or drinks with friends',
-	            points: [2, 0, -2, 0]
-	        }, {
-	            text: 'turn-based strategy computer games',
-	            points: [-1, 1, 2, -1]
-	        }, {
-	            text: 'watching tv',
-	            points: [-1, -1, 0, 0]
-	        }]
-	    }, {
-	        number: 11,
-	        text: 'What does fairness mean to you?',
-	        options: [{
-	            text: 'holding everyone to the same standard',
-	            points: [0, 0, 2, 0]
-	        }, {
-	            text: 'considering the needs and experiences of everyone invloved',
-	            points: [0, 0, -2, 0]
-	        }]
-	    }, {
-	        number: 12,
-	        text: 'Which of the following best describes your relationship to finishing a task?',
-	        options: [{
-	            text: 'once I finish the task, I can relax and play',
-	            points: [0, 0, 0, 2]
-	        }, {
-	            text: 'I can play and work at the same time',
-	            points: [0, 0, 0, -2]
-	        }]
-	    }, {
-	        number: 13,
-	        text: 'What is the first thing you notice about a painting?',
-	        options: [{
-	            text: 'the details of the image',
-	            points: [0, -2, 0, 0]
-	        }, {
-	            text: 'the significance of the image',
-	            points: [0, 2, 0, 0]
-	        }, {
-	            text: 'uggg, art is so boring',
-	            points: [1, -1, 0, 0]
-	        }]
-	    }];
-	
-	    this.addStrength = function () {
-	        for (var i = 0; i < _this.result.length; i++) {
-	            if (_this.result[i] > 7 || _this.result[i] < -7) {
-	                _this.type[i].strength = 'strong';
-	            } else if (_this.result[i] > 2 || _this.result[i] < -2) {
-	                _this.type[i].strength = 'moderate';
-	            } else {
-	                _this.type[i].strength = 'weak';
-	            }
-	        }
-	        _this.addDescriptions();
-	    };
-	
-	    this.addDescriptions = function () {
-	        for (var i = 0; i < _this.type.length; i++) {
-	            // this.type[i].text = 'You have a ' + this.type[i].strength + ' preference for ';
-	            if (_this.result[i] > 0) {
-	                _this.type[i].myType = _this.typeOptions[i][0];
-	                _this.type[i].notType = _this.typeOptions[i][1];
-	                //this.type[i].text += this.typeOptions[i][0] + ' over ' + this.typeOptions[i][1] + '. You prefer to ' + this.typeDescriptions[i][0];
-	                _this.type[i].text = '. You prefer to ' + _this.typeDescriptions[i][0];
-	            } else {
-	                _this.type[i].myType = _this.typeOptions[i][1];
-	                _this.type[i].notType = _this.typeOptions[i][0];
-	                //this.type[i].text += this.typeOptions[i][1] + ' over ' + this.typeOptions[i][0] + '. You prefer to ' + this.typeDescriptions[i][1];
-	                _this.type[i].text = '. You prefer to ' + _this.typeDescriptions[i][1];
-	            }
-	        }
-	    };
-	
-	    this.finish = function () {
-	        console.log('finishing up, these are the points ', _this.result);
-	        _this.type = [];
-	        if (_this.result[0] > 0) {
-	            _this.type.push({ letter: 'E' });
-	        } else {
-	            _this.type.push({ letter: 'I' });
-	        }
-	        if (_this.result[1] > 0) {
-	            _this.type.push({ letter: 'N' });
-	        } else {
-	            _this.type.push({ letter: 'S' });
-	        }
-	        if (_this.result[2] > 0) {
-	            _this.type.push({ letter: 'T' });
-	        } else {
-	            _this.type.push({ letter: 'F' });
-	        }
-	        if (_this.result[3] > 0) {
-	            _this.type.push({ letter: 'J' });
-	        } else {
-	            _this.type.push({ letter: 'P' });
-	        }
-	        _this.addStrength();
-	    };
-	
-	    this.answer = function (points) {
-	        console.log(points);
-	        for (var i = 0; i < points.length; i++) {
-	            _this.result[i] += points[i];
-	        }
-	        _this.number++;
-	        if (_this.number > _this.questions.length) {
-	            _this.finish();
-	        }
-	    };
-	};
-
-/***/ },
-/* 19 */
-/***/ function(module, exports) {
-
-	module.exports = "\n <section class =\"page\" id=\"test-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n    </div>\n    <div class=\"results-area\" ng-if=\"$ctrl.type.length>0\">\n        <table class=\"trait-table\"> \n            <tr>\n                <td ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></td>                \n            </tr>\n            <tr>\n                <td ng-repeat=\"type in $ctrl.type\"><div class=\"type-name\" ng-class=type.myType>{{type.myType}}</div></td>\n            </tr>\n            <tr>\n                <td ng-repeat=\"strength in $ctrl.type\"><div class=\"strength\" ng-class=strength.strength>{{strength.strength}}</div></td>\n            </tr>\n        </table>\n\n    <table class=results-descriptions>\n        <tr ng-repeat=\"type in $ctrl.type\">\n            <td ng-class=type.letter>\n                <h1 class='result-description'>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>\n            </td>\n        </tr>\n    </table>\n\n</section>\n";
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _typical = __webpack_require__(21);
-	
-	var _typical2 = _interopRequireDefault(_typical);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _typical2.default,
-	    controller: controller
-	};
-	
-	
-	controller.$inject = ['$timeout', '$rootScope'];
-	
-	function controller(timeout) {
-	    this.options = {};
-	}
-
-/***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = "\n <section class =\"page\" id=\"typical-page\">\n    <div>\n        <h1 ng-if=\"$ctrl.type.length<1\" >Question {{$ctrl.number}}</h1>\n        <h2 class=\"question-text\">{{$ctrl.questions[$ctrl.number -1].text}}</h2>\n        <button id=\"answer-button\" ng-repeat=\"option in $ctrl.questions[$ctrl.number -1].options\" \n        ng-click=\"$ctrl.answer(option.points)\">{{option.text}}</button>\n    </div>\n    <div class=\"results-area\" ng-if=\"$ctrl.type.length>0\">\n        <table class=\"trait-table\"> \n            <tr>\n                <td ng-repeat=\"letter in $ctrl.type\"><div class=\"trait-table-letter\" ng-class=letter.letter>{{letter.letter}}</div></td>                \n            </tr>\n            <tr>\n                <td ng-repeat=\"type in $ctrl.type\"><div class=\"type-name\" ng-class=type.myType>{{type.myType}}</div></td>\n            </tr>\n            <tr>\n                <td ng-repeat=\"strength in $ctrl.type\"><div class=\"strength\" ng-class=strength.strength>{{strength.strength}}</div></td>\n            </tr>\n        </table>\n\n    <table class=results-descriptions>\n        <tr ng-repeat=\"type in $ctrl.type\">\n            <td ng-class=type.letter>\n                <h1 class='result-description'>You have a <em>{{type.strength}}</em> preference for <em>{{type.myType}}</em> over <em>{{type.notType}}</em>{{type.text}}<h1>\n            </td>\n        </tr>\n    </table>\n\n</section>\n";
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _angular = __webpack_require__(1);
-	
-	var _angular2 = _interopRequireDefault(_angular);
-	
-	var _camelcase = __webpack_require__(8);
-	
-	var _camelcase2 = _interopRequireDefault(_camelcase);
-	
-	var _path = __webpack_require__(9);
-	
-	var _path2 = _interopRequireDefault(_path);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	// .context is a method webpack adds to require 
-	var context = __webpack_require__(23);
-	
-	// create the module to put the resources in,
-	// in this case directives
-	var _module = _angular2.default.module('services', []);
-	
-	// iterate each of the found required contexts (files)
-	context.keys().forEach(function (key) {
-	    // convert kabob to camel, eg list-item -> listItem
-	    var name = (0, _camelcase2.default)(_path2.default.basename(key, '.js'));
-	    // add the component to the components module
-	    _module.factory(name, context(key).default);
-	});
-	
-	// export the name of the module for 
-	// adding as a dependecy at the app level
-	exports.default = _module.name;
-
-/***/ },
-/* 23 */
 /***/ function(module, exports) {
 
 	function webpackContext(req) {
@@ -34151,11 +33616,11 @@
 	webpackContext.keys = function() { return []; };
 	webpackContext.resolve = webpackContext;
 	module.exports = webpackContext;
-	webpackContext.id = 23;
+	webpackContext.id = 11;
 
 
 /***/ },
-/* 24 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -42504,7 +41969,7 @@
 	//# sourceMappingURL=angular-ui-router.js.map
 
 /***/ },
-/* 25 */
+/* 13 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42525,8 +41990,8 @@
 	    });
 	
 	    $stateProvider.state({
-	        name: 'portfolio',
-	        url: '/portfolio',
+	        name: 'user',
+	        url: '/user',
 	        data: { public: true },
 	        component: 'portfolio'
 	    });
@@ -42556,7 +42021,7 @@
 	}
 
 /***/ },
-/* 26 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!

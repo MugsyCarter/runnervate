@@ -4,12 +4,9 @@ const app = express();
 const morgan = require('morgan');
 const errorHandler = require('./error-handler');
 
-const courses = require('./routes/courses');
 const auths = require('./routes/auths');
 const users = require('./routes/users');
-const elements = require('./routes/elements');
-const questions = require('./routes/questions');
-const lessons= require('./routes/lessons');
+const trips = require('./routes/trips');
 
 app.use(morgan('dev'));
 

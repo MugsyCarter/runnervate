@@ -1,4 +1,4 @@
-import template from './trip.html';
+import template from './incident.html';
 
 export default {
     template,

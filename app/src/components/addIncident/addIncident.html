@@ -1,63 +1,114 @@
 <section>
-    <h1>Add Trip</h1>
+    <h1>Add Incident</h1>
     <form class="form-horizontal">
             <fieldset>
-              <legend>Enter Trip Details</legend>
+              <legend>Enter Lynching Incident Details</legend>
               
               <div class="form-group">
-                <label for="inputName" class="col-lg-2 control-label">Trip Name</label>
+                <label for="inputName" class="col-lg-2 control-label">Incident Name</label>
                 <div class="col-lg-10">
-                  <input ng-model="$ctrl.trip.name" type="text" class="form-control" id="inputName" placeholder="Trip Name">
+                  <input ng-model="$ctrl.incident.name" type="text" class="form-control" id="inputName" placeholder="Incident Name">
                 </div>
               </div>
 
               <div class="form-group">
-                    <label for="inputType" class="col-lg-2 control-label">Trip Type</label>
+                    <label for="inputType" class="col-lg-2 control-label">Incident Type</label>
                     <div class="col-lg-10">
-                      <input ng-model="$ctrl.trip.type" type="text" class="form-control" id="inputType" placeholder="Trip Type">
+                      <input ng-model="$ctrl.incident.type" type="text" class="form-control" id="inputType" placeholder="Incident Type">
                     </div>
                   </div>
 
-              <div class="form-group">
-                    <label for="inputStartDate" class="col-lg-2 control-label">Start Date</label>
-                    <div class="col-lg-10">
-                      <input ng-model="$ctrl.trip.startDate" type="date" class="form-control" id="inputDate" placeholder="Start Date">
-                    </div>
-                </div>
-
+              <div class ="form-section">
+                <h2> Location </h2>
                 <div class="form-group">
-                        <label for="inputEndDate" class="col-lg-2 control-label">End Date</label>
+                    <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                    <div class="col-lg-10">
+                      <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                    </div>
+                  </div>
+    
+                <div class="form-group">
+                        <label for="inputEndLocation" class="col-lg-2 control-label">Ending Location</label>
                         <div class="col-lg-10">
-                          <input ng-model="$ctrl.trip.endDate" type="date" class="form-control" id="inputDate" placeholder="End Date">
+                          <input ng-model="$ctrl.incident.endLocation" type="text" class="form-control" id="inputName" placeholder="End">
                         </div>
                 </div>
-
-            <div class="form-group">
-                <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
-                <div class="col-lg-10">
-                  <input ng-model="$ctrl.trip.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
-                </div>
               </div>
 
-            <div class="form-group">
-                    <label for="inputEndLocation" class="col-lg-2 control-label">Ending Location</label>
-                    <div class="col-lg-10">
-                      <input ng-model="$ctrl.trip.endLocation" type="text" class="form-control" id="inputName" placeholder="End">
+              <div class ="form-section">
+                <h2> Date </h2>
+                <div class="form-group">
+                      <label for="inputStartDate" class="col-lg-2 control-label">Start Date</label>
+                      <div class="col-lg-10">
+                        <input ng-model="$ctrl.incident.startDate" type="date" class="form-control" id="inputDate" placeholder="Start Date">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                          <label for="inputEndDate" class="col-lg-2 control-label">End Date</label>
+                          <div class="col-lg-10">
+                            <input ng-model="$ctrl.incident.endDate" type="date" class="form-control" id="inputDate" placeholder="End Date">
+                          </div>
+                  </div>
+              </div>
+
+            
+              <div class ="form-section">
+                  <h2> Lynching </h2>
+                  <div class="form-group">
+                      <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                      <div class="col-lg-10">
+                        <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                      </div>
                     </div>
-            </div>
-
-              <div class="form-group">
-                <label for="textArea" class="col-lg-2 control-label">Description</label>
-                <div class="col-lg-10">
-                  <textarea ng-model="$ctrl.trip.description" class="form-control" rows="3" id="textArea"></textarea>
-                  <span class="help-block">Write a brief description of the trip here.</span>
                 </div>
-              </div>
+
+                <div class ="form-section">
+                    <h2> Suspects </h2>
+                    <div class="form-group">
+                        <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                        <div class="col-lg-10">
+                          <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class ="form-section">
+                      <h2> Victims </h2>
+                      <div class="form-group">
+                          <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                          <div class="col-lg-10">
+                            <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class ="form-section">
+                        <h2> Soures and Notes </h2>
+                        <div class="form-group">
+                            <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                            <div class="col-lg-10">
+                              <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="textArea" class="col-lg-2 control-label">Description</label>
+                              <div class="col-lg-10">
+                                <textarea ng-model="$ctrl.incident.description" class="form-control" rows="3" id="textArea"></textarea>
+                                <span class="help-block">Write a brief description of the Incident here.</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+
+             
 
               <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                   <button type="reset" class="btn btn-default">Cancel</button>
-                  <button ng-click="$ctrl.addThisTrip()" type="submit" class="btn btn-primary">Submit</button>
+                  <button ng-click="$ctrl.addThisIncident()" type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </fieldset>

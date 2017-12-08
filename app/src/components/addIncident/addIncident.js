@@ -1,14 +1,14 @@
-import template from './addTrip.html';
+import template from './addIncident.html';
 
 export default {
     template,
     controller
 };
 
-controller.$inject = [ '$rootScope', 'tripService', '$state'];
+controller.$inject = [ '$rootScope', 'lynchService', '$state'];
 
-function controller(rootScope, tripSvc, $state) {
-    this.trip = {
+function controller(rootScope, lynchSvc, $state) {
+    this.incident = {
         name: null,
         type: null,
         startDate: null,
@@ -27,11 +27,11 @@ function controller(rootScope, tripSvc, $state) {
         activities: []
     };
   
-    this.addThisTrip= ()=>{
-        console.log('adding this trip ', this.trip);
-        tripSvc.addTrip(this.trip)
-            .then((trip)=>{
-                console.log('this trip was added to the DB ', trip);
+    this.addThisIncident= ()=>{
+        console.log('adding this incident ', this.incident);
+        lynchSvc.addIncident(this.incident)
+            .then((incident)=>{
+                console.log('this incident was added to the DB ', incident);
             });
     };
 

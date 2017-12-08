@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "The express server for level-up-chemistry",
+  "description": "The express server for California-Lynching-Database",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/Level-Up-Chemistry.git"
+    "url": "git+https://github.com/MugsyCarter/California-Lynching-Database.git"
   },
   "author": "Mugsy Carter",
   "license": "ISC",
   "bugs": {
-   "url": "https://github.com/MugsyCarter/Level-Up-Chemistry/issues"
+   "url": "https://github.com/MugsyCarter/California-Lynching-Database/issues"
   },
-  "homepage": "git+https://github.com/MugsyCarter/Level-Up-Chemistry#readme",
+  "homepage": "git+https://github.com/MugsyCarter/California-Lynching-Database#readme",
   "dependencies": {
     "bcryptjs": "^2.4.0",
     "body-parser": "^1.15.2",

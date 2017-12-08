@@ -1,3 +1,3 @@
-# backpackingPNW
-A web app to create and share backpacking trip itineraries.
+# California-Lynching-Database
+A Web portal for entering data to a project studying Lynchings in California.
 

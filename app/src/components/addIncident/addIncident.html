@@ -66,11 +66,26 @@
                 <div class ="form-section">
                     <h2> Suspects </h2>
                     <div class="form-group">
-                        <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
-                        <div class="col-lg-10">
-                          <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+
+                        <label for="inputSuspectNumber" class="col-lg-2 control-label">Number of Suspects</label>
+                        <div class="col-lg-2">
+                            <input type="number" name="quantity" min="1"> 
+                        </div>
+
+                        <label for="inputSuspectGender" class="col-lg-2 control-label">Suspect Gender(s)</label>
+                        <div class="col-lg-2">
+                            <input type="radio" name="gender" value="male" checked> Male<br>
+                            <input type="radio" name="gender" value="female"> Female<br>
+                            <input type="radio" name="gender" value="both"> both
                         </div>
                       </div>
+
+                      <label for="inputSuspectRaces" class="col-lg-2 control-label">Suspect Race(s)</label>
+                      <div class="col-lg-2" ng-repeat="race in $ctrl.races" >
+                          <input type="checkbox" name="{{race}}" value="{race}"> {{race}}<br>
+                      </div>
+                      <br>
+
                   </div>
 
                   <div class ="form-section">

@@ -69,6 +69,7 @@ function controller(rootScope, lynchSvc, $state) {
 
     this.races = ['white', 'asian', 'indian', 'black', 'latino'];
 
+    this.months= ['January', 'February', 'March'];
 
     this.addThisIncident= ()=>{
         console.log('adding this incident ', this.incident);

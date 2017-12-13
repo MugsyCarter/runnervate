@@ -61,14 +61,60 @@
                   </div>
               </div>
 
+
+           
+              lethalityFormula: null,
+              lethality: null,
+              otherNamesMentioned: null
+
             
               <div class ="form-section">
                   <h2> Lynching </h2>
                   <div class="form-group">
-                      <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
-                      <div class="col-lg-10">
-                        <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                      <label for="inputCrowdType" class="col-lg-2 control-label">Crowd Type</label>
+                      <div class="col-lg-2">
+                        <input ng-model="$ctrl.incident.crowdType" type="text" class="form-control" id="inputCrowdType" placeholder="Crowd Type">
                       </div>
+
+                      <div class="form-group">
+                          <label for="inputCrowdSize" class="col-lg-2 control-label">Crowd Size</label>
+                          <div class="col-lg-2">
+                            <input ng-model="$ctrl.incident.crowdSize" type="text" class="form-control" id="inputCrowdSize" placeholder="Crowd Size">
+                          </div>
+
+                        <label for="inputOpen" class="col-lg-2 control-label">Open or Closed</label>
+                        <div class="col-lg-1">
+                            <input ng-model="$ctrl.open" type="radio" name="open" value="open" checked> Open<br>
+                            <input ng-model="$ctrl.open" type="radio" name="closed" value="closed"> Closed<br>
+                            <input ng-model="$ctrl.open" type="radio" name="unknown" value="unknown"> Unknown
+                        </div>
+
+                        <label for="inputAuthorities" class="col-lg-2 control-label">Authorities</label>
+                        <div class="col-lg-2">
+                          <input ng-model="$ctrl.incident.authorities" type="text" class="form-control" id="inputAuthorities" placeholder="Authorities">
+                        </div>
+
+                        <label for="inputCrime" class="col-lg-2 control-label">Crime</label>
+                        <div class="col-lg-2">
+                          <input ng-model="$ctrl.incident.crime" type="text" class="form-control" id="inputCrime" placeholder="Crime">
+                        </div>
+
+                        <label for="inputPunishment" class="col-lg-2 control-label">Punishment</label>
+                        <div class="col-lg-2">
+                          <input ng-model="$ctrl.incident.punishment" type="text" class="form-control" id="inputPunishment" placeholder="Punishment">
+                        </div>
+
+                        <label for="inputOpen" class="col-lg-2 control-label">Lethality</label>
+                        <div class="col-lg-1">
+                            <input ng-model="$ctrl.lethality" type="radio" name="lethal" value="lethal" checked> Lethal<br>
+                            <input ng-model="$ctrl.lethality" type="radio" name="non-lethal" value="non-lethal"> Non-Lethal<br>
+                            <input ng-model="$ctrl.lethality" type="radio" name="unknown" value="unknown"> Unknown
+                        </div>
+            
+                        <label for="inputOtherNamesMentioned" class="col-lg-2 control-label">Other Names Mentioned</label>
+                        <div class="col-lg-2">
+                          <input ng-model="$ctrl.incident.otherNamesMentioned" type="text" class="form-control" id="inputOtherNamesMentioned" placeholder="Other Names Mentioned">
+                        </div>
                     </div>
                 </div>
 

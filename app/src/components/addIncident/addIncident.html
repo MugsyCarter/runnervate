@@ -4,6 +4,30 @@
             <fieldset>
               <legend>Enter Lynching Incident Details</legend>
               
+              <div class ="form-section">
+                  <h2> Indices </h2>
+
+                  <div class="form-group">
+                      <label for="inputCwIndex" class="col-lg-2 control-label">C-W Index
+                      </label>
+                      <div class="col-lg-10">
+                        <input ng-model="$ctrl.incident.cwIndex" type="text" class="form-control" id="inputCwIndex" placeholder="C-W Index">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputGdIndex" class="col-lg-2 control-label">G-D Index
+                        </label>
+                        <div class="col-lg-10">
+                          <input ng-model="$ctrl.incident.gdIndex" type="text" class="form-control" id="inputCwIndex" placeholder="C-W Index">
+                        </div>
+                      </div>
+
+                  </div>
+
+
+
+
               <div class="form-group">
                 <label for="inputName" class="col-lg-2 control-label">Incident Name</label>
                 <div class="col-lg-10">
@@ -68,33 +92,58 @@
                     <div class="form-group">
 
                         <label for="inputSuspectNumber" class="col-lg-2 control-label">Number of Suspects</label>
-                        <div class="col-lg-2">
+                        <div class="col-lg-1">
                             <input type="number" name="quantity" min="1"> 
                         </div>
 
                         <label for="inputSuspectGender" class="col-lg-2 control-label">Suspect Gender(s)</label>
-                        <div class="col-lg-2">
+                        <div class="col-lg-1">
                             <input type="radio" name="gender" value="male" checked> Male<br>
                             <input type="radio" name="gender" value="female"> Female<br>
                             <input type="radio" name="gender" value="both"> both
                         </div>
+                        <label for="inputSuspectRaces" class="col-lg-2 control-label">Suspect Race(s)</label>
+                        <div class="col-lg-1" ng-repeat="race in $ctrl.races" >
+                            <input type="checkbox" name="{{race}}" value="{race}"> {{race}}<br>
+                        </div>
+                        <br>
                       </div>
 
-                      <label for="inputSuspectRaces" class="col-lg-2 control-label">Suspect Race(s)</label>
-                      <div class="col-lg-2" ng-repeat="race in $ctrl.races" >
-                          <input type="checkbox" name="{{race}}" value="{race}"> {{race}}<br>
+                    
+                      <label for="textArea" class="col-lg-2 control-label">Suspect Notes</label>
+                      <div class="col-lg-10">
+                        <textarea ng-model="$ctrl.incident.suspectNotes" class="form-control" rows="3" id="textArea"></textarea>
+                        <span class="help-block">Write notes concerning the suspect here.</span>
                       </div>
-                      <br>
-
                   </div>
 
                   <div class ="form-section">
-                      <h2> Victims </h2>
-                      <div class="form-group">
-                          <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
-                          <div class="col-lg-10">
-                            <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
-                          </div>
+                      <div class ="form-section">
+                          <h2> Victims </h2>
+                          <div class="form-group">
+      
+                              <label for="inputSuspectNumber" class="col-lg-2 control-label">Number of Victims</label>
+                              <div class="col-lg-1">
+                                  <input type="number" name="quantity" min="1"> 
+                              </div>
+      
+                              <label for="inputVictimGender" class="col-lg-2 control-label">Victim Gender(s)</label>
+                              <div class="col-lg-1">
+                                  <input type="radio" name="gender" value="male" checked> Male<br>
+                                  <input type="radio" name="gender" value="female"> Female<br>
+                                  <input type="radio" name="gender" value="both"> both
+                              </div>
+      
+                            <label for="inputVictimRaces" class="col-lg-2 control-label">Victim Race(s)</label>
+                            <div class="col-lg-1" ng-repeat="race in $ctrl.races" >
+                                <input type="checkbox" name="{{race}}" value="{race}"> {{race}}<br>
+                            </div>
+                            <br>
+                        </div>
+                        <label for="textArea" class="col-lg-2 control-label">Victim Notes</label>
+                        <div class="col-lg-10">
+                          <textarea ng-model="$ctrl.incident.victimNotes" class="form-control" rows="3" id="textArea"></textarea>
+                          <span class="help-block">Write notes concerning the victim here.</span>
                         </div>
                     </div>
 
@@ -107,13 +156,11 @@
                             </div>
                           </div>
 
-                          <div class="form-group">
-                              <label for="textArea" class="col-lg-2 control-label">Description</label>
+                       <label for="textArea" class="col-lg-2 control-label">Description</label>
                               <div class="col-lg-10">
                                 <textarea ng-model="$ctrl.incident.description" class="form-control" rows="3" id="textArea"></textarea>
                                 <span class="help-block">Write a brief description of the Incident here.</span>
                               </div>
-                            </div>
 
                       </div>
 

@@ -25,14 +25,19 @@
               <div class ="form-section">
                 <h2> Location </h2>
                 <div class="form-group">
-                    <label for="inputStartLocation" class="col-lg-2 control-label">Place</label>
+                    <label for="inputCounty" class="col-lg-2 control-label">State</label>
                     <div class="col-lg-2">
-                      <input ng-model="$ctrl.incident.place" type="text" class="form-control" id="inputPlace" placeholder="Place">
-                    </div>
-                        <label for="inputCounty" class="col-lg-2 control-label">County</label>
+                      <select ng-model="$ctrl.incident.state" ng-options="state for state in $ctrl.states">
+                      </select>
+                      </div>
+                        <label for="inputCounty" class="col-lg-1 control-label">County</label>
                         <div class="col-lg-2">
                           <select ng-model="$ctrl.incident.county" ng-options="county for county in $ctrl.counties">
                           </select>
+                        </div>
+                        <label for="inputStartLocation" class="col-lg-1 control-label">Place</label>
+                        <div class="col-lg-2">
+                          <input ng-model="$ctrl.incident.place" type="text" class="form-control" id="inputPlace" placeholder="Place">
                         </div>
 
                         </div>
@@ -48,13 +53,13 @@
                 <div class="form-group">
                       <label for="inputYear" class="col-lg-2 control-label">Year</label>
                       <div class="col-lg-2">
-                        <input ng-model="$ctrl.incident.year" type="number" min="1500" max="2090" class="form-control" id="inputYear">
+                        <input ng-model="$ctrl.incident.year" type="number" min="1500" max="2100" class="form-control" id="inputYear">
                       </div>
-                          <label for="inputMonth" class="col-lg-2 control-label">Month</label>
+                          <label for="inputMonth" class="col-lg-1 control-label">Month</label>
                           <div class="col-lg-2">
                               <input ng-model="$ctrl.incident.month" type="number" min="1" max="12" class="form-control" id="inputMonth">
                             </div>
-                          <label for="inputDay" class="col-lg-2 control-label">Day</label>
+                          <label for="inputDay" class="col-lg-1 control-label">Day</label>
                           <div class="col-lg-2">
                             <input ng-model="$ctrl.incident.day" type="number" min="1" max="31" class="form-control" id="inputMonth">
                           </div>
@@ -62,12 +67,6 @@
               </div>
 
 
-           
-              lethalityFormula: null,
-              lethality: null,
-              otherNamesMentioned: null
-
-            
               <div class ="form-section">
                   <h2> Lynching </h2>
                   <div class="form-group">
@@ -84,14 +83,22 @@
 
                         <label for="inputOpen" class="col-lg-2 control-label">Open or Closed</label>
                         <div class="col-lg-1">
-                            <input ng-model="$ctrl.open" type="radio" name="open" value="open" checked> Open<br>
-                            <input ng-model="$ctrl.open" type="radio" name="closed" value="closed"> Closed<br>
-                            <input ng-model="$ctrl.open" type="radio" name="unknown" value="unknown"> Unknown
+                            <input ng-model="$ctrl.incident.open" type="radio" name="open" value="open" checked> Open<br>
+                            <input ng-model="$ctrl.incident.open" type="radio" name="closed" value="closed"> Closed<br>
+                            <input ng-model="$ctrl.incident.open" type="radio" name="unknown" value="unknown"> Unknown
                         </div>
 
-                        <label for="inputAuthorities" class="col-lg-2 control-label">Authorities</label>
-                        <div class="col-lg-2">
-                          <input ng-model="$ctrl.incident.authorities" type="text" class="form-control" id="inputAuthorities" placeholder="Authorities">
+                        <label for="inputAuthorities" class="col-lg-2 control-label">Authorities Present?</label>
+                        <div class="col-lg-1">
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="present" value="present" checked> Present<br>
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="not" value="not"> Not Present<br>
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="unknown" value="unknown"> Unknown
+                        </div>
+
+                        <label for="textArea" class="col-lg-2 control-label">Authorities Notes</label>
+                        <div class="col-lg-10">
+                          <textarea ng-model="$ctrl.incident.authoritiesNotes" class="form-control" rows="3" id="textArea"></textarea>
+                          <span class="help-block">Write notes concerning the authorities here.</span>
                         </div>
 
                         <label for="inputCrime" class="col-lg-2 control-label">Crime</label>
@@ -108,7 +115,7 @@
                         <div class="col-lg-1">
                             <input ng-model="$ctrl.lethality" type="radio" name="lethal" value="lethal" checked> Lethal<br>
                             <input ng-model="$ctrl.lethality" type="radio" name="non-lethal" value="non-lethal"> Non-Lethal<br>
-                            <input ng-model="$ctrl.lethality" type="radio" name="unknown" value="unknown"> Unknown
+                            <input ng-model="$ctrl.lethality" type="radio" name="both" value="both"> Both
                         </div>
             
                         <label for="inputOtherNamesMentioned" class="col-lg-2 control-label">Other Names Mentioned</label>
@@ -117,6 +124,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <div class ="form-section">
                     <h2> Suspects </h2>
@@ -154,13 +162,14 @@
                           <div class="form-group">
       
                               <label for="inputSuspectNumber" class="col-lg-2 control-label">Number of Victims</label>
-                              <div class="col-lg-1">
+                              <div class="col-lg-2">
                                   <input type="number" name="quantity" min="1"> 
+                                  <span class="help-block">Leave blank if unknown.</span>
                               </div>
       
                               <label for="inputVictimGender" class="col-lg-2 control-label">Victim Gender(s)</label>
                               <div class="col-lg-1">
-                                  <input type="radio" name="gender" value="male" checked> Male<br>
+                                  <input type="radio" name="gender" value="male"> Male<br>
                                   <input type="radio" name="gender" value="female"> Female<br>
                                   <input type="radio" name="gender" value="both"> both
                               </div>

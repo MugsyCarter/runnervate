@@ -44,29 +44,46 @@ function controller(rootScope, lynchSvc, $state) {
             lethality: null,
             otherNamesMentioned: null
         },
-        suspects: {
-            numberSuspects: null,
-            checkSuspects: true,
-            suspectNames: [],
-            suspectRaces: [],
-            confessionOrSpeech: null, 
-            suspectNotes: null
-        },
+        suspects: [
+            {
+                suspectNames: [],
+                suspectRace: [],
+                suspectGender: male,
+                confessionOrSpeech: null,
+                confessionNotes: null,
+                attendedByClergy: false, 
+                suspectNotes: null
+            }
+        ],
         vitims: [
             {
-                victimName: [],
+                victimNames: [],
                 victimGender: null,
                 victimRace: null,
                 victimNotes: null
             }
         ],
         sourcesAndNotes: {
-            sources: null,
-            notes: null,
-            cwGdIndexDatesNotes: null,
+            sources: [
+                {
+                    type: null,
+                    publicationDate: null,
+                    publicationCity: null,
+                    publicationDate: null,
+                    author: null,
+                    title: null,
+                    volumeNumber: null,
+                    pageNumbers: null,
+                    sourceNotes: null,
+                    url: null
+                }
+            ],
+            abstract: null,
             origDbIndex: null
         }
     };
+
+    this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal'];
 
     this.races = ['white', 'asian', 'indian', 'black', 'latino'];
 

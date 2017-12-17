@@ -191,16 +191,16 @@
                     <div class ="form-section">
                         <h2> Soures and Notes </h2>
                         <div class="form-group">
-                            <label for="inputStartLocation" class="col-lg-2 control-label">Starting Location</label>
+                            <label for="inputStartLocation" class="col-lg-2 control-label">Add Source</label>
                             <div class="col-lg-10">
-                              <input ng-model="$ctrl.incident.startLocation" type="text" class="form-control" id="inputName" placeholder="Start">
+                              <input ng-model="$ctrl.incident.sources" type="text" class="form-control" id="inputName" placeholder="Start">
                             </div>
                           </div>
 
-                       <label for="textArea" class="col-lg-2 control-label">Description</label>
+                       <label for="textArea" class="col-lg-2 control-label">Abstract</label>
                               <div class="col-lg-10">
-                                <textarea ng-model="$ctrl.incident.description" class="form-control" rows="3" id="textArea"></textarea>
-                                <span class="help-block">Write a brief description of the Incident here.</span>
+                                <textarea ng-model="$ctrl.incident.abstract" class="form-control" rows="3" id="textArea"></textarea>
+                                <span class="help-block">Write a brief abstract of the Incident here.</span>
                               </div>
 
                       </div>

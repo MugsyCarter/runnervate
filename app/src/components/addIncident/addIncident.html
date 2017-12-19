@@ -25,11 +25,22 @@
               <div class ="form-section">
                 <h2> Location </h2>
                 <div class="form-group">
-                    <label for="inputCounty" class="col-lg-2 control-label">State</label>
+                    <!-- <label for="inputCounty" class="col-lg-2 control-label">State</label>
                     <div class="col-lg-2">
-                      <select ng-model="$ctrl.incident.state" ng-options="state for state in $ctrl.states">
+                      <select ng-model="$ctrl.incident.state" ng-options="state for state in $ctrl.states" value="California">
                       </select>
-                      </div>
+                    </div> -->
+
+                   
+                      <label for="inputCounty" class="col-lg-2 control-label">State</label>
+                      <div class="col-lg-2">
+                        <select ng-model="$ctrl.incident.state" ng-options="state for state in $ctrl.states">
+                            <option value="">California </option>
+                          </select>
+                       </div>
+
+
+                     
                         <label for="inputCounty" class="col-lg-1 control-label">County</label>
                         <div class="col-lg-2">
                           <select ng-model="$ctrl.incident.county" ng-options="county for county in $ctrl.counties">
@@ -137,7 +148,7 @@
 
                         <label for="inputSuspectGender" class="col-lg-2 control-label">Suspect Gender(s)</label>
                         <div class="col-lg-1">
-                            <input type="radio" name="gender" value="male" checked> Male<br>
+                            <input type="radio" name="gender" value="male" checked>  Male<br>
                             <input type="radio" name="gender" value="female"> Female<br>
                             <input type="radio" name="gender" value="both"> both
                         </div>
@@ -217,6 +228,12 @@
             </fieldset>
           </form>
                
+          <div>
+            <h2>Data Check</h2>
+            <!-- <p>{{$ctrl.incident}}</p> -->
+          </div>
+
+
 
 
 </section>

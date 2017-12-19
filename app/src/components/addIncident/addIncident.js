@@ -27,7 +27,7 @@ function controller(rootScope, lynchSvc, $state) {
             dateNotes: null
         },
         location: {
-            state: null,
+            state: 'California',
             place: null,
             county: null,
             locationNotes: null
@@ -48,7 +48,7 @@ function controller(rootScope, lynchSvc, $state) {
             {
                 suspectNames: [],
                 suspectRace: [],
-                suspectGender: male,
+                suspectGender: null,
                 confessionOrSpeech: null,
                 confessionNotes: null,
                 attendedByClergy: false, 

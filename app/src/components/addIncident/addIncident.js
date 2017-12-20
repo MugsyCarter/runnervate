@@ -8,42 +8,33 @@ export default {
 controller.$inject = [ '$rootScope', 'lynchService', '$state'];
 
 function controller(rootScope, lynchSvc, $state) {
+
+    this.showFormData = false;
     this.incident = {
-        indices: {
-            cwIndex: null,
-            gdIndex: null,
-            crossRefNotesCwGd: null
+        cwIndex: null,
+        gdIndex: null,
+        crossRefNotesCwGd: null,
+        GISdecimal: {
+            lat: 0,
+            lon: 0
         },
-        gisCoordinates: {
-            decimal: {
-                lat: 0,
-                lon: 0
-            }
-        },
-        date: {
-            year: null,
-            month: null,
-            day: null,
-            dateNotes: null
-        },
-        location: {
-            state: 'California',
-            place: null,
-            county: null,
-            locationNotes: null
-        },
-        lynching: {
-            crowdType: null,
-            crowdSize: null,
-            open: true,
-            authoritiesPresent: null,
-            authoritiesNotes: null,
-            crime: null,
-            punishment: null,
-            lethalityFormula: null,
-            lethality: null,
-            otherNamesMentioned: null
-        },
+        year: null,
+        month: null,
+        day: null,
+        dateNotes: null,
+        state: 'California',
+        place: null,
+        county: null,
+        locationNotes: null,
+        crowdType: null,
+        crowdSize: null,
+        open: true,
+        authoritiesPresent: null,
+        authoritiesNotes: null,
+        crime: null,
+        punishment: null,
+        lethality: null,
+        otherNamesMentioned: null,
         suspects: [
             {
                 suspectNames: [],
@@ -63,24 +54,22 @@ function controller(rootScope, lynchSvc, $state) {
                 victimNotes: null
             }
         ],
-        sourcesAndNotes: {
-            sources: [
-                {
-                    type: null,
-                    publicationDate: null,
-                    publicationCity: null,
-                    publicationDate: null,
-                    author: null,
-                    title: null,
-                    volumeNumber: null,
-                    pageNumbers: null,
-                    sourceNotes: null,
-                    url: null
-                }
-            ],
-            abstract: null,
-            origDbIndex: null
-        }
+        sources: [
+            {
+                type: null,
+                publicationDate: null,
+                publicationCity: null,
+                publicationDate: null,
+                author: null,
+                title: null,
+                volumeNumber: null,
+                pageNumbers: null,
+                sourceNotes: null,
+                url: null
+            }
+        ],
+        abstract: null,
+        origDbIndex: null
     };
 
     this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal'];
@@ -149,10 +138,11 @@ function controller(rootScope, lynchSvc, $state) {
 
     this.addThisIncident= ()=>{
         console.log('adding this incident ', this.incident);
-        lynchSvc.addIncident(this.incident)
-            .then((incident)=>{
-                console.log('this incident was added to the DB ', incident);
-            });
+        this.showFormData = true;
+        // lynchSvc.addIncident(this.incident)
+        //     .then((incident)=>{
+        //         console.log('this incident was added to the DB ', incident);
+        //     });
     };
 
           

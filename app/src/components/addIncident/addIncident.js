@@ -81,13 +81,13 @@ function controller(rootScope, lynchSvc, $state) {
         author: null,
         title: null,
         volumeNumber: null,
-        pageNumbers: null,
+        pageNumber: null,
         sourceNotes: null,
         url: null,
-        
-        day: 0,
-        month: 0,
-        year: 0 
+
+        day: null,
+        month: null,
+        year: null 
     };
 
 

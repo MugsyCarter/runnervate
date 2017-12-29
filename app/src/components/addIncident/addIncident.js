@@ -72,6 +72,25 @@ function controller(rootScope, lynchSvc, $state) {
         abstract: null,
     };
 
+
+    this.source = {
+        type: null,
+        publicationDate: null,
+        publicationCity: null,
+        publicationDate: null,
+        author: null,
+        title: null,
+        volumeNumber: null,
+        pageNumbers: null,
+        sourceNotes: null,
+        url: null,
+        
+        day: 0,
+        month: 0,
+        year: 0 
+    };
+
+
     this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal'];
 
     this.races = ['white', 'asian', 'indian', 'black', 'latino'];

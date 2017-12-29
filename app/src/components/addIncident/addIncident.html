@@ -45,6 +45,7 @@
                           <select ng-model="$ctrl.incident.county" ng-options="county for county in $ctrl.counties">
                           </select>
                         </div>
+
                         <label for="inputStartLocation" class="col-lg-1 control-label">Place</label>
                         <div class="col-lg-2">
                           <input ng-model="$ctrl.incident.place" type="text" class="form-control" id="inputPlace" placeholder="Place">
@@ -73,7 +74,12 @@
                           <div class="col-lg-2">
                             <input ng-model="$ctrl.incident.day" type="number" min="1" max="31" class="form-control" id="inputMonth">
                           </div>
-                  </div>
+                        </div>
+                          <label for="textArea" class="col-lg-2 control-label">Date Notes</label>
+                          <div class="col-lg-10">
+                            <textarea ng-model="$ctrl.incident.dateNotes" class="form-control" rows="3" id="textArea"></textarea>
+                            <span class="help-block">Write notes concerning the date here.</span>
+                          </div>         
               </div>
 
 
@@ -98,19 +104,6 @@
                             <input ng-model="$ctrl.incident.open" type="radio" name="unknown" value="unknown"> Unknown
                         </div>
 
-                        <label for="inputAuthorities" class="col-lg-2 control-label">Authorities Present?</label>
-                        <div class="col-lg-1">
-                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="present" value="present" checked> Present<br>
-                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="not" value="not"> Not Present<br>
-                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="unknown" value="unknown"> Unknown
-                        </div>
-
-                        <label for="textArea" class="col-lg-2 control-label">Authorities Notes</label>
-                        <div class="col-lg-10">
-                          <textarea ng-model="$ctrl.incident.authoritiesNotes" class="form-control" rows="3" id="textArea"></textarea>
-                          <span class="help-block">Write notes concerning the authorities here.</span>
-                        </div>
-
                         <label for="inputCrime" class="col-lg-2 control-label">Crime</label>
                         <div class="col-lg-2">
                           <input ng-model="$ctrl.incident.crime" type="text" class="form-control" id="inputCrime" placeholder="Crime">
@@ -121,18 +114,31 @@
                           <input ng-model="$ctrl.incident.punishment" type="text" class="form-control" id="inputPunishment" placeholder="Punishment">
                         </div>
 
-                        <label for="inputOpen" class="col-lg-2 control-label">Lethality</label>
+                        <label for="inputLethality" class="col-lg-2 control-label">Lethality</label>
                         <div class="col-lg-1">
-                            <input ng-model="$ctrl.lethality" type="radio" name="lethal" value="lethal" checked> Lethal<br>
-                            <input ng-model="$ctrl.lethality" type="radio" name="non-lethal" value="non-lethal"> Non-Lethal<br>
-                            <input ng-model="$ctrl.lethality" type="radio" name="both" value="both"> Both
+                            <input ng-model="$ctrl.incident.lethality" type="radio" name="lethal" value="lethal" checked> Lethal<br>
+                            <input ng-model="$ctrl.incident.lethality" type="radio" name="non-lethal" value="non-lethal"> Non-Lethal<br>
+                            <input ng-model="$ctrl.incident.lethality" type="radio" name="both" value="both"> Both
                         </div>
-            
+
                         <label for="inputOtherNamesMentioned" class="col-lg-2 control-label">Other Names Mentioned</label>
                         <div class="col-lg-2">
                           <input ng-model="$ctrl.incident.otherNamesMentioned" type="text" class="form-control" id="inputOtherNamesMentioned" placeholder="Other Names Mentioned">
                         </div>
-                    </div>
+                    
+                        <label for="inputAuthorities" class="col-lg-2 control-label">Authorities Present?</label>
+                        <div class="col-lg-1">
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="present" value="present" checked> Present<br>
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="not" value="not"> Not Present<br>
+                            <input ng-model="$ctrl.incident.authoritiesPresent" type="radio" name="unknown" value="unknown"> Unknown
+                        </div>
+                      </div>
+
+                        <label for="textArea" class="col-lg-2 control-label">Authorities Notes</label>
+                        <div class="col-lg-10">
+                          <textarea ng-model="$ctrl.incident.authoritiesNotes" class="form-control" rows="3" id="textArea"></textarea>
+                          <span class="help-block">Write notes concerning the authorities here.</span>
+                        </div> 
                 </div>
 
 
@@ -198,13 +204,40 @@
                         </div>
                     </div>
 
+                    type: null,
+                    publicationDate: null,
+                    publicationCity: null,
+                    publicationDate: null,
+                    author: null,
+                    title: null,
+                    volumeNumber: null,
+                    pageNumbers: null,
+                    sourceNotes: null,
+                    url: null
+
                     <div class ="form-section">
                         <h2> Soures and Notes </h2>
                         <div class="form-group">
+
+                            <label for="inputSourceType" class="col-lg-1 control-label">Source Type</label>
+                            <div class="col-lg-2">
+                              <select ng-model="$ctrl.incident.sourceType" ng-options="type for type in $ctrl.sourceTypes">
+                              </select>
+                            </div>
+
                             <label for="inputStartLocation" class="col-lg-2 control-label">Add Source</label>
                             <div class="col-lg-10">
-                              <input ng-model="$ctrl.incident.sources" type="text" class="form-control" id="inputName" placeholder="Start">
+                              <input ng-model="$ctrl.incident.sources" type="text" class="form-control" id="inputSource" placeholder="Start">
+                              
                             </div>
+
+
+
+
+
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button ng-click="$ctrl.addThisSource()" type="submit" class="btn btn-primary">Add Source</button>
+                              </div>
                           </div>
 
                        <label for="textArea" class="col-lg-2 control-label">Abstract</label>

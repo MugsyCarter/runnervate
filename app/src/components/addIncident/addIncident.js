@@ -70,7 +70,6 @@ function controller(rootScope, lynchSvc, $state) {
             }
         ],
         abstract: null,
-        origDbIndex: null
     };
 
     this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal'];

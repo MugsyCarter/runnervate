@@ -204,13 +204,6 @@
                         </div>
                     </div>
 
-                    publicationCity: null,
-                    
-      
-
-                    notes: null,
-                    url: null
-
                     <div class ="form-section">
                         <h2> Soures and Notes </h2>
                         <div class="form-group">
@@ -223,7 +216,7 @@
 
                             <label ng-if="$ctrl.source.type === 'book'" for="inputSourceYear" class="col-lg-1 control-label">Volume #</label>
                             <div class="col-lg-1" ng-if="$ctrl.source.type === 'book'">
-                              <input ng-model="$ctrl.source.volumeNumber" type="number" min="1500" max="2100" class="form-control" id="inputVolumeNumber">
+                              <input ng-model="$ctrl.source.volumeNumber" type="number" min="0" max="20000" class="form-control" id="inputVolumeNumber">
                             </div>
 
                             <label ng-if="$ctrl.source.type === 'newspaper'" for="inputSourceColumn" class="col-lg-1 control-label">Column #</label>
@@ -258,19 +251,33 @@
                               </div>
                                 
                               <div class="form-group">
-                                <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+                                <label for="inputTitle" class="col-lg-1 control-label">Title</label>
                                 <div class="col-lg-2">
                                   <input ng-model="$ctrl.source.title" type="text" class="form-control" id="inputSourceTitle" placeholder="Source Title">
                                 </div>
 
-                                <label for="inputAuthor" class="col-lg-2 control-label">Author</label>
+                                <label for="inputAuthor" class="col-lg-1 control-label">Author</label>
                                 <div class="col-lg-2">
                                   <input ng-model="$ctrl.source.author" type="text" class="form-control" id="inputAuthor" placeholder="Source Author">
                                 </div>
 
-                                <label for="inputUrl" class="col-lg-2 control-label">URL</label>
+                                <label for="inputPublicationState" class="col-lg-2 control-label">Publication State</label>
+                                <div class="col-lg-1">
+                                  <select ng-model="$ctrl.source.state" ng-options="state for state in $ctrl.states">
+                                      <option value="">California </option>
+                                  </select>
+                                 </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                <label for="inputPublicationCity" class="col-lg-1 control-label">Publication City</label>
                                 <div class="col-lg-2">
-                                  <input ng-model="$ctrl.source.url" type="urk" class="form-control" id="inputUrl" placeholder="source location URL here">
+                                  <input ng-model="$ctrl.source.city" type="text" class="form-control" id="inputAuthor" placeholder="Publication City">
+                                </div>
+
+                                <label for="inputUrl" class="col-lg-1 control-label">URL</label>
+                                <div class="col-lg-2">
+                                  <input ng-model="$ctrl.source.url" type="url" class="form-control" id="inputUrl" placeholder="source location URL">
                                 </div>
 
                               </div>

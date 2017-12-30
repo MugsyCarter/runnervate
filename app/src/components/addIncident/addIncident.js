@@ -90,7 +90,10 @@ function controller(rootScope, lynchSvc, $state) {
         year: null, 
 
         pageStart: null,
-        pageEnd: null
+        pageEnd: null,
+
+        state: 'California',
+        city: null,
     };
 
 
@@ -167,7 +170,9 @@ function controller(rootScope, lynchSvc, $state) {
         //     });
     };
 
-          
+    this.addThisSource = ()=>{
+        console.log('adding this source', this.source);
+    };     
    
 
 };

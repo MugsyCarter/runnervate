@@ -33617,14 +33617,14 @@
 
 	var map = {
 		"./about/about.js": 12,
-		"./addTrip/addTrip.js": 14,
+		"./addIncident/addIncident.js": 14,
 		"./app/app.js": 16,
 		"./home/home.js": 18,
-		"./login/login.js": 20,
-		"./logout/logout.js": 22,
-		"./signup/signup.js": 24,
-		"./trip/trip.js": 26,
-		"./trips/trips.js": 28,
+		"./incident/incident.js": 20,
+		"./incidents/incidents.js": 22,
+		"./login/login.js": 24,
+		"./logout/logout.js": 26,
+		"./signup/signup.js": 28,
 		"./user/user.js": 30
 	};
 	function webpackContext(req) {
@@ -33681,47 +33681,102 @@
 	    value: true
 	});
 	
-	var _addTrip = __webpack_require__(15);
+	var _addIncident = __webpack_require__(15);
 	
-	var _addTrip2 = _interopRequireDefault(_addTrip);
+	var _addIncident2 = _interopRequireDefault(_addIncident);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
 	exports.default = {
-	    template: _addTrip2.default,
+	    template: _addIncident2.default,
 	    controller: controller
 	};
 	
 	
-	controller.$inject = ['$rootScope', 'tripService', '$state'];
+	controller.$inject = ['$rootScope', 'lynchService', '$state'];
 	
-	function controller(rootScope, tripSvc, $state) {
-	    var _this = this;
+	function controller(rootScope, lynchSvc, $state) {
+	    var _ref,
+	        _source,
+	        _this = this;
 	
-	    this.trip = {
-	        name: null,
-	        type: null,
-	        startDate: null,
-	        endDate: null,
-	        startLocation: null,
-	        endLocation: null,
-	        description: null,
-	        mileage: null,
-	        people: [],
-	        fun: null,
-	        scenery: null,
-	        difficulty: null,
-	        overall: null,
-	        comments: [],
-	        photos: [],
-	        activities: []
+	    this.showFormData = false;
+	    this.incident = {
+	        cwIndex: null,
+	        gdIndex: null,
+	        origDBIndex: null,
+	        crossRefNotesCwGd: null,
+	        GISdecimal: {
+	            lat: 0,
+	            lon: 0
+	        },
+	        year: null,
+	        month: null,
+	        day: null,
+	        dateNotes: null,
+	        state: 'California',
+	        place: null,
+	        county: null,
+	        locationNotes: null,
+	        crowdType: null,
+	        crowdSize: null,
+	        open: true,
+	        authoritiesPresent: null,
+	        authoritiesNotes: null,
+	        crime: null,
+	        punishment: null,
+	        lethality: null,
+	        otherNamesMentioned: null,
+	        suspects: [{
+	            suspectNames: [],
+	            suspectRace: [],
+	            suspectGender: null,
+	            confessionOrSpeech: null,
+	            confessionNotes: null,
+	            attendedByClergy: false,
+	            suspectNotes: null
+	        }],
+	        vitims: [{
+	            victimNames: [],
+	            victimGender: null,
+	            victimRace: null,
+	            victimNotes: null
+	        }],
+	        sources: [(_ref = {
+	            type: null,
+	            publicationDate: null,
+	            publicationCity: null
+	        }, _defineProperty(_ref, 'publicationDate', null), _defineProperty(_ref, 'author', null), _defineProperty(_ref, 'title', null), _defineProperty(_ref, 'volumeNumber', null), _defineProperty(_ref, 'pageNumbers', null), _defineProperty(_ref, 'sourceNotes', null), _defineProperty(_ref, 'url', null), _ref)],
+	        abstract: null
 	    };
 	
-	    this.addThisTrip = function () {
-	        console.log('adding this trip ', _this.trip);
-	        tripSvc.addTrip(_this.trip).then(function (trip) {
-	            console.log('this trip was added to the DB ', trip);
-	        });
+	    this.source = (_source = {
+	        type: null,
+	        publicationDate: null,
+	        publicationCity: null
+	    }, _defineProperty(_source, 'publicationDate', null), _defineProperty(_source, 'author', null), _defineProperty(_source, 'title', null), _defineProperty(_source, 'volumeNumber', null), _defineProperty(_source, 'pageNumber', null), _defineProperty(_source, 'notes', null), _defineProperty(_source, 'url', null), _defineProperty(_source, 'day', null), _defineProperty(_source, 'month', null), _defineProperty(_source, 'year', null), _defineProperty(_source, 'pageStart', null), _defineProperty(_source, 'pageEnd', null), _defineProperty(_source, 'state', 'California'), _defineProperty(_source, 'city', null), _source);
+	
+	    this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal'];
+	
+	    this.races = ['white', 'asian', 'indian', 'black', 'latino'];
+	
+	    this.states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+	
+	    this.counties = ['Alameda County', 'Alpine County', 'Amador County', 'Butte County', 'Calaveras County', 'Colusa County', 'Contra Costa County', 'Del Norte County', 'El Dorado County', 'Fresno County', 'Glenn County', 'Humboldt County', 'Imperial County', 'Inyo County', 'Kern County', 'Kings County', 'Lake County', 'Lassen County', 'Los Angeles County', 'Madera County', 'Marin County', 'Mariposa County', 'Mendocino County', 'Merced County', 'Modoc County', 'Mono County', 'Monterey County', 'Napa County', 'Nevada County', 'Orange County', 'Placer County', 'Plumas County', 'Riverside County', 'Sacramento County', 'San Benito County', 'San Bernardino County', 'San Diego County', 'San Francisco County', 'San Joaquin County', 'San Luis Obispo County', 'San Mateo County', 'Santa Barbara County', 'Santa Clara County', 'Santa Cruz County', 'Shasta County', 'Sierra County', 'Siskiyou County', 'Solano County', 'Sonoma County', 'Stanislaus County', 'Sutter County', 'Tehama County', 'Trinity County', 'Tulare County', 'Tuolumne County', 'Ventura County', 'Yolo County', 'Yuba County'];
+	
+	    this.addThisIncident = function () {
+	        console.log('adding this incident ', _this.incident);
+	        _this.showFormData = true;
+	        // lynchSvc.addIncident(this.incident)
+	        //     .then((incident)=>{
+	        //         console.log('this incident was added to the DB ', incident);
+	        //     });
+	    };
+	
+	    this.addThisSource = function () {
+	        console.log('adding this source', _this.source);
 	    };
 	};
 
@@ -33729,7 +33784,7 @@
 /* 15 */
 /***/ function(module, exports) {
 
-	module.exports = "<section>\n    <h1>Add Trip</h1>\n    <form class=\"form-horizontal\">\n            <fieldset>\n              <legend>Enter Trip Details</legend>\n              \n              <div class=\"form-group\">\n                <label for=\"inputName\" class=\"col-lg-2 control-label\">Trip Name</label>\n                <div class=\"col-lg-10\">\n                  <input ng-model=\"$ctrl.trip.name\" type=\"text\" class=\"form-control\" id=\"inputName\" placeholder=\"Trip Name\">\n                </div>\n              </div>\n\n              <div class=\"form-group\">\n                    <label for=\"inputType\" class=\"col-lg-2 control-label\">Trip Type</label>\n                    <div class=\"col-lg-10\">\n                      <input ng-model=\"$ctrl.trip.type\" type=\"text\" class=\"form-control\" id=\"inputType\" placeholder=\"Trip Type\">\n                    </div>\n                  </div>\n\n              <div class=\"form-group\">\n                    <label for=\"inputStartDate\" class=\"col-lg-2 control-label\">Start Date</label>\n                    <div class=\"col-lg-10\">\n                      <input ng-model=\"$ctrl.trip.startDate\" type=\"date\" class=\"form-control\" id=\"inputDate\" placeholder=\"Start Date\">\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                        <label for=\"inputEndDate\" class=\"col-lg-2 control-label\">End Date</label>\n                        <div class=\"col-lg-10\">\n                          <input ng-model=\"$ctrl.trip.endDate\" type=\"date\" class=\"form-control\" id=\"inputDate\" placeholder=\"End Date\">\n                        </div>\n                </div>\n\n            <div class=\"form-group\">\n                <label for=\"inputStartLocation\" class=\"col-lg-2 control-label\">Starting Location</label>\n                <div class=\"col-lg-10\">\n                  <input ng-model=\"$ctrl.trip.startLocation\" type=\"text\" class=\"form-control\" id=\"inputName\" placeholder=\"Start\">\n                </div>\n              </div>\n\n            <div class=\"form-group\">\n                    <label for=\"inputEndLocation\" class=\"col-lg-2 control-label\">Ending Location</label>\n                    <div class=\"col-lg-10\">\n                      <input ng-model=\"$ctrl.trip.endLocation\" type=\"text\" class=\"form-control\" id=\"inputName\" placeholder=\"End\">\n                    </div>\n            </div>\n\n              <div class=\"form-group\">\n                <label for=\"textArea\" class=\"col-lg-2 control-label\">Description</label>\n                <div class=\"col-lg-10\">\n                  <textarea ng-model=\"$ctrl.trip.description\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                  <span class=\"help-block\">Write a brief description of the trip here.</span>\n                </div>\n              </div>\n\n              <div class=\"form-group\">\n                <div class=\"col-lg-10 col-lg-offset-2\">\n                  <button type=\"reset\" class=\"btn btn-default\">Cancel</button>\n                  <button ng-click=\"$ctrl.addThisTrip()\" type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </div>\n            </fieldset>\n          </form>\n               \n\n\n</section>";
+	module.exports = "<section>\n    <h1>Add Incident</h1>\n    <form class=\"form-horizontal\">\n            <fieldset>\n              <legend>Enter Lynching Incident Details</legend>\n              \n              <div class =\"form-section\">\n                  <h2> Database Indices </h2>\n                  <div class=\"form-group\">\n\n                      <label for=\"inputCwIndex\" class=\"col-lg-2 control-label\">C-W Index\n                      </label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.cwIndex\" type=\"text\" class=\"form-control\" id=\"inputCwIndex\" placeholder=\"C-W Index\">\n                      </div>\n\n                        <label for=\"inputGdIndex\" class=\"col-lg-1 control-label\">G-D Index\n                        </label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.gdIndex\" type=\"text\" class=\"form-control\" id=\"inputCwIndex\" placeholder=\"G-D Index\">\n                        </div>\n\n                        <label for=\"inputOrigDBIndex\" class=\"col-lg-1 control-label\">Original Database Index\n                          </label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.origDBIndex\" type=\"text\" class=\"form-control\" id=\"inputOrigDBIndex\" placeholder=\"Original DB Index\">\n                          </div>\n\n                      </div>\n                  </div>\n\n              <div class =\"form-section\">\n                <h2> Location </h2>\n                <div class=\"form-group\">\n\n                      <label for=\"inputCounty\" class=\"col-lg-2 control-label\">State</label>\n                      <div class=\"col-lg-2\">\n                        <select ng-model=\"$ctrl.incident.state\" ng-options=\"state for state in $ctrl.states\">\n                            <option value=\"\">California </option>\n                          </select>\n                       </div>\n\n                        <label for=\"inputCounty\" class=\"col-lg-1 control-label\">County</label>\n                        <div class=\"col-lg-2\">\n                          <select ng-model=\"$ctrl.incident.county\" ng-options=\"county for county in $ctrl.counties\">\n                          </select>\n                        </div>\n\n                        <label for=\"inputStartLocation\" class=\"col-lg-1 control-label\">Place</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.place\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                        </div>\n\n                        </div>\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Location Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.locationNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the location here.</span>\n                        </div>\n              </div>\n\n              <div class =\"form-section\">\n                <h2> Date </h2>\n                <div class=\"form-group\">\n                      <label for=\"inputYear\" class=\"col-lg-2 control-label\">Year</label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputYear\">\n                      </div>\n                          <label for=\"inputMonth\" class=\"col-lg-1 control-label\">Month</label>\n                          <div class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.incident.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputMonth\">\n                            </div>\n                          <label for=\"inputDay\" class=\"col-lg-1 control-label\">Day</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputMonth\">\n                          </div>\n                        </div>\n                          <label for=\"textArea\" class=\"col-lg-2 control-label\">Date Notes</label>\n                          <div class=\"col-lg-10\">\n                            <textarea ng-model=\"$ctrl.incident.dateNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                            <span class=\"help-block\">Write notes concerning the date here.</span>\n                          </div>         \n              </div>\n\n\n              <div class =\"form-section\">\n                  <h2> Lynching </h2>\n                  <div class=\"form-group\">\n                      <label for=\"inputCrowdType\" class=\"col-lg-2 control-label\">Crowd Type</label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.crowdType\" type=\"text\" class=\"form-control\" id=\"inputCrowdType\" placeholder=\"Crowd Type\">\n                      </div>\n\n                      <div class=\"form-group\">\n                          <label for=\"inputCrowdSize\" class=\"col-lg-2 control-label\">Crowd Size</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.crowdSize\" type=\"text\" class=\"form-control\" id=\"inputCrowdSize\" placeholder=\"Crowd Size\">\n                          </div>\n\n                        <label for=\"inputOpen\" class=\"col-lg-2 control-label\">Open or Closed</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"open\" value=\"open\" checked> Open<br>\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"closed\" value=\"closed\"> Closed<br>\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"unknown\" value=\"unknown\"> Unknown\n                        </div>\n\n                        <label for=\"inputCrime\" class=\"col-lg-2 control-label\">Crime</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.crime\" type=\"text\" class=\"form-control\" id=\"inputCrime\" placeholder=\"Crime\">\n                        </div>\n\n                        <label for=\"inputPunishment\" class=\"col-lg-2 control-label\">Punishment</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.punishment\" type=\"text\" class=\"form-control\" id=\"inputPunishment\" placeholder=\"Punishment\">\n                        </div>\n\n                        <label for=\"inputLethality\" class=\"col-lg-2 control-label\">Lethality</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"lethal\" value=\"lethal\" checked> Lethal<br>\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"non-lethal\" value=\"non-lethal\"> Non-Lethal<br>\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"both\" value=\"both\"> Both\n                        </div>\n\n                        <label for=\"inputOtherNamesMentioned\" class=\"col-lg-2 control-label\">Other Names Mentioned</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.otherNamesMentioned\" type=\"text\" class=\"form-control\" id=\"inputOtherNamesMentioned\" placeholder=\"Other Names Mentioned\">\n                        </div>\n                    \n                        <label for=\"inputAuthorities\" class=\"col-lg-2 control-label\">Authorities Present?</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"present\" value=\"present\" checked> Present<br>\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"not\" value=\"not\"> Not Present<br>\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"unknown\" value=\"unknown\"> Unknown\n                        </div>\n                      </div>\n\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Authorities Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.authoritiesNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the authorities here.</span>\n                        </div> \n                </div>\n\n\n                <div class =\"form-section\">\n                    <h2> Suspects </h2>\n                    <div class=\"form-group\">\n\n                        <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Suspects</label>\n                        <div class=\"col-lg-1\">\n                            <input type=\"number\" name=\"quantity\" min=\"1\"> \n                        </div>\n\n                        <label for=\"inputSuspectGender\" class=\"col-lg-2 control-label\">Suspect Gender(s)</label>\n                        <div class=\"col-lg-1\">\n                            <input type=\"radio\" name=\"gender\" value=\"male\" checked>  Male<br>\n                            <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                            <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                        </div>\n                        <label for=\"inputSuspectRaces\" class=\"col-lg-2 control-label\">Suspect Race(s)</label>\n                        <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                            <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                        </div>\n                        <br>\n                      </div>\n\n                    \n                      <label for=\"textArea\" class=\"col-lg-2 control-label\">Suspect Notes</label>\n                      <div class=\"col-lg-10\">\n                        <textarea ng-model=\"$ctrl.incident.suspectNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                        <span class=\"help-block\">Write notes concerning the suspect here.</span>\n                      </div>\n                  </div>\n\n                  <div class =\"form-section\">\n                      <div class =\"form-section\">\n                          <h2> Victims </h2>\n                          <div class=\"form-group\">\n      \n                              <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Victims</label>\n                              <div class=\"col-lg-2\">\n                                  <input type=\"number\" name=\"quantity\" min=\"1\"> \n                                  <span class=\"help-block\">Leave blank if unknown.</span>\n                              </div>\n      \n                              <label for=\"inputVictimGender\" class=\"col-lg-2 control-label\">Victim Gender(s)</label>\n                              <div class=\"col-lg-1\">\n                                  <input type=\"radio\" name=\"gender\" value=\"male\"> Male<br>\n                                  <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                                  <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                              </div>\n      \n                            <label for=\"inputVictimRaces\" class=\"col-lg-2 control-label\">Victim Race(s)</label>\n                            <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                                <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                            </div>\n                            <br>\n                        </div>\n\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Victim Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.victimNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the victim here.</span>\n                        </div>\n                    </div>\n\n                    <div class =\"form-section\">\n                        <h2> Soures and Notes </h2>\n                        <div class=\"form-group\">\n\n                            <label for=\"inputSourceType\" class=\"col-lg-1 control-label\">Source Type</label>\n                            <div class=\"col-lg-1\">\n                              <select ng-model=\"$ctrl.source.type\" ng-options=\"type for type in $ctrl.sourceTypes\">\n                              </select>\n                            </div>\n\n                            <label ng-if=\"$ctrl.source.type === 'book'\" for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Volume #</label>\n                            <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'book'\">\n                              <input ng-model=\"$ctrl.source.volumeNumber\" type=\"number\" min=\"0\" max=\"20000\" class=\"form-control\" id=\"inputVolumeNumber\">\n                            </div>\n\n                            <label ng-if=\"$ctrl.source.type === 'newspaper'\" for=\"inputSourceColumn\" class=\"col-lg-1 control-label\">Column #</label>\n                            <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'newspaper'\">\n                              <input ng-model=\"$ctrl.source.columnNumber\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputColumnNumber\">\n                            </div>\n\n                            <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">Page #</label>\n                            <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.pageNumberStart\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                            </div>\n\n                            <!-- <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">to</label>\n                            <div class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.source.pageNumberEnd\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                            </div> -->\n                           \n                            <label for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Publication Year</label>\n                            <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputSourceYear\">\n                            </div>\n\n                                <label for=\"inputSourceMonth\" class=\"col-lg-1 control-label\">Publication Month</label>\n                                <div class=\"col-lg-1\">\n                                    <input ng-model=\"$ctrl.source.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputsourceMonth\">\n                                  </div>\n\n                                <label for=\"inputSourceDay\" class=\"col-lg-1 control-label\">Publication Day</label>\n                                <div class=\"col-lg-1\">\n                                  <input ng-model=\"$ctrl.source.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputSourceMonth\">\n                                </div>\n                              </div>\n                                \n                              <div class=\"form-group\">\n                                <label for=\"inputTitle\" class=\"col-lg-1 control-label\">Title</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.title\" type=\"text\" class=\"form-control\" id=\"inputSourceTitle\" placeholder=\"Source Title\">\n                                </div>\n\n                                <label for=\"inputAuthor\" class=\"col-lg-1 control-label\">Author</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.author\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Source Author\">\n                                </div>\n\n                                <label for=\"inputPublicationState\" class=\"col-lg-2 control-label\">Publication State</label>\n                                <div class=\"col-lg-1\">\n                                  <select ng-model=\"$ctrl.source.state\" ng-options=\"state for state in $ctrl.states\">\n                                      <option value=\"\">California </option>\n                                  </select>\n                                 </div>\n                                </div>\n                                \n                                <div class=\"form-group\">\n                                <label for=\"inputPublicationCity\" class=\"col-lg-1 control-label\">Publication City</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.city\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Publication City\">\n                                </div>\n\n                                <label for=\"inputUrl\" class=\"col-lg-1 control-label\">URL</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.url\" type=\"url\" class=\"form-control\" id=\"inputUrl\" placeholder=\"source location URL\">\n                                </div>\n\n                              </div>\n\n                              <div class=\"form-group\">\n                                <label for=\"textArea\" class=\"col-lg-2 control-label\"> Source Notes</label>\n                                <div class=\"col-lg-10\">\n                                  <textarea ng-model=\"$ctrl.source.notes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                                  <span class=\"help-block\">Write notes concerning this source here.</span>\n                                </div>\n\n                            <div class=\"col-lg-10 col-lg-offset-2\">\n                                <button ng-click=\"$ctrl.addThisSource()\" type=\"submit\" class=\"btn btn-primary\">Add Source</button>\n                              </div>\n                          </div>\n                  \n\n                      <div class=\"form-group\">\n                       <label for=\"textArea\" class=\"col-lg-2 control-label\">Abstract</label>\n                              <div class=\"col-lg-10\">\n                                <textarea ng-model=\"$ctrl.incident.abstract\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                                <span class=\"help-block\">Write a brief abstract of the Incident here.</span>\n                              </div>\n                      </div>\n\n\n             \n\n              <div class=\"form-group\">\n                <div class=\"col-lg-10 col-lg-offset-2\">\n                  <button type=\"reset\" class=\"btn btn-default\">Cancel</button>\n                  <button ng-click=\"$ctrl.addThisIncident()\" type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </div>\n            </fieldset>\n          </form>\n               \n          <div ng-if=\"$ctrl.showFormData===true\">\n            <h2>Data Check</h2>\n            <p>{{$ctrl.incident}}</p>\n          </div>\n\n\n\n\n</section>";
 
 /***/ },
 /* 16 */
@@ -33756,36 +33811,35 @@
 	controller.$inject = ['$state', '$rootScope'];
 	
 	function controller($state, rootScope) {
-	    var _this = this;
 	
-	    this.loggedIn = false;
+	    // this.loggedIn=false;
 	
-	    rootScope.$on('login', function (event, user) {
-	        // console.log('after Logged in, useris ', user.user);
-	        rootScope.user = user.user;
-	        console.log('user logged in as ', user);
-	        _this.loggedIn = true;
-	        $state.go('user');
-	    });
+	    // rootScope.$on('login', (event, user)=>{
+	    //     // console.log('after Logged in, useris ', user.user);
+	    //     rootScope.user = user.user;
+	    //     console.log('user logged in as ', user);
+	    //     this.loggedIn = true;
+	    //     $state.go('user');
+	    // });
 	
-	    rootScope.$on('logout', function (event) {
-	        _this.user = null;
-	        _this.loggedIn = false;
-	        $state.go('home');
-	        // console.log('Logged out, useris ', user.user);
-	        // this.updateMenu();
-	    });
+	    // rootScope.$on('logout', (event)=>{
+	    //     this.user = null;
+	    //     this.loggedIn = false;
+	    //     $state.go('home');
+	    //     // console.log('Logged out, useris ', user.user);
+	    //     // this.updateMenu();
+	    // });
 	
-	    rootScope.$on('updateUser', function (event, user) {
-	        // no code here yet
-	    });
+	    // rootScope.$on('updateUser', (event, user)=>{
+	    //     // no code here yet
+	    // });
 	};
 
 /***/ },
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = " <section>     \n\n        <nav class=\"navbar navbar-default\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">BackpackingPNW</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if='$ctrl.loggedIn===true'><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Page</a></li>\n                    <li><a ui-sref=\"trips\"><span class=\"glyphicon glyphicon-globe\"></span>Browse Trips</a></li>\n                    <li><a ui-sref=\"addTrip\"><span class=\"glyphicon glyphicon-plus\"></span>Add Trip</a></li>\n                    <li><a ui-sref=\"about\">About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Trips\">\n                                <div class=\"input-group-btn\">\n                                    <button class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>         \n                  </ul>\n                  <ul class=\"nav navbar-nav navbar-right\">\n                        <li ng-if='$ctrl.loggedIn===false'><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-pencil\"></span> Sign Up</a></li>\n                        <li ng-if='$ctrl.loggedIn===false'><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a></li>\n                        <li ng-if='$ctrl.loggedIn===true'><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a></li>\n                      </ul>\n                </div>\n              </nav>\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n  </section>";
+	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if='$ctrl.loggedIn===true'><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Page</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-globe\"></span>Browse Incidents</a></li>\n                    <li><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Incident</a></li>\n                    <li><a ui-sref=\"about\">About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\">\n                                <div class=\"input-group-btn\">\n                                    <button class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>         \n                  </ul>\n                </div>\n              </nav>\n\n\n\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; David A. Johnson, 2017 </span></p>\n    </div>\n  </section>";
 
 /***/ },
 /* 18 */
@@ -33812,32 +33866,33 @@
 	controller.$inject = ['$timeout'];
 	
 	function controller($timeout) {
-	    var _this = this;
 	
-	    this.letters = [];
-	    this.letterOptions = [['I', 'E'], ['N', 'S'], ['T', 'F'], ['J', 'P']];
+	    //     this.letters=[];
+	    //     this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
 	
-	    this.letters = [];
-	    this.count = 0;
+	    //     this.letters = [];
+	    //     this.count = 0;
 	
-	    this.update = function () {
-	        if (_this.count < 1000) {
-	            for (var i = 0; i < _this.letterOptions.length; i++) {
-	                _this.letters[i] = { letter: _this.letterOptions[i][Math.round(Math.random())] };
-	            }
-	            _this.count++;
-	            $timeout(_this.update, 1000);
-	        }
-	    };
 	
-	    this.update();
+	    //     this.update = ()=>{
+	    //         if (this.count < 1000){
+	    //             for(let i=0;i<this.letterOptions.length; i++){
+	    //                 this.letters[i]= {letter: this.letterOptions[i][Math.round(Math.random())]};
+	    //             }
+	    //             this.count ++;
+	    //             $timeout(this.update, 1000);
+	    //         }
+	    //     };
+	
+	    //     this.update(); fun
+	
 	};
 
 /***/ },
 /* 19 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n  <div class=\"jumbotron\">\n    <h1 class=\"title\">Backpacking PNW</h1>\n    <h2 class=\"subtitle\">Adventures in the beautiful Pacific Northwewst</h1>\n  </div>\n  \n    <div class=\"container-fluid\">\n      <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2017 <a href=\"https://github.com/MugsyCarter\"> https://github.com/MugsyCarter</a></span></p>\n    </div>\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">California Lynching Database</h1>\n    <p class=\"lead\">Subtitle here?</p>\n    <hr class=\"my-4\">\n    <p>Some basic info here?</p>\n    <p class=\"lead\">\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"login\" role=\"button\">Login</a>\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"signup\" role=\"button\">Sign Up</a>\n    </p>\n  </div>\n\n</section>\n";
 
 /***/ },
 /* 20 */
@@ -33849,7 +33904,81 @@
 	    value: true
 	});
 	
-	var _login = __webpack_require__(21);
+	var _incident = __webpack_require__(21);
+	
+	var _incident2 = _interopRequireDefault(_incident);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _incident2.default,
+	    controller: controller
+	};
+	
+	
+	controller.$inject = ['$timeout', '$rootScope'];
+	
+	function controller(timeout) {
+	    this.options = {};
+	}
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = "\n <section>\n        <h1>Trip Section</h1>\n\n</section>\n";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _incidents = __webpack_require__(23);
+	
+	var _incidents2 = _interopRequireDefault(_incidents);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _incidents2.default,
+	    controller: controller
+	};
+	
+	
+	controller.$inject = ['incidentService', '$timeout', '$rootScope'];
+	
+	function controller(incidentSvc, timeout, rootScope) {
+	    var _this = this;
+	
+	    incidentSvc.get().then(function (incident) {
+	        _this.incidents = incident;
+	        console.log('incident is ', incidents);
+	        console.log(_this.incidents[0].name);
+	    });
+	}
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<section>\n       \n        <h2>Browse Incidents</h2>\n        <div id=\"filters\">\n\n        </div>\n        <div id=\"trip-gallery\">\n                <ul id=\"trip-list\">\n                        <li ng-repeat=\"trip in $ctrl.trips\">\n                                <div>\n                                        <h3>{{trip.name}}</h3>\n                                        <h4>{{trip.type}}</h4>\n                                        <h4>{{trip.startDate}} to {{trip.endDate}}</h4>\n                                        <h4>{{trip.startlocation}}</h4>\n                                        <p>{{trip.description}}</p>          \n                                <div>\n                        </li>\n                </ul>\n        <div>\n</section>";
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _login = __webpack_require__(25);
 	
 	var _login2 = _interopRequireDefault(_login);
 	
@@ -33880,13 +34009,13 @@
 	};
 
 /***/ },
-/* 21 */
+/* 25 */
 /***/ function(module, exports) {
 
 	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<button type=\"submit\">Login</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ },
-/* 22 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33895,7 +34024,7 @@
 	    value: true
 	});
 	
-	var _logout = __webpack_require__(23);
+	var _logout = __webpack_require__(27);
 	
 	var _logout2 = _interopRequireDefault(_logout);
 	
@@ -33919,13 +34048,13 @@
 	}
 
 /***/ },
-/* 23 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<section>\n    <h2>You've been logged out of your account.</h2>\n</section>";
 
 /***/ },
-/* 24 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33934,7 +34063,7 @@
 	    value: true
 	});
 	
-	var _signup = __webpack_require__(25);
+	var _signup = __webpack_require__(29);
 	
 	var _signup2 = _interopRequireDefault(_signup);
 	
@@ -33978,84 +34107,10 @@
 	};
 
 /***/ },
-/* 25 */
-/***/ function(module, exports) {
-
-	module.exports = "<section class=\"signup-box\">\n   \t<h2 id=\"signup-header\">Sign up for a user account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"name\">\n\t\t\t\tName<br>       \n\t\t\t\tFirst: <input type=\"text\" ng-model=\"$ctrl.first\">\n\t\t\t\tLast: <input type=\"text\" ng-model=\"$ctrl.last\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"email\">\n\t\t\t\tEmail: <input type=\"email\" ng-model=\"$ctrl.credentials.email\">\n\t\t\t</label>\n\t\t</div>\n\n        <div id=\"dob\">\n\t\t\tDate of Birth: <input type=\"date\" ng-model=\"$ctrl.credentials.dob\">\n\t\t</div>\n\n\t\t<button type=\"submit\">Sign Up</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _trip = __webpack_require__(27);
-	
-	var _trip2 = _interopRequireDefault(_trip);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _trip2.default,
-	    controller: controller
-	};
-	
-	
-	controller.$inject = ['$timeout', '$rootScope'];
-	
-	function controller(timeout) {
-	    this.options = {};
-	}
-
-/***/ },
-/* 27 */
-/***/ function(module, exports) {
-
-	module.exports = "\n <section>\n        <h1>Trip Section</h1>\n\n</section>\n";
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _trips = __webpack_require__(29);
-	
-	var _trips2 = _interopRequireDefault(_trips);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = {
-	    template: _trips2.default,
-	    controller: controller
-	};
-	
-	
-	controller.$inject = ['tripService', '$timeout', '$rootScope'];
-	
-	function controller(tripSvc, timeout, rootScope) {
-	    var _this = this;
-	
-	    tripSvc.get().then(function (trip) {
-	        _this.trips = trip;
-	        console.log('trip is ', trip);
-	        console.log(_this.trips[0].name);
-	    });
-	}
-
-/***/ },
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section>\n       \n        <h2>Browse Trips</h2>\n        <div id=\"filters\">\n\n        </div>\n        <div id=\"trip-gallery\">\n                <ul id=\"trip-list\">\n                        <li ng-repeat=\"trip in $ctrl.trips\">\n                                <div>\n                                        <h3>{{trip.name}}</h3>\n                                        <h4>{{trip.type}}</h4>\n                                        <h4>{{trip.startDate}} to {{trip.endDate}}</h4>\n                                        <h4>{{trip.startlocation}}</h4>\n                                        <p>{{trip.description}}</p>          \n                                <div>\n                        </li>\n                </ul>\n        <div>\n</section>";
+	module.exports = "<section class=\"signup-box\">\n   \t<h2 id=\"signup-header\">Sign up for a user account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"name\">\n\t\t\t\tName<br>       \n\t\t\t\tFirst: <input type=\"text\" ng-model=\"$ctrl.first\">\n\t\t\t\tLast: <input type=\"text\" ng-model=\"$ctrl.last\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"email\">\n\t\t\t\tEmail: <input type=\"email\" ng-model=\"$ctrl.credentials.email\">\n\t\t\t</label>\n\t\t</div>\n\n        <div id=\"dob\">\n\t\t\tDate of Birth: <input type=\"date\" ng-model=\"$ctrl.credentials.dob\">\n\t\t</div>\n\n\t\t<button type=\"submit\">Sign Up</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ },
 /* 30 */
@@ -34152,8 +34207,8 @@
 
 	var map = {
 		"./auth-service.js": 34,
-		"./token-service.js": 35,
-		"./trip-service.js": 36,
+		"./lynch-service.js": 35,
+		"./token-service.js": 36,
 		"./user-service.js": 37
 	};
 	function webpackContext(req) {
@@ -34226,6 +34281,46 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.default = lynchService;
+	
+	lynchService.$inject = ['$http', 'apiUrl'];
+	
+	function lynchService($http, apiUrl) {
+	    return {
+	        get: function get() {
+	            return $http.get(apiUrl + '/trips').then(function (res) {
+	                return res.data;
+	            });
+	        },
+	        getById: function getById(tripId) {
+	            console.log('in get by Id ,', apiUrl);
+	            return $http.get(apiUrl + '/trips/' + tripId).then(function (res) {
+	                return res.data;
+	            });
+	        },
+	        getByName: function getByName(tripname) {
+	            return $http.get(apiUrl + '/trips/' + tripname).then(function (res) {
+	                return res.data;
+	            });
+	        },
+	        addIncident: function addIncident(incident) {
+	            console.log('In lynch service, adding this incident ', incident);
+	            return $http.post(apiUrl + '/incidents', incident).then(function (res) {
+	                return res.data;
+	            });
+	        }
+	    };
+	};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	exports.default = tokenService;
 	tokenService.$inject = ['$window'];
 	
@@ -34245,46 +34340,6 @@
 	        }
 	    };
 	}
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = tripService;
-	
-	tripService.$inject = ['$http', 'apiUrl'];
-	
-	function tripService($http, apiUrl) {
-	    return {
-	        get: function get() {
-	            return $http.get(apiUrl + '/trips').then(function (res) {
-	                return res.data;
-	            });
-	        },
-	        getById: function getById(tripId) {
-	            console.log('in get by Id ,', apiUrl);
-	            return $http.get(apiUrl + '/trips/' + tripId).then(function (res) {
-	                return res.data;
-	            });
-	        },
-	        getByName: function getByName(tripname) {
-	            return $http.get(apiUrl + '/trips/' + tripname).then(function (res) {
-	                return res.data;
-	            });
-	        },
-	        addTrip: function addTrip(trip) {
-	            console.log('In trip service, adding this trip ', trip);
-	            return $http.post(apiUrl + '/trips', trip).then(function (res) {
-	                return res.data;
-	            });
-	        }
-	    };
-	};
 
 /***/ },
 /* 37 */
@@ -42720,24 +42775,24 @@
 	    });
 	
 	    $stateProvider.state({
-	        name: 'trips',
-	        url: '/trips',
+	        name: 'incidents',
+	        url: '/incidents',
 	        data: { public: true },
-	        component: 'trips'
+	        component: 'incidents'
 	    });
 	
 	    $stateProvider.state({
-	        name: 'trip',
-	        url: '/trip',
+	        name: 'incident',
+	        url: '/incident',
 	        data: { public: true },
-	        component: 'trip'
+	        component: 'incident'
 	    });
 	
 	    $stateProvider.state({
-	        name: 'addTrip',
-	        url: '/addTrip',
+	        name: 'addIncident',
+	        url: '/addIncident',
 	        data: { public: true },
-	        component: 'addTrip'
+	        component: 'addIncident'
 	    });
 	
 	    $stateProvider.state({

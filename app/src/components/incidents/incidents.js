@@ -103,7 +103,13 @@ function controller(lynchSvc, timeout, rootScope) {
 
     this.addFilter = ()=>{
         this.newFilter=true;
+        console.log('added a new filter, here are the old ones: ', this.queries);
     };
+
+    this.searchIncidents = ()=>{
+        console.log('searching incidents with these queries ', this.queries);
+    };
+    
 }
 
 

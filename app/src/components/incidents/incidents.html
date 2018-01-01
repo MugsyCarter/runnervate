@@ -13,13 +13,19 @@
 
                         <div>
                                 <div class="col-lg-2" >
-                                        <select ng-if="$ctrl.activeFilter.name==='county'" ng-model="$ctrl.filter" ng-options="county for county in $ctrl.counties">
+                                        <select ng-if="$ctrl.activeFilter.name==='county'" ng-model="$ctrl.newQuery" ng-options="county for county in $ctrl.counties">
                                         </select>
+                                </div>
+                                <div class="col-lg-2">
+                                        <input ng-if="$ctrl.activeFilter.name==='place'" ng-model="$ctrl.newQuery" type="text" class="form-control" id="inputPlace" placeholder="Place">
+                                </div>
+                                <div class="col-lg-1">
+                                        <input ng-if="$ctrl.activeFilter.name==='year'" ng-model="$ctrl.newQuery" type="number" class="form-control" id="inputYear" min=1500 max=2100>
                                 </div>
                         </div>
 
                 </div>
-                <button ng-if="$ctrl.newFilter===false" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Filter</h6></span></button>
+                <button ng-if="$ctrl.newFilter===false" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Another Filter</h6></span></button>
                 <button class="btn btn-info"  ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"><h6>Seach Incidents</h6></span></button>
         </div>
 

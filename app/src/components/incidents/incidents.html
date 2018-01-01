@@ -3,16 +3,33 @@
        
         <h2>Browse Incidents</h2>
         <div id="filters">
-                <h3 class="filterHeading">Filters</h2>
-                <button class="btn btn-secondary"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h4>Add Filter</h4></span></button>
+              
+                <div >
+                        <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
+                        <div class="col-lg-1">
+                                <select ng-model="$ctrl.activeFilter" ng-options="filter.name for filter in $ctrl.filters">
+                                </select>
+                        </div>
 
-                <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
-                <div class="col-lg-2">
-                  <select ng-model="$ctrl.filter" ng-options="filter.name for filter in $ctrl.filters">
-                  </select>
+                        <div>
+                                <div class="col-lg-2" >
+                                        <select ng-if="$ctrl.activeFilter.name==='county'" ng-model="$ctrl.filter" ng-options="county for county in $ctrl.counties">
+                                        </select>
+                                </div>
+                        </div>
+
                 </div>
-                
+                <button ng-if="$ctrl.newFilter===false" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Filter</h6></span></button>
+                <button class="btn btn-info"  ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"><h6>Seach Incidents</h6></span></button>
         </div>
+
+        <div>
+                <h1>Test Filters</h1>
+                <div ng-repeat="query in $ctrl.queries">
+                       <p>query</p> 
+                </div>
+        </div>
+
 
         <div id="incident-gallery">
                 <ul id="incident-list">

@@ -16,10 +16,7 @@ function controller(rootScope, lynchSvc, $state) {
         origDBindex: null,
         caseNum: null,
         crossRefNotesCwGd: null,
-        GISdecimal: {
-            lat: 0,
-            lon: 0
-        },
+        
         year: null,
         month: null,
         day: null,
@@ -28,6 +25,14 @@ function controller(rootScope, lynchSvc, $state) {
         place: null,
         county: null,
         locationNotes: null,
+        latDecimal:  null,
+        lonDecimal:  null,
+        latNDegrees: null,
+        latNMinutes: null,
+        latNSeconds: null,
+        lonWDegrees: null,
+        lonWMinutes: null,
+        lonWSeconds: null,
         crowdType: null,
         crowdSize: null,
         open: true,

@@ -10,6 +10,7 @@ controller.$inject = [ '$rootScope', 'lynchService', '$state'];
 function controller(rootScope, lynchSvc, $state) {
 
     this.showFormData = false;
+    this.decimal = 'true';
     this.incident = {
         cwIndex: null,
         gdIndex: null,

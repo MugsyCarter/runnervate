@@ -13,6 +13,7 @@ function controller(rootScope, lynchSvc, $state) {
     this.incident = {
         cwIndex: null,
         gdIndex: null,
+        origDBindex: null,
         caseNum: null,
         crossRefNotesCwGd: null,
         GISdecimal: {
@@ -47,7 +48,7 @@ function controller(rootScope, lynchSvc, $state) {
                 suspectNotes: null
             }
         ],
-        vitims: [
+        victims: [
             {
                 victimNames: [],
                 victimGender: null,

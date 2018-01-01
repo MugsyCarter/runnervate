@@ -2,10 +2,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const requiredString = {type: String, required: true};
+const requiredNumber = {type: Number, required: true};
 
 //trip
 const tripSchema = new Schema({
     caseNum: requiredString,
+    origDBIndex: Number,
     cwIndex: String,
     gdIndex: String,
     crossRefNotesCwGd: String,
@@ -17,58 +19,40 @@ const tripSchema = new Schema({
     lonWDegrees:Number,
     lonWMinutes:Number,
     lonWSeconds:Number,
-    
-    year: null,
-    month: null,
-    day: null,
-    dateNotes: null,
-    state: 'California',
-    place: null,
-    county: null,
-    locationNotes: null,
-    crowdType: null,
-    crowdSize: null,
-    open: true,
-    authoritiesPresent: null,
-    authoritiesNotes: null,
-    crime: null,
-    punishment: null,
-    lethality: null,
-    otherNamesMentioned: null,
-    suspects: [
-        {
-            suspectNames: [],
-            suspectRace: [],
-            suspectGender: null,
-            confessionOrSpeech: null,
-            confessionNotes: null,
-            attendedByClergy: false, 
-            suspectNotes: null
-        }
-    ],
-    vitims: [
-        {
-            victimNames: [],
-            victimGender: null,
-            victimRace: null,
-            victimNotes: null
-        }
-    ],
-    sources: [
-        {
-            type: null,
-            publicationDate: null,
-            publicationCity: null,
-            publicationDate: null,
-            author: null,
-            title: null,
-            volumeNumber: null,
-            pageNumbers: null,
-            sourceNotes: null,
-            url: null
-        }
-    ],
-    abstract: null,
+    year: requiredNumber,
+    month: Number,
+    day: Number,
+    dateNotes: String,
+    state: String,
+    place: String,
+    county: String,
+    locationNotes: String,
+    crowdType: String,
+    crowdSize: String,
+    open: String,
+    oldAuthorities: String,
+    authoritiesPresent: Boolean,
+    authoritiesNotes: String,
+    crime: String,
+    punishment: requiredString,
+    lethality: String,
+    otherNamesMentioned: String,
+    suspects: [],
+    numberSuspects: requiredNumber,
+    suspectNames: String,
+    suspectRaces: String,
+    confession: String,
+    suspectNotes: String,
+    victims: [],
+    victimNumber: String,
+    victimNames: String,
+    victimGenders: String,
+    victimRaces: String,
+    victimNotes: String,
+    sources: [],
+    oldSources: String,
+    oldNotes: String,
+    abstract: String,
 });
 
 

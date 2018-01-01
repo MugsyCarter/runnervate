@@ -10,12 +10,13 @@ controller.$inject = ['lynchService', '$timeout', '$rootScope'];
 function controller(lynchSvc, timeout, rootScope) {
     this.newFilter = false;
     this.activeFilter = null;
-    this.searchYear = false;
-    this.searchCounty = false;
-    this.searchPlace = false;
+
+    this.newQuery = {
+        category: null,
+        target: null
+    };
 
     this.queries = [];
-
 
     this.filters = [
         {
@@ -103,13 +104,24 @@ function controller(lynchSvc, timeout, rootScope) {
 
     this.addFilter = ()=>{
         this.newFilter=true;
-        console.log('added a new filter, here are the old ones: ', this.queries);
+        if (this.newQuery.category !== null && this.newQuery.target !== null){
+            this.queries.push(this.newQuery);
+            this.newQuery = {
+                catergory: null,
+                target: null
+            };
+            this.incompleteFilter = false;
+            console.log('added a new filter, here are the old ones: ', this.queries);
+        }
+        else{
+            this.incompleteFilter = true;
+        }
     };
 
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
     };
-    
+
 }
 
 

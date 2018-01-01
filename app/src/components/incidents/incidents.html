@@ -4,23 +4,22 @@
         <h2>Browse Incidents</h2>
         <div id="filters">
               
-                <div >
+                <div class="form-group">
                         <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
                         <div class="col-lg-1">
-                                <select ng-model="$ctrl.activeFilter" ng-options="filter.name for filter in $ctrl.filters">
+                                <select ng-model="$ctrl.newQuery.category" ng-options="filter.name for filter in $ctrl.filters">
                                 </select>
                         </div>
-
                         <div>
-                                <div class="col-lg-2" >
-                                        <select ng-if="$ctrl.activeFilter.name==='county'" ng-model="$ctrl.newQuery" ng-options="county for county in $ctrl.counties">
+                                <div ng-if="$ctrl.newQuery.category==='county'" class="col-lg-2" >
+                                        <select  ng-model="$ctrl.newQuery.target" ng-options="county for county in $ctrl.counties">
                                         </select>
                                 </div>
-                                <div class="col-lg-2">
-                                        <input ng-if="$ctrl.activeFilter.name==='place'" ng-model="$ctrl.newQuery" type="text" class="form-control" id="inputPlace" placeholder="Place">
+                                <div ng-if="$ctrl.newQuery.category==='place'" class="col-lg-2">
+                                        <input ng-model="$ctrl.newQuery.target" type="text" class="form-control" id="inputPlace" placeholder="Place">
                                 </div>
-                                <div class="col-lg-1">
-                                        <input ng-if="$ctrl.activeFilter.name==='year'" ng-model="$ctrl.newQuery" type="number" class="form-control" id="inputYear" min=1500 max=2100>
+                                <div class="col-lg-1" ng-if="$ctrl.newQuery.category==='year'">
+                                        <input ng-model="$ctrl.newQuery.target" type="number" class="form-control" id="inputYear" min=1500 max=2100>
                                 </div>
                         </div>
 

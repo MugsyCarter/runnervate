@@ -7,6 +7,7 @@ const errorHandler = require('./error-handler');
 const auths = require('./routes/auths');
 const users = require('./routes/users');
 const trips = require('./routes/trips');
+const peoples = require('./routes/peoples');
 
 app.use(morgan('dev'));
 
@@ -24,6 +25,7 @@ app.use(express.static('./public'));
 app.use('/api/trips', trips);
 app.use('/api/auths', auths);
 app.use('/api/users', users);
+app.use('/api/peoples', peoples);
 
 app.use(errorHandler);
 

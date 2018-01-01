@@ -13,7 +13,7 @@ function controller(rootScope, lynchSvc, $state) {
     this.incident = {
         cwIndex: null,
         gdIndex: null,
-        origDBIndex: null,
+        caseNum: null,
         crossRefNotesCwGd: null,
         GISdecimal: {
             lat: 0,

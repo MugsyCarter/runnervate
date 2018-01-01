@@ -169,6 +169,12 @@ function controller(rootScope, lynchSvc, $state) {
         'Yuba County'];
 
     this.addThisIncident= ()=>{
+        if (this.decimal === 'false'){
+            //write code to convert here
+            this.incident.latDecimal = this.incident.latNDegrees + (this.incident.latNMinutes/60) + (this.incident.latNSeconds/3600);;
+            this.incident.lonDecimal = 0 - (this.incident.lonWDegrees + (this.incident.lonWMinutes/60) + (this.incident.lonWSeconds/3600));
+            console.log(this.incident.lonDecimal);
+        }
         console.log('adding this incident ', this.incident);
         this.showFormData = true;
         // lynchSvc.addIncident(this.incident)

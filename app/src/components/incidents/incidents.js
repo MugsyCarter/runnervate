@@ -5,15 +5,35 @@ export default {
     controller
 };
 
-controller.$inject = ['incidentService', '$timeout', '$rootScope'];
+controller.$inject = ['lynchService', '$timeout', '$rootScope'];
 
-function controller(incidentSvc, timeout, rootScope) {
-    incidentSvc.get()
-    .then((incident) => {
-        this.incidents = incident;
-        console.log('incident is ', incidents);
-        console.log(this.incidents[0].name);
-    });
+function controller(lynchSvc, timeout, rootScope) {
+    this.filters = [
+        {
+            name: 'year',
+            value: 'year'
+        },
+        {
+            name: 'state',
+            value: 'state'
+        },
+        {
+            name: 'county',
+            value: 'county'
+        },
+        {
+            name: 'place',
+            value: 'place'
+        }
+    ];
+   
+   
+    // incidentSvc.get()
+    // .then((incident) => {
+    //     this.incidents = incident;
+    //     console.log('incident is ', incidents);
+    //     console.log(this.incidents[0].name);
+    // });
 }
 
 

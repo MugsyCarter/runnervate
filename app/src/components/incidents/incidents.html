@@ -3,13 +3,22 @@
        
         <h2>Browse Incidents</h2>
         <div id="filters">
+                <h3 class="filterHeading">Filters</h2>
+                <button class="btn btn-secondary"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h4>Add Filter</h4></span></button>
 
+                <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
+                <div class="col-lg-2">
+                  <select ng-model="$ctrl.filter" ng-options="filter.name for filter in $ctrl.filters">
+                  </select>
+                </div>
+                
         </div>
-        <div id="trip-gallery">
-                <ul id="trip-list">
-                        <li ng-repeat="trip in $ctrl.trips">
+
+        <div id="incident-gallery">
+                <ul id="incident-list">
+                        <li ng-repeat="incident in $ctrl.incidents">
                                 <div>
-                                        <h3>{{trip.name}}</h3>
+                                        <h3>{{incident.name}}</h3>
                                         <h4>{{trip.type}}</h4>
                                         <h4>{{trip.startDate}} to {{trip.endDate}}</h4>
                                         <h4>{{trip.startlocation}}</h4>

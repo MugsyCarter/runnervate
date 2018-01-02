@@ -29,11 +29,11 @@
         </div>
 
         <br>
-        
+
         <div class="form-group" ng-if="$ctrl.queries.length">
                 <label for="inputFilter" class="col-lg-3 control-label">Active Filters: Click a Filter to Remove</label>
                 <div class="col-lg-2" ng-repeat="query in $ctrl.queries" >
-                        <button type='button' class="{{$ctrl.classes[query.number]}}">{{query.category.name}} is {{query.target}}</button>
+                        <button type='button' class="{{$ctrl.classes[query.number]}}" ng-click="$ctrl.removeFilter(query)">{{query.category.name}} is {{query.target}}</button>
                 </div>
         </div>
 

@@ -132,6 +132,10 @@ function controller(lynchSvc, timeout, rootScope) {
         }
     };
 
+    this.removeFilter = (filter)=>{
+        console.log('removing this filter ', filter);
+    };
+    
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
     };

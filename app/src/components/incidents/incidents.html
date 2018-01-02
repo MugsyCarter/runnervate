@@ -3,7 +3,7 @@
        
         <h2>Browse Incidents</h2>
         <div id="filters">
-                <div class="form-group">
+                <div class="jumbotron">
                         <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
                         <div class="col-lg-1">
                                 <select ng-model="$ctrl.newQuery.category" ng-options="filter.name for filter in $ctrl.filters">
@@ -17,32 +17,26 @@
                                 <div ng-if="$ctrl.newQuery.category.name==='place'" class="col-lg-2">
                                         <input ng-model="$ctrl.newQuery.target" type="text" class="form-control" id="inputPlace" placeholder="Place">
                                 </div>
-                                <div class="col-lg-1" ng-if="$ctrl.newQuery.category.name==='year'">
+                                <div class="col-lg-2" ng-if="$ctrl.newQuery.category.name==='year'">
                                         <input ng-model="$ctrl.newQuery.target" type="number" class="form-control" id="inputYear" min=1500 max=2100>
                                 </div>
                         </div>
-
+                        <button ng-if="$ctrl.newQuery.target!==null" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Another Filter</h6></span></button>
 
                 </div>
-                <button ng-if="$ctrl.newQuery.target!==null" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Another Filter</h6></span></button>
-                <button class="btn btn-info"  ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"><h6>Seach Incidents</h6></span></button>
         </div>
 
-        <br>
-
-        <div class="form-group" ng-if="$ctrl.queries.length">
+        <div class="jumbotron mb-3" ng-if="$ctrl.queries.length">
                 <label for="inputFilter" class="col-lg-3 control-label">Active Filters: Click a Filter to Remove</label>
                 <div class="col-lg-2" ng-repeat="query in $ctrl.queries" >
                         <button type='button' class="{{$ctrl.classes[query.number]}}" ng-click="$ctrl.removeFilter(query)">{{query.category.name}} is {{query.target}}</button>
                 </div>
         </div>
 
-        <!-- <div>
-                <h1>Test Filters</h1>
-                <div ng-repeat="query in $ctrl.queries">
-                       <p>{{query.category.name}}  and {{query.target}}</p> 
-                </div>
-        </div> -->
+        <div class="form-group">
+                <button class="btn btn-info"  ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"><h6>Seach Incidents</h6></span></button>
+        </div>
+
 
 
         <div id="incident-gallery">

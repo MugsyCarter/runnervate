@@ -11,9 +11,12 @@ function controller(lynchSvc, timeout, rootScope) {
     this.newFilter = false;
     this.activeFilter = null;
 
+    this.queryNumber=-1; 
+
     this.newQuery = {
         category: null,
-        target: null
+        target: null,
+        number: null
     };
 
     this.queries = [];
@@ -91,6 +94,10 @@ function controller(lynchSvc, timeout, rootScope) {
         'Yolo County',
         'Yuba County'];
 
+    this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
+
+    this.buttonClass = 'btn btn-outline-primary';
+
     // incidentSvc.get()
     // .then((incident) => {
     //     this.incidents = incident;
@@ -101,24 +108,26 @@ function controller(lynchSvc, timeout, rootScope) {
     this.addFilter = ()=>{
         this.newFilter=true;
         if (this.newQuery.category !== null && this.newQuery.target !== null){
+            this.queryNumber ++;
+            if (this.queryNumber > 3){
+                this.queryNumber = 0;
+            }
+
+            this.newQuery.number = this.queryNumber;
+
             this.queries.push(this.newQuery);
 
             let index = this.filters.findIndex((filter)=>{
-                console.log(filter.name);
                 return filter.name === this.newQuery.category.name;
             });
 
-
-            console.log('this is the index ', index);
-            console.log('removing this filter ', this.filters[index]);
             this.filters.splice(index,1);
 
             this.newQuery = {
                 catergory: null,
-                target: null
+                target: null,
+                number: null
             };
-            
-            console.log('added a new filter, here are the old ones: ', this.queries);
             console.log('filters are ', this.filters);
         }
     };

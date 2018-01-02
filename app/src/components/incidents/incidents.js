@@ -134,8 +134,18 @@ function controller(lynchSvc, timeout, rootScope) {
 
     this.removeFilter = (filter)=>{
         console.log('removing this filter ', filter);
+
+        this.filters.push(filter.category);
+
+        let index = this.queries.findIndex((query)=>{
+            console.log('query name is ' + query.category.name + ' and filter name is ' + filter.category.name);
+            return query.category.name === filter.category.name;
+        });
+
+        this.queries.splice(index,1);
+
     };
-    
+
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
     };

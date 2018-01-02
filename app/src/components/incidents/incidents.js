@@ -23,10 +23,6 @@ function controller(lynchSvc, timeout, rootScope) {
             name: 'year',
             value: 'year'
         },
-        // {
-        //     name: 'state',
-        //     value: 'state'
-        // },
         {
             name: 'county',
             value: 'county'
@@ -106,15 +102,24 @@ function controller(lynchSvc, timeout, rootScope) {
         this.newFilter=true;
         if (this.newQuery.category !== null && this.newQuery.target !== null){
             this.queries.push(this.newQuery);
+
+            let index = this.filters.findIndex((filter)=>{
+                console.log(filter.name);
+                return filter.name === this.newQuery.category.name;
+            });
+
+
+            console.log('this is the index ', index);
+            console.log('removing this filter ', this.filters[index]);
+            this.filters.splice(index,1);
+
             this.newQuery = {
                 catergory: null,
                 target: null
             };
-            this.incompleteFilter = false;
+            
             console.log('added a new filter, here are the old ones: ', this.queries);
-        }
-        else{
-            this.incompleteFilter = true;
+            console.log('filters are ', this.filters);
         }
     };
 

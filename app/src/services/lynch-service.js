@@ -7,6 +7,7 @@ export default function lynchService($http, apiUrl) {
             return $http.get(`${apiUrl}/incidents`)
                 .then(res => res.data);
         },
+        
         getById(incidentId) {
             console.log('in get by Id ,', apiUrl);
             return $http.get(`${apiUrl}/incidents/${incidentId}`)

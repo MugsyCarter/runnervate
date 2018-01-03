@@ -21,7 +21,7 @@
                                         <input ng-model="$ctrl.newQuery.target" type="number" class="form-control" id="inputYear" min=1500 max=2100>
                                 </div>
                         </div>
-                        <button ng-if="$ctrl.newQuery.target!==null" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add Another Filter</h6></span></button>
+                        <button ng-if="$ctrl.newQuery.target!==null" class="btn btn-success"  ng-click="$ctrl.addFilter()" ><span class="glyphicon glyphicon-plus"><h6>Add</h6></span></button>
 
                 </div>
         </div>
@@ -39,7 +39,7 @@
 
 
 
-        <div id="incident-gallery">
+        <div id="incident-gallery" ng-if="$ctrl.incidents.length">
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">
                         <li ng-repeat="incident in $ctrl.incidents">

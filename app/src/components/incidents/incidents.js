@@ -13,7 +13,8 @@ function controller(lynchSvc, timeout, rootScope) {
 
     this.queryNumber=-1; 
 
-    this.incidentNumber = this.incidents.length;
+    this.incidents = [];
+    
 
     this.newQuery = {
         category: null,
@@ -162,6 +163,7 @@ function controller(lynchSvc, timeout, rootScope) {
             .then((incidents)=>{
                 this.incidents=incidents;
                 console.log(this.incidents);
+                this.incidentNumber = this.incidents.length;
             });
     };
 
@@ -169,6 +171,7 @@ function controller(lynchSvc, timeout, rootScope) {
         .then((incidents)=>{
             this.incidents=incidents;
             console.log(this.incidents);
+            this.incidentNumber = this.incidents.length;
         });
 
     // this code populates the DB

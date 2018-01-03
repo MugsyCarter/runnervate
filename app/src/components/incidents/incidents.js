@@ -148,6 +148,20 @@ function controller(lynchSvc, timeout, rootScope) {
 
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
+        let queryString = '';
+        if (this.queries.length > 0){
+            queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;
+            for (let i=1; i < this.queries.length; i++){
+                queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
+            }
+        }
+        console.log(queryString);
+        lynchSvc.getByQuery(queryString)
+            .then((incidents)=>{
+                this.incidents=incidents;
+                console.log(this.incidents);
+            });
+       
     };
 
     lynchSvc.get()

@@ -13,8 +13,8 @@ export default function lynchService($http, apiUrl) {
                 .then(res => res.data);
         },
 
-        getByName(incidentname) {
-            return $http.get(`${apiUrl}/incidents/${incidentname}`)
+        getByQuery(query) {
+            return $http.get(`${apiUrl}/incidents/${query}`)
             .then(res => res.data);
         },
 

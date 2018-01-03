@@ -150,6 +150,11 @@ function controller(lynchSvc, timeout, rootScope) {
         console.log('searching incidents with these queries ', this.queries);
     };
 
+    lynchSvc.get()
+        .then((incidents)=>{
+            this.incidents=incidents;
+            console.log(this.incidents);
+        });
 }
 
 

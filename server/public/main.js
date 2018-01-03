@@ -34048,13 +34048,18 @@
 	    this.searchIncidents = function () {
 	        console.log('searching incidents with these queries ', _this.queries);
 	    };
+	
+	    lynchSvc.get().then(function (incidents) {
+	        _this.incidents = incidents;
+	        console.log(_this.incidents);
+	    });
 	}
 
 /***/ },
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<section>\n       \n        <h2>Browse Incidents</h2>\n        <div id=\"filters\">\n                <div class=\"form-group\">\n                        <label for=\"inputFilter\" class=\"col-lg-1 control-label\">Filter by </label>\n                        <div class=\"col-lg-1\">\n                                <select ng-model=\"$ctrl.newQuery.category\" ng-options=\"filter.name for filter in $ctrl.filters\">\n                                </select>\n                        </div>\n                        <div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='county'\" class=\"col-lg-2\" >\n                                        <select  ng-model=\"$ctrl.newQuery.target\" ng-options=\"county for county in $ctrl.counties\">\n                                        </select>\n                                </div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='place'\" class=\"col-lg-2\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                                </div>\n                                <div class=\"col-lg-1\" ng-if=\"$ctrl.newQuery.category.name==='year'\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"number\" class=\"form-control\" id=\"inputYear\" min=1500 max=2100>\n                                </div>\n                        </div>\n\n\n                </div>\n                <button ng-if=\"$ctrl.newQuery.target!==null\" class=\"btn btn-success\"  ng-click=\"$ctrl.addFilter()\" ><span class=\"glyphicon glyphicon-plus\"><h6>Add Another Filter</h6></span></button>\n                <button class=\"btn btn-info\"  ng-click=\"$ctrl.searchIncidents()\" ><span class=\"glyphicon glyphicon-search\"><h6>Seach Incidents</h6></span></button>\n        </div>\n\n        <br>\n\n        <div class=\"form-group\" ng-if=\"$ctrl.queries.length\">\n                <label for=\"inputFilter\" class=\"col-lg-3 control-label\">Active Filters: Click a Filter to Remove</label>\n                <div class=\"col-lg-2\" ng-repeat=\"query in $ctrl.queries\" >\n                        <button type='button' class=\"{{$ctrl.classes[query.number]}}\" ng-click=\"$ctrl.removeFilter(query)\">{{query.category.name}} is {{query.target}}</button>\n                </div>\n        </div>\n\n        <!-- <div>\n                <h1>Test Filters</h1>\n                <div ng-repeat=\"query in $ctrl.queries\">\n                       <p>{{query.category.name}}  and {{query.target}}</p> \n                </div>\n        </div> -->\n\n\n        <div id=\"incident-gallery\">\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.incidents\">\n                                <div>\n                                        <h3>{{incident.name}}</h3>\n                                        <h4>{{trip.type}}</h4>\n                                        <h4>{{trip.startDate}} to {{trip.endDate}}</h4>\n                                        <h4>{{trip.startlocation}}</h4>\n                                        <p>{{trip.description}}</p>          \n                                <div>\n                        </li>\n                </ul>\n        <div>\n</section>";
+	module.exports = "\n<section>\n       \n        <h2>Browse Incidents</h2>\n        <div id=\"filters\">\n                <div class=\"jumbotron\">\n                        <label for=\"inputFilter\" class=\"col-lg-1 control-label\">Filter by </label>\n                        <div class=\"col-lg-1\">\n                                <select ng-model=\"$ctrl.newQuery.category\" ng-options=\"filter.name for filter in $ctrl.filters\">\n                                </select>\n                        </div>\n                        <div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='county'\" class=\"col-lg-2\" >\n                                        <select  ng-model=\"$ctrl.newQuery.target\" ng-options=\"county for county in $ctrl.counties\">\n                                        </select>\n                                </div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='place'\" class=\"col-lg-2\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                                </div>\n                                <div class=\"col-lg-2\" ng-if=\"$ctrl.newQuery.category.name==='year'\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"number\" class=\"form-control\" id=\"inputYear\" min=1500 max=2100>\n                                </div>\n                        </div>\n                        <button ng-if=\"$ctrl.newQuery.target!==null\" class=\"btn btn-success\"  ng-click=\"$ctrl.addFilter()\" ><span class=\"glyphicon glyphicon-plus\"><h6>Add Another Filter</h6></span></button>\n\n                </div>\n        </div>\n\n        <div class=\"jumbotron mb-3\" ng-if=\"$ctrl.queries.length\">\n                <label for=\"inputFilter\" class=\"col-lg-3 control-label\">Active Filters: Click a Filter to Remove</label>\n                <div class=\"col-lg-2\" ng-repeat=\"query in $ctrl.queries\" >\n                        <button type='button' class=\"{{$ctrl.classes[query.number]}}\" ng-click=\"$ctrl.removeFilter(query)\">{{query.category.name}} is {{query.target}}</button>\n                </div>\n        </div>\n\n        <div class=\"form-group\">\n                <button class=\"btn btn-info\"  ng-click=\"$ctrl.searchIncidents()\" ><span class=\"glyphicon glyphicon-search\"><h6>Seach Incidents</h6></span></button>\n        </div>\n\n\n\n        <div id=\"incident-gallery\">\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.incidents\">\n                                <div>\n                                        <h3>{{incident.year}}</h3>\n                                        <h4>{{incident.month}}</h4>\n                                        <h4>{{incident.place}}</h4>\n                                        <p>{{incident}}</p>          \n                                <div>\n                        </li>\n                </ul>\n        <div>\n</section>";
 
 /***/ },
 /* 24 */
@@ -34376,18 +34381,18 @@
 	function lynchService($http, apiUrl) {
 	    return {
 	        get: function get() {
-	            return $http.get(apiUrl + '/trips').then(function (res) {
+	            return $http.get(apiUrl + '/incidents').then(function (res) {
 	                return res.data;
 	            });
 	        },
-	        getById: function getById(tripId) {
+	        getById: function getById(incidentId) {
 	            console.log('in get by Id ,', apiUrl);
-	            return $http.get(apiUrl + '/trips/' + tripId).then(function (res) {
+	            return $http.get(apiUrl + '/incidents/' + incidentId).then(function (res) {
 	                return res.data;
 	            });
 	        },
-	        getByName: function getByName(tripname) {
-	            return $http.get(apiUrl + '/trips/' + tripname).then(function (res) {
+	        getByName: function getByName(incidentname) {
+	            return $http.get(apiUrl + '/incidents/' + incidentname).then(function (res) {
 	                return res.data;
 	            });
 	        },

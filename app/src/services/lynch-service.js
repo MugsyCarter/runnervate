@@ -4,17 +4,17 @@ lynchService.$inject = ['$http', 'apiUrl'];
 export default function lynchService($http, apiUrl) {
     return {
         get() {
-            return $http.get(`${apiUrl}/trips`)
+            return $http.get(`${apiUrl}/incidents`)
                 .then(res => res.data);
         },
-        getById(tripId) {
+        getById(incidentId) {
             console.log('in get by Id ,', apiUrl);
-            return $http.get(`${apiUrl}/trips/${tripId}`)
+            return $http.get(`${apiUrl}/incidents/${incidentId}`)
                 .then(res => res.data);
         },
 
-        getByName(tripname) {
-            return $http.get(`${apiUrl}/trips/${tripname}`)
+        getByName(incidentname) {
+            return $http.get(`${apiUrl}/incidents/${incidentname}`)
             .then(res => res.data);
         },
 
@@ -24,20 +24,20 @@ export default function lynchService($http, apiUrl) {
                 .then(res => res.data);
         },
 
-        // updatetrip(trip, course) {
-        //     return $http.put(`${apiUrl}/trips/${trip._id}`, course)
+        // updateincident(incident, course) {
+        //     return $http.put(`${apiUrl}/incidents/${incident._id}`, course)
         //         .then(res => res.data);
         // },
 
-        // checkCourseProgress(trip, course){
-        //     console.log('checking progress ', trip, course);
+        // checkCourseProgress(incident, course){
+        //     console.log('checking progress ', incident, course);
         // },
 
-        // updateCourseProgress(trip, course){
-        //     console.log('updating this trip and course ', trip, course);
+        // updateCourseProgress(incident, course){
+        //     console.log('updating this incident and course ', incident, course);
         //     var points = 0;
         //     var total = 0;
-        //     trip[course.name].forEach((unit)=>{
+        //     incident[course.name].forEach((unit)=>{
         //         if (unit){
         //             points += unit.correct;
         //             total += unit.total;
@@ -45,7 +45,7 @@ export default function lynchService($http, apiUrl) {
         //         console.log('unit is ', unit);
         //     });
         //     var percentComplete = (points/total)* 100;
-        //     console.log('trip has this many points', percentComplete);
+        //     console.log('incident has this many points', percentComplete);
         // }
 
 

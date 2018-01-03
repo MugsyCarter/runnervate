@@ -14,7 +14,7 @@ router
             .then(incident => res.send(incident ))
             .catch(next);
     })
-        //find a incident and all incidentdata
+        //find an incident and all incidentdata
     .get('/:incident', (req, res, next) => {
 	    const incidentID = req.params.incident;
         console.log('incidentID is ', incidentID);

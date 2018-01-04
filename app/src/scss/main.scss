@@ -9,7 +9,18 @@ ul{
   list-style: none;
 }
 
+
 //browse Incidents
 //search filters
 #filterGroup{
+}
+
+//incident results
+#incident-panel{
+  border: none;
+  :hover{
+    cursor: pointer;
+  }
+  margin: 1vh;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }

@@ -171,7 +171,11 @@ function controller(lynchSvc, timeout, rootScope) {
                 this.incidents=incidents;
                 console.log(this.incidents);
                 this.incidentNumber = this.incidents.length;
+                this.incidents.sort((a,b)=>{
+                    return a.year > b.year
+                });
             });
+         
     };
 
     lynchSvc.get()
@@ -179,7 +183,13 @@ function controller(lynchSvc, timeout, rootScope) {
             this.incidents=incidents;
             console.log(this.incidents);
             this.incidentNumber = this.incidents.length;
+            let sorted = this.incidents.sort((a,b)=>{
+                return parseInt(a.year) > parseInt(b.year);
+            });
+            this.incidents = sorted;
         });
+
+
 
     // this code populates the DB
     // this.oldJSON.forEach((entry)=>{

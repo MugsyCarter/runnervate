@@ -39,7 +39,7 @@ function controller(lynchSvc, timeout, rootScope) {
         }
     ];
    
-    this.counties = ['Alameda County', 'Alpine County',
+    this.oldCounties = ['Alameda County', 'Alpine County',
         'Amador County',
         'Butte County',
         'Calaveras County',
@@ -97,16 +97,23 @@ function controller(lynchSvc, timeout, rootScope) {
         'Yolo County',
         'Yuba County'];
 
+    this.counties = [];
+
+    this.oldCounties.forEach((county)=>{
+        let arr = county.split(' ');
+        arr.pop();
+        let str = arr.join(' ');
+        this.counties.push(str);
+    });
+    
     this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
 
     this.buttonClass = 'btn btn-outline-primary';
 
-    // incidentSvc.get()
-    // .then((incident) => {
-    //     this.incidents = incident;
-    //     console.log('incident is ', incidents);
-    //     console.log(this.incidents[0].name);
-    // });
+    lynchSvc.get()
+    .then((incident) => {
+        this.incidents = incident;
+    });
 
     this.addFilter = ()=>{
         this.newFilter=true;
@@ -176,10 +183,14 @@ function controller(lynchSvc, timeout, rootScope) {
 
     // this code populates the DB
     // this.oldJSON.forEach((entry)=>{
-    //     lynchSvc.addIncident(entry)
-    //     .then((incident)=>{
-    //         console.log('posted ', incident);
-    //     });
+        // if (entry.yearMonthDay.length > 0){
+        //     entry.month = 
+        // }
+        // lynchSvc.addIncident(entry)
+        // .then((incident)=>{
+        //     console.log('posted ', incident);
+        // });
+    //     console.log(entry);
     // });
 
 }

@@ -40,10 +40,11 @@
         <div id="incident-gallery" ng-if="$ctrl.incidents.length" class="panel-group">
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">
-                        <li ng-repeat="incident in $ctrl.incidents" class="panel panel-default">
+                        <li ng-repeat="incident in $ctrl.incidents" class="panel panel-success">
                                 <div class="panel-body">
                                         <h3>{{incident.year}}</h3>
                                         <h4>{{incident.month}}</h4>
+                                        <h4>{{incident.day}}</h4>
                                         <h4>{{incident.place}}</h4>
                                         <p>{{incident}}</p>          
                                 <div>

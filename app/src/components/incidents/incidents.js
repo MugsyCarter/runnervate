@@ -156,6 +156,14 @@ function controller(lynchSvc, timeout, rootScope) {
 
     };
 
+    this.showIncident= (incident)=>{
+        incident.fullView = true;
+    };
+
+    this.hideIncident= (incident)=>{
+        incident.fullView = false;
+    };
+
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
         let queryString = '';

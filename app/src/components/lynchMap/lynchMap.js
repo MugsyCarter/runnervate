@@ -113,10 +113,10 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     // this.buttonClass = 'btn btn-outline-primary';
 
-    // lynchSvc.get()
-    // .then((incident) => {
-    //     this.incidents = incident;
-    // });
+    lynchSvc.get()
+    .then((incident) => {
+        this.incidents = incident;
+    });
 
     // this.addFilter = ()=>{
     //     this.newFilter=true;

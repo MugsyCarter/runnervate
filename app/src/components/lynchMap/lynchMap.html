@@ -3,9 +3,17 @@
        
         <h1>Lynching Map</h1>
 
-        <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
-                <ng-map center="41,-87" zoom="3"></ng-map>
+        <div class="lynchMap" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
+                <ng-map center="37.897894, -119.340420" zoom="5">
+                        <!-- <marker position=“{{$ctrl.incidents[0].latDecimal}},{{$ctrl.incidents[0].lonDecimal}}” />  -->
+                        <marker ng-repeat="incident in $ctrl.incidents" position=“{{incident.latDecimal}},{{incident.lonDecimal}}” /> 
+                </ng-map>
         </div>
+
+        <!-- ng-repeat="incident in $ctrl.incidents"  -->
+
+        
+
 
         <!-- <h2>Browse Incidents</h2>
         <div id="filters">

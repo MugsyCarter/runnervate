@@ -17,6 +17,13 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
+        name: 'map',
+        url: '/map',
+        data: { public: true },
+        component: 'map' 
+    });
+
+    $stateProvider.state({
         name: 'incidents',
         url: '/incidents',
         data: { public: true },

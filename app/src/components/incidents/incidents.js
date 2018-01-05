@@ -175,12 +175,34 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.updateActiveIncidents = ()=>{
         console.log('updating active incidents');
         this.activeIncidents = [];
+        if (this.maxResult > (this.incidents.length - 1)){
+            this.maxResult = (this.incidents.length - 1)
+        }
         for (let i = this.minResult; i < this.maxResult; i ++){
             this.activeIncidents.push(this.incidents[i]);
         }
     };
 
+    this.nextResults = ()=>{
+        this.minResult += 10;
+        this.maxResult += 10;
+        this.updateActiveIncidents();
+    };
+
+    this.previousResults = ()=>{
+        if (this.maxResult % 10 !== 0){
+            this.maxResult -=(this.maxResult % 10);
+        }
+        else{
+            this.maxResult -= 10;
+        }
+        this.minResult -= 10;
+        this.updateActiveIncidents();
+    };
+
     this.searchIncidents = ()=>{
+        this.minResult = 0;
+        this.maxResult = 10;
         console.log('searching incidents with these queries ', this.queries);
         let queryString = '';
         if (this.queries.length > 0){

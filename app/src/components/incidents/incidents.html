@@ -1,6 +1,6 @@
 
 <section>
-       
+     <div class="container">
  
         <!-- <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
         <ng-map center="41,-87" zoom="3"></ng-map>
@@ -45,11 +45,18 @@
         <div id="incident-gallery" ng-if="$ctrl.incidents.length" class="panel-group">
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">
-                        <li ng-repeat="incident in $ctrl.incidents">
+                        <li ng-repeat="incident in $ctrl.activeIncidents">
                                 <div class="panel panel-primary col-lg-11" id="incident-panel">
                                         <div  class="panel-header">
                                                 <h3>{{incident.suspectNames}}</h3>
                                         </div>
+
+                                        <div class="lynchMap" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}" >
+                                                <ng-map class="small-map" center="{{incident.latDecimal}},{{incident.lonDecimal}} " zoom="8">
+                                                        <marker  position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/> 
+                                                </ng-map>
+                                        </div>
+
                                         <div class="panel-body" ng-hide="incident.fullView===true"> 
                                                 <button class="btn btn-primary" id="show-incident-button" ng-click="$ctrl.showIncident(incident)"><span class="glyphicon glyphicon-view"><h6>Show More</h6></span></button>
                                                 <h3>{{incident.year}}</h3>
@@ -129,5 +136,14 @@
                                 </div>
                         </li>
                 </ul>
-        <div>
+        </div>
+
+        <div id="search-results-footer" class="panel-group" ng-if="$ctrl.incidents.length>0">
+                <div class="panel-md-10">
+                        <button><span class="glyphicon glyphicon-arrow-left"><h6>Previous</h6></button>
+                        <button><span class="glyphicon glyphicon-arrow-right"><h6>Next</h6></button>
+                        <h3>Results Found</h3>
+                </div>
+        </div>
+        </div>        
 </section>

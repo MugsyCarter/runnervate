@@ -11,6 +11,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.mapURL =  googleMapsUrl;
 
+    this.minResult = 0;
+    this.maxResult = 10;
+
     this.newFilter = false;
     this.activeFilter = null;
 
@@ -18,6 +21,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.incidents = [];
     
+    this.activeIncidents = [];
+
 
     this.newQuery = {
         category: null,
@@ -167,6 +172,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         incident.fullView = false;
     };
 
+    this.updateActiveIncidents = ()=>{
+        console.log('updating active incidents');
+        this.activeIncidents = [];
+        for (let i = this.minResult; i < this.maxResult; i ++){
+            this.activeIncidents.push(this.incidents[i]);
+        }
+    };
+
     this.searchIncidents = ()=>{
         console.log('searching incidents with these queries ', this.queries);
         let queryString = '';
@@ -186,8 +199,10 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
                     return a.year > b.year;
                 });
             });
-         
+         this.updateActiveIncidents();
     };
+
+ 
 
     lynchSvc.get()
         .then((incidents)=>{
@@ -198,6 +213,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
                 return parseInt(a.year) > parseInt(b.year);
             });
             this.incidents = sorted;
+            this.updateActiveIncidents();
         });
 
 

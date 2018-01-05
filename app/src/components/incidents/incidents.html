@@ -56,15 +56,20 @@
                                                 <h3>{{incident.year}}</h3>
                                                 <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
                                                 <p>{{incident.summary}} summary will go here</p>
-                                                <h4>Suspects</h4>
+
+                                                <h4>Accused</h4>
                                                 <p>Number: {{incident.numberSuspects}}</p>
                                                 <p>Names: {{incident.suspectNames}}</p>
                                                 <p>Races: {{incident.suspectRaces}}</p>
                                                 <p>Confession or Speech at Gallows: {{incident.confession}}</p>
-                                                <p>Suspect Notes: {{incident.suspectNotes}}</p>
+                                                <p>Accused Notes: {{incident.suspectNotes}}</p>
                                             
-                        
-
+                                                <h4>Victims</h4>
+                                                <h5>Number: </h5><p>{{incident.victimNumber}}</p>
+                                                <p>Names: {{incident.victimNames}}</p>
+                                                <p>Genders: {{incident.victimGenders}}</p>
+                                                <p>Races: {{incident.victimRaces}}</p>
+                                                <p>Victim Notes: {{incident.victimNotes}}</p>
 
                                                 caseNum: requiredString,
     origDBIndex: Number,

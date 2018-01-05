@@ -5,9 +5,12 @@ export default {
     controller
 };
 
-controller.$inject = ['lynchService', '$timeout', '$rootScope'];
+controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl'];
 
-function controller(lynchSvc, timeout, rootScope) {
+function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
+
+    this.mapURL =  googleMapsUrl;
+
     this.newFilter = false;
     this.activeFilter = null;
 
@@ -180,7 +183,7 @@ function controller(lynchSvc, timeout, rootScope) {
                 console.log(this.incidents);
                 this.incidentNumber = this.incidents.length;
                 this.incidents.sort((a,b)=>{
-                    return a.year > b.year
+                    return a.year > b.year;
                 });
             });
          

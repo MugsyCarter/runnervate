@@ -52,7 +52,7 @@ const tripSchema = new Schema({
     sources: [],
     oldSources: String,
     oldNotes: String,
-    abstract: String,
+    summary: String,
 });
 
 

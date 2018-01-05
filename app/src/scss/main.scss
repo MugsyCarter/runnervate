@@ -10,6 +10,8 @@ ul{
 }
 
 
+
+
 //browse Incidents
 //search filters
 #filterGroup{
@@ -28,3 +30,6 @@ ul{
 #show-incident-button{
   float: right;
 }
+
+//map stuff
+.angular-google-map-container { height: 400px; }

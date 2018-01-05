@@ -17,10 +17,10 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'map',
-        url: '/map',
+        name: 'lynchMap',
+        url: '/lynchMap',
         data: { public: true },
-        component: 'map' 
+        component: 'lynchMap' 
     });
 
     $stateProvider.state({

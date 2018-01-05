@@ -11,6 +11,11 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.mapURL =  googleMapsUrl;
 
+    this.fart = ()=>{
+        alert('fart');
+        console.log('fart complete');
+    }
+
     // this.newFilter = false;
     // this.activeFilter = null;
 

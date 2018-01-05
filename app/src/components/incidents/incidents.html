@@ -55,7 +55,53 @@
                                                 <button class="btn btn-secondary" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-view"><h6>Show Less</h6></span></button>
                                                 <h3>{{incident.year}}</h3>
                                                 <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
-                                                <p>{{incident.summary}} summary will go here</p> 
+                                                <p>{{incident.summary}} summary will go here</p>
+                                                <h4>Suspects</h4>
+                                                <p>Number: {{incident.numberSuspects}}</p>
+                                                <p>Names: {{incident.suspectNames}}</p>
+                                                <p>Races: {{incident.suspectRaces}}</p>
+                                                <p>Confession or Speech at Gallows: {{incident.confession}}</p>
+                                                <p>Suspect Notes: {{incident.suspectNotes}}</p>
+                                            
+                        
+
+
+                                                caseNum: requiredString,
+    origDBIndex: Number,
+    cwIndex: String,
+    gdIndex: String,
+    crossRefNotesCwGd: String,
+    latDecimal: Number,
+    lonDecimal: Number,
+    latNDegrees:Number,
+    latNMinutes:Number,
+    latNSeconds:Number,
+    lonWDegrees:Number,
+    lonWMinutes:Number,
+    lonWSeconds:Number,
+    year: requiredNumber,
+    month: Number,
+    day: Number,
+    dateNotes: String,
+    state: String,
+    place: String,
+    county: String,
+    locationNotes: String,
+    crowdType: String,
+    crowdSize: String,
+    open: String,
+    oldAuthorities: String,
+    authoritiesPresent: Boolean,
+    authoritiesNotes: String,
+    crime: String,
+    punishment: requiredString,
+    lethality: String,
+    otherNamesMentioned: String,
+
+    sources: [],
+    oldSources: String,
+    oldNotes: String,
+    summary: String, 
                                         </div>
                                 </div>
                         </li>

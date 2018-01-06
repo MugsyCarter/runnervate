@@ -9,11 +9,12 @@ controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl',
 
 function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
-    this.map={};
+
+  
 
     lynchSvc.get()
-    .then((incident) => {
-        this.incidents = incident;
+    .then((incidents) => {
+        this.incidents = incidents;
         console.log('incidents loaded: ', this.incidents);
         NgMap.getMap().then(function(map) {
             console.log(map.getCenter());
@@ -21,17 +22,39 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
             console.log('shapes', map.shapes);
             console.log('class', map.class);
 
-            let newMarker = new google.maps.Marker({
-                    title: "Hi marker "
-                  });
+            for (let i =0; i < incidents.length; i++){
+                    console.log('add marker called');
+                    let newMarker = new google.maps.Marker({
+                        title: "Hi marker "
+                    });
+            
+                    newMarker.addListener('click', function() {
+                        map.setZoom(10);
+                        map.setCenter(newMarker.getPosition());
+                        alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
+                      });
 
-            var bounds = new google.maps.LatLngBounds();
-            var lat = 38.7296252;
-            var lng =-120.798546;
-            var latlng = new google.maps.LatLng(lat, lng)
-            newMarker.setPosition(latlng);
-            newMarker.setMap(map);
-            bounds.extend(latlng);
+                    var bounds = new google.maps.LatLngBounds();
+                    var lat = incidents[i].latDecimal;
+                    var lng = incidents[i].lonDecimal;
+                    var latlng = new google.maps.LatLng(lat, lng)
+                    newMarker.setPosition(latlng);
+                    newMarker.setMap(map);
+                    bounds.extend(latlng);
+                };
+
+                // map.addListener('center_changed', function() {
+                //     // 3 seconds after the center of the map has changed, pan back to the
+                //     // marker.
+                //     window.setTimeout(function() {
+                //       map.panTo(marker.getPosition());
+                //     }, 3000);
+                //   });
+        });
+    });
+    
+
+
 
     // for (var i=0; i<8 ; i++) {
     //   markers[i] = new google.maps.Marker({
@@ -59,8 +82,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     // };  
     
     // timeout( this.GenerateMapMarkers, 2000);
-        });
-    });
+  
 
 
     

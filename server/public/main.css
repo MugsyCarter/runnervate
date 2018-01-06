@@ -1,4 +1,25 @@
 select {
   margin: 3vh; }
 
+ul {
+  list-style: none; }
+
+#incident-panel {
+  border: none;
+  margin: 1vh;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  #incident-panel :hover {
+    cursor: pointer; }
+
+#show-incident-button {
+  float: right; }
+
+.lynch-map {
+  height: 100vh; }
+
+.small-map {
+  height: 60vh;
+  width: 70vh;
+  float: right; }
+
 /*# sourceMappingURL=main.css.map*/

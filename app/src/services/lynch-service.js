@@ -1,7 +1,7 @@
 
 lynchService.$inject = ['$http', 'apiUrl'];
 
-export default function lynchService($https, apiUrl) {
+export default function lynchService($http, apiUrl) {
     return {
         get() {
             return $http.get(`${apiUrl}/incidents`)

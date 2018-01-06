@@ -175,10 +175,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.updateActiveIncidents = ()=>{
         console.log('updating active incidents');
         this.activeIncidents = [];
-        if (this.maxResult > (this.incidents.length - 1)){
-            this.maxResult = (this.incidents.length - 1)
-        }
-        for (let i = this.minResult; i < this.maxResult; i ++){
+        for (let i = this.minResult-1; i < this.maxResult; i ++){
             this.activeIncidents.push(this.incidents[i]);
         }
     };
@@ -186,6 +183,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.nextResults = ()=>{
         this.minResult += 10;
         this.maxResult += 10;
+        if (this.maxResult > this.incidents.length){
+            this.maxResult = this.incidents.length;
+        }
         this.updateActiveIncidents();
     };
 
@@ -201,8 +201,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     };
 
     this.searchIncidents = ()=>{
-        this.minResult = 0;
-        this.maxResult = 10;
         console.log('searching incidents with these queries ', this.queries);
         let queryString = '';
         if (this.queries.length > 0){
@@ -220,8 +218,13 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
                 this.incidents.sort((a,b)=>{
                     return a.year > b.year;
                 });
+                this.minResult = 1;
+                this.maxResult = this.incidents.length;
+                if ((this.incidents.length)>9){
+                    this.maxResult = 10;
+                }
+                this.updateActiveIncidents();
             });
-         this.updateActiveIncidents();
     };
 
  
@@ -235,6 +238,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
                 return parseInt(a.year) > parseInt(b.year);
             });
             this.incidents = sorted;
+            if ((this.incidents.length)>9){
+                this.maxResult = 10;
+            }
             this.updateActiveIncidents();
         });
 

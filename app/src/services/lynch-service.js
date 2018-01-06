@@ -1,13 +1,13 @@
 
-lynchService.$inject = ['$http', 'apiUrl'];
+lynchService.$inject = ['$https', 'apiUrl'];
 
-export default function lynchService($http, apiUrl) {
+export default function lynchService($https, apiUrl) {
     return {
         get() {
-            return $http.get(`${apiUrl}/incidents`)
+            return $https.get(`${apiUrl}/incidents`)
                 .then(res => res.data);
         },
-        
+
         getById(incidentId) {
             console.log('in get by Id ,', apiUrl);
             return $http.get(`${apiUrl}/incidents/${incidentId}`)

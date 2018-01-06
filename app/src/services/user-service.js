@@ -1,7 +1,7 @@
 
-userService.$inject = ['$http', 'apiUrl'];
+userService.$inject = ['$https', 'apiUrl'];
 
-export default function userService($http, apiUrl) {
+export default function userService($https, apiUrl) {
     return {
         get() {
             return $http.get(`${apiUrl}/users`)

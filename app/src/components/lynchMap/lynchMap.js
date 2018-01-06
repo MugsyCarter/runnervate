@@ -5,9 +5,99 @@ export default {
     controller
 };
 
-controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl'];
+controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl', 'NgMap'];
 
-function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
+function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
+
+    this.map={};
+
+    lynchSvc.get()
+    .then((incident) => {
+        this.incidents = incident;
+        console.log('incidents loaded: ', this.incidents);
+        NgMap.getMap().then(function(map) {
+            console.log(map.getCenter());
+            console.log('markers', map.markers);
+            console.log('shapes', map.shapes);
+            console.log('class', map.class);
+
+            let newMarker = new google.maps.Marker({
+                    title: "Hi marker "
+                  });
+
+            var bounds = new google.maps.LatLngBounds();
+            var lat = 38.7296252;
+            var lng =-120.798546;
+            var latlng = new google.maps.LatLng(lat, lng)
+            newMarker.setPosition(latlng);
+            newMarker.setMap(map);
+            bounds.extend(latlng);
+
+    // for (var i=0; i<8 ; i++) {
+    //   markers[i] = new google.maps.Marker({
+    //     title: "Hi marker " + i
+    //   })
+    // }
+    // this.GenerateMapMarkers = function() {
+    //     var numMarkers = Math.floor(Math.random() * 4) + 4;  // betwween 4 & 8 of them
+    //      var bounds = new google.maps.LatLngBounds();
+
+    //     for (i = 0; i < numMarkers; i++) {
+    //         var lat =   1.280095 + (Math.random()/100);
+    //         var lng = 103.850949 + (Math.random()/100);
+    //         // You need to set markers according to google api instruction
+    //         // you don't need to learn ngMap, but you need to learn google map api v3
+    //         // https://developers.google.com/maps/documentation/javascript/markers
+    //         var latlng = new google.maps.LatLng(lat, lng);
+    //         markers[i].setPosition(latlng);
+    //         markers[i].setMap(this.map);
+    //         bounds.extend(latlng);
+    //     }
+        
+    //     var centre = bounds.getCenter();
+    //     this.map.setCenter(centre);
+    // };  
+    
+    // timeout( this.GenerateMapMarkers, 2000);
+        });
+    });
+
+
+    
+
+    // var markers = [];
+            
+    // for (var i=0; i<8 ; i++) {
+    //   markers[i] = new google.maps.Marker({
+    //     title: "Hi marker " + i
+    //   })
+    // }
+    // this.GenerateMapMarkers = function() {
+    //     var numMarkers = Math.floor(Math.random() * 4) + 4;  // betwween 4 & 8 of them
+    //      var bounds = new google.maps.LatLngBounds();
+
+    //     for (i = 0; i < numMarkers; i++) {
+    //         var lat =   1.280095 + (Math.random()/100);
+    //         var lng = 103.850949 + (Math.random()/100);
+    //         // You need to set markers according to google api instruction
+    //         // you don't need to learn ngMap, but you need to learn google map api v3
+    //         // https://developers.google.com/maps/documentation/javascript/markers
+    //         var latlng = new google.maps.LatLng(lat, lng);
+    //         markers[i].setPosition(latlng);
+    //         markers[i].setMap(this.map);
+    //         bounds.extend(latlng);
+    //     }
+        
+    //     var centre = bounds.getCenter();
+    //     this.map.setCenter(centre);
+    // };  
+    
+    // timeout( this.GenerateMapMarkers, 2000);
+
+    //     });
+    // });
+
+
 
     this.mapURL =  googleMapsUrl;
 
@@ -15,6 +105,12 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         alert('fart');
         console.log('fart complete');
     }
+    
+
+   
+
+    // google.maps.event.trigger(map, “resize”);
+
 
     // this.newFilter = false;
     // this.activeFilter = null;
@@ -117,11 +213,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     // this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
 
     // this.buttonClass = 'btn btn-outline-primary';
-
-    lynchSvc.get()
-    .then((incident) => {
-        this.incidents = incident;
-    });
 
     // this.addFilter = ()=>{
     //     this.newFilter=true;

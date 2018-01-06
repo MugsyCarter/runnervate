@@ -227,22 +227,23 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
             });
     };
 
+    this.searchIncidents();
  
 
-    lynchSvc.get()
-        .then((incidents)=>{
-            this.incidents=incidents;
-            console.log(this.incidents);
-            this.incidentNumber = this.incidents.length;
-            let sorted = this.incidents.sort((a,b)=>{
-                return parseInt(a.year) > parseInt(b.year);
-            });
-            this.incidents = sorted;
-            if ((this.incidents.length)>9){
-                this.maxResult = 10;
-            }
-            this.updateActiveIncidents();
-        });
+    // lynchSvc.get()
+    //     .then((incidents)=>{
+    //         this.incidents=incidents;
+    //         console.log(this.incidents);
+    //         this.incidentNumber = this.incidents.length;
+    //         let sorted = this.incidents.sort((a,b)=>{
+    //             return parseInt(a.year) > parseInt(b.year);
+    //         });
+    //         this.incidents = sorted;
+    //         if ((this.incidents.length)>9){
+    //             this.maxResult = 10;
+    //         }
+    //         this.updateActiveIncidents();
+    //     });
 
 
 

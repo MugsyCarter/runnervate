@@ -15,7 +15,9 @@ const app = angular.module('myApp', [components, services, uiRouter, ngmap]);
 
 
 
-app.value('apiUrl', 'https://localhost:3000/api');
+// app.value('apiUrl', 'http://localhost:3000/api');
+app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+
 
 app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 

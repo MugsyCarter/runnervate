@@ -34846,7 +34846,7 @@
 	
 	lynchService.$inject = ['$http', 'apiUrl'];
 	
-	function lynchService($https, apiUrl) {
+	function lynchService($http, apiUrl) {
 	    return {
 	        get: function get() {
 	            return $http.get(apiUrl + '/incidents').then(function (res) {

@@ -34844,12 +34844,12 @@
 	});
 	exports.default = lynchService;
 	
-	lynchService.$inject = ['$https', 'apiUrl'];
+	lynchService.$inject = ['$http', 'apiUrl'];
 	
 	function lynchService($https, apiUrl) {
 	    return {
 	        get: function get() {
-	            return $https.get(apiUrl + '/incidents').then(function (res) {
+	            return $http.get(apiUrl + '/incidents').then(function (res) {
 	                return res.data;
 	            });
 	        },
@@ -34913,9 +34913,9 @@
 	});
 	exports.default = userService;
 	
-	userService.$inject = ['$https', 'apiUrl'];
+	userService.$inject = ['$http', 'apiUrl'];
 	
-	function userService($https, apiUrl) {
+	function userService($http, apiUrl) {
 	    return {
 	        get: function get() {
 	            return $http.get(apiUrl + '/users').then(function (res) {

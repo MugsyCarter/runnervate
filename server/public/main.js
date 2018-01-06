@@ -78,10 +78,11 @@
 	
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
+	// app.value('apiUrl', 'http://localhost:3000/api');
+	
+	
 	// import defaultRoute from 'angular-ui-router-default';
-	
-	
-	app.value('apiUrl', 'http://localhost:3000/api');
+	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	
@@ -34843,12 +34844,12 @@
 	});
 	exports.default = lynchService;
 	
-	lynchService.$inject = ['$http', 'apiUrl'];
+	lynchService.$inject = ['$https', 'apiUrl'];
 	
-	function lynchService($http, apiUrl) {
+	function lynchService($https, apiUrl) {
 	    return {
 	        get: function get() {
-	            return $http.get(apiUrl + '/incidents').then(function (res) {
+	            return $https.get(apiUrl + '/incidents').then(function (res) {
 	                return res.data;
 	            });
 	        },
@@ -34912,9 +34913,9 @@
 	});
 	exports.default = userService;
 	
-	userService.$inject = ['$http', 'apiUrl'];
+	userService.$inject = ['$https', 'apiUrl'];
 	
-	function userService($http, apiUrl) {
+	function userService($https, apiUrl) {
 	    return {
 	        get: function get() {
 	            return $http.get(apiUrl + '/users').then(function (res) {

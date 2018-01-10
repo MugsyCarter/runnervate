@@ -9,6 +9,7 @@ controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl']
 
 function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
+    console.log('root scoped query is ', rootScope.query);
     this.mapURL =  googleMapsUrl;
 
     this.minResult = 0;
@@ -118,11 +119,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.buttonClass = 'btn btn-outline-primary';
 
-    lynchSvc.get()
-    .then((incident) => {
-        this.incidents = incident;
-    });
-
     this.addFilter = ()=>{
         this.newFilter=true;
         if (this.newQuery.category !== null && this.newQuery.target !== null){
@@ -227,8 +223,26 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
             });
     };
 
+
+
+    if (rootScope.query){
+        console.log('query found: ', rootScope.query);
+        this.newQuery = 
+        {
+            category: {name: 'place', value: 'place'},
+            target: rootScope.query,
+            number: null
+        };
+        this.addFilter();
+    }
+    else{
+        console.log('no rootscope query found');
+        // lynchSvc.get()
+        //     .then((incident) => {
+        //         this.incidents = incident;
+        //     });
+    }
     this.searchIncidents();
- 
 
     // lynchSvc.get()
     //     .then((incidents)=>{

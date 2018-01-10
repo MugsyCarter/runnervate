@@ -10,6 +10,14 @@ controller.$inject = ['$state', '$rootScope'];
 
 function controller($state, rootScope) {
 
+    this. searchQuery = '';
+    this.searchFor = ()=>{
+        console.log('searching for this town: ', this.searchQuery);
+        $state.go('home');
+        rootScope.query = this.searchQuery;
+        $state.go('incidents');
+    };
+
     // this.loggedIn=false;
 
     // rootScope.$on('login', (event, user)=>{

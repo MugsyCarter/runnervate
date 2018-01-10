@@ -42,6 +42,10 @@
                 <button class="btn btn-info"  ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"><h6>Search Incidents</h6></span></button>
         </div>
 
+        <div id="No Results Message" ng-if="$ctrl.incidents.length===0" class="panel-group">
+                <h3>No Results Found</h3>
+        </div>
+
         <div id="incident-gallery" ng-if="$ctrl.incidents.length" class="panel-group">
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">

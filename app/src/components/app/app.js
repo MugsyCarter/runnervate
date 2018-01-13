@@ -10,6 +10,8 @@ controller.$inject = ['$state', '$rootScope'];
 
 function controller($state, rootScope) {
 
+    this.state = $state;
+    
     this. searchQuery = '';
     this.searchFor = ()=>{
         console.log('searching for this town: ', this.searchQuery);

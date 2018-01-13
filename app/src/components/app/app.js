@@ -13,9 +13,10 @@ function controller($state, rootScope) {
     this. searchQuery = '';
     this.searchFor = ()=>{
         console.log('searching for this town: ', this.searchQuery);
-        $state.go('home');
         rootScope.query = this.searchQuery;
         $state.go('incidents');
+        console.log('state is ', $state);
+        console.log('statename is ', $state.current.name);
     };
 
     // this.loggedIn=false;

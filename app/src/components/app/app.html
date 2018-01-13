@@ -13,7 +13,7 @@
                     <li><a ui-sref="addIncident"><span class="glyphicon glyphicon-plus"></span>Add Lynching</a></li>
                     <li><a ui-sref="about">About</a></li>
                     <form class="navbar-form navbar-left">
-                        <div class="input-group">
+                        <div class="input-group" ng-hide="$state.current.name==='incidents'">
                             <input type="text" class="form-control" placeholder="Search Lynchings by Location" ng-model="$ctrl.searchQuery">
                                 <div class="input-group-btn">
                                     <button ng-click="$ctrl.searchFor()" class="btn btn-default" type="submit">

@@ -3,6 +3,7 @@
      <div class="container">
  
                 <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.deleteIncidents()" ><span class="glyphicon glyphicon-fire"><h6>Nuke Incients</h6></span></button>
+                <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.populateDatabase()" ><span class="glyphicon glyphicon-book"><h6>Populate Database</h6></span></button>
         <!-- <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
         <ng-map center="41,-87" zoom="3"></ng-map>
         </div> -->
@@ -64,7 +65,7 @@
 
                                         <div class="panel-body" ng-hide="incident.fullView===true"> 
                                                 <button class="btn btn-primary" id="show-incident-button" ng-click="$ctrl.showIncident(incident)"><span class="glyphicon glyphicon-plus"><h6>Show More</h6></span></button>
-                                                <h3>{{incident.year}}</h3>
+                                                <h3>{{incident.dateString}}</h3>
                                                 <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
                                                 <p>{{incident.summary}} summary will go here</p>          
                                         </div>

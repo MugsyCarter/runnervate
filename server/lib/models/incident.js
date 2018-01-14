@@ -22,6 +22,7 @@ const tripSchema = new Schema({
     year: requiredNumber,
     month: Number,
     day: Number,
+    dateString: String,
     dateNotes: String,
     state: String,
     place: String,

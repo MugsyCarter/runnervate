@@ -15,6 +15,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.minResult = 0;
     this.maxResult = 10;
 
+    this.nuke = true; 
+    
     this.newFilter = false;
     this.activeFilter = null;
 
@@ -172,10 +174,11 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         console.log('deleting this incident ', incident);
         lynchSvc.deleteIncident(incident)
             .then((incident)=>{
-                console.log(incident);
+                console.log(incident + 'was deleted');
+                this.searchIncidents();
         });
     };
-    
+
     this.updateActiveIncidents = ()=>{
         console.log('updating active incidents');
         this.activeIncidents = [];
@@ -251,6 +254,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         //     });
     }
     this.searchIncidents();
+
+
+    this.deleteIncidents= ()=>{
+          lynchSvc.get()
+            .then((incidents)=>{
+                console.log('nuking this incidents: ', incidents);
+        });
+    };
 
     // lynchSvc.get()
     //     .then((incidents)=>{

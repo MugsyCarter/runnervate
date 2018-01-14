@@ -110,7 +110,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.counties = [];
     this.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    
+
     this.oldCounties.forEach((county)=>{
         let arr = county.split(' ');
         arr.pop();
@@ -289,13 +289,28 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
             if(entry.yearMonthDay !== null){
                 let splitDate = entry.yearMonthDay.split('/');
                 console.log('split date is ', splitDate);
-                entry.month = splitDate[1];
-                entry.day = splitDate[2];
+                entry.month = parseInt(splitDate[1]);
+                entry.day = parseInt(splitDate[2]);
+                    let suffix = 'th';
+                if (entry.day === 1){
+                    suffix = 'st';
+                }
+                else if (entry.day === 2){
+                    suffix = 'nd';
+                }
+                else if (entry.day === 3){
+                    suffix = 'rd';
+                }
+                entry.dateString = this.months[entry.month] + ' ' + entry.day +  suffix + ', ' + entry.year;
             }
             else if(entry.yearMonth !== null){
                 let splitDate = entry.yearMonthDay.split('/');
                 console.log('split date is ', splitDate);
-                entry.month = splitDate[1];
+                entry.month = parseInt(splitDate[1]);
+                entry.dateString = this.months[entry.month] + ' of ' + entry.year;
+            }
+            else{
+                entry.dateString = entry.year;
             }
             lynchSvc.addIncident(entry)
                 .then((incident)=>{

@@ -6,7 +6,7 @@
         <ng-map center="41,-87" zoom="3"></ng-map>
         </div> -->
 
-        <h2>Browse Incidents</h2>
+        <h2>Browse Lynchings</h2>
         <div id="filters">
                 <div class="jumbotron">
                         <label for="inputFilter" class="col-lg-1 control-label">Filter by </label>
@@ -118,6 +118,8 @@
                                                         <p>Sources:  <em>{{incident.oldSources}}</em></p>
                                                         <p>Notes:  <em>{{incident.oldNotes}}</em></p>
                                                 </div>
+
+                                                <button class="btn btn-danger" id="delete-incident-button" ng-click="$ctrl.deleteIncident(incident)" ><span class="glyphicon glyphicon-view"><h6>Delete Incident</h6></span></button>
 
     <!-- latDecimal: Number,
     lonDecimal: Number,

@@ -168,6 +168,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         incident.fullView = false;
     };
 
+    this.deleteIncident = (incident)=>{
+        console.log('deleting this incident ', incident);
+        lynchSvc.deleteIncident(incident)
+            .then((incident)=>{
+                console.log(incident);
+        });
+    };
+    
     this.updateActiveIncidents = ()=>{
         console.log('updating active incidents');
         this.activeIncidents = [];

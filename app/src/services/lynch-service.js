@@ -25,6 +25,11 @@ export default function lynchService($http, apiUrl) {
                 .then(res => res.data);
         },
 
+        deleteIncident(incident){
+            console.log('In lynch service, deleting this incident ', incident);
+            return $http.delete(`${apiUrl}/incidents/${incident._id}`)
+                .then(res => res.data);
+        },
         // updateincident(incident, course) {
         //     return $http.put(`${apiUrl}/incidents/${incident._id}`, course)
         //         .then(res => res.data);

@@ -16,7 +16,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.maxResult = 10;
 
     this.nuke = true; 
-    
+
     this.newFilter = false;
     this.activeFilter = null;
 
@@ -256,11 +256,27 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.searchIncidents();
 
 
-    this.deleteIncidents= ()=>{
-          lynchSvc.get()
-            .then((incidents)=>{
-                console.log('nuking this incidents: ', incidents);
+
+    this.deleteIncident = (incident)=>{
+        console.log('deleting this incident ', incident);
+        lynchSvc.deleteIncident(incident)
+            .then((incident)=>{
+                console.log(incident + 'was deleted');
+                this.searchIncidents();
         });
+    };
+
+
+    //this is the nuclear option to totally wipe the database of incident entries
+    //BE CAREFUL!
+    this.deleteIncidents= ()=>{
+                console.log('nuking this incidents: ', this.incidents);
+                for (let i=0; i < this.incidents.length; i++){
+                    lynchSvc.deleteIncident(this.incidents[i])
+                    .then((incident)=>{
+                        console.log(incident + 'was deleted');
+                });
+        }
     };
 
     // lynchSvc.get()

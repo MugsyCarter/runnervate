@@ -15,7 +15,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.minResult = 0;
     this.maxResult = 10;
 
-    this.nuke = true; 
+    this.nuke = false; 
 
     this.newFilter = false;
     this.activeFilter = null;

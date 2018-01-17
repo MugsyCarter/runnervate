@@ -23,13 +23,13 @@ function controller($state, rootScope) {
 
     this.loggedIn=false;
 
-    // rootScope.$on('login', (event, user)=>{
-    //     // console.log('after Logged in, useris ', user.user);
-    //     rootScope.user = user.user;
-    //     console.log('user logged in as ', user);
-    //     this.loggedIn = true;
-    //     $state.go('user');
-    // });
+    rootScope.$on('login', (event, user)=>{
+        // console.log('after Logged in, useris ', user.user);
+        rootScope.user = user.user;
+        console.log('user logged in as ', user);
+        this.loggedIn = true;
+        $state.go('user');
+    });
 
     // rootScope.$on('logout', (event)=>{
     //     this.user = null;

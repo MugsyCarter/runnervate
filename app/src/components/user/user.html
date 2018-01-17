@@ -5,6 +5,8 @@
     <h3>Name: {{$ctrl.user.name}}</h3>
     <h3>Password: {{$ctrl.user.password}}</h3>
     <h3>Email: {{$ctrl.user.email}}</h3>
-    <h3>Date of Birth: {{$ctrl.user.dob}}</h3>  
-
+    <h3>Date of Birth: {{$ctrl.user.dob}}</h3>
+    <h3 ng-if="$ctrl.user.role==='user'">role: User (can comment on lynching entries)</h3>
+    <h3 ng-if="$ctrl.user.role==='contributor'">role: User (can create and edit lynching entries with admin approval)</h3>  
+    <h3 ng-if="$ctrl.user.role==='admin'">role: Admin (can create, edit, and delete lynching entries.  Can approve changes submitted by contributors.  Can add contributor accounts.)</h3>     
 </section>

@@ -7,10 +7,10 @@
                   </div>
                   <ul class="nav navbar-nav">
                     <li><a ui-sref="home" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                    <li ng-if='$ctrl.loggedIn===true'><a ui-sref="user"><span class="glyphicon glyphicon-user"></span>My Page</a></li>
+                    <li ng-if="$ctrl.loggedIn===true"><a ui-sref="user"><span class="glyphicon glyphicon-user"></span>My Account</a></li>
                     <li><a ui-sref="lynchMap"><span class="glyphicon glyphicon-globe"></span>Lynching Map</a></li>
                     <li><a ui-sref="incidents"><span class="glyphicon glyphicon-list"></span>Browse Lynchings</a></li>
-                    <li><a ui-sref="addIncident"><span class="glyphicon glyphicon-plus"></span>Add Lynching</a></li>
+                    <li ng-if="$ctrl.loggedIn===true"><a ui-sref="addIncident"><span class="glyphicon glyphicon-plus"></span>Add Lynching</a></li>
                     <li><a ui-sref="about"><span class="glyphicon glyphicon-apple"></span>About</a></li>
                     <form class="navbar-form navbar-left">
                         <div class="input-group" ng-hide="$ctrl.state.current.name==='incidents'">
@@ -22,9 +22,9 @@
                                 </div>
                         </div>
                     </form>
-                    <li><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li> 
-                    <li><a ui-sref="logout"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>   
-                    <li><a ui-sref="signup"><span class="glyphicon glyphicon-edit"></span>Sign Up</a></li>    
+                    <li ng-if="$ctrl.loggedIn===false"><a ui-sref="login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li> 
+                    <li ng-if="$ctrl.loggedIn===true"><a ui-sref="logout"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>   
+                    <li ng-if="$ctrl.loggedIn===false"><a ui-sref="signup"><span class="glyphicon glyphicon-edit"></span>Sign Up</a></li>    
                   </ul>
                 </div>
               </nav>

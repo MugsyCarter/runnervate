@@ -21,7 +21,7 @@ function controller($state, rootScope) {
         console.log('statename is ', $state.current.name);
     };
 
-    // this.loggedIn=false;
+    this.loggedIn=false;
 
     // rootScope.$on('login', (event, user)=>{
     //     // console.log('after Logged in, useris ', user.user);

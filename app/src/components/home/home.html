@@ -6,7 +6,7 @@
     <p class="lead">Subtitle here?</p>
     <hr class="my-4">
     <p>Some basic info here?</p>
-    <p class="lead">
+    <p class="lead" ng-if="$ctrl.loggedIn===false">
       <a class="btn btn-primary btn-lg" ui-sref="login" role="button">Login</a>
       <a class="btn btn-primary btn-lg" ui-sref="signup" role="button">Sign Up</a>
     </p>

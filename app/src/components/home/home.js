@@ -6,10 +6,12 @@ export default {
 };
 
 
-controller.$inject = ['$timeout'];
+controller.$inject = ['$timeout', '$rootScope'];
 
-function controller($timeout) {
-
+function controller($timeout, rootScope) {
+    this.user = rootScope.user;
+    this.loggedIn = rootScope.loggedIn;
+    console.log(this.loggedIn);
 //     this.letters=[];
 //     this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
 

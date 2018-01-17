@@ -47,6 +47,7 @@ router.post('/signup', jsonParser, (req, res, next) => {
 });
 
 router.post('/login', jsonParser, (req, res, next) => {
+    console.log('in auth service.  login.');
     const {username, password} = req.body;
     if (!username || !password) {
         throw {code: 400, message: 'Missing username or password'};

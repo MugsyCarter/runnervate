@@ -10,6 +10,7 @@ controller.$inject = [ '$rootScope', 'authService', '$state'];
 function controller(rootScope, authSvc, $state) {
     this.credentials = {};
     this.authenticate = () => {
+        console.log('authenticate called');
         return authSvc.login(this.credentials)
             .then((user) => {
                 console.log('user is ', user);

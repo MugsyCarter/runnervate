@@ -78,11 +78,12 @@
 	
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
-	// app.value('apiUrl', 'http://localhost:3000/api');
-	
-	
 	// import defaultRoute from 'angular-ui-router-default';
-	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	
+	
+	app.value('apiUrl', 'http://localhost:3000/api');
+	// app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	
@@ -33856,7 +33857,7 @@
 	        console.log('statename is ', $state.current.name);
 	    };
 	
-	    // this.loggedIn=false;
+	    this.loggedIn = false;
 	
 	    // rootScope.$on('login', (event, user)=>{
 	    //     // console.log('after Logged in, useris ', user.user);
@@ -33883,7 +33884,7 @@
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if='$ctrl.loggedIn===true'><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Page</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\">About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\" ng-hide=\"$ctrl.state.current.name==='incidents'\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\" ng-model=\"$ctrl.searchQuery\">\n                                <div class=\"input-group-btn\">\n                                    <button ng-click=\"$ctrl.searchFor()\" class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>         \n                  </ul>\n                </div>\n              </nav>\n\n\n\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; David A. Johnson, 2018 </span></p>\n    </div>\n  </section>";
+	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\" ng-hide=\"$ctrl.state.current.name==='incidents'\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\" ng-model=\"$ctrl.searchQuery\">\n                                <div class=\"input-group-btn\">\n                                    <button ng-click=\"$ctrl.searchFor()\" class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav>\n\n\n\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; David A. Johnson, 2018 </span></p>\n    </div>\n  </section>";
 
 /***/ },
 /* 18 */
@@ -34020,6 +34021,7 @@
 	
 	    this.credentials = {};
 	    this.authenticate = function () {
+	        console.log('authenticate called');
 	        return authSvc.login(_this.credentials).then(function (user) {
 	            console.log('user is ', user);
 	            localStorage.setItem('user', JSON.stringify(user));
@@ -34035,7 +34037,7 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<button type=\"submit\">Login</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
+	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<button type=\"submit\" ng-click=\"$ctrl.authenticate\">Login</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ },
 /* 26 */

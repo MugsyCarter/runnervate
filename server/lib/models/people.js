@@ -7,7 +7,10 @@ const peopleSchema = new Schema({
     first: String,
     last: String,
     gender: String,
-    age: Number
+    age: Number,
+    victim: [],
+    suspect: [],
+    other: []
 });
 
 

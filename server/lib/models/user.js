@@ -14,9 +14,8 @@ const userSchema = new Schema({
     name: requiredString,
     email: requiredString,
     dob: Date,
-    friends: [],
     role: String,
-    trips: [],
+    trips: []
 });
 
 //when user signs in - hash generated from password

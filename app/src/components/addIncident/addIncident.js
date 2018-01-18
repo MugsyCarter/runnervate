@@ -9,6 +9,8 @@ controller.$inject = [ '$rootScope', 'lynchService', '$state'];
 
 function controller(rootScope, lynchSvc, $state) {
 
+    this.user = rootScope.user;
+    
     this.showFormData = false;
     this.decimal = 'true';
     this.incident = {

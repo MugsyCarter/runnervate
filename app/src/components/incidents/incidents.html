@@ -105,7 +105,7 @@
                                                         <p>Other Names Mentioned: {{incident.otherNamesMentioned}}</p>
                                                 </div>
                                     
-                                                <div class="panel-body">
+                                                <div class="panel-body" ng-if="$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'">
                                                         <h4>Database Indices</h4>
                                                         <p>Case Number:  <em>{{incident.caseNum}}</em></p>
                                                         <p>Current Database ID:  <em>{{incident._id}}</em></p>
@@ -121,8 +121,11 @@
                                                         <p>Notes:  <em>{{incident.oldNotes}}</em></p>
                                                 </div>
 
-                                                <button class="btn btn-warning" id="edit-incident-button" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Edit Incident</h6></span></button>
-                                                <button class="btn btn-danger" id="delete-incident-button" ng-click="$ctrl.deleteIncident(incident)" ><span class="glyphicon glyphicon-trash"><h6>Delete Incident</h6></span></button>
+                                                <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='admin'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Edit Incident</h6></span></button>
+                                                <button class="btn btn-danger" id="delete-incident-button" ng-if="$ctrl.user.role=='admin'" ng-click="$ctrl.deleteIncident(incident)" ><span class="glyphicon glyphicon-trash"><h6>Delete Incident</h6></span></button>
+
+                                                <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Propose Edits to incident</h6></span></button>
+                                                <button class="btn btn-danger" id="delete-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.proposeDeletion(incident)" ><span class="glyphicon glyphicon-trash"><h6>Propose Delete Incident</h6></span></button>
 
     <!-- latDecimal: Number,
     lonDecimal: Number,

@@ -31,10 +31,10 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'incident',
-        url: '/incident',
+        name: 'editIncident',
+        url: '/editIncident',
         data: { public: true },
-        component: 'incident' 
+        component: 'editIncident' 
     });
 
     $stateProvider.state({

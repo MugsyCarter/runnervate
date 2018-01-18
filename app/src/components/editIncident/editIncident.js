@@ -1,4 +1,4 @@
-import template from './incident.html';
+import template from './editIncident.html';
 
 export default {
     template,

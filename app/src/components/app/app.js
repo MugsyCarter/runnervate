@@ -56,6 +56,12 @@ function controller($state, rootScope, userSvc) {
         rootScope.location = location;
     });
 
+    rootScope.$on('editIncident', (event, incident)=>{
+        console.log('incident ', incident);
+        rootScope.incident = incident;
+        $state.go('editIncident');
+    });
+
 
     // rootScope.$on('updateUser', (event, user)=>{
     //     // no code here yet

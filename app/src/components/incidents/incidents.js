@@ -174,7 +174,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     };
 
     this.editIncident=(incident)=>{
-       rootScope.emit('editIncident');
+       rootScope.$emit('editIncident', incident);
     };
 
     this.deleteIncident = (incident)=>{

@@ -54,7 +54,7 @@
                         <li ng-repeat="incident in $ctrl.activeIncidents">
                                 <div class="panel panel-primary col-lg-11" id="incident-panel">
                                         <div  class="panel-header">
-                                                <h3>{{incident.suspectNames}}</h3>
+                                                <h3>{{incident.suspectNames}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3>
                                         </div>
 
                                         <div ng-if="incident.fullView===true" class="lynchMap" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}" >
@@ -65,14 +65,12 @@
 
                                         <div class="panel-body" ng-hide="incident.fullView===true"> 
                                                 <button class="btn btn-primary" id="show-incident-button" ng-click="$ctrl.showIncident(incident)"><span class="glyphicon glyphicon-plus"><h6>Show More</h6></span></button>
-                                                <h3>{{incident.dateString}}</h3>
-                                                <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
+                                                <h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
                                                 <p>{{incident.summary}} summary will go here</p>          
                                         </div>
                                         <div class="panel-body" ng-if="incident.fullView===true">
                                                 <button class="btn btn-secondary" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>
-                                                <h3>{{incident.dateString}}</h3>
-                                                <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
+                                                <h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
                                                 <p>{{incident.summary}} summary will go here</p>
 
                                                 <div class="panel-body">

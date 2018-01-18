@@ -3,11 +3,26 @@
        
         <h1>Lynching Map</h1>
 
-        <div class="lynchMap" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
-                <ng-map class="lynch-map" center="37.897894, -119.340420" zoom="6">
-                        <!-- <marker position=“{{$ctrl.incidents[0].latDecimal}},{{$ctrl.incidents[0].lonDecimal}}” /> -->
-                        <!-- <marker ng-repeat="incident in $ctrl.incidents" position=“{{incident.latDecimal}},{{incident.lonDecimal}}” on-click="$ctrl.fart()"/>  -->
-                </ng-map>
+        <div class="container" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
+                <div class="row">
+                        <div class="col-sm-9">
+                                <ng-map class="big-map" center="37.897894, -119.340420" zoom="6">
+                                        <!-- <marker position=“{{$ctrl.incidents[0].latDecimal}},{{$ctrl.incidents[0].lonDecimal}}” /> -->
+                                        <!-- <marker ng-repeat="incident in $ctrl.incidents" position=“{{incident.latDecimal}},{{incident.lonDecimal}}” on-click="$ctrl.fart()"/>  -->
+                                </ng-map>
+                        </div>
+
+                        <!-- <div class="col-sm-3" ng-hide="$ctrl.incident!==null">
+                                <h3>Click a map marker to view lynching incident details</h3>                     
+                        </div> -->
+
+                        <div class="col-sm-3" ng-if="$ctrl.incident!==null">
+                                <h3>{{$ctrl.incident.suspectNames}}</h3>
+                                <h3>{{$ctrl.incident.dateString}}</h3>
+                                <h4>{{$ctrl.incident.place}}, {{incident.county}} County {{incident.state}}</h4>
+                                <p>{{$ctrl.incident.summary}} summary will go here</p>                            
+                        </div>
+                </div>
         </div>
 
 

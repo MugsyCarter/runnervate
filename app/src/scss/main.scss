@@ -32,10 +32,16 @@ ul{
 }
 
 //map stuff
-.lynch-map{
+.big-map{
   height: 100vh;
+  max-width: 60vw;
 }
 
+.big-map-textbox{
+  position: inherit;
+  display: inline;
+  max-width: 35vw;
+}
 .small-map{
   height: 60vh;
   width: 70vh;

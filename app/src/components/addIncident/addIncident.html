@@ -201,7 +201,7 @@
 
 
                 <div class ="form-section">
-                    <h2> Suspects </h2>
+                    <h2> Accused </h2>
                     <div class="form-group">
 
                         <label for="inputSuspectNumber" class="col-lg-2 control-label">Number of Suspects</label>
@@ -222,7 +222,12 @@
                         <br>
                       </div>
 
-                    
+                      <label for="inputWeapon" class="col-lg-1 control-label">Weapon Used</label>
+                      <div class="col-lg-2">
+                        <select ng-model="$ctrl.accused.weapon" ng-options="weapon for weapon in $ctrl.weapons">
+                        </select>
+                      </div>
+
                       <label for="textArea" class="col-lg-2 control-label">Suspect Notes</label>
                       <div class="col-lg-10">
                         <textarea ng-model="$ctrl.incident.suspectNotes" class="form-control" rows="3" id="textArea"></textarea>
@@ -263,7 +268,7 @@
                     </div>
 
                     <div class ="form-section">
-                        <h2> Soures and Notes </h2>
+                        <h2> Sources and Notes </h2>
                         <div class="form-group">
 
                             <label for="inputSourceType" class="col-lg-1 control-label">Source Type</label>
@@ -277,15 +282,17 @@
                               <input ng-model="$ctrl.source.volumeNumber" type="number" min="0" max="20000" class="form-control" id="inputVolumeNumber">
                             </div>
 
+                            <label for="inputSourcePage" class="col-lg-1 control-label">Page #</label>
+                            <div class="col-lg-1">
+                              <input ng-model="$ctrl.source.pageNumberStart" type="number" min="0" max="200" class="form-control" id="inputPageNumber">
+                            </div>
+
                             <label ng-if="$ctrl.source.type === 'newspaper'" for="inputSourceColumn" class="col-lg-1 control-label">Column #</label>
                             <div class="col-lg-1" ng-if="$ctrl.source.type === 'newspaper'">
                               <input ng-model="$ctrl.source.columnNumber" type="number" min="0" max="200" class="form-control" id="inputColumnNumber">
                             </div>
 
-                            <label for="inputSourcePage" class="col-lg-1 control-label">Page #</label>
-                            <div class="col-lg-1">
-                              <input ng-model="$ctrl.source.pageNumberStart" type="number" min="0" max="200" class="form-control" id="inputPageNumber">
-                            </div>
+                         
 
                             <!-- <label for="inputSourcePage" class="col-lg-1 control-label">to</label>
                             <div class="col-lg-2">

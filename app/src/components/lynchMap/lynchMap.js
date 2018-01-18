@@ -8,7 +8,7 @@ export default {
 controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl', 'NgMap'];
 
 function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
-
+    this.incident = null;
 
   
 
@@ -32,6 +32,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                         map.setZoom(10);
                         map.setCenter(newMarker.getPosition());
                         alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
+                        this.incident = incidents[i];
+                        rootScope.$emit('updateLocation', this.incident);
+                        console.log('this.incident', this.incident);
                       });
 
                     var bounds = new google.maps.LatLngBounds();
@@ -42,15 +45,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                     newMarker.setMap(map);
                     bounds.extend(latlng);
                 };
-
-                // map.addListener('center_changed', function() {
-                //     // 3 seconds after the center of the map has changed, pan back to the
-                //     // marker.
-                //     window.setTimeout(function() {
-                //       map.panTo(marker.getPosition());
-                //     }, 3000);
-                //   });
         });
+        this.incident = rootScope.location;
     });
     
 

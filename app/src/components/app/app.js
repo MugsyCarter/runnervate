@@ -41,13 +41,21 @@ function controller($state, rootScope, userSvc) {
         });
     });
 
-    // rootScope.$on('logout', (event)=>{
-    //     this.user = null;
-    //     this.loggedIn = false;
-    //     $state.go('home');
-    //     // console.log('Logged out, useris ', user.user);
-    //     // this.updateMenu();
-    // });
+    rootScope.$on('logout', (event)=>{
+        this.user = null;
+        this.loggedIn = false;
+        $state.go('home');
+        rootScope.user = null;
+        rootScope.loggedIn = false;
+        // console.log('Logged out, useris ', user.user);
+        // this.updateMenu();
+    });
+
+    rootScope.$on('updateLocation', (event, location)=>{
+        console.log('location is ', location);
+        rootScope.location = location;
+    });
+
 
     // rootScope.$on('updateUser', (event, user)=>{
     //     // no code here yet

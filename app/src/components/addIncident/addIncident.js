@@ -168,6 +168,7 @@ function controller(rootScope, lynchSvc, $state) {
         'Yolo County',
         'Yuba County'];
 
+    this.weapons = ['gun', 'knife', 'none'];
     this.counties = [];
 
     this.oldCounties.forEach((county)=>{

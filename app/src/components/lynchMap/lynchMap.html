@@ -16,11 +16,11 @@
                                 <h3>Click a map marker to view lynching incident details</h3>                     
                         </div> -->
 
-                        <div class="col-sm-3" ng-if="$ctrl.incident!==null">
-                                <h3>{{$ctrl.incident.suspectNames}}</h3>
-                                <h3>{{$ctrl.incident.dateString}}</h3>
-                                <h4>{{$ctrl.incident.place}}, {{incident.county}} County {{incident.state}}</h4>
-                                <p>{{$ctrl.incident.summary}} summary will go here</p>                            
+                        <div id="big-map-textbox" class="col-sm-3" ng-if="$ctrl.incident">
+                                <p>Name of Accused: {{$ctrl.incident.suspectNames}}</p>
+                                <p>Date: {{$ctrl.incident.dateString}}</p>
+                                <p>Locaiton: {{$ctrl.incident.place}}, {{incident.county}} County {{incident.state}}</p>
+                                <p>Summary: {{$ctrl.incident.summary}} summary will go here</p>                            
                         </div>
                 </div>
         </div>

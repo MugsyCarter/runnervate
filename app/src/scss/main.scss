@@ -33,14 +33,14 @@ ul{
 
 //map stuff
 .big-map{
-  height: 100vh;
+  height: 90vh;
   max-width: 60vw;
 }
 
-.big-map-textbox{
-  position: inherit;
-  display: inline;
-  max-width: 35vw;
+#big-map-textbox{
+  background-color: $blue;
+  color: white;
+  height: 90vh;
 }
 .small-map{
   height: 60vh;

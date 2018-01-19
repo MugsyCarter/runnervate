@@ -6,9 +6,9 @@ export default {
 };
 
 
-controller.$inject = ['$state', '$rootScope', 'userService'];
+controller.$inject = ['$scope', '$state', '$rootScope', 'userService', '$timeout'];
 
-function controller($state, rootScope, userSvc) {
+function controller($scope, $state, rootScope, userSvc, timeout) {
 
     this.state = $state;
     
@@ -52,8 +52,11 @@ function controller($state, rootScope, userSvc) {
     });
 
     rootScope.$on('updateLocation', (event, location)=>{
-        console.log('location is ', location);
-        rootScope.location = location;
+        console.log('update location called.  location is ', rootScope.location);
+        timeout(function(){
+            //boardcast will available to every listener
+            rootScope.$broadcast('locationUpdated', location)
+        },500);
     });
 
     rootScope.$on('editIncident', (event, incident)=>{

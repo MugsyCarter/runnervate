@@ -277,7 +277,7 @@
                               </select>
                             </div>
 
-                            <label ng-if="$ctrl.source.type === 'book'" for="inputSourceYear" class="col-lg-1 control-label">Volume #</label>
+                            <label ng-if="$ctrl.source.type === 'book' || $ctrl.source.type === 'journal'" for="inputSourceYear" class="col-lg-1 control-label">Volume #</label>
                             <div class="col-lg-1" ng-if="$ctrl.source.type === 'book'">
                               <input ng-model="$ctrl.source.volumeNumber" type="number" min="0" max="20000" class="form-control" id="inputVolumeNumber">
                             </div>
@@ -299,6 +299,11 @@
                               <input ng-model="$ctrl.source.pageNumberEnd" type="number" min="0" max="200" class="form-control" id="inputPageNumber">
                             </div> -->
                            
+                            <label ng-if="$ctrl.source.type === 'book'" for="inputSourcePublisher" class="col-lg-1 control-label">Publisher</label>
+                            <div ng-if="$ctrl.source.type === 'book'" class="col-lg-2">
+                              <input ng-model="$ctrl.source.publisher" type="text" class="form-control" id="inputSourcePublisher" placeholder="Source Publisher">
+                            </div>
+
                             <label for="inputSourceYear" class="col-lg-1 control-label">Publication Year</label>
                             <div class="col-lg-1">
                               <input ng-model="$ctrl.source.year" type="number" min="1500" max="2100" class="form-control" id="inputSourceYear">
@@ -314,20 +319,42 @@
                                   <input ng-model="$ctrl.source.day" type="number" min="1" max="31" class="form-control" id="inputSourceMonth">
                                 </div>
                               </div>
-                                
+
+                              <label ng-if="$ctrl.source.type === 'magazine'" for="inputSourcePublication" class="col-lg-1 control-label">Publication</label>
+                              <div ng-if="$ctrl.source.type === 'book'" class="col-lg-2">
+                                <input ng-model="$ctrl.source.publiaction" type="text" class="form-control" id="inputSourcePublication" placeholder="Source Publication">
+                              </div>
+
                               <div class="form-group">
-                                <label for="inputTitle" class="col-lg-1 control-label">Title</label>
+                                <label for="inputTitle" class="col-lg-1 control-label">Article Title</label>
                                 <div class="col-lg-2">
-                                  <input ng-model="$ctrl.source.title" type="text" class="form-control" id="inputSourceTitle" placeholder="Source Title">
+                                  <input ng-model="$ctrl.source.articleTitle" type="text" class="form-control" id="inputSourceTitle" placeholder="Source Title">
                                 </div>
 
                                 <label for="inputAuthor" class="col-lg-1 control-label">Author</label>
+                                <label for="inputAuthor" class="col-lg-1 control-label">First</label>
                                 <div class="col-lg-2">
-                                  <input ng-model="$ctrl.source.author" type="text" class="form-control" id="inputAuthor" placeholder="Source Author">
+                                  <input ng-model="$ctrl.source.authorFirst" type="text" class="form-control" id="inputAuthor" placeholder="First Name">
+                                </div>
+                                <label for="inputAuthorSuffix" class="col-lg-1 control-label">Middle Initial</label>
+                                <div class="col-lg-1">
+                                    <input ng-model="$ctrl.source.authorMI" type="text" class="form-control" id="inputAuthor" placeholder="Middle Intial">
+                                </div>
+                                <label for="inputAuthorSuffix" class="col-lg-1 control-label">Last</label>
+                                <div class="col-lg-2">
+                                    <input ng-model="$ctrl.source.authorLast" type="text" class="form-control" id="inputAuthor" placeholder="Last Name">
+                                </div>
+                                <label for="inputAuthorSuffix" class="col-lg-1 control-label">Suffix</label>
+                                <div class="col-lg-1">
+                                  <select ng-model="$ctrl.source.authorSuffix" ng-options="suff for suff in $ctrl.suffs">
+                                      <option value=""> </option>
+                                  </select>
+                                 </div>
                                 </div>
 
-                                <label for="inputPublicationState" class="col-lg-2 control-label">Publication State</label>
-                                <div class="col-lg-1">
+
+                                <label for="inputPublicationState"  ng-hide="$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'" class="col-lg-2 control-label">Publication State</label>
+                                <div class="col-lg-1"  ng-hide="$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'">
                                   <select ng-model="$ctrl.source.state" ng-options="state for state in $ctrl.states">
                                       <option value="">California </option>
                                   </select>
@@ -335,11 +362,16 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                <label for="inputPublicationCity" class="col-lg-1 control-label">Publication City</label>
-                                <div class="col-lg-2">
+                                <label ng-hide="$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'" class="col-lg-1 control-label">Publication City</label>
+                                <div class="col-lg-2"  ng-hide="$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'">
                                   <input ng-model="$ctrl.source.city" type="text" class="form-control" id="inputAuthor" placeholder="Publication City">
                                 </div>
 
+                                <label for="inputUrl" class="col-lg-1 control-label">URL</label>
+                                <div class="col-lg-2">
+                                  <input ng-model="$ctrl.source.url" type="url" class="form-control" id="inputUrl" placeholder="source location URL">
+                                </div>
+                                
                                 <label for="inputUrl" class="col-lg-1 control-label">URL</label>
                                 <div class="col-lg-2">
                                   <input ng-model="$ctrl.source.url" type="url" class="form-control" id="inputUrl" placeholder="source location URL">

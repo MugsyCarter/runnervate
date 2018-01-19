@@ -14,8 +14,14 @@ ul {
 #show-incident-button {
   float: right; }
 
-.lynch-map {
-  height: 100vh; }
+.big-map {
+  height: 90vh;
+  max-width: 60vw; }
+
+#big-map-textbox {
+  background-color: #2C3E50;
+  color: white;
+  height: 90vh; }
 
 .small-map {
   height: 60vh;

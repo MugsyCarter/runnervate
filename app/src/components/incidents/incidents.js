@@ -12,7 +12,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     console.log('root scoped query is ', rootScope.query);
     this.user = rootScope.user;
     
-    this.mapURL =  googleMapsUrl;
+    this.mapURL = googleMapsUrl;
 
     this.minResult = 0;
     this.maxResult = 10;

@@ -11,7 +11,8 @@ controller.$inject = ['$scope', '$state', '$rootScope', 'userService', '$timeout
 function controller($scope, $state, rootScope, userSvc, timeout) {
 
     this.state = $state;
-    
+    console.log('state is ', this.state);
+
     this. searchQuery = '';
     this.searchFor = ()=>{
         console.log('searching for this town: ', this.searchQuery);

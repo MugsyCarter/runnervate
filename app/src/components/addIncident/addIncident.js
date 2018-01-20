@@ -108,79 +108,15 @@ function controller(rootScope, lynchSvc, $state) {
 
     this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal', 'website'];
 
-    this.races = ['white', 'asian', 'native american', 'black', 'latino'];
+    this.races = rootScope.races;
 
     this.suffs = ['jr.', 'sr.', 'III'];
 
-    this.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+    this.states = rootScope.states;
 
-    this.oldCounties = ['Alameda County', 'Alpine County',
-        'Amador County',
-        'Butte County',
-        'Calaveras County',
-        'Colusa County',
-        'Contra Costa County',
-        'Del Norte County',
-        'El Dorado County',
-        'Fresno County',
-        'Glenn County',
-        'Humboldt County',
-        'Imperial County',
-        'Inyo County',
-        'Kern County',
-        'Kings County',
-        'Lake County',
-        'Lassen County',
-        'Los Angeles County',
-        'Madera County',
-        'Marin County',
-        'Mariposa County',
-        'Mendocino County',
-        'Merced County',
-        'Modoc County',
-        'Mono County',
-        'Monterey County',
-        'Napa County',
-        'Nevada County',
-        'Orange County',
-        'Placer County',
-        'Plumas County',
-        'Riverside County',
-        'Sacramento County',
-        'San Benito County',
-        'San Bernardino County',
-        'San Diego County',
-        'San Francisco County',
-        'San Joaquin County',
-        'San Luis Obispo County',
-        'San Mateo County',
-        'Santa Barbara County',
-        'Santa Clara County',
-        'Santa Cruz County',
-        'Shasta County',
-        'Sierra County',
-        'Siskiyou County',
-        'Solano County',
-        'Sonoma County',
-        'Stanislaus County',
-        'Sutter County',
-        'Tehama County',
-        'Trinity County',
-        'Tulare County',
-        'Tuolumne County',
-        'Ventura County',
-        'Yolo County',
-        'Yuba County'];
+    this.counties = rootScope.counties;
 
-    this.weapons = ['gun', 'knife', 'none'];
-    this.counties = [];
-
-    this.oldCounties.forEach((county)=>{
-        let arr = county.split(' ');
-        arr.pop();
-        let str = arr.join(' ');
-        this.counties.push(str);
-    });
+    this.weapons = rootScope.weapons;
 
     this.addThisIncident= ()=>{
         if (this.decimal === 'false'){

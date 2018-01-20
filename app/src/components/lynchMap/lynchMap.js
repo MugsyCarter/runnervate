@@ -11,6 +11,11 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     this.mapURL=googleMapsUrl;
     this.incident=null;
 
+    this.races = rootScope.races;
+    this.states = rootScope.states;
+    this.counties = rootScope.counties;
+    this.weapons = rootScope.weapons;
+
     console.log('this is ', this);
 
     rootScope.$on('locationUpdated', (event, location)=>{

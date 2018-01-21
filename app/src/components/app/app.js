@@ -30,16 +30,16 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
         this.user = user.user;
     //     console.log('user logged in as ', user);
         rootScope.loggedIn = true;
-         this.loggedIn = true;
+        this.loggedIn = true;
     //     $state.go('user');
     // });
-    userSvc.getById(this.user.userId)
-        .then((user) => {
-            console.log('user is ', user[0]);
-            rootScope.user = user[0];
-            console.log('user is ', rootScope.user);
-            this.user = rootScope.user;
-        });
+        userSvc.getById(this.user.userId)
+            .then((user) => {
+                console.log('user is ', user[0]);
+                rootScope.user = user[0];
+                console.log('user is ', rootScope.user);
+                this.user = rootScope.user;
+            });
     });
 
     rootScope.$on('logout', (event)=>{
@@ -55,9 +55,7 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
     rootScope.$on('updateLocation', (event, location)=>{
         console.log('update location called.  location is ', rootScope.location);
         timeout(function(){
-            rootScope.$broadcast('locationUpdated', location)},500);
-    });
-
+            rootScope.$broadcast('locationUpdated', location);},500);});
     rootScope.$on('editIncident', (event, incident)=>{
         console.log('incident ', incident);
         rootScope.incident = incident;
@@ -204,16 +202,16 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
         'Yolo County',
         'Yuba County'];
 
-        this.counties = [];
+    this.counties = [];
 
-        this.oldCounties.forEach((county)=>{
-            let arr = county.split(' ');
-            arr.pop();
-            let str = arr.join(' ');
-            this.counties.push(str);
-        });
+    this.oldCounties.forEach((county)=>{
+        let arr = county.split(' ');
+        arr.pop();
+        let str = arr.join(' ');
+        this.counties.push(str);
+    });
 
-        rootScope.counties = this.counties;
+    rootScope.counties = this.counties;
 
-        rootScope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+    rootScope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
 };

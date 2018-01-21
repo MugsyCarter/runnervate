@@ -20,8 +20,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     rootScope.$on('locationUpdated', (event, location)=>{
         console.log('broadcast recieved', location);
-       this.incident = location;
-       console.log('and this is ', this);
+        this.incident = location;
+        console.log('and this is ', this);
     });
 
 
@@ -36,28 +36,28 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
             console.log('class', map.class);
 
             for (let i =0; i < incidents.length; i++){
-                    console.log('add marker called');
-                    let newMarker = new google.maps.Marker({
-                        title: incidents[i].suspectNames
-                    });
+                console.log('add marker called');
+                let newMarker = new google.maps.Marker({
+                    title: incidents[i].suspectNames
+                });
             
-                    newMarker.addListener('click', function() {
-                        map.setZoom(10);
-                        map.setCenter(newMarker.getPosition());
-                        // alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
-                        this.location = incidents[i];
-                        rootScope.$emit('updateLocation', this.location);
-                        console.log('this.incident', this.location);
-                      });
+                newMarker.addListener('click', function() {
+                    map.setZoom(10);
+                    map.setCenter(newMarker.getPosition());
+                    // alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
+                    this.location = incidents[i];
+                    rootScope.$emit('updateLocation', this.location);
+                    console.log('this.incident', this.location);
+                });
 
-                    var bounds = new google.maps.LatLngBounds();
-                    var lat = incidents[i].latDecimal;
-                    var lng = incidents[i].lonDecimal;
-                    var latlng = new google.maps.LatLng(lat, lng)
-                    newMarker.setPosition(latlng);
-                    newMarker.setMap(map);
-                    bounds.extend(latlng);
-                };
+                var bounds = new google.maps.LatLngBounds();
+                var lat = incidents[i].latDecimal;
+                var lng = incidents[i].lonDecimal;
+                var latlng = new google.maps.LatLng(lat, lng);
+                newMarker.setPosition(latlng);
+                newMarker.setMap(map);
+                bounds.extend(latlng);
+            };
         });
     });
     

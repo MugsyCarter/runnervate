@@ -55,9 +55,7 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
     rootScope.$on('updateLocation', (event, location)=>{
         console.log('update location called.  location is ', rootScope.location);
         timeout(function(){
-            //boardcast will available to every listener
-            rootScope.$broadcast('locationUpdated', location)
-        },500);
+            rootScope.$broadcast('locationUpdated', location)},500);
     });
 
     rootScope.$on('editIncident', (event, incident)=>{
@@ -70,6 +68,77 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
     // rootScope.$on('updateUser', (event, user)=>{
     //     // no code here yet
     // });
+
+
+    //filter stuff here
+    this.newFilter = false;
+    this.activeFilter = null;
+    this.newQuery = {
+        category: null,
+        target: null,
+        number: null
+    };
+    this.queries = [];
+    this.queryNumber=-1; 
+    this.filters = [
+        {
+            name: 'year',
+            value: 'year'
+        },
+        {
+            name: 'county',
+            value: 'county'
+        },
+        {
+            name: 'place',
+            value: 'place'
+        }
+    ];
+    this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
+    this.buttonClass = 'btn btn-outline-primary';
+
+    this.addFilter = ()=>{
+        this.newFilter=true;
+        if (this.newQuery.category !== null && this.newQuery.target !== null){
+            this.queryNumber ++;
+            if (this.queryNumber > 3){
+                this.queryNumber = 0;
+            }
+
+            this.newQuery.number = this.queryNumber;
+
+            this.queries.push(this.newQuery);
+
+            let index = this.filters.findIndex((filter)=>{
+                return filter.name === this.newQuery.category.name;
+            });
+
+            this.filters.splice(index,1);
+
+            this.newQuery = {
+                catergory: null,
+                target: null,
+                number: null
+            };
+            console.log('filters are ', this.filters);
+        }
+    };
+
+    this.removeFilter = (filter)=>{
+        console.log('removing this filter ', filter);
+
+        this.filters.push(filter.category);
+
+        let index = this.queries.findIndex((query)=>{
+            console.log('query name is ' + query.category.name + ' and filter name is ' + filter.category.name);
+            return query.category.name === filter.category.name;
+        });
+
+        this.queries.splice(index,1);
+
+    };
+
+
     
     rootScope.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 

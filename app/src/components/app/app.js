@@ -84,8 +84,6 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         target: null,
         number: null
     };
-    this.maxResult = 10;
-    this.minresult = 0;
     this.queries = [];
     this.queryNumber=-1; 
     this.filters = [
@@ -149,15 +147,6 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.updateIncidents = (incidents)=>{
         rootScope.incidents = incidents;
         console.log('updating rootscope active incidents', incidents);
-        // if (rootScope.map ===true){
-        //     rootScope.activeIncidents = incidents; 
-        // }
-        // else{
-        //     rootScope.activeIncidents = [];
-        //     for (let i = this.minResult-1; i < this.maxResult; i ++){
-        //         rootScope.activeIncidents.push(incidents[i]);
-        //     }
-        // }
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
     };
@@ -181,11 +170,6 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 this.incidents.sort((a,b)=>{
                     return a.year > b.year;
                 });
-                this.minResult = 1;
-                this.maxResult = this.incidents.length;
-                if ((this.incidents.length)>9){
-                    this.maxResult = 10;
-                }
                 this.updateIncidents(this.incidents);
             });
     };

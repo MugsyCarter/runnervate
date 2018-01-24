@@ -29,11 +29,20 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     rootScope.$on('incidentsUpdated', (event, incidents)=>{
         console.log('incident update broadcast recieved', incidents);
         this.incidents = incidents;
-        this.updateActiveIncidents(incidents);
+        this.incidentNumber = this.incidents.length;
+        this.minResult = 1;
+        this.maxResult = this.incidents.length;
+        if ((this.incidents.length)>9){
+            this.maxResult = 10;
+        }
+        this.updateActiveIncidents();
     });
    
-    this.updateActiveIncidents = (incidents)=>{
-
+    this.updateActiveIncidents = ()=>{
+        this.activeIncidents = [];
+        for (let i = this.minResult-1; i < this.maxResult; i ++){
+            this.activeIncidents.push(this.incidents[i]);
+        }
     };
 
     this.showIncident= (incident)=>{
@@ -198,7 +207,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         }
         rootScope.map = false;
         rootScope.searchIncidents();
-    }   
+    };   
 
     this.loadIncidents();
 };

@@ -6,14 +6,16 @@ export default {
 };
 
 
-controller.$inject = ['$scope', '$state', '$rootScope', 'userService', '$timeout'];
+controller.$inject = ['$scope', '$state', '$rootScope', 'userService', 'lynchService', '$timeout'];
 
-function controller($scope, $state, rootScope, userSvc, timeout) {
+function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     this.state = $state;
     console.log('state is ', this.state);
+    rootScope.map = false;
 
     this. searchQuery = '';
+
     this.searchFor = ()=>{
         console.log('searching for this town: ', this.searchQuery);
         rootScope.query = this.searchQuery;
@@ -52,10 +54,16 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
         // this.updateMenu();
     });
 
+    rootScope.$on('updateActiveIncidents', (event)=>{
+        console.log('updatingActiveIncidents', this.incid);
+        this.updateActiveIncidents();
+    });
+
     rootScope.$on('updateLocation', (event, location)=>{
         console.log('update location called.  location is ', rootScope.location);
         timeout(function(){
             rootScope.$broadcast('locationUpdated', location);},500);});
+
     rootScope.$on('editIncident', (event, incident)=>{
         console.log('incident ', incident);
         rootScope.incident = incident;
@@ -76,6 +84,8 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
         target: null,
         number: null
     };
+    this.maxResult = 10;
+    this.minresult = 0;
     this.queries = [];
     this.queryNumber=-1; 
     this.filters = [
@@ -136,6 +146,51 @@ function controller($scope, $state, rootScope, userSvc, timeout) {
 
     };
 
+    this.updateActiveIncidents = (incidents)=>{
+        rootScope.incidents = incidents;
+        console.log('updating rootscope active incidents', incidents);
+        if (rootScope.map ===true){
+            rootScope.activeIncidents = incidents; 
+        }
+        else{
+            rootScope.activeIncidents = [];
+            for (let i = this.minResult-1; i < this.maxResult; i ++){
+                rootScope.activeIncidents.push(incidents[i]);
+            }
+        }
+        timeout(function(){
+            rootScope.$broadcast('incidentsUpdated', rootScope.activeIncidents);},500);
+    };
+
+
+    this.searchIncidents = ()=>{
+        console.log('searching incidents with these queries ', this.queries);
+        let queryString = '';
+        if (this.queries.length > 0){
+            queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;
+            for (let i=1; i < this.queries.length; i++){
+                queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
+            }
+        }
+        console.log(queryString);
+        lynchSvc.getByQuery(queryString)
+            .then((incidents)=>{
+                this.incidents=incidents;
+                console.log(this.incidents);
+                this.incidentNumber = this.incidents.length;
+                this.incidents.sort((a,b)=>{
+                    return a.year > b.year;
+                });
+                this.minResult = 1;
+                this.maxResult = this.incidents.length;
+                if ((this.incidents.length)>9){
+                    this.maxResult = 10;
+                }
+                this.updateActiveIncidents(this.incidents);
+            });
+    };
+
+    rootScope.searchIncidents = this.searchIncidents;
 
     
     rootScope.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

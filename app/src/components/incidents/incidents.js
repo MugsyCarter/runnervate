@@ -19,8 +19,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
     this.nuke = false; 
 
-    this.incidents = [];
-    this.activeIncidents = [];
+    this.incidents = rootScope.incidents;
+    this.activeIncidents = rootScope.ActiveIncidents;
+    this.queries = rootScope.queries;
    
     this.counties = rootScope.counties;
     this.months = rootScope.months;
@@ -52,15 +53,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         console.log('suggesting this incident be deleted: ', incident);
     };
 
-
-    this.updateActiveIncidents = ()=>{
-        console.log('updating active incidents');
-        this.activeIncidents = [];
-        for (let i = this.minResult-1; i < this.maxResult; i ++){
-            this.activeIncidents.push(this.incidents[i]);
-        }
-    };
-
     this.nextResults = ()=>{
         this.minResult += 10;
         this.maxResult += 10;
@@ -81,53 +73,36 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         this.updateActiveIncidents();
     };
 
-    this.searchIncidents = ()=>{
-        console.log('searching incidents with these queries ', this.queries);
-        let queryString = '';
-        if (this.queries.length > 0){
-            queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;
-            for (let i=1; i < this.queries.length; i++){
-                queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
-            }
-        }
-        console.log(queryString);
-        lynchSvc.getByQuery(queryString)
-            .then((incidents)=>{
-                this.incidents=incidents;
-                console.log(this.incidents);
-                this.incidentNumber = this.incidents.length;
-                this.incidents.sort((a,b)=>{
-                    return a.year > b.year;
-                });
-                this.minResult = 1;
-                this.maxResult = this.incidents.length;
-                if ((this.incidents.length)>9){
-                    this.maxResult = 10;
-                }
-                this.updateActiveIncidents();
-            });
-    };
+    // this.searchIncidents = ()=>{
+    //     console.log('searching incidents with these queries ', this.queries);
+    //     let queryString = '';
+    //     if (this.queries.length > 0){
+    //         queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;
+    //         for (let i=1; i < this.queries.length; i++){
+    //             queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
+    //         }
+    //     }
+    //     console.log(queryString);
+    //     lynchSvc.getByQuery(queryString)
+    //         .then((incidents)=>{
+    //             this.incidents=incidents;
+    //             console.log(this.incidents);
+    //             this.incidentNumber = this.incidents.length;
+    //             this.incidents.sort((a,b)=>{
+    //                 return a.year > b.year;
+    //             });
+    //             this.minResult = 1;
+    //             this.maxResult = this.incidents.length;
+    //             if ((this.incidents.length)>9){
+    //                 this.maxResult = 10;
+    //             }
+    //             this.updateActiveIncidents();
+    //         });
+    // };
 
 
 
-    if (rootScope.query){
-        console.log('query found: ', rootScope.query);
-        this.newQuery = 
-        {
-            category: {name: 'place', value: 'place'},
-            target: rootScope.query,
-            number: null
-        };
-        this.addFilter();
-    }
-    else{
-        console.log('no rootscope query found');
-        // lynchSvc.get()
-        //     .then((incident) => {
-        //         this.incidents = incident;
-        //     });
-    }
-    this.searchIncidents();
+  
 
 
 
@@ -197,5 +172,22 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         });
     };
 
+
+    //on load
+    if (rootScope.query){
+        console.log('query found: ', rootScope.query);
+        this.newQuery = 
+        {
+            category: {name: 'place', value: 'place'},
+            target: rootScope.query,
+            number: null
+        };
+        this.addFilter();
+    }
+    else{
+        console.log('no rootscope query found');
+    }
+    rootScope.map = false;
+    rootScope.searchIncidents();
 
 };

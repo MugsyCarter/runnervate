@@ -25,10 +25,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     });
 
 
-    lynchSvc.get()
-    .then((incidents) => {
-        this.incidents = incidents;
-        console.log('incidents loaded: ', this.incidents);
+    this.updateMap= (incidents) =>{
+        console.log('incidents loaded: ', incidents);
         NgMap.getMap().then(function(map) {
             console.log(map.getCenter());
             console.log('markers', map.markers);
@@ -59,8 +57,21 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                 bounds.extend(latlng);
             };
         });
-    });
+    };
     
+    this.updateMapIncidents = ()=>{
+        rootScope.map = true;
+        rootScope.searchIncidents();
+    };
+   
+    rootScope.$on('incidentsUpdated', (event, incidents)=>{
+        console.log('incident update broadcast recieved', incidents);
+        this.incidents = incidents;
+        this.updateMap(this.incidents);
+    });
+
+    this.updateMapIncidents();
+ 
 }
 
 

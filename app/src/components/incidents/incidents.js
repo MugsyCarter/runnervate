@@ -26,7 +26,15 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     this.counties = rootScope.counties;
     this.months = rootScope.months;
     
+    rootScope.$on('incidentsUpdated', (event, incidents)=>{
+        console.log('incident update broadcast recieved', incidents);
+        this.incidents = incidents;
+        this.updateActiveIncidents(incidents);
+    });
    
+    this.updateActiveIncidents = (incidents)=>{
+
+    };
 
     this.showIncident= (incident)=>{
         incident.fullView = true;
@@ -174,20 +182,23 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
 
 
     //on load
-    if (rootScope.query){
-        console.log('query found: ', rootScope.query);
-        this.newQuery = 
-        {
-            category: {name: 'place', value: 'place'},
-            target: rootScope.query,
-            number: null
-        };
-        this.addFilter();
-    }
-    else{
-        console.log('no rootscope query found');
-    }
-    rootScope.map = false;
-    rootScope.searchIncidents();
+    this.loadIncidents = ()=>{
+        if (rootScope.query){
+            console.log('query found: ', rootScope.query);
+            this.newQuery = 
+            {
+                category: {name: 'place', value: 'place'},
+                target: rootScope.query,
+                number: null
+            };
+            this.addFilter();
+        }
+        else{
+            console.log('no rootscope query found');
+        }
+        rootScope.map = false;
+        rootScope.searchIncidents();
+    }   
 
+    this.loadIncidents();
 };

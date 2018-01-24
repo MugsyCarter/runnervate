@@ -146,20 +146,20 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     };
 
-    this.updateActiveIncidents = (incidents)=>{
+    this.updateIncidents = (incidents)=>{
         rootScope.incidents = incidents;
         console.log('updating rootscope active incidents', incidents);
-        if (rootScope.map ===true){
-            rootScope.activeIncidents = incidents; 
-        }
-        else{
-            rootScope.activeIncidents = [];
-            for (let i = this.minResult-1; i < this.maxResult; i ++){
-                rootScope.activeIncidents.push(incidents[i]);
-            }
-        }
+        // if (rootScope.map ===true){
+        //     rootScope.activeIncidents = incidents; 
+        // }
+        // else{
+        //     rootScope.activeIncidents = [];
+        //     for (let i = this.minResult-1; i < this.maxResult; i ++){
+        //         rootScope.activeIncidents.push(incidents[i]);
+        //     }
+        // }
         timeout(function(){
-            rootScope.$broadcast('incidentsUpdated', rootScope.activeIncidents);},500);
+            rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
     };
 
 
@@ -186,7 +186,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 if ((this.incidents.length)>9){
                     this.maxResult = 10;
                 }
-                this.updateActiveIncidents(this.incidents);
+                this.updateIncidents(this.incidents);
             });
     };
 

@@ -9,12 +9,23 @@ ul{
   list-style: none;
 }
 
-
+.navbar{
+  border-radius: 4px 4px 0px 0px;
+  margin-bottom: 0px;
+}
 
 
 //browse Incidents
 //search filters
-#filterGroup{
+#filters{
+  background-color: #1C2328;
+  margin: 0em;
+  padding: 0em;
+  border-radius: 0px 0px 4px 4px;
+}
+
+#filter-label{
+  color: white;
 }
 
 //incident results

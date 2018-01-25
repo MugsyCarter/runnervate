@@ -87,18 +87,15 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.queries = [];
     this.queryNumber=-1; 
     this.filters = [
-        {
-            name: 'year',
-            value: 'year'
-        },
-        {
-            name: 'county',
-            value: 'county'
-        },
-        {
-            name: 'place',
-            value: 'place'
-        }
+        {name: 'year',value: 'year'},
+        {name: 'county',value: 'county'},
+        {name: 'place',value: 'place'},
+        {name: 'public or private',value: 'open'},
+        {name: 'lethality',value: 'lethality'},
+        {name: 'crime',value: 'crime'},
+        {name: 'punishment',value: 'punishment'},
+        {name: 'race of accused',value: 'suspectRace'},
+        {name: 'nationality of accused',value: 'suspectNationality'}
     ];
     this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
     this.buttonClass = 'btn btn-outline-primary';
@@ -204,10 +201,10 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     
     rootScope.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    this.races = rootScope.races = ['white', 'asian', 'native american', 'black', 'latino'];
 
-    rootScope.races = ['white', 'asian', 'native american', 'black', 'latino'];
-
-    rootScope.weapons = ['gun', 'knife', 'none'];
+    this.weapons = rootScope.weapons = ['gun', 'knife', 'none'];
 
     this.oldCounties = ['Alameda County', 'Alpine County',
         'Amador County',
@@ -278,5 +275,5 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     rootScope.counties = this.counties;
 
-    rootScope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+    this.states = rootScope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
 };

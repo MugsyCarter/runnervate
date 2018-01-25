@@ -29,6 +29,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         console.log('incidents loaded: ', incidents);
         NgMap.getMap().then(function(map) {
             console.log(map.getCenter());
+            //remove old markers
+            if(map.markers){
+                map.markers.forEach((marker)=>{
+                    marker.setMap(null);
+                });
+            }
+            map.markers = [];
+            console.log('map is ', map);
             console.log('markers', map.markers);
             console.log('shapes', map.shapes);
             console.log('class', map.class);
@@ -53,10 +61,18 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                 var lng = incidents[i].lonDecimal;
                 var latlng = new google.maps.LatLng(lat, lng);
                 newMarker.setPosition(latlng);
-                newMarker.setMap(map);
+                map.markers.push(newMarker);
+                // newMarker.setMap(map);
                 bounds.extend(latlng);
             };
+            console.log('map is ', map);
+            console.log('markers are', map.markers);
+            //add new markers
+            map.markers.forEach((marker)=>{
+                marker.setMap(map);
+            });
         });
+   
     };
     
     this.updateMapIncidents = ()=>{

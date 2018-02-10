@@ -155,11 +155,11 @@
                             <input ng-model="$ctrl.incident.crowdSize" type="text" class="form-control" id="inputCrowdSize" placeholder="Crowd Size">
                           </div>
 
-                        <label for="inputOpen" class="col-lg-2 control-label">Open or Closed</label>
+                        <label for="inputOpen" class="col-lg-2 control-label">Open or Secret?</label>
                         <div class="col-lg-1">
-                            <input ng-model="$ctrl.incident.open" type="radio" name="open" value="open" checked> Open<br>
-                            <input ng-model="$ctrl.incident.open" type="radio" name="closed" value="closed"> Closed<br>
-                            <input ng-model="$ctrl.incident.open" type="radio" name="unknown" value="unknown"> Unknown
+                            <input ng-model="$ctrl.incident.open" type="radio" name="Open" value="Open" checked> Open<br>
+                            <input ng-model="$ctrl.incident.open" type="radio" name="Secret" value="Secret"> Secret<br>
+                            <input ng-model="$ctrl.incident.open" type="radio" name="Unknown" value="Unknown"> Unknown
                         </div>
 
                         <label for="inputCrime" class="col-lg-2 control-label">Crime</label>
@@ -176,7 +176,7 @@
                         <div class="col-lg-1">
                             <input ng-model="$ctrl.incident.lethality" type="radio" name="lethal" value="lethal" checked> Lethal<br>
                             <input ng-model="$ctrl.incident.lethality" type="radio" name="non-lethal" value="non-lethal"> Non-Lethal<br>
-                            <input ng-model="$ctrl.incident.lethality" type="radio" name="both" value="both"> Both
+                            <input ng-model="$ctrl.incident.lethality" type="radio" name="unknown" value="unknown"> unknown
                         </div>
 
                         <label for="inputOtherNamesMentioned" class="col-lg-2 control-label">Other Names Mentioned</label>

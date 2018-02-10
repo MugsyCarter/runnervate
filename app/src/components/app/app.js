@@ -90,7 +90,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         {name: 'year',value: 'year'},
         {name: 'county',value: 'county'},
         {name: 'place',value: 'place'},
-        {name: 'public or private',value: 'open'},
+        {name: 'open or secret',value: 'open'},
         {name: 'lethality',value: 'lethality'},
         {name: 'crime',value: 'crime'},
         {name: 'punishment',value: 'punishment'},

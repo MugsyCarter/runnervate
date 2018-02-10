@@ -49,11 +49,17 @@
                                     </div>
                                     <div ng-if="$ctrl.newQuery.category.value==='open'">
                                         <select ng-model="$ctrl.newQuery.target">
-                                            <option value="open">public</option>
-                                            <option value="closed">private</option>
-                                            <option value="unknown">unknown</option>
+                                            <option value="Open">Open</option>
+                                            <option value="Secret">Secret</option>
+                                            <option value="Unknown">unknown</option>
                                         </select>
                                     </div>
+                                    <div ng-if="$ctrl.newQuery.category.value==='lethality'">
+                                            <select ng-model="$ctrl.newQuery.target">
+                                                <option value="Lethal">Lethal</option>
+                                                <option value="Not Lethal">Not Lethal</option>                   
+                                            </select>
+                                        </div>
                                     <div ng-if="$ctrl.newQuery.category.value==='suspectRace'">
                                         <select ng-model="$ctrl.newQuery.target" ng-options="race for race in $ctrl.races"></select>
                                     </div>
@@ -66,7 +72,7 @@
 
                     <!-- <div class="row"> -->
                         <div class="col-sm-2">
-                                <button class="btn btn-info" ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"></span>  Search Incidents</button>
+                                <button class="btn btn-info" ng-click="$ctrl.searchIncidents()" ><span class="glyphicon glyphicon-search"></span>  Search Lynchings</button>
                         </div>  
                         <label ng-if="$ctrl.queries.length" for="inputFilter" class="col-sm-2 control-label" id="filter-label">Active Filters: <em>Click a Filter to Remove</em></label>
                         <div class="col-sm-2" ng-if="$ctrl.queries.length" ng-repeat="query in $ctrl.queries" >

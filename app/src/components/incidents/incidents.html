@@ -67,15 +67,69 @@
                                                 <!-- long view starts -->
                                                 <div class="row" ng-if="incident.fullView===true">
                                                
+      <div class="jumbotron">
+                <h2>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h2>
+                <!-- <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p> -->
+                <!-- <p><a class="btn btn-lg btn-success" href="#" role="button" ng-click="$ctrl.hideIncident(incident)" >Sign up today</a></p> -->
+                <button class="btn btn-secondary" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>
+                        <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
+                                <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
+                                
+                        </ng-map>
+              <!-- </div> -->
+        
+              <div class="row marketing">
+                <div class="col-lg-6">
+                  <h4>Subheading</h4>
+                  <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        
+                  <h4>Subheading</h4>
+                  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+        
+                  <h4>Subheading</h4>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+        
+                <div class="col-lg-6">
+                  <h4>Subheading</h4>
+                  <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        
+                  <h4>Subheading</h4>
+                  <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+        
+                  <h4>Subheading</h4>
+                  <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+                </div>
+              </div>
+        /div>
+
+
+
+
+
+
+
+
                                                 <div class="row">
-                                                        <div class="col-sm-4"><h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4></div>
+                                                        <div class="col-sm-4"><h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <h4>Accused</h4>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <p>Names: {{incident.suspectNames}}</p>
+                                                        </div>
+                                                                <p>Races: {{incident.suspectRaces}}</p></div>
+                                                                <br>
+                                                                <p>Confession or Speech at Gallows: {{incident.confession}}</p>
+                                                        </div>
                                                         <div class="col-sm-2"> <button class="btn btn-secondary" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button></div>
-                                                                <div class="col-sm-6">
-                                                                        <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
-                                                                                <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
-                                                                             
-                                                                        </ng-map>
-                                                                </div>
+                                                        <div class="col-sm-4">
+                                                                <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
+                                                                        <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
+                                                                        
+                                                                </ng-map>
+                                                        </div>
                                                         </div>
                                                         <div class="row">
                                                         <div class="col-sm-10">  

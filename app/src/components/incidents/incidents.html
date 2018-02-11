@@ -72,10 +72,7 @@
                 <!-- <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p> -->
                 <!-- <p><a class="btn btn-lg btn-success" href="#" role="button" ng-click="$ctrl.hideIncident(incident)" >Sign up today</a></p> -->
                 <div class="row">
-                        <div class='col-lg-2'>
-                                <button class="btn btn-success" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>
-                        </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-10">
                                 <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
                                         <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
                                         
@@ -116,6 +113,7 @@
                         <p>Notes:  <em>{{incident.oldNotes}}</em></p>
                 </div>
               </div>
+                        <button class="btn btn-success" id="hide-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>
         </div>
 <!-- 
                                                 <div class="row">

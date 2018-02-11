@@ -27,6 +27,12 @@ ul {
 #show-incident-button {
   float: right; }
 
+#hide-incident-button {
+  float: right; }
+
+#big-incident {
+  margin: 0px; }
+
 .big-map {
   height: 90vh;
   max-width: 60vw; }

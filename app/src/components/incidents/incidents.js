@@ -5,9 +5,9 @@ export default {
     controller
 };
 
-controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl'];
+controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl', 'NgMap'];
 
-function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
+function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     console.log('root scoped query is ', rootScope.query);
     this.user = rootScope.user;
@@ -46,6 +46,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
     };
 
     this.showIncident= (incident)=>{
+        this.updateMap(incident);
         incident.fullView = true;
     };
 
@@ -88,6 +89,33 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl) {
         }
         this.minResult -= 10;
         this.updateActiveIncidents();
+    };
+
+    this.updateMap= (incident) =>{
+        console.log('updating map for this incident: ', incident);
+        NgMap.getMap().then(function(map) {
+            console.log(map.getCenter());
+            let newMarker = new google.maps.Marker({
+                title: incident.suspectNames
+            });
+            
+            newMarker.addListener('click', function() {
+                map.setZoom(10);
+                map.setCenter(newMarker.getPosition());
+                // alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
+            });
+
+            var bounds = new google.maps.LatLngBounds();
+            var lat = incident.latDecimal;
+            var lng = incident.lonDecimal;
+            var latlng = new google.maps.LatLng(lat, lng);
+            newMarker.setPosition(latlng);
+            // map.markers.push(newMarker);
+            newMarker.setMap(map);
+            bounds.extend(latlng);
+            console.log('map is ', map);
+            console.log('marker is', map.markers);
+        });
     };
 
     // this.searchIncidents = ()=>{

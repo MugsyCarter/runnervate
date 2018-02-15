@@ -1,29 +1,25 @@
-//model for the trip schema
+//model for the incident schema
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const requiredString = {type: String, required: true};
 const requiredNumber = {type: Number, required: true};
 
-//trip
-const tripSchema = new Schema({
+//incident
+const incidentSchema = new Schema({
     caseNum: requiredString,
-    origDBIndex: Number,
-    cwIndex: String,
-    gdIndex: String,
-    crossRefNotesCwGd: String,
-    latDecimal: Number,
-    lonDecimal: Number,
-    latNDegrees:Number,
-    latNMinutes:Number,
-    latNSeconds:Number,
-    lonWDegrees:Number,
-    lonWMinutes:Number,
-    lonWSeconds:Number,
+    incidentNotes: String,
     year: requiredNumber,
     month: Number,
     day: Number,
-    dateString: String,
     dateNotes: String,
+    latDecimal: Number,
+    lonDecimal: Number,
+    latDegrees: Number,
+    latMinutes: Number,
+    latSeconds: Number,
+    lonDegrees: Number,
+    lonMinutes: Number,
+    lonSeconds: Number,
     state: String,
     place: String,
     county: String,
@@ -31,30 +27,17 @@ const tripSchema = new Schema({
     crowdType: String,
     crowdSize: String,
     open: String,
-    oldAuthorities: String,
+    authorities: String,
     authoritiesPresent: Boolean,
-    authoritiesNotes: String,
-    crime: String,
-    punishment: requiredString,
     lethality: String,
-    otherNamesMentioned: String,
-    suspects: [],
-    numberSuspects: requiredNumber,
-    suspectNames: String,
-    suspectRaces: String,
-    confession: String,
-    suspectNotes: String,
-    victims: [],
-    victimNumber: String,
-    victimNames: String,
-    victimGenders: String,
-    victimRaces: String,
-    victimNotes: String,
-    sources: [],
-    oldSources: String,
-    oldNotes: String,
+    cwIndex: String,
+    gdIndex: String,
+    crossRefNotesCwGd: String,
+   
+    dateString: String,
+    origDBIndex: Number,
     summary: String,
 });
 
 
-module.exports = mongoose.model('Trip', tripSchema);
+module.exports = mongoose.model('Incident', incidentSchema);

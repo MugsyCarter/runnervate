@@ -13,24 +13,13 @@ import 'angular-ui-router/release/stateEvents';
 
 const app = angular.module('myApp', [components, services, uiRouter, ngmap]);
 
-
-
-//app.value('apiUrl', 'http://localhost:3000/api');
-app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
-
+//switch between these two lines to switch between local host and heroku api urls
+app.value('apiUrl', 'http://localhost:3000/api');
+//app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 
 app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 
 app.config(routes);
-
-// app.config(routes, function(uiGmapGoogleMapApiProvider) {
-//     uiGmapGoogleMapApiProvider.configure({
-//         key: 'AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY',
-//         v: '3.20', //defaults to latest 3.X anyhow
-//         libraries: 'weather,geometry,visualization'
-//     });
-// })
-
 
 //route debugger
 app.run(function($rootScope) {

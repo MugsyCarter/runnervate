@@ -6,9 +6,9 @@ const punishment = new Schema({
     accusedID: Number,
     caseNum: Number,
     fullName: String,
-    accusation: String,
-    weapon: String,
+    punishment: String,
+    lashes: String,
     notes: String
 });
 
-module.exports = mongoose.model('Punishmen', punishmentSchema);
+module.exports = mongoose.model('Punishment', punishmentSchema);

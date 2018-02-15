@@ -17,7 +17,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     this.minResult = 0;
     this.maxResult = 10;
 
-    this.nuke = false; 
+    this.nuke = true; 
 
     this.incidents = rootScope.incidents;
     this.activeIncidents = rootScope.ActiveIncidents;
@@ -93,7 +93,8 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     this.updateMap= (incident) =>{
         console.log('updating map for this incident: ', incident);
-        NgMap.getMap().then(function(map) {
+        let mapID = 'map-' + incident._id;
+        NgMap.getMap({id:mapID}).then(function(map) {
             console.log(map.getCenter());
             let newMarker = new google.maps.Marker({
                 title: incident.suspectNames

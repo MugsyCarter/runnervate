@@ -73,7 +73,7 @@
                 <!-- <p><a class="btn btn-lg btn-success" href="#" role="button" ng-click="$ctrl.hideIncident(incident)" >Sign up today</a></p> -->
                 <div class="row">
                         <div class="col-lg-10">
-                                <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
+                                <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7" id="'map-' + {{incident._id}}">
                                         <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
                                         
                                 </ng-map>

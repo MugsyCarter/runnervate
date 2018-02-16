@@ -33,9 +33,7 @@ const incidentSchema = new Schema({
     cwIndex: String,
     gdIndex: String,
     crossRefNotesCwGd: String,
-   
     dateString: String,
-    origDBIndex: Number,
     summary: String,
 });
 

@@ -16,7 +16,7 @@ const website = new Schema({
     publisher: String,
     volume: String,	
     pages: String,	
-    title: String,
+    bookTitle: String,
     location: String,	
     stateProvince: String,
     country: String,

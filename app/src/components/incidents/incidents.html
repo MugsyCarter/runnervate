@@ -4,7 +4,7 @@
  
                 <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.deleteIncidents()" ><span class="glyphicon glyphicon-fire"><h6>Nuke Incients</h6></span></button>
                 <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.populateDatabase()" ><span class="glyphicon glyphicon-book"><h6>Populate Database</h6></span></button>
-                
+
         <!-- <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
         <ng-map center="41,-87" zoom="3"></ng-map>
         </div> -->
@@ -83,6 +83,38 @@
         </div>
               <div class="row marketing">
                 <div class="col-lg-6">
+                                <p>{{incident.caseNum}}</p>
+                                <p>1{{incident.incidentNotes}}</p>
+                                <p>2{{incident.year}}</p>
+                                <p>3{{incident.month}}</p>
+                                <p>4{{incident.day}}</p>
+                                <p>5{{incident.dateNotes}}</p>
+                                <p>6{{incident.latDecimal}}</p>
+                                <p>7{{incident.lonDecimal}}</p>
+                                <p>8{{incident.latDegrees}}</p>
+                                <p>9{{incident.latMinutes}}</p>
+                                <p>10{{incident.latSeconds}}</p>
+                                <p>11{{incident.lonDegrees}}</p>
+                                <p>12{{incident.lonMinutes}}</p>
+                                <p>13{{incident.lonSeconds}}</p>
+                                <p>14{{incident.state}}</p>,
+                                <p>15{{incident.place}}</p>,
+                                <p>16{{incident.county}}</p>,
+                                <p>17{{incident.locationNotes}}</p>,
+                                <p>18{{incident.crowdType}}</p>,
+                                <p>19{{incident.crowdSize}}</p>,
+                                <p>20{{incident.open}}</p>,
+                                <p>21{{incident.authorities}}</p>,
+                                <p>22{{incident.authoritiesPresent}}</p>
+                                <p>23{{incident.lethality}}</p>,
+                                <p>24{{incident.cwIndex}}</p>,
+                                <p>25{{incident.gdIndex}}</p>,
+                                <p>26{{incident.crossRefNotesCwGd}}</p>,
+                                <p>27{{incident.dateString}}</p>,
+                                <p>28{{incident.summary}}</p>,
+
+
+
                         <h4>Accused</h4>
                         <p>Names: {{incident.suspectNames}}</p>
                         <p>Races: {{incident.suspectRaces}}</p>
@@ -292,8 +324,8 @@
                                                         <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Propose Edits to incident</h6></span></button>
                                                         <button class="btn btn-danger" id="delete-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.proposeDeletion(incident)" ><span class="glyphicon glyphicon-trash"><h6>Propose Delete Incident</h6></span></button>
 
-        <!-- latDecimal: Number,
-        lonDecimal: Number,
+        <!-- latDecimal}}</p>
+        lonDecimal}}</p>
         latNDegrees:Number,
         latNMinutes:Number,
         latNSeconds:Number,
@@ -301,13 +333,13 @@
         lonWMinutes:Number,
         lonWSeconds:Number,
         year: requiredNumber,
-        month: Number,
-        day: Number,
-        dateNotes: String,
-        state: String,
-        place: String,
-        county: String,
-        locationNotes: String, -->
+        month}}</p>
+        day}}</p>
+        dateNotes}}</p>,
+        state}}</p>,
+        place}}</p>,
+        county}}</p>,
+        locationNotes}}</p>, -->
                                                 <!-- long view ends -->
                                                 </div>
                                         </div>

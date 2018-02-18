@@ -55,8 +55,8 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     });
 
     rootScope.$on('updateActiveIncidents', (event)=>{
-        console.log('updatingActiveIncidents', this.incid);
-        this.updateActiveIncidents();
+        console.log('updatingActiveIncidents', this.incidents);
+        this.updateIncidents();
     });
 
     rootScope.$on('updateLocation', (event, location)=>{

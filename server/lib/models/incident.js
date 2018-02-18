@@ -6,7 +6,7 @@ const requiredNumber = {type: Number, required: true};
 
 //incident
 const incidentSchema = new Schema({
-    caseNum: requiredString,
+    caseNum: requiredNumber,
     incidentNotes: String,
     year: requiredNumber,
     month: Number,

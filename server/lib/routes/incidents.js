@@ -39,13 +39,11 @@ router
 
 //allows admins to delete a Incident
     .delete('/:incident', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Incident.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis incident: ', req.params.incident);
+        Incident.remove({_id: req.params.incident})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });
-
-
 
 
 module.exports = router;

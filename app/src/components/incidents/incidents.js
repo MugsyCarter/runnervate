@@ -40,10 +40,12 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
    
     this.updateActiveIncidents = ()=>{
         this.activeIncidents = [];
-        for (let i = this.minResult-1; i < this.maxResult; i ++){
+        for (let i=this.minResult; i <=this.maxResult; i++){
             this.activeIncidents.push(this.incidents[i]);
         }
     };
+
+
 
     this.showIncident= (incident)=>{
         this.updateMap(incident);
@@ -63,7 +65,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         lynchSvc.deleteIncident(incident)
             .then((incident)=>{
                 console.log(incident + 'was deleted');
+                this.updateActiveIncidents();
             });
+
     };
 
     this.proposeDeletion = (incident)=>{
@@ -189,6 +193,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     //on load
     this.loadIncidents = ()=>{
+        console.log('1')
         if (rootScope.query){
             console.log('query found: ', rootScope.query);
             this.newQuery = 

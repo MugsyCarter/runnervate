@@ -54,10 +54,9 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         // this.updateMenu();
     });
 
-    rootScope.$on('updateActiveIncidents', (event)=>{
-        console.log('updatingActiveIncidents', this.incidents);
-        this.updateIncidents();
-    });
+    // rootScope.$on('updateActiveIncidents', (event)=>{
+    //     console.log('updatingActiveIncidents', this.incidents);
+    // });
 
     rootScope.$on('updateLocation', (event, location)=>{
         console.log('update location called.  location is ', rootScope.location);
@@ -142,8 +141,10 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     };
 
     this.updateIncidents = (incidents)=>{
-        rootScope.incidents = incidents;
-        console.log('updating rootscope active incidents', incidents);
+        console.log(3);
+        console.log(this.incidents);
+        rootScope.incidents = this.incidents;
+        console.log('updating rootscope active incidents', this.incidents);
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
     };
@@ -151,6 +152,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     this.searchIncidents = ()=>{
         //if a filter needs to be added
+        console.log(2);
         this.newFilter=true;
         if (this.newQuery.category !== null && this.newQuery.target !== null){
             this.queryNumber ++;
@@ -175,7 +177,6 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             };
             console.log('filters are ', this.filters);
         }
-
         console.log('searching incidents with these queries ', this.queries);
         let queryString = '';
         if (this.queries.length > 0){
@@ -193,6 +194,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 this.incidents.sort((a,b)=>{
                     return a.year > b.year;
                 });
+                console.log('calling update incidents with these incidents', this.incidents);
                 this.updateIncidents(this.incidents);
             });
     };

@@ -140,7 +140,13 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         }
     };
 
-
+    this.populateDB = (collection)=>{
+        console.log('adding this collection', collection);
+        lynchSvc.addIncident(entry)
+        .then((incident)=>{
+            console.log('posted ', incident);
+        });
+    };
 
     // this code populates the DB
     this.populateDatabase=()=>{
@@ -197,6 +203,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     //on load
     this.loadIncidents = ()=>{
+        this.loading = true;
         console.log('1')
         if (rootScope.query){
             console.log('query found: ', rootScope.query);

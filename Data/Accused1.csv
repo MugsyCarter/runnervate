@@ -1,0 +1,995 @@
+accusedID,caseNum,fullName,race,nationality,gender,confession,notes
+1,1,Antoine,Latinx,Spanish,Male,,
+1,27,Antoine,Latinx,Spanish,Male,,
+2,1,Montreuil ,White,Canadian,Male,,
+3,1,Pepi,Latinx,Italian,Male,,
+3,27,Pepi,Latinx,Italian,Male,,
+4,1,Tchal,White,French,Male,,
+4,27,Tchal,White,French,Male,,
+5,2,Samuel Roberts,White,American,Male,,
+6,2,Unknown,White,American,Male,,
+7,2,Unknown,White,American,Male,,
+8,2,Unknown,White,American,Male,,
+9,2,Unknown,White,American,Male,,
+10,2,Unknown,White,American,Male,,
+11,2,Unknown,White,American,Male,,
+12,2,Unknown,White,American,Male,,
+13,2,Unknown,White,American,Male,,
+14,2,Unknown,White,American,Male,,
+15,2,Unknown,White,American,Male,,
+16,2,Unknown,White,American,Male,,
+17,2,Unknown,White,American,Male,,
+18,2,Unknown,White,American,Male,,
+19,2,Unknown,White,American,Male,,
+20,2,Unknown,White,American,Male,,
+21,2,Unknown,White,American,Male,,
+22,2,Unknown,White,American,Male,,
+23,2,Unknown,White,American,Male,,
+24,3,Wooly Mike,White,American,Male,,
+25,4,Dionisio Ocho,Latinx,Mexican,Male,,
+26,4,Gabino Casias,Latinx,Mexican,Male,,
+27,4,Pablo Martinez,Latinx,Mexican,Male,,
+28,4,Rinz Molina,Latinx,Mexican,Male,,
+29,4,Unknown,Latinx,Mexican,Male,,
+30,5,Hewster,White,American,Male,Insisted on innocence,Hewster and wife employed as cooks at Kearney House; wife not punished
+31,5,Hewster,White,American,Female,,Hewster and wife employed as cooks at Kearney House; wife seized and released wihout punishment
+32,6,Richard Crone,White,Irish,Male,"Given freely;
+
+Intransigent gallows speech",
+33,7,Unknown,Native American,,Male,,"Party killed 7 or 8 Indians, including two or three squaws"
+34,7,Unknown,Native American,,Male,,
+35,7,Unknown,Native American,,Male,,
+36,7,Unknown,Native American,,Male,,
+37,7,Unknown,Native American,,Male,,
+38,7,Unknown,Native American,,Male,,
+39,7,Unknown,Native American,,Male,,
+40,7,Unknown,Native American,,Male,,
+41,8,Unknown,White,English,Male,,
+42,9,Jim,White,English,Male,,
+43,10,Johnson,White,American,Male,Extorted--successful,
+44,11,Unknown,White,American,Male,,
+45,11,Unknown,White,American,Male,,
+46,11,Unknown,White,American,Male,,
+47,12,Unknown,Latinx,Chilean,Male,Confessed to priest,
+48,13,Unknown,African American,,Male,,
+49,14,Unknown,White,American,Male,,
+50,15,William Hepel Robinson,White,American,Male,,
+51,16,Bowen,White,American,Male,,
+52,17,Unknown,Native American,,Male,,
+53,18,Jessie Dinwiddie,White,American,Male,,
+54,19,Unknown,White,American,Male,,
+55,19,Unknown,White,American,Male,,
+56,19,Unknown,White,American,Male,,
+57,20,Unknown,White,American,Male,,
+58,20,Unknown,White,American,Male,,
+59,20,Unknown,White,American,Male,,
+60,21,Smith,White,American,Male,,
+61,22,Pacheco,Latinx,Californian,Male,,
+62,23,Unknown,White,American,Male,,
+63,25,Frederick J. Roe,White,English,Male,Attended by clergy; declared lost senses in killing. Myers,
+64,26,Charles Simmons,White,American,Male,,
+65,26,James Baxter,White,American,Male,Begged to live a little longer,(Sac Transcript says names may have been assumed)
+66,28,Unknown,White,American,Male,,
+67,28,Unknown,White,American,Male,,
+68,28,Unknown,White,American,Male,,
+69,28,Unknown,White,American,Male,,
+70,28,Unknown,White,American,Male,,
+71,29,Jackson,White,American,Male,,
+72,29,Unknown,White,American,Male,,
+73,30,Unknown,White,American,Male,,
+74,31,Unknown,Native American,,Male,,
+75,32,S. S. Easterbrooks,White,American,Male,At hanging declared the murder was the result of drinking and warned against it,
+76,33,Evans,White,American,Male,,
+77,34,Andrew S. Scott,White,American,Male,"At gallows requested to be shot, as it would pain his father to learn he had been hanged. Very cool at execution","described as a ""most ferocious villain"" this being the third or fourth murder he committed, including Dr. McManus of St. Genevieve. 23 years old. Sac Transcript states he had killed 2 white men and one ""negro,"" one in NY and the other in Missouri, but had been cleared. Father a former Congressman from Missouri"
+78,35,Cecilia Mesa,Latinx,Sonorian,Male,,
+79,35,Solomon Pico,Latinx,Californian,Male,,
+80,35,William Otis,White,American,Male,,"Solomon Pico brother of Antonio Pico.
+Otil/Hall later lynched; see Case 081"
+80,81,William Otis,White,American,Male,,"See Case 035; Otis/Hall had been convincted in April in Monterey of horse stealing. Escaped from jail; recaptured in LA and returned to Monterey, where he was lynched in the jail"
+81,36,Jones,White,English,Male,Allen confessed to people's court,
+82,37,George Miller,White,American,Male,,
+83,37,Henry Rigler,White,American,Male,Allen Confessed; Rigler denied involvement; Miller also denied the charge,
+84,37,John Allen,White,American,Male,,
+85,38,Unknown,White,American,Male,,
+86,39,J. Spofford,White,American,Male,,
+87,39,John Emory,White,American,Male,,
+88,39,Unknown,Native American,,Male,,
+89,39,Unknown,Native American,,Male,,
+90,39,Unknown,Native American,,Male,,
+91,39,Unknown,Native American,,Male,,
+92,39,Unknown,Native American,,Male,,
+93,39,Unknown,Native American,,Male,,
+94,39,Unknown,Native American,,Male,,
+95,39,Unknown,Native American,,Male,,
+96,39,Unknown,Native American,,Male,,
+97,39,Unknown,Native American,,Male,,
+98,39,Unknown,Native American,,Male,,
+99,39,Unknown,Native American,,Male,,
+100,39,Unknown,Native American,,Male,,
+101,40,Unknown,Native American,,Male,,
+102,40,Unknown,Native American,,Male,,
+103,40,Unknown,Native American,,Male,,
+104,40,Unknown,Native American,,Male,,
+105,40,Unknown,Native American,,Male,,
+106,40,Unknown,Native American,,Male,,
+107,40,Unknown,Native American,,Male,,
+108,40,Unknown,Native American,,Male,,
+109,40,Unknown,Native American,,Male,,
+110,40,Unknown,Native American,,Male,,
+111,40,Unknown,Native American,,Male,,
+112,40,Unknown,Native American,,Male,,
+113,40,Unknown,Native American,,Male,,
+114,40,Unknown,Native American,,Male,,
+115,40,Unknown,Native American,,Male,,
+116,40,Unknown,Native American,,Male,,
+117,40,Unknown,Native American,,Male,,
+118,40,Unknown,Native American,,Male,,
+119,40,Unknown,Native American,,Male,,
+120,40,Unknown,Native American,,Male,,
+121,40,Unknown,Native American,,Male,,
+122,40,Unknown,Native American,,Male,,
+123,40,Unknown,Native American,,Male,,
+124,40,Unknown,Native American,,Male,,
+125,40,Unknown,Native American,,Male,,
+126,40,Unknown,Native American,,Male,,
+127,40,Unknown,Native American,,Male,,
+128,40,Unknown,Native American,,Male,,
+129,40,Unknown,Native American,,Male,,
+130,40,Unknown,Native American,,Male,,
+131,40,Unknown,Native American,,Male,,
+132,40,Unknown,Native American,,Male,,
+133,40,Unknown,Native American,,Male,,
+134,40,Unknown,Native American,,Male,,
+135,40,Unknown,Native American,,Male,,
+136,40,Unknown,Native American,,Male,,
+137,40,Unknown,Native American,,Male,,
+138,40,Unknown,Native American,,Male,,
+139,40,Unknown,Native American,,Male,,
+140,40,Unknown,Native American,,Male,,
+141,41,Francisco Galvez,Latinx,Mexican,Male,,
+142,41,Jesus Moreno,Latinx,Mexican,Male,,
+143,41,Luis Cracia,Latinx,Mexican,Male,,
+144,41,Ramon Dias,Latinx,Mexican,Male,"Each of the suspects made a confession, ""acknowledged their sentence to be just.""","Confeesions stated that the band was employed by white men; one claimed to work for ""notorious 'Jim Beckwith.'"""
+145,41,Timoteo Sandoval,Latinx,Mexican,Male,,
+146,42,Hamilton McCauley,White,American,Male,,had been constable in Missouri
+147,44,Gatson,White,American,Male,Confessed,"two others, George Frank and Jennings, escaped"
+148,45,O'Brien,White,,Male,,
+149,46,Alberto de la Cruz,Mexican,Mexican,Male,,
+150,46,Martia Lopez,Latinx,Mexican,Male,,
+151,48,Unknown,Native American,,Male,,
+152,48,Unknown,Native American,,Male,,
+153,48,Unknown,Native American,,Male,,
+154,48,Unknown,Native American,,Male,,
+155,48,Unknown,Native American,,Male,,
+156,48,Unknown,Native American,,Male,,
+157,48,Unknown,Native American,,Male,,
+158,48,Unknown,Native American,,Male,,
+159,48,Unknown,Native American,,Male,,
+160,48,Unknown,Native American,,Male,,
+161,48,Unknown,Native American,,Male,,
+162,48,Unknown,Native American,,Male,,
+163,48,Unknown,Native American,,Male,,
+164,48,Unknown,Native American,,Male,,
+165,48,Unknown,Native American,,Male,,
+166,48,Unknown,Native American,,Male,,
+167,48,Unknown,Native American,,Male,,
+168,48,Unknown,Native American,,Male,,
+169,48,Unknown,Native American,,Male,,
+170,48,Unknown,Native American,,Male,,
+171,48,Unknown,Native American,,Male,,
+172,48,Unknown,Native American,,Male,,
+173,48,Unknown,Native American,,Male,,
+174,48,Unknown,Native American,,Male,,
+175,48,Unknown,Native American,,Male,,
+176,48,Unknown,Native American,,Male,,
+177,48,Unknown,Native American,,Male,,
+178,48,Unknown,Native American,,Male,,
+179,48,Unknown,Native American,,Male,,
+180,48,Unknown,Native American,,Male,,
+181,48,Unknown,Native American,,Male,,
+182,48,Unknown,Native American,,Male,,
+183,48,Unknown,Native American,,Male,,
+184,48,Unknown,Native American,,Male,,
+185,48,Unknown,Native American,,Male,,
+186,48,Unknown,Native American,,Male,,
+187,48,Unknown,Native American,,Male,,
+188,48,Unknown,Native American,,Male,,
+189,48,Unknown,Native American,,Male,,
+190,48,Unknown,Native American,,Male,,
+191,48,Unknown,Native American,,Male,,
+192,48,Unknown,Native American,,Male,,
+193,48,Unknown,Native American,,Male,,
+194,48,Unknown,Native American,,Male,,
+195,49,Thomas Jenkins,White,Australian,Male,,Jenkins previously lynched and remanded. Case 550
+195,550,Thomas Jenkins,White,Australian,Male,,"Jenkins subequently seized after excaping from jail and whipped, branded, and banished. Case 049"
+196,51,William McEvoy,White,American,Male,,"Near Mokelumne Hill, McEvoy stole horse with Williams; Williams not caught"
+197,53,John Jenkins,White,Australian,Male,Attended by clergy,
+198,54,Antonio Cruz,Latinx,Mexican,Male,,"Names from Carrigan and Webb and Gonzalez-Day. C-W cite SF Herald 6-28 and 7-1, 1851. One ""Antonio,"" younger of two men hanged, identified in SF Herald, 7-1-1851"
+199,54,Patricio Janori,Latinx,Mexican,Male,,
+200,55,Unknown,White,American,Male,,No mention of suspects' race; assuming white
+201,55,Unknown,White,American,Male,,
+202,56,Hetherington,White,English,Male,,
+203,57,Unknown,White,American,Male,Extorted--unsuccessful,
+204,58,Samuel Gallagher,White,American,Male,,
+205,59,Juan,Mexican,Mexican,Male,,
+206,60,Unknown,Mexican,Mexican,Male,,
+207,60,Unknown,Mexican,Mexican,Male,,
+208,61,Pitcher,White,American,Male,,
+209,62,Unknown,Latinx,Mexican,Male,,
+210,63,Unknown,Latinx,Chilean,Male,,
+211,64,David Hill,White,American,Male,"Confessed, Implicated others;
+
+Prayed/ attended by clergy at gallows","Age about 23. From Courtland Co., NY"
+212,65,Unknown,Latinx,Californian,Male,,
+213,65,Unknown,Latinx,Californian,Male,,
+214,65,Unknown,Latinx,Californian,Male,,
+215,65,Unknown,Latinx,Californian,Male,,
+216,66,John Nelson,White,American,Male,,Attempted suicide by stabbing self when captured
+217,67,Josefa Loaiza,Latinx,Mexican,Femaie,"Given freely;
+
+Intransigent at gallows",
+218,68,James Gibson,White,Scottish,Male,,
+219,68,John Thompson,White,English,Male,,
+220,68,Owen Cruthers,White,Irish,Male,,
+221,68,William Benjamin Robinson,White,American,Male,,
+222,69,James Stuart,White,English,Male,Extended conffession AC 7/11/51,
+223,70,Unknown,Mexican,Mexican,Male,Confessed,
+224,71,Unknown,Native American,,Male,,
+225,71,Unknown,Native American,,Male,,
+226,73,Hill,White,American,Male,Extorted--successful,
+227,75,Unknown,Latinx,Mexican,Male,,
+228,76,Unknown,Native American,,Male,,
+229,78,Haynes,White,American,Male,"Failed to get confession; suspect insisted on innocence, prayed",
+230,79,George Adams,White,American,Male,,
+231,80,Unknown,Native American,,Male,,
+232,80,Unknown,Native American,,Male,,
+233,82,Unknown,White,American,Male,,
+234,82,Unknown,White,American,Male,,
+235,82,Unknown,White,American,Male,,
+236,83,John Thornpen,White,American,Male,,
+237,84,James Graham,White,American,Male,Confessed,
+238,85,Unknown,Native American,,Male,,
+239,85,Unknown,Native American,,Male,,
+240,86,Hugh Morgan,White,American,Male,,
+241,87,William Heppard,White,American,Male,"Confessed to crimes, ""alleging the grossest and most undounded charges against men who stand high in this community…"" prayed and ""invoked Heaven to have mercy on hs soul""",
+242,88,Frank Reynolds,White,American,Male,,
+243,89,Unknown,Latinx,Californian,Male,,AC doesn't mention race of suspects; HHB refers to the father and son as Hispano-Californios
+244,89,Unknown,Latinx,Californian,Male,,
+245,89,Unknown,Latinx,Californian,Male,,
+246,89,Unknown,Latinx,Californian,Male,,
+247,90,Robert McKenzie,White,Australian,Male,Lengthy confessions in AC,
+248,90,Samuel Whittaker,White,English,Male,,
+249,91,Unknown,Latinx,Mexican,Male,,
+250,92,Unknown,Latinx,Mexican,Male,suspect states he knew who had stolen the cattle; crowd took that as evidence of his guilt,
+251,93,Unknown,White,Australian,Male,,
+252,94,Unknown,Mexican,Mexican,Male,,
+253,95,Mercer,White,American,Male,,
+254,96,Aaron Bradbury,White,American,Male,,
+255,97,Unknown,Pacific Islander,,Male,,
+256,98,John Donahue,White,American,Male,,later indicted for first degree murder
+257,99,Unknown,Native American,,Male,,
+258,100,Paddy Welsh,White,Irish,Male,,
+259,101,Griffin,White,Australian,Male,,
+260,102,Little John,White,Swedish,Male,Insisted on innocence,
+261,103,W. E. Conkling,White,American,Male,,
+262,104,Seymour,White,Australia,Male,,
+263,106,W. G. Hance,White,American,Male,,
+264,107,Toby,African American,,Male,,"""belonging to Mr. T. Hale""; ""above named boy"" apparently a slave"
+265,108,Abner J. Dixon,White,American,Male,protested innocence ot the last," from Wisconsin, about 19 years old"
+266,109,Antonio Gonzales,Latinx,Mexican,Male,,
+267,110,Domingo,Latinx,Mexican,Male,Implicated others,
+268,112,David Brown,White,Swedish,Male,confesed fully; drunk at hanging,
+269,113,James Campbell,White,American,Male,,
+270,114,Silvermann,White,,Male,,"identified as a ""jew"""
+271,115,Unknown,African American,,Male,Confessed and begged for her life,
+272,116,Charley Bucroft,White,Australian,Male,,
+273,116,John Bucroft,White,Australian,Male,refused to confess,
+274,117,Brown,African American,,Male,,
+275,118,George Tanner,White,Australian,Male,,
+276,119,Carlos Esclava,Latinx,Sonorian,Male,Confessed at gallows,
+277,120,Unknown,White,American,Male,,
+278,121,Unknown,Native American,,Male,,
+279,122,Henry George,White,Australian,Male,,
+280,122,William Miller,African American,,Male,,
+281,123,Mills,White,American,Male,,
+282,124,James Hughlett,White,American,Male,,
+283,125,John Balthus,Latinx,Mexican,Male,,"Described as ""half breed"""
+284,126,Hensley,White,Irish,Male,,
+285,127,Unknown,Native American,,Male,,
+286,127,Unknown,Native American,,Male,,
+287,127,Unknown,Native American,,Male,,
+288,127,Unknown,Native American,,Male,,
+289,128,Washington Rideout,African American,,Male,,"from Marysville. Arrested after killing Hoories, along with Rideout's companion, William B. Johnson"
+290,129,Unknown,Native American,,Male,,Brought in by Indian chief
+291,129,Unknown,Native American,,Male,,
+292,130,John Jackson,White,American,Male,,
+293,131,Jose Cheverino,Latinx,Mexican,Male,Confessed his guilt,
+294,132,Cruz Flores,Latinx,Mexican,Male,,
+295,132,Mariano,Latinx,Mexican,Male,,
+296,134,William,White,American,Male,,
+297,136,Dunn,White,American,Male,,
+298,138,Unknown,White,American,Male,,
+299,138,Unknown,White,American,Male,,
+300,138,Unknown,White,American,Male,,
+301,138,Unknown,White,American,Male,,
+302,138,Unknown,White,American,Male,,
+303,139,Raymond,White,French,Male,,
+304,140,Kit Shannon,White,American,Male,declined hearing the clergyman talking to him and made no confession,"gambler, hardened villain; reportedly had killed two men in California"
+305,141,Francis Boyd,White,American,Male,,
+306,142,Unknown,White,American,Femaile,,said to be crazy. about 70 years of age
+307,143,Pablo Panso,Latinx,Mexican,Male,,"gambler, 20-25 years"
+308,144,Joshua Robinson,African American,,Male,refused with calm endurance; whether innocent or guilty they were going to hnng him,servant of man killed
+309,145,Unknown,Latinx,Mexican,Male,,
+310,145,Unknown,Latinx,Mexican,Male,,
+311,146,Dominguez Hernandez,Latinx,Mexican,Male,,
+312,147,Unknown,Latinx,Mexican,Male,Confessed and implicated 5 or 6 others,
+313,148,Doroteo Zavaleta,Latinx,Mexican,Male,,
+314,148,Jesus Rivas,Latinx,Mexican,Male,Prayed/ attended by clergy; Insisted on innocence,
+315,149,Capistrano,Latinx,Mexican,Male,Refused,"""chief man in the gang"""
+316,150,Unknown,Latinx,Mexican,Male,,"1 woman, 5 men"
+317,150,Unknown,Latinx,Mexican,Male,,
+318,150,Unknown,Latinx,Mexican,Female,,
+319,150,Unknown,Latinx,Mexican,Male,,
+320,150,Unknown,Latinx,Mexican,Male,,
+321,150,Unknown,Latinx,Mexican,Male,,
+322,151,Johnson,White,American,Male,,old man
+323,152,Ross,White,American,Male,,
+324,153,Unknown,African American,,Male,,
+325,154,Antonio Duarto,Latinx,Mexican,Male,,
+326,154,Jesus Brisano,Latinx,Mexican,Male,,
+327,155,Dolores Pico,Latinx,Mexican,Male,Extorted--successful,
+328,156,Michael Grant,White,Irish,Male,Insisted on innocence,
+329,157,Unknown,Native American,,Male,,
+330,158,Unknown,White,French,Male,,
+331,159,Unknown,White,Italian,Male,,shopkeeper
+332,160,Unknown,Asian,Chinese,Male,,
+333,161,Unknown,African American,,Male,confessed,
+334,162,Unknown,White,American,Male,,
+335,163,Walden,White,American,Male,hanging did not succeed,
+336,164,Unknown,White,Australia,Male,,
+337,165,Reyes Feliz,Mexican,Mexican,Male,Confessed to crimes at execution but denied involvement in murder of Gen. Bean. Attended by priest,16 years old
+338,166,Barumas,Latinx,Sonorian,Male,,
+339,166,Benito Lopez,Latinx,Mexican,Male,,
+340,166,Cipriano Sandoval,Latinx,Mexican,Male,Insisted on innocence; Barumas criticized summary justice and advised all Mexicans to leave for Sonora,
+341,167,Unknown,White,American,Male,,
+342,168,Unknown,White,French,Male,,
+343,169,Unknown,Asian,Chinese,Male,,
+344,170,Jose Delores Velaszques,Latinx,Mexican,Male,,Had been accused of attempted rape of 90 year old woman a year earlier
+345,171,William K. Jones,White,American,Male,Protested informal proceedings,
+346,172,James Edmonson,White,American,Male,,
+347,173,Christopher Ferril,White,Australian,Male,,
+348,174,Unknown,White,American,Male,one confessed and implicated his comrad,sailors
+349,174,Unknown,White,American,Male,,
+350,175,Unknown,White,American,Male,,
+351,176,Unknown,Native American,,Male,,Old Chief
+352,177,Antonio Valencia,Latinx,Mexican,Male,refused to confess,part of Joaquin's banc
+353,178,Unknown,White,Italian,Male,,
+354,178,Unknown,White,Italian,Male,,
+355,178,Unknown,White,Italian,Male,,
+356,178,Unknown,White,Italian,Male,,
+357,178,Unknown,White,Italian,Male,,
+358,178,Unknown,White,Italian,Male,,
+359,179,Big Bill,Latinx,Mexican,Male,,C-W list only one suspect; Doten writes that 2 were hanged
+360,179,Unknown,Latinx,Mexican,Male,,
+361,180,Conrad Sacksin,White,Swiss,Male,,Cook in a German Boardinghouse
+362,181,Unknown,Latinx,Mexican,Male,Confessed; said that Indian victim had killed his brother,
+363,182,Isaac D. Martin,White,American,Male,,
+364,183,Unknown,Latinx,Mexican,Male,,
+365,184,Unknown,Asian,Chinese,Male,,
+366,184,Unknown,Asian,Chinese,Male,,
+367,184,Unknown,Asian,Chinese,Male,,
+368,186,Juan Sanchez,Latinx,Mexican,Male,gave a full confession,
+369,187,John Boyd,White,American,Male,,
+370,188,C. Kanaska,White,Unknown,Male,,
+371,188,George McDonald,White,American,Male,McDonald confessed fully,
+372,189,James Noland,White,American,Male,,Gambler
+373,190,Unknown,Latinx,Mexican,Male,,
+374,190,Unknown,Latinx,Mexican,Male,,
+375,191,Unknown,Latinx,Mexican,Male,,
+376,192,Unknown,Asian,Chinese,Male,,
+377,193,Unknown,Latinx,Mexican,Male,,
+378,194,Antonio Marto,Latinx,Mexican,Male,,
+379,195,Polonia Sanchez,Latinx,Chilean,Male,Partial confession; attended by Catholic clergy,
+380,196,John Clare,White,Scottish,Male,acknowledged the crime,
+381,197,Unknown,Native American,,Male,,
+382,198,Jesus Evarra,Latinx,Mexican,Male,Insisted on innocence,
+383,199,Anastacio Higuerre,Latinx,Mexican,Male,,
+384,199,Manuel Olivas,Latinx,Mexican,Male,,
+385,199,Ramon Espinosa,Latinx,Mexican,Male,,
+386,200,Prasey,White,American,Male,,
+387,201,Bernardo Daniel,Latinx,Sonorian,Male,,
+388,202,Unknown,White,American,Male,,
+389,203,Unknown,White,French,Male,brief hanging by American miners failed; suspects insisted on innocence,
+390,203,Unknown,White,French,Male,,
+391,205,Unknown,Asian,Chinese,Male,,
+392,205,Unknown,Asian,Chinese,Male,,
+393,207,Jose Arode,Latinx,Chilean,Male,,
+394,207,Juan P. Gonzalez,Latinx,Chilean,Male,,
+395,207,Salvador Valdez,Latinx,Californian,Male,"Valdez confessed  numerous crimes, including murder of 7 menb; Chilenos ""begged hard for life, but in vain""",
+396,208,Dolores,Latinx,Mexican,Male,1 (mexican) confessed,
+397,208,Unknown,Latinx,Chilean,Male,,
+398,209,Peter Nicolas,White,Austrian,Male,,
+399,211,Swarz,White,Dutch,Male,,HHB says Swiss
+400,212,William Ritchie,White,American,Male,,"about 25-30, a resident of Napa Valley, where his parents lived"
+401,213,Henry,Native American,,Male,,
+402,213,Isaac,Native American,,Male,,
+403,214,Demasio Berriessa,Latinx,Californian,Male,,about 30 years old; lived on large and valuable tract near New Almaden mine; left wife and 3 children
+404,215,Unknown,Latinx,Mexican,Male,,
+405,216,Unknown,Latinx,Mexican,Male,Asked to be shot but crowd hanged him,Killed his prother in law
+406,217,Amadee Canu,White,Belgian,Male,,
+407,217,Pierre Archambault,White,French,Male,,
+408,218,Demas,Native American,,Male,,
+409,218,Unknown,Native American,,Male,,
+410,218,Unknown,Native American,,Male,,
+411,219,Jack Roarke,White,American,Male,Confessed at hanging,
+412,220,Unknown,Asian,Chinese,Male,,
+413,221,Macy,White,American,Male,,drunk
+414,222,David Brown,White,American,Male,"Acknowledged guilt, ""maintained the most careless indifference."" ",Brown convicted with Philip Alvitre for murder; Brown granted stay while Alvitre was hanged (not a lynching). Brown convicted for killing Pinkney Clifford; Alvitre convicted for killing James Ellington.
+415,223,Edward Crane Griffiths,White,Australian,Male,Given freely; in AC report plus letters to wife,Englishman who arrived from Australia
+416,225,Unknown,White,American,Male,insisted on innocence of the theft but admitted he had escaped from the penitentiary and had committed other crimse,
+417,226,Bob Parker,White,American,Male,,
+418,226,George Seldon,White,American,Male,one of the two seized named others and was released by crowd,
+419,227,William M. Johnson,White,American,Male,denounced mob law at gallows,"Age 24; in CA 5 years, from NYC"
+420,228,James Moran,White,American,Male,attended by Rve. Mr. Register,young man from NYC
+421,231,Unknown,Latinx,Mexican,Male,,
+422,233,Justo Betancour,Latinx,Mexican,Male,,
+423,234,Adolpheus E. Moore,White,American,Male,,
+424,234,Garretson,White,American,Male,,
+425,234,Pole Wilkerson,White,American,Male,,
+426,234,William Hand,White,American,Male,,
+427,234,William Watson,White,American,Male,"3 suspects (Hand, Watson, Moore) made statements confessing their role in various crimes",
+428,235,John Fenning,White,Irish,Male,,
+429,236,Jose,Latinx,Mexican,Male,,
+430,236,Pertervine,Latinx,Mexican,Male,,
+431,236,Trancolino,Latinx,Mexican,Male,,
+432,237,Peter Carnes,White,American,Male,Freely confessed,
+433,238,Unknown,Native American,,Male,,
+434,239,Shimer,White,American,Male,Immediately confessed to killing,
+435,240,John S. Barclay,White,American,Male,Insisted on innocence,"from Chinese Camp; man of, husband of, ""fancy man"" of owner of house of prostitution where murder occurred, Marth Carlos (Carloss)"
+436,241,John Thompson,African American,,Male,,
+437,242,Francisco Sanchez,Latinx,Mexican,Male,"Lackner Implicated others;
+Mexicans did not confess
+Lackner eventually admitted he deserved his fate",
+438,242,Francisco Tapia,Latinx,Mexican,Male,,
+439,242,James G. Lackner,White,German,Male,,
+440,242,Jesus Pino,Latinx,Mexican,Male,,
+441,243,Unknown,White,,Male,,"""a brute inhuman shape"""
+442,244,Unknown,Native American,,Male,,
+443,245,Harris,White,American,Male,,"Hill and Harris suspected to be in a gang that also included Stephen Jacques (of St. Joseph's, Michigan) and Thomas Gear, ""one of the leaders,"" as well as two Mexicans who were arrested alongside H and H but subsequently escaped. The Mexicans' escape prompted the quick execution of H and H. One report also says ringleaders of the band were named James and Beamer. Some reports suggest as many as 15 suspected cattle thieves. Two early reports claimed that suspects are ""all Spaniards,"" but this seems to be disproven by later reports with more detail."
+444,245,Hill,White,American,Male,,
+445,246,Unknown,Latinx,Mexican,Male,,"HHB claims 2 suspects, both Mexicans. One hanged, one shot."
+446,248,William A. Mann,White,American,Male,"When first attempt failed, ""he begged 'in the name of God, that if they intended to hang him, to do it decently!'""","Arrested two years prior for stealing a mule and a horse, caught in the act, escaped while his case was under consideration; also had been previously publicly whipped in Sacramento for horse stealing"
+447,249,Charles Osborne,White,American,Male,"""declared that he hoped for nothing more than to get back to Marshal North's palace.""","Robbed Abell of unknown possessions; escaped from station-house morning after arrest, ""was caught a few days since at San Juan, in Monterey county, with a horse and buggy stolen in this city."""
+448,250,Isadoro Soto,Latinx,Mexican,Male,,"""a Californian"""
+449,251,Unknown,Latinx,Chilean,Male,Given freely,
+450,253,Juan B. Lopez,Latinx,Mexican,Male,,Indian implicated in murder of F. Mellen; 3 Latinos implicated in murder of storeowner David Picart
+451,253,R. Soto,Latinx,Mexican,Male,,
+452,253,R. Zuniga,Latinx,Mexican,Male,,
+453,253,Unknown,Native American,,Male,,
+454,254,Charles Cora,White,American,Male,,
+455,254,James P. Casey,White,American,Male,"Given freely;
+
+Insisted on innocence at gallows",
+456,256,A. J. Goff,White,American,Male,"Given freely;
+
+Intransigent at gallows",
+457,257,Joseph Hetheringon,White,English,Male,,
+458,257,Philander Brace,White,American,Male,,"Each is suspected in separate murder; Brace reported as form New York Hetherington is a ""subject of Great Britain"""
+459,258,Unknown,White,French,Male,Given freely,"""a poor idiot Frenchman who has but one arm."" One article takes issue with label of ""idiot."" Says ""the criminal was and is more 'knave than fool,' having before this, in another portion of the State, been whipped for stealing money"""
+460,260,C. Colebrook,White,English,Male,,"""an English sailor"" and ""was a brother of the Colebrook who shot a Chileno near Campo Seco last year, was bailed out, absconded, and has never been seen since."""
+461,261,Unknown,Latinx,Mexican,Male,,American and Mexican arrested; American immediately returned to San Quentin; Mexican remanded after lynch court prosecuted
+462,262,Jose Castro,Latinx,Mexican,Male,,"Suspect is one in a band of native Californian stock thieves said to be under the command of ""the celebrated robber chieftain,"" Joaquin Murietta. Suspect was ""a Californian who had been living on Mr. White's Ranch, about four miles from Watsonville."""
+463,264,Chung Yew,Asian,Chinese,Male,,
+464,264,Huey,Asian,Chinese,Male,,
+465,264,Low Sick,Asian,Chinese,Male,,
+466,264,Sam Wau,Asian,Chinese,Male,Given freely,First 2 were hanged; other 3 banished
+467,264,Tom Buc,Asian,Chinese,Male,,
+468,265,Unknown,White,American,Male,Given freely,
+469,266,Unknown,White,American,Male,,
+470,267,Miguel Soto,Latinx,Mexican,Male,,
+471,268,Diego Navarro,Latinx,Mexican,Male,,Part of Flores-Daniel Band
+472,268,Jose Santos,Latinx,Mexican,Male,,
+473,268,Juan Valenzuela,Latinx,Mexican,Male,,
+474,268,Pedro Lopez,Latinx,Mexican,Male,,
+475,269,Francisco Ardillero,Latinx,Mexican,Male,,Part of Flores-Daniel Band
+476,269,Juan Silvas,Latinx,Mexican,Male,,
+477,270,Jose Jesus Espinosa,Latinx,Mexican,Male,Confession,Part of Flores-Daniel Band
+478,271,Encarnacion Berreyessa,Latinx,Mexican,Male,,Swept up in search for Flores gang
+479,272,Andreas Frontez,Latinx,Californian,Male,,
+480,272,Francisco Daniel,Latinx,Mexican,Male,,
+481,272,Pequino,Latinx,Mexican,Male,,
+482,273,Juan Flores,Latinx,Mexican,Male,Confessed,Part of Flores-Daniel Band
+483,274,Anastacio Garcia,Latinx,Californian,Male,,"28 years old, left wife and child"
+484,276,Unknown,Native American,,Male,,"15 were hung, but more were involved in the crime; suspects were supposedly intoxicated ""upon liquor furnished them by some villainous white men"""
+485,276,Unknown,Native American,,Male,,
+486,276,Unknown,Native American,,Male,,
+487,276,Unknown,Native American,,Male,,
+488,276,Unknown,Native American,,Male,,
+489,276,Unknown,Native American,,Male,,
+490,276,Unknown,Native American,,Male,,
+491,276,Unknown,Native American,,Male,,
+492,276,Unknown,Native American,,Male,,
+493,276,Unknown,Native American,,Male,,
+494,276,Unknown,Native American,,Male,,
+495,276,Unknown,Native American,,Male,,
+496,276,Unknown,Native American,,Male,,
+497,276,Unknown,Native American,,Male,,
+498,276,Unknown,Native American,,Male,,
+499,277,Jose Maria Egare,Latinx,Mexican,Male,,
+500,278,Johnson,White,American,Male,Jones confessed against his companions and was spared,"Ringgold, Johnson, and Lake hanged. Jones confessed and was spared."
+501,278,Jones,White,American,Male,,
+502,278,Lake,White,American,Male,,
+503,278,Ringgold,White,American,Male,,
+504,279,Mrs. C,White,American,Female,,"Mrs. C. and her family were banished as a result of the incident where she threw a woman ""into a ditch."" Article notes Mrs. C. ""appears to be somewhat of a virago."""
+505,280,Dean,White,American,Male,,Article notes that Dean was acting in self-defense
+506,282,Julian,Native American,,Male,,"Suspected to be ""notorious for the last six years as a murderer and bravo--he having committed during that time no less than eight murders, besides killing his own wife and child."""
+507,283,Hoskins,White,American,Male,,Suspected of having a baby with his daughter
+508,284,Unknown,Native American,,Male,,
+509,284,Unknown,Native American,,Male,,
+510,284,Unknown,Native American,,Male,,
+511,285,Robinson,African American,,Male,,
+512,286,Unknown,Asian American,Chinese,Male,,
+513,286,Unknown,Asian American,Chinese,Male,,
+514,286,Unknown,Asian American,Chinese,Male,,
+515,286,Unknown,Asian American,Chinese,Male,,
+516,287,Henry Lorrenz,White,American,Male,Extorted--unsuccessful,
+517,288,Unknown,Latinx,Mexican,Male,,Aged man of spanish blood
+518,289,Aguerra,Latinx,Mexican,Male,"Implicated others;  (his brother, Guero); confessed to robbery",brother to the notorioius Gero
+519,290,Unknown,White,American,Male,,
+520,290,Unknown,White,American,Male,,
+521,290,Unknown,White,American,Male,,
+522,290,Unknown,White,American,Male,,
+523,290,Unknown,White,American,Male,,
+524,290,Unknown,White,American,Male,,
+525,291,Stepplefield,White,American,Male,Extorted--unsuccessful,"Two unnamed ""were arrested, on suspicion, by the mob, and severe means resorted to in order to make them confess. Failing to make them do so, the mob liberated them, and arrested a third party, named Steppfield, who was subsequently rescued by the Sheriff."" Passing reference is made to Steppfield as ""one of the men whom Squire Kendall was pretending to have Lynched, as a blind."" Not sure what this means."
+526,291,Unknown,White,American,Male,,
+527,291,Unknown,White,American,Male,,
+528,292,Jesus Anastasia,Latinx,Mexican,Male,,"Gov. Weller mistakenly wrote stay of execution for ""Anastasia Jesus."""
+529,293,Aaron Bracey,African American,,Male,Remorseful ,
+530,294,Unknown,Native American,,Male,,
+531,294,Unknown,Native American,,Male,,
+532,294,Unknown,Native American,,Male,,
+533,295,Unknown,Latinx,Californian,Male,,unclear whether suspect died from whipping
+534,296,James E. Carter,White,American,Male,Extorted--successful,
+535,298,Ysidro Silvas,Latinx,Mexican,Male,,
+536,299,Anderson,White,American,Male,,
+537,300,Snow,White,American,Male,implicated others,
+538,301,William C. Deputy,White,American,Male,,"Uncle of Mr. Deputy, age 56, native of Delaware"
+539,302,John,Asian,Chinese,Male,Agreed to repay money accused of stealing,
+540,303,Unknown,Asian,Chinese,Male,,
+541,304,Pancho Daniel,Latinx,Mexican,Male,,
+542,305,Harrison Morgan,White,American,Male,,
+543,305,Wallace,White,American,Male,,
+544,306,Badillo,Latinx,Californian,Male,,son age 14 or 17
+545,306,Francisco Badillo,Latinx,Californian,Male,,
+546,308,Antonio Ruez,Latinx,Mexican,Male,"""He confessed his crime to a countryman of his before the body of the unfortunate girl was found.""",
+547,309,Benjamin Doyle,White,American,Male,,
+548,309,George Rush,White,American,Male,,
+549,309,William Grey,White,American,Male,,"""notoriously dissolute and desperate men, constantly engaged in drinking, gambling and fighting"""
+550,309,William Riddle,White,American,Male,,
+551,310,To-ah-yo-la,Native American,,Male,,"suspected in murder from Fall of 1854. Given over to people by fellow Indians, to whom To-ah-yo-la bragged about his crime"
+552,311,Jose Claudio Alvitre,Latinx,Californian,Male,,Aged
+553,312,Unknown,Latinx,Mexican,Male,,
+554,313,Francisco Cota,Latinx,Mexican,Male,,
+555,314,Unknown,Asian,Chinese,Male,,
+556,315,Allajo,Latinx,Californian,Male,,"""four or five Californians, or Mexicans""; Allajo lived in Negro Alley in San Diego"
+557,315,Unknown,Latinx,Californian,Male,,
+558,315,Unknown,Latinx,Californian,Male,,
+559,315,Unknown,Latinx,Californian,Male,,
+560,315,Unknown,Latinx,Californian,Male,,
+561,316,Manuel Vera,Latinx,Mexican,Male,,
+562,317,Capitan,Native American,,Male,,"""It is not known whether they confessed to any crime, but is certain the ""Capitan"" and four of his tribe suffered the extreme punishment of Judge Lynch."""
+563,317,Unknown,Native American,,Male,,
+564,317,Unknown,Native American,,Male,,
+565,317,Unknown,Native American,,Male,,
+566,317,Unknown,Native American,,Male,,
+567,318,Unknown,Native American,,Male,,
+568,319,Andrew Wood,White,American,Male,,
+569,319,Boston Damewood,White,American,Male,,"Blew states Daimwood had three cohorts and that Wood was executed at same time; because he was also in jail, although not associated with Daimwood; he was there for stealing chickens"
+570,319,Eli Chase,White,American,Male,,
+571,319,José Sylvester Olivas,Latinx,Mexican,Male,,
+572,319,José Yrreba,Latinx,Mexican,Male,,
+573,320,Unknown,Mexican,Mexican,Male,,"one of a ""party of Spanish desperadoes"""
+574,321,Manuel Ceredel,Latinx,Mexican,Male,confessed to being involved in murder of John Rains; gave names of other murderers in Rains murder,one member of a group of five criminals; suspect implicated four other members in murder of John Rains
+575,322,Charles Wilkins,White,English,Male,,"Mormon; suspect also said to have confessed to killing two men in Yreka and nine men in total; was sentenced to State Prison from San Luis Obispo for grand larceny, but escaped"
+576,323,Gregorio Orozco,Native American,,Male,Confessed murder,"""There was no quarrel between them, nor had either ever seen the other before; and the only reason Gregoria gave for shooting Martin was that he felt like killing somebody, and he would have shot any other man who might have been passing at the time."""
+577,324,Unknown,Native American,,Male,"In first, Indians boasted about murder at Jones's store; in second, suspect confessed after being seized and taken to place of supposed murder, showed where he was buried.","In first, two Indians suspected and executed; in second, one Indian suspected to have ""in company with another, killed a shepherd about one year ago and buried him under a tree."" Some of the articles also mention a white man being lynched, but none of the articles makes it clear how the American is involved or whether it is a separate crime and/or execution."
+578,324,Unknown,Native American,,Male,,
+579,324,Unknown,Native American,,Male,,
+580,324,Unknown,White,American,Male,,
+581,325,Dickinson,White,American,Male,,one of a crew of four robbers who committed a series of crimes.
+582,326,Francisco Lopez,Latinx,Californian,Male,,
+583,326,Patricinio Lopez,Latinx,Californian,Male,Patricinio confessed murder to his brother,Lopez family notorious in the area
+584,326,Salvador Mesquita,Latinx,Californian,Male,,
+585,327,Unknown,Latinx,Mexican,Male,Suspect denied crime,"vaquero shot for interfering with lynching. suspect charged for one particular horse theft two days prior, but article notes that ""Snellings has long been annoyed by bands of horse-thieves"""
+586,327,Latinx,Mexican,,Male,,
+587,328,Juan Iguera,Latinx,Mexican,Male,,Iguera age 20. Pancho Alviso; captured by troops with Higura; Higura escaped and was later found lynched
+588,329,John Barnhart,White,American,Male,,both suspect and victim employed by Chico and Idaho Stage Company
+589,330,Charles Lee,White,American,Male,,
+590,330,Patrick Murphy,White,American,Male,,
+591,331,Billy Wilburn,White,American,Male,,it is unclear whether the three other men were lynched or involved in facilitating the lynching
+592,331,Unknown,White,American,Male,,
+593,331,Unknown,White,American,Male,,
+594,331,Unknown,White,American,Male,,
+595,332,Unknown,Asian,Chinese,Male,,
+596,333,Elder Thompson,White,American,Male,,"former soldier; deserter ""from the gallant Fourteenth, U.S.A., or from San Quentin"""
+597,334,Unknown,Latinx,Mexican,Male,Indian confessed to Boggs after confronted by mob; Indian again confessed at mob's trial,"both were ranch hands for Boggs. Boggs had raised Indian boy, ""and he had previously borne a good character, and Boggs had great confidence in him."" Mexican came from Lower California a few weeks prior to incident. "
+598,334,Unknown,Native American,,Male,,
+599,335,Estevan,Native American,,Male,Confesssed,
+600,336,Webb,White,English,Male,,
+601,337,Unknown,White,American,Male,Confessed to victim's friends,
+602,339,Rains,White,American,Male,,"lynched for ""stealing his neighbors' hogs and other stock until forbearance ceased to be a virtue."" ""supposed to have been at the head of a gang of thieves and Chinese robbers that infested the northern part of Fresno County in 1863…"""
+603,341,Lucas Garcia,Latinx,Californian,Male,"Luis Garcia, grandfather of Lucas, confessed Lucas's crime, and the body was found through his assistance buried in Lucas's garden","""half Indian and half native""; committed crime with partner Jesus Castillo, who is still undergoing trial as of writing of article"
+604,342,Unknown,Latinx,Mexican,Male,,one member of a gang of horse and cattle thieves. Gang was confronted between Hornitos and Lagrange and engaged in shoot-out with officers of Tuolumne County and Sheriff Bourland; three of gang were shot and killed; Mexican got away until caught later
+605,343,Gregorio Gomez,Latinx,Mexican,Male,,
+606,343,Jesus Gomez,Latinx,Mexican,Male,,
+607,343,Valentine Vargas,Latinx,Mexican,Male,,Gregorio and Jesus Gomez borthers. Varagas had lived with victim
+608,344,Charles Olson,White,American,Male,"suspect was ""bleeding and begging for mercy,… whose cries were heard by many citizens""",one article says Olsen was defending himself from Logan; both were teamsters and working together
+609,345,Santana Duartz,Native American,,Male,,
+610,346,Unknown,Native American,,Male,,"a third Indian suspect not found when article was written, but he ""cannot elude speedy capture and punishment""; the suspects ""had been in the vicinity for some time."""
+611,346,Unknown,Native American,,Male,,
+612,347,Miguel Lachenais,White,French,Male,"Administered last rites by Father Birmingham; Lachenais insisted on his innocence, that the killing was self defense",age 42
+613,348,James McCrory,White,American,Male,,"described as ""a noted desperado, who has already killed several men in this place"" and ""the worst man that has ever made Visalia his home"""
+614,349,George Hargrand,White,American,Male,"""He acknowledged having killed Martin and also that he intended to kill two other men who lived neighbors. His son, a boy 15 year of age, says his father had killed two men before.""",dispute with victim over land claim
+615,350,Matt Tarpey,White,American,Male,Given freely; insisted shooting was a mistake while firing at a man in self defense,
+616,351,Pete,Native American,,Male,"""Before Pete's arrest he confessed to the killing. And said he did it for six dollars which he knew Crooks had in his possession""","one article notes that ""the body of Crooks [victim], who was killed by an Indian named Pete on McCloud river, was caught in a fish trap by another Indian and buried for fear the killing would be laid to him."""
+617,352,Billy Smith,White,American,Male,,
+618,352,Charley Howard,White,American,Male,,
+619,352,Joe Barbie,White,American,Male,,
+620,352,John Blanchon,White,American,Male,,
+621,352,John Williams,White,American,Male,,
+622,352,Joseph Newell,White,American,Male,,
+623,352,Unknown,White,American,Male,,
+624,352,Unknown,White,American,Male,,
+625,352,Unknown,White,American,Male,,
+626,352,Unknown,White,American,Male,,
+627,353,Jake Linson,White,American,Male,,previously banished from town
+628,354,Blanchard,White,American,Male,,interfered in argument between Miles and Graham; shot Graham
+629,355,Ernst Reusch,White,American,Male,,
+630,357,Jesus Ramos,Latinx,Mexican,Male,,
+631,358,George Brown,White,American,Male,,
+632,358,Harry Howard,White,American,Male,,
+633,358,Potter,White,American,Male,,
+634,358,Seth McCain,White,American,Male,,"referred to as ""roughs"" and ""deadbeats""; several suspects refused to leave or waited until the last minute to leave"
+635,358,Spence,White,American,Male,,
+636,359,Antonio Igarra,Latinx,Mexican,Male,,"a little confusing because Antone is the member of a criminal gang that ""has infested the road from Ukiah to Cloverdale…, of which gang the assassin was thought to be a member."" But the assassin of Grangee was ""a Spaniard named Yereger"""
+637,360,Yereger,Native American,,Male,,
+638,361,Thomas W. Henley,White,American,Male,,"60 years old, resided near Windsor"
+639,362,Joseph Murphey,White,American,Male,Hanged three times to force confession; failed; given back to sheriff,"from Oakland; had recently arrived in Cloverdale and was being a nuisance, possibly stealing other horses in the area"
+640,363,Francisco Arias,Latinx,Mexican,Male,,
+641,363,José Chamalis,Latinx,Mexican,Male,"""For a time [Arias] denied the murder of De Forest, but on being closely cross examined, indirectly admitted the crime.""","Chamalis ""executed within 300 yards of where he was born""; 21 yrs old; served three years in prison for robbery. Arias 38 yrs old; born near Pescadero; murdered a sheep herder in San Luis Obispo"
+642,364,Justin Arajo,Latinx,Mexican,Male,,
+643,365,Antonio Maron,Latinx,Mexican,Male,,part of an organized criminal band
+644,365,Bessena Ruiz,Latinx,Mexican,Male,,
+645,365,Fermin Elder,Latinx,Mexican,Male,,
+646,365,Francisco Ensinas,Latinx,Mexican,Male,,
+647,365,Miguel Elias,Latinx,Mexican,Male,,
+648,366,Christian Mutschler,White,Hungarian,Male,,
+649,367,Thomas Yoakum,White,American,Male,William denied that his bro had anything to do with the murders,
+650,367,William Yoakum,White,American,Male,,
+651,368,Unknown,Native American,,Male,,
+652,369,Abijah Gibson,White,American,Male,,
+653,369,Elijah Frost,White,American,Male,,
+654,369,Tom McCracken,White,American,Male,,
+655,370,Victo Miranda,Latinx,Californian,Male,"""It is said that Mirando, when first captured, said: 'I don't care; it will only be three years in San Quentin.'""","16 or 17 yrs old, resident of Florence, had been working husking corn for Mr. Bailey on the Cerritos"
+656,371,Thomas James,White,American,Male,no signs of violence on suspect other than hanging,
+657,372,Tom Herbert,White,American,Male,"during trial, suspect denied guilt","employee of Piute Mountain mine under victim, who was a partner [owner?] in the mine"
+658,373,Unknown,Native American,,Male,,
+659,374,Jim Moore,White,American,Male,"Williams returned after leaving and was banished again, with more force","Williams had a history of ""robbing of drunken men… had almost led the citizens to deal summarily with him before."""
+660,374,Jim Williams,White,American,Male,,
+661,375,Encarnacion Garcia,Latinx,Mexican,Male,,Age 24
+662,376,William Richardson,White,American,Male,,"""had always borne a good character""; unknown what connection Cyrus Broderick played, but ""three men stood guard over Broderick and his wife while the hanging was going on."""
+663,378,Louis Farthing,White,American,Male,,"Pitts suspected of murder, as he slept next ot Harris; Pitts a deserter from US army; enlisted under the name of William H. White"
+664,378,William H. White,White,American,Male,,
+665,379,Jimmy Delaney,White,American,Male,,
+666,380,A. W. Powers,White,American,Male,"""There were evidences that a severe struggle had taken place."" Several of the accused lynchers made confessions after; at first, some suggested Powers had committed suicide.","grew up in Vermont, 70 years old. ""Although recognized as one of the kindest of men and a fine physician, Dr. Powers was decidedly unpopular in the neighborhood in which he lived."""
+667,381,J. Hemmi,White,American,Male,"elder Hemmi had previous threatened to kill Walker ""on sight""",Son about 20 years old; father about 50 years old. Peter H. had threatened to kill Walker numerous times in order to drive him off of government land
+668,381,Peter Hemmi,White,American,Male,,
+669,382,Hong Di,Asian,Chinese,Male,,
+670,383,McCutcheon,White,American,Male,"Confessed--""Before being hanged the boy confessed to setting the ten or twelve incendiary fires with which Oakdale has been visited within the past two weeks.""","16 yrs old; ""Deceased was a brother of the boy McCutchan who was convicted and sentenced to eight years' imprisonment recently for the murder of his step-brother."" A man named Manuel has also been arrested as an accessory of McCutchan."""
+671,384,Tacho,Native American,,Male,,"""Tacho was a bad man, and had been stealing horses and cattle for the past year or more, operating especially in San Diego county."""
+672,385,E. L. Criswell,White,American,Male,"bound and gagged before hanging. ""The whole thing was done very quietly and did not awaken parties sleeping in the next room and there was only a thin partition between.""","""bears a hard reputation hereabouts""; had been ""posting notices upon a bulletin board in front of his saloon reflecting upon the character of one of our citizens… this citizen swore out a warrant for the arrest of Criswell and placed it in the hands of Constable Southard."" When Southard confronted him, a gun battle ensued."
+673,386,B. D. Yantis,White,American,Male,,
+674,386,Calvin Hall,White,American,Male,"""Not even given the opportunity of making a farewell stFrank was so defiant that they had to lynch him earlier than the restatement""","Calvin Hall a ""squaw man"""
+675,386,Frank Hall,Mixed Race,American,Male,,"referred to as ""half breed"""
+676,386,James Hall,Mixed Race,American,Male,,"referred to as ""half breed"""
+677,386,Martin Hall,Mixed Race,American,Male,,"referred to as ""half breed"""
+678,387,Mickey,White,Australian,Male,,"Belonged to a fraternity of ""Hounds"" that had long disturbed the peace for six months
+Other suspects awaited trial
+One or more other suspects arrested outside of Stockton had heads shaved and ears cut off"
+679,388,Lewis Ford,African American,,Male,"Defied captors, attempted to flee",Alleged to be part of a gang. Other members included Peter Miller and Yankee Jim.
+680,389,Devine,White,English,Male,,
+681,390,Unknown,Latinx,Mexican,Male,,"As executioner was ""Spanish,"" suspect likely Latino?"
+682,391,Unknown,Mexican,Mexican,Male,,"Suspected Mexican man gave the names of two or three, including his father"
+683,392,Unknown,White,American,Male,Not specified,Confederate of man who received 100 lashes at Hick's Ranch for stealing stock
+684,393,Unknown,Latinx,Mexican,Male,,
+685,394,Pablo,Latinx,Mexican,Male,,40 years old
+686,395,Starkey,White,American,Male,"upon being strung up and down 5 times, made a full confession",
+687,396,Eustis,White,American,Male,,
+688,396,Grant,White,American,Male,"During punishment, Grant declared innocence and Eustis declared both equally guilty",Grant had kept a boarding house in Sacramento near the stock market
+689,398,Thomas Fillmore,White,American,Male,Confessed upon discovery,
+690,399,Robert Fisher,White,American,Male,,
+691,401,William Wilson,White,American,Male,,
+692,402,Yankee Jim,White,American,Male,,leader of notorious gang
+693,405,Sage,White,American,Male,,Accomplice to Hamilton
+694,406,Coyote Joe,Native American,,Male,,Coyote Joe had been with Capt Sutter
+695,407,Unknown,Asian,Chinese,Male,,
+696,407,Unknown,Asian,Chinese,Male,,
+697,408,James Simpson,White,American,Male,,
+698,408,Unknown,White,American,Male,,
+699,408,Unknown,White,American,Male,,
+700,409,James,White,American,Male,,
+701,409,Staggers,White,American,Male,,
+702,410,Bill Hardin,White,American,Male,,
+703,411,Unknown,White,American,Male,Screamed for mercy,
+704,413,Unknown,White,Irish,Male,"Confessed; asked to see a priest, 4 hours allowed","deserted British army; confessed to priest that he had two wives, had emigrated from Liverpool to NY, St. Jos. Mo, and then Nevada (City), Ca, committed roberies at Nevada and Mariposa"
+705,414,Unknown,Latinx,Mexican,Male,,
+706,414,Unknown,Latinx,Mexican,Male,,
+707,415,Church,White,American,Male,,U.S. Dragoons deserter
+708,416,J. B. Isabell,White,American,Male,,Coulburn young man from Indiana; gambler and drunkard ( convicted of charge but released without punishment as lynch court tempered by near hanging of Isabell)
+709,416,Robert Coulburn,White,American,Male,,
+710,417,Unknown,White,Australian,Male,,
+711,418,Unknown,White,American,Male,,
+712,419,Unknown,White,American,Male,,"""Young"""
+713,422,Unknown,Mexican,Mexican,Male,,
+714,422,Unknown,Mexican,Mexican,Male,,
+715,423,A. Bardt,White,American,Male,Confessed,
+716,424,Unknown,White,American,Male,,
+717,425,John Ross,White,American,Male,,
+718,426,Unknown,Native American,,Male,,
+719,427,Henry Miller,White,American,Male,,
+720,427,Jonathan Pillsbury,White,American,Male,,
+721,427,Tom Parks,White,American,Male,,
+722,428,Unknown,White,American,Male,One of the 4 suspects confessed to shooting at Indians,
+723,428,Unknown,White,American,Male,,
+724,428,Unknown,White,American,Male,,
+725,428,Unknown,White,American,Male,,
+726,430,James Taylor,African American,,Male,"Confessed and begged for life; a ""one of his colored brothers,"" Mr. Kelsey, pled for lenience, which exasperated the crowd",
+727,431,Unknown,Latinx,Chilean,Male,Yes,"Before taken by Americans, struck by hatchet and beaten by Chinese"
+728,432,George Wright,White,American,Male,Wright and Porter falsely accused of intending to murder Dr. Covell,
+729,432,Porter,White,American,Male,,
+730,433,George Taylor,White,American,Male,,
+731,434,McDivitt,White,American,Male,,
+732,435,Charles Thompson,White,American,Male,,
+733,436,Unknown,White,American,Male,No,"""two boys"""
+734,436,Unknown,White,American,Male,,
+735,437,William Lomax,White,American,Male,insisted on innocence,
+736,438,Unknown,Native American,,Male,,
+737,438,Wood,White,Irish,Male,,
+738,439,Rafael Escobar,Latinx,Mexican,Male,"Insisted he had no role in rancheria murders, but knew who did and would identify. Others say he had confessed to Officer Taylor to his role in Rancheria murders",
+739,440,Unknown,Asian,Chinese,Male,,
+740,440,Unknown,Asian,Chinese,Male,,
+741,440,Unknown,Asian,Chinese,Male,,
+742,440,Unknown,Asian,Chinese,Male,,
+743,440,Unknown,Asian,Chinese,Male,,
+744,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+745,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+746,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+747,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+748,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+749,441,Unknown,Latinx,Mexican,Male,,Described as Mexican in early reports; generically as Spaniards in later reports
+750,442,Woods,White,American,Male,,"Partner York later fought with lynchers and killed a dman, was then arrested and jailed"
+751,443,Unknown,Native American,,Male,,"Report says ""several"""
+752,443,Unknown,Native American,,Male,,
+753,443,Unknown,Native American,,Male,,
+754,443,Unknown,Native American,,Male,,
+755,443,Unknown,Native American,,Male,,
+756,443,Unknown,Native American,,Male,,
+757,443,Unknown,Native American,,Male,,
+758,443,Unknown,Native American,,Male,,
+759,444,Unknown,White,American,Male,Begged for meercy before whipping (sentenced to 12 lashes),
+760,445,Unknown,White,American,Male,,
+761,446,Pancho,Latinx,Mexican,Male,,
+762,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+763,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+764,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+765,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+766,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+767,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+768,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+769,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+770,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+771,446,Unknown,Latinx,Mexican or Chilean,Male,,Reports say 10 Mexicans and Chilenos shot; probably more. One report says 20 shot
+772,447,George Wilson,White,American,Male,,
+773,448,Unknown,Native American,,Male,,
+774,449,Pete,White,American,Male,Yes,
+775,450,George Mitchell,White,American,Male,Insisted on innocence; perps later arrested and convicted,
+776,451,José Alvitre,Latinx,Mexican,Male,,
+777,451,Juan Alvitre,Latinx,Mexican,Male,,Brothers
+778,452,Unknown,Asian,Chinese,Male,,
+779,452,Unknown,Asian,Chinese,Male,,
+780,454,Nep,Native American,,Male,,"""young boyu"" and ""decrepit"" father"
+781,454,Nep's father,Native American,,Male,,
+782,455,Tom,Native American,,Male,,oy between age of 10 and 15
+783,457,Unknown,Native American,,Male,,
+784,457,Unknown,Native American,,Male,,
+785,458,Unknown,White,American,Male,,"""a highwayman""; ""a man who had a piece of calico over his face"""
+786,459,John O'Donnell,White,American,Male,,Jealous of Shields's attention to his (O'donnell's) wife
+787,460,Unknown,Latinx,Chilean,Male,,"""drunken Chilean"""
+788,461,Jesus Arellanes,Latinx,Mexican,Male,,
+789,462,Unknown,Asian,Chinese,Male,,
+790,463,Jack McDowell,White,American,Male,,
+791,463,James Welch,White,American,Male,,
+792,464,Robbes,Latinx,Mexican,Male,,"Report states name as ""Robbes."" Could this be a typo of ""Robles?"""
+793,465,Spikey,Native American,,Male,,
+794,466,Juan de Dios Supulveda,Latinx,Mexican,Male,,
+795,468,Ah Cut,Asian,Chinese,Male,,
+796,468,Ah Long,Asian,Chinese,Male,,
+797,468,Ah Loo,Asian,Chinese,Male,,
+798,468,Ah Wan,Asian,Chinese,Male,,
+799,468,Ah Was,Asian,Chinese,Male,,
+800,468,Chang Wan,Asian,Chinese,Male,,
+801,468,Chee Long Tong,Asian,Chinese,Male,,
+802,468,Day Kee,Asian,Chinese,Male,,
+803,468,Fun Yu,Asian,Chinese,Male,,
+804,468,Ho Hing,Asian,Chinese,Male,,
+805,468,Joung Burrow,Asian,Chinese,Male,,
+806,468,Lo Hey,Asian,Chinese,Male,,
+807,468,Long Quai,Asian,Chinese,Male,,
+808,468,Tong Wan,Asian,Chinese,Male,,
+809,468,Wa Sin Quai,Asian,Chinese,Male,,
+810,468,Wan Fo,Asian,Chinese,Male,,
+811,468,Wing Chee,Asian,Chinese,Male,,
+812,468,Wong Chin,Asian,Chinese,Male,,
+813,468,Wong Tuck,Asian,Chinese,Male,,
+814,470,Carlos Ferman,,Portuguese,Male,,
+815,470,Eustagio Santyo,Latinx,Mexican,Male,,
+816,470,Frank Doheny,,Portuguese,Male,,
+817,470,Gumasindo Palacio,,Portuguese,Male,,
+818,471,Indian Charley,Native American,,Male,,
+819,472,Refugio Boca,Latinx,Mexican,Male,,"Later reports claim wrong man (Montallo) lynched, a resident of Agua Mansa ""quiet and innofensive"""
+820,473,John McCoy,White,American,Male,,
+821,474,Jose Semferino Fellom,Latinx,Californian,Male,,rejected by Miss Crane; about 30 (or 26-27) years old; left quite wealthy on death of his father. Until recently lived in Gilroy. Once a student at Santa Clara College
+822,475,Unknown,White,American,Male,,
+823,475,Unknown,White,American,Male,,
+824,475,Unknown,White,American,Male,,
+825,477,Joseph de Roche,White,French,Male,,
+826,478,Francisco Jimeno,Latinx,Mexican,Male,"Jimeno stated he had seen an unknown Mexican rape and murder Mrs. Sergeant, burid it as it was near his cabin and feared being accused",Also identified as Indian. Age about 16
+828,480,Henry D. Benner,White,American,Male,suspect denied guilt,Benner had formerly lived with victim as her husband
+829,481,Holden Dick,Native American,Pitt River,Male,,
+830,481,Vicente Olivas,Latinx,Mexican,Male,,
+831,482,George Vuga,White,Austrian,Male,,about 60 years old
+832,483,Julian Ladon,Latinx,Californian,Male,,"""helpless boy."" Age 22; Mexican; also described as Native Californian and Native American"
+833,484,John Wright,White,American,Male,,"age 18 years; sister Pet Graham operated brothel known as ""Pink Saloon"""
+834,485,Ah Tai,Asian,Chinese,Male,,
+835,486,Charles Ruggles,White,American,Male,,
+836,486,John Ruggles,White,American,Male,,"Brothers, age 34 (John) and 22 (Charles)"
+837,487,Francisco Torres,Latinx,Mexican,Male,,Had worked at ranch. Poll tax amount garnished from his wagesby McKelveyTaken from jail
+838,488,J. W. Smith,White,American,Male,,"murdered wife and daughter, then attempted suicide"
+839,489,Jesus Fuen,Latinx,Mexican,Male,,Described as Spaniard
+840,490,William Dean,Native American,,Male,,aged 24 years
+841,491,Victor Adams,White,American,Male,,
+842,492,Garland Stemler,White,American,Male,,Age 19 in another
+843,492,Lawrence H. Johnson,White,American,Male,,Age 59
+844,492,Luis Moreno,Latinx,Mexican,Male,,"Moreno age 40; Mexico protested the lynching of Moreno, a citizen of Mexico"
+845,492,William Null,White,American,Male,,Age 45
+846,493,William Archer,Native American,,Male,,
+847,494,Alfrred Littlefield,White,American,Male,,from Round Valley
+848,495,Yung Fook,Asian,Chinese,Male,,described as temporarily insane because of opium
+849,496,Joe Simpson,White,American,Male,,"Gambler, aged 34"
+850,497,Charles Valento,White,American,Male,,
+851,497,George Boyd,White,American,Male,,"Member of notorious ""Howard Street Gang"""
+852,497,Terrence Fitts,White,American,Male,,
+853,498,John M. Holmes,White,American,Male,,both 30 years old
+854,498,Thomas H. Thurmond,White,American,Male,,
+855,499,Joe Williams,African American,,Male,,about 24 years old
+856,500,Santos Peralta,Latinx,Mexican,Male,"acknowledged guilt, did not name others",
+857,501,Joaquin Valenzuela,Latinx,Californian,Male,,"Declared innocent in LA Clamor Publico, according to his employer Don David W. Alexander; brother of Joaquin Valenzuela"
+858,502,Luciano Tapia,Latinx,Californian,Male,,
+859,503,Jose Antonio Garcia,Latinx,Californian,Male,,
+860,504,Pio Linares,Latinx,Californian,Male,,
+861,505,Desidero Grijalva,Latinx,Californian,Male,,
+862,505,Miguel Blanco,Latinx,Californian,Male,,Blanco about 20 years old; native Californian
+863,506,Nieves Eduriquez Robles,Latinx,Californian,Male,,about 23 years old
+864,507,Manual Garcia,Latinx,Mexican,Male,,
+865,508,Antonio Garcia,Latinx,Mexican,Male,,
+866,509,Manuel Castro,Latinx,Mexican,Male,,
+867,510,Unknown,Latinx,Mexican,Male,,
+868,510,Unknown,Latinx,Mexican,Male,,
+869,511,Charley,Native American,,Male,,
+870,511,Unknown,Native American,,Male,,
+871,512,Thomas George,White,Australian,Male,"After numerous hangings, confessed and returned stolen gold",
+872,513,Unknown,Native American,,Male,confessed; asked to have hands loosened; attack crowd; immediately hanged,
+873,514,Black Mow,Native American,Klamath,Male,,"Jim, son of Black Mow; Narpa, Chetcoe Indian"
+874,514,Jim,Native American,Klamath,Male,Son of Black Mow,
+875,514,Narpa,Native American,Chetcoe,Male,,
+876,515,Dillon,White,American,Male,,
+877,516,Unknown,White,Australian,Male,,
+878,517,Jonathan Ogle,White,American,Male,,
+879,518,Unknown,White,American,Male,,
+880,519,Unknown,Latinx,Mexican,Male,,Captured by Love's Rangers
+881,520,Unknown,Native American,,Male,,"Pitt River Indians; Nuntaramin, Chief of Cow Creek Indians, identified suspects to whites"
+882,520,Unknown,Native American,,Male,,
+883,520,Unknown,Native American,,Male,,
+884,520,Unknown,Native American,,Male,,
+885,520,Unknown,Native American,,Male,,
+886,522,Christopher Bennett,White,Dutch,Male,,about 30 years old
+887,523,Tubbs,Native American,,Male,,
+888,524,Cruz,Latinx,Mexican,Male,,
+889,525,Ramon Carillo,Latinx,Californian,Male,,About 37 years old; Long been the terror of Sta Barbara; formerly lived in Sonoma County; connected by birth and marriage with the most respectable old families of California; Romueldo pachedo takes issue with these characterizations and issues statement that Carillo was upstanding citizen
+890,526,Pancho Redondo,Latinx,Mexican,Male,,
+891,527,Chulu Castro,Latinx,Californian,Male,,
+892,528,Unknown,Native American,,Male,"Confessed, then hanged",
+893,529,Jose Castro,Latinx,Mexican,Male,,
+894,530,Jose Alvijo,Latinx,Mexican,Male,,Part of border band; information in reports; purportedly part of Tiburcio Vasquez gang
+895,530,Rafael Martinez,Latinx,Mexican,Male,,
+896,531,Unknown,Latinx,Mexican,Male,,
+897,531,Unknown,Latinx,Mexican,Male,,
+898,532,Juan Salazar,Latinx,Mexican,Male,,related to Case 262
+899,532,Unknown,Latinx,Mexican,Male,,
+900,532,Unknown,Latinx,Mexican,Male,,
+901,533,Unknown,White,American,Male,,
+902,534,Flores,Latinx,Mexican,Male,,"""fine looking youth, only about eighteen years old"""
+903,535,James B. Yates,White,American,Male,,Shot victim (Chinese) because latter refused to drink with him
+904,536,Unknown,White,American,Male,,
+905,536,Unknown,Latinx,Chilean,Male,,
+906,538,Benjamin F. Sprague,White,American,Male,,
+907,539,Clyde L. Johnson,White,American,Male,,Aged 24 years
+908,540,Unknown,Latinx,Californian,Male,,
+909,541,Tom Bell,White,American,Male,Confessed and wrote letter to mother,From Tennessee; described as either 26 or 33
+910,542,Dennis Haggerty,White,American,Male,,
+911,542,Henry Dowling,White,American,Male,,
+912,543,J. J. Robbins,White,American,Male,,
+913,543,Joseph Doan,White,American,Male,Shot after refusing to leave when banished,"Saloonkeeper; participant in rape; ""one of the men who ravished the younger McCrellis girl."""
+914,543,McCrellis,White,American,Male,,
+915,543,McCrellis,White,American,Male,,
+916,543,McCrellis,White,American,Male,,
+917,543,McCrellis,White,American,Male,,
+918,544,Henry Planz,White,American,Male,,Manager of brewery
+919,545,James Cummings,African American,,Male,Begged for life on knees when beatend and shot,recently arrivbed in town
+920,546,B. H. Harrington,White,American,Male,Begged for life while being beaten,"Age 35, painter and upholsterer"
+921,547,Joseph Ciserich,White,Austrian,Male,"Gunfight with crown from inside his home, using infant as shield",Fisherman
+922,548,John M. Jones,White,American,Male,,Since jailed on a different charge
+923,549,Russell,White,American,Male,,
+924,550,A. J. Sloan,White,American,Male,,
+925,550,Frank Henston,White,American,Male,,
+926,550,William F. Cleveland,White,American,Male,,
+927,551,John Ryan,White,American,Male,"Confessed to crime and offered to pay back his partners, from whom he stole the dust",
+928,552,William Kid,White,American,Male,,
+929,553,Unknown,Native American,,Male,,Young Indian who watched Mexican sheepherder murder his father for unknown reasons
+930,553,Unknown,Native American,,Male,,
+931,553,Unknown,Native American,,Male,,
+932,554,N. Gray,White,American,Male,,"old resident of Fort Tejon and ""well known in this region."""
+933,555,Unknown,Latinx,Mexican,Male,,
+934,556,J. W. Bagley,White,American,Male,,
+935,556,James Thompson,White,English,Male,,"Liverpool Jack a ""notorious bad character. Bagley ex member of legislature from San Francisco"
+936,556,John Stephens,White,,Male,,
+937,557,Unknown,Native American,,Male,,"Accused ""met his fate with consummate bravery"""
+938,558,John Fisher,White,American,Male,,Baker
+939,559,Unknown,Native American,,Male,,
+940,560,Mick,White,American,Male,,
+941,561,Unknown,Asian,Chinese,Male,,
+942,562,George Johnson,White,American,Male,,
+943,563,Unknown,Mulatto,,Male,,
+944,564,Unknown,Asian,Chinese,Male,,
+945,565,Frederick Soltmore,White,German,Male,,
+946,565,James Cochrane,White,American,Male,,
+947,565,James Niel,White,American,Male,,
+948,565,James Wilson,White,American,Male,,"Wilson, age 23, from Illinois; Soltmore, German"
+949,565,Jerome Boland,White,American,Male,,
+950,566,Bill Carr,White,,Male,,
+951,566,C. P. Duane,White,,Male,,
+952,566,Edgar Bulger,White,,Male,,"Bulger banished twice, 6/5/1856 and8/5/1856, after he returned to San Francisco"
+952,570,Edgar Bulger,White,,Male,,"Bulger banished twice, 6/5/1856 and8/5/1856, after he returned to San Francisco"
+953,566,Martin Gallagher,White,,Male,,
+954,566,William Mulligan,White,,Male,,
+955,566,Wooley Kearney,White,,Male,,
+956,567,Bill Lewis,White,,Male,,
+957,567,John Crowe,White,,Male,,
+958,567,John Lawler,White,,Male,,
+959,567,Terrence Kelley,White,,Male,,
+960,567,Willliam Hamilton,White,,Male,,
+961,568,Alex Purple,White,,Male,,
+962,568,Dan Aldrich,White,,Male,,
+963,568,J. R. Maloney,White,,Male,,
+964,568,Lewis Mahoney,White,,Male,,
+965,568,T. B. Cunningham,White,,Male,,
+966,568,Tom Mulloy,White,,Male,,
+967,569,Abraham Kraft,White,,Male,,
+968,569,James Burke,White,,Male,,
+969,569,James White,White,,Male,,
+970,569,William F. Mclean,White,,Male,,
+971,570,Chris Lily,White,,Male,,
+972,570,Henry F. Foy,White,,Male,,
+973,570,John Cooney,White,,Male,,
+974,570,Michael Brannegan,White,,Male,,

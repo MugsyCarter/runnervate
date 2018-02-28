@@ -1,0 +1,9066 @@
+[
+ {
+   "accusedID": 1,
+   "caseNum": 27,
+   "fullName": "Antoine",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 1,
+   "caseNum": 1,
+   "fullName": "Antoine",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 2,
+   "caseNum": 1,
+   "fullName": "Montreuil ",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 3,
+   "caseNum": 27,
+   "fullName": "Pepi",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 3,
+   "caseNum": 1,
+   "fullName": "Pepi",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 4,
+   "caseNum": 27,
+   "fullName": "Tchal",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 4,
+   "caseNum": 1,
+   "fullName": "Tchal",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 5,
+   "caseNum": 2,
+   "fullName": "Samuel Roberts",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 5,
+   "caseNum": 2,
+   "fullName": "Samuel Roberts",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 6,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 6,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 7,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 7,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 8,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 8,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 9,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 9,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 10,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 10,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 11,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 11,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 12,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 12,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 13,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 13,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 14,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 14,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 15,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 15,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 16,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 16,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 17,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 17,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 18,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 18,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 19,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 19,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 20,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 20,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 21,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 21,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 22,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 22,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 23,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 23,
+   "caseNum": 2,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 24,
+   "caseNum": 3,
+   "fullName": "Wooly Mike",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 25,
+   "caseNum": 4,
+   "fullName": "Dionisio Ocho",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 26,
+   "caseNum": 4,
+   "fullName": "Gabino Casias",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 27,
+   "caseNum": 4,
+   "fullName": "Pablo Martinez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 28,
+   "caseNum": 4,
+   "fullName": "Rinz Molina",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 29,
+   "caseNum": 4,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 30,
+   "caseNum": 5,
+   "fullName": "Hewster",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 31,
+   "caseNum": 5,
+   "fullName": "Hewster",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 32,
+   "caseNum": 6,
+   "fullName": "Richard Crone",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 33,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 34,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 35,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 36,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 37,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 38,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 39,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 40,
+   "caseNum": 7,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 41,
+   "caseNum": 8,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 42,
+   "caseNum": 9,
+   "fullName": "Jim",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 43,
+   "caseNum": 10,
+   "fullName": "Johnson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 44,
+   "caseNum": 11,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 45,
+   "caseNum": 11,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 46,
+   "caseNum": 11,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 47,
+   "caseNum": 12,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 48,
+   "caseNum": 13,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Other"
+ },
+ {
+   "accusedID": 49,
+   "caseNum": 14,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 50,
+   "caseNum": 15,
+   "fullName": "William Hepel Robinson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 51,
+   "caseNum": 16,
+   "fullName": "Bowen",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 52,
+   "caseNum": 17,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 53,
+   "caseNum": 18,
+   "fullName": "Jessie Dinwiddie",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 54,
+   "caseNum": 19,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 55,
+   "caseNum": 19,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 56,
+   "caseNum": 19,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 57,
+   "caseNum": 20,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 58,
+   "caseNum": 20,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 59,
+   "caseNum": 20,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 60,
+   "caseNum": 21,
+   "fullName": "Smith",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 61,
+   "caseNum": 22,
+   "fullName": "Pacheco",
+   "accusation": "Robbery ",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 62,
+   "caseNum": 23,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 63,
+   "caseNum": 25,
+   "fullName": "Frederick J. Roe",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 64,
+   "caseNum": 26,
+   "fullName": "Charles Simmons",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 65,
+   "caseNum": 26,
+   "fullName": "James Baxter",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 66,
+   "caseNum": 28,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 67,
+   "caseNum": 28,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 68,
+   "caseNum": 28,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 69,
+   "caseNum": 28,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 70,
+   "caseNum": 28,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 71,
+   "caseNum": 29,
+   "fullName": "Jackson",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 72,
+   "caseNum": 29,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 73,
+   "caseNum": 30,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 74,
+   "caseNum": 31,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 75,
+   "caseNum": 32,
+   "fullName": "S. S. Easterbrooks",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 76,
+   "caseNum": 33,
+   "fullName": "Evans",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 77,
+   "caseNum": 34,
+   "fullName": "Andrew S. Scott",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 78,
+   "caseNum": 35,
+   "fullName": "Cecilia Mesa",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 79,
+   "caseNum": 35,
+   "fullName": "Solomon Pico",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 80,
+   "caseNum": 81,
+   "fullName": "William Otis",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 80,
+   "caseNum": 81,
+   "fullName": "William Otis",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 80,
+   "caseNum": 35,
+   "fullName": "William Otis",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 81,
+   "caseNum": 36,
+   "fullName": "Jones",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 82,
+   "caseNum": 37,
+   "fullName": "George Miller",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$2,500"
+ },
+ {
+   "accusedID": 83,
+   "caseNum": 37,
+   "fullName": "Henry Rigler",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$2,500"
+ },
+ {
+   "accusedID": 84,
+   "caseNum": 37,
+   "fullName": "John Allen",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$2,500"
+ },
+ {
+   "accusedID": 85,
+   "caseNum": 38,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "money"
+ },
+ {
+   "accusedID": 86,
+   "caseNum": 39,
+   "fullName": "J. Spofford",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 87,
+   "caseNum": 39,
+   "fullName": "John Emory",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 88,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 89,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 90,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 91,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 92,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 93,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 94,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 95,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 96,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 97,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 98,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 99,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 100,
+   "caseNum": 39,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 101,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 102,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 103,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 104,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 105,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 106,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 107,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 108,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 109,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 110,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 111,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 112,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 113,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 114,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 115,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 116,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 117,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 118,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 119,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 120,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 121,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 122,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 123,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 124,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 125,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 126,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 127,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 128,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 129,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 130,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 131,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 132,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 133,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 134,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 135,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 136,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 137,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 138,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 139,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 140,
+   "caseNum": 40,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 141,
+   "caseNum": 41,
+   "fullName": "Francisco Galvez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 142,
+   "caseNum": 41,
+   "fullName": "Jesus Moreno",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 143,
+   "caseNum": 41,
+   "fullName": "Luis Cracia",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 144,
+   "caseNum": 41,
+   "fullName": "Ramon Dias",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 145,
+   "caseNum": 41,
+   "fullName": "Timoteo Sandoval",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 146,
+   "caseNum": 42,
+   "fullName": "Hamilton McCauley",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Governor had commuted sentence after conviction by court"
+ },
+ {
+   "accusedID": 147,
+   "caseNum": 44,
+   "fullName": "Gatson",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and muled"
+ },
+ {
+   "accusedID": 148,
+   "caseNum": 45,
+   "fullName": "O'Brien",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 149,
+   "caseNum": 46,
+   "fullName": "Alberto de la Cruz",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 149,
+   "caseNum": 46,
+   "fullName": "Alberto de la Cruz",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 150,
+   "caseNum": 46,
+   "fullName": "Martia Lopez",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 150,
+   "caseNum": 46,
+   "fullName": "Martia Lopez",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 151,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 152,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 153,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 154,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 155,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 156,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 157,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 158,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 159,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 160,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 161,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 162,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 163,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 164,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 165,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 166,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 167,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 168,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 169,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 170,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 171,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 172,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 173,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 174,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 175,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 176,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 177,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 178,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 179,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 180,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 181,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 182,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 183,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 184,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 185,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 186,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 187,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 188,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 189,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 190,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 191,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 192,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 193,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 194,
+   "caseNum": 48,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 195,
+   "caseNum": 49,
+   "fullName": "Thomas Jenkins",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle and horses"
+ },
+ {
+   "accusedID": 195,
+   "caseNum": 550,
+   "fullName": "Thomas Jenkins",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 196,
+   "caseNum": 51,
+   "fullName": "William McEvoy",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 197,
+   "caseNum": 53,
+   "fullName": "John Jenkins",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Safe containing $1,500"
+ },
+ {
+   "accusedID": 198,
+   "caseNum": 54,
+   "fullName": "Antonio Cruz",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 199,
+   "caseNum": 54,
+   "fullName": "Patricio Janori",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 200,
+   "caseNum": 55,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 201,
+   "caseNum": 55,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 202,
+   "caseNum": 56,
+   "fullName": "Hetherington",
+   "accusation": "Fencing stolen goods",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 203,
+   "caseNum": 57,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 204,
+   "caseNum": 58,
+   "fullName": "Samuel Gallagher",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 205,
+   "caseNum": 59,
+   "fullName": "Juan",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Clothing"
+ },
+ {
+   "accusedID": 206,
+   "caseNum": 60,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 207,
+   "caseNum": 60,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 208,
+   "caseNum": 61,
+   "fullName": "Pitcher",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$662"
+ },
+ {
+   "accusedID": 209,
+   "caseNum": 62,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 210,
+   "caseNum": 63,
+   "fullName": "Unknown",
+   "accusation": "Counterfeiting",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 211,
+   "caseNum": 64,
+   "fullName": "David Hill",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 211,
+   "caseNum": 64,
+   "fullName": "David Hill",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 211,
+   "caseNum": 64,
+   "fullName": "David Hill",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 212,
+   "caseNum": 65,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 213,
+   "caseNum": 65,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 214,
+   "caseNum": 65,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 215,
+   "caseNum": 65,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 216,
+   "caseNum": 66,
+   "fullName": "John Nelson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 217,
+   "caseNum": 67,
+   "fullName": "Josefa Loaiza",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 218,
+   "caseNum": 68,
+   "fullName": "James Gibson",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 218,
+   "caseNum": 68,
+   "fullName": "James Gibson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 219,
+   "caseNum": 68,
+   "fullName": "John Thompson",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 219,
+   "caseNum": 68,
+   "fullName": "John Thompson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 220,
+   "caseNum": 68,
+   "fullName": "Owen Cruthers",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 220,
+   "caseNum": 68,
+   "fullName": "Owen Cruthers",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 221,
+   "caseNum": 68,
+   "fullName": "William Benjamin Robinson",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 221,
+   "caseNum": 68,
+   "fullName": "William Benjamin Robinson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 222,
+   "caseNum": 69,
+   "fullName": "James Stuart",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 222,
+   "caseNum": 69,
+   "fullName": "James Stuart",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 223,
+   "caseNum": 70,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 224,
+   "caseNum": 71,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 225,
+   "caseNum": 71,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 226,
+   "caseNum": 73,
+   "fullName": "Hill",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 227,
+   "caseNum": 75,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 228,
+   "caseNum": 76,
+   "fullName": "Unknown",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 229,
+   "caseNum": 78,
+   "fullName": "Haynes",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$400"
+ },
+ {
+   "accusedID": 230,
+   "caseNum": 79,
+   "fullName": "George Adams",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 231,
+   "caseNum": 80,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Watermelons"
+ },
+ {
+   "accusedID": 232,
+   "caseNum": 80,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Watermelons"
+ },
+ {
+   "accusedID": 233,
+   "caseNum": 82,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$130"
+ },
+ {
+   "accusedID": 234,
+   "caseNum": 82,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$130"
+ },
+ {
+   "accusedID": 235,
+   "caseNum": 82,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$130"
+ },
+ {
+   "accusedID": 236,
+   "caseNum": 83,
+   "fullName": "John Thornpen",
+   "accusation": "Escaped Prison",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 237,
+   "caseNum": 84,
+   "fullName": "James Graham",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 237,
+   "caseNum": 84,
+   "fullName": "James Graham",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 238,
+   "caseNum": 85,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 239,
+   "caseNum": 85,
+   "fullName": "Unknown",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 240,
+   "caseNum": 86,
+   "fullName": "Hugh Morgan",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 241,
+   "caseNum": 87,
+   "fullName": "William Heppard",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 241,
+   "caseNum": 87,
+   "fullName": "William Heppard",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 242,
+   "caseNum": 88,
+   "fullName": "Frank Reynolds",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Gun"
+ },
+ {
+   "accusedID": 243,
+   "caseNum": 89,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Cattle for food"
+ },
+ {
+   "accusedID": 244,
+   "caseNum": 89,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Cattle for food"
+ },
+ {
+   "accusedID": 245,
+   "caseNum": 89,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Cattle for food"
+ },
+ {
+   "accusedID": 246,
+   "caseNum": 89,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Cattle for food"
+ },
+ {
+   "accusedID": 247,
+   "caseNum": 90,
+   "fullName": "Robert McKenzie",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 248,
+   "caseNum": 90,
+   "fullName": "Samuel Whittaker",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 249,
+   "caseNum": 91,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Mule"
+ },
+ {
+   "accusedID": 250,
+   "caseNum": 92,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 251,
+   "caseNum": 93,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Mule"
+ },
+ {
+   "accusedID": 252,
+   "caseNum": 94,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Pistol"
+ },
+ {
+   "accusedID": 253,
+   "caseNum": 95,
+   "fullName": "Mercer",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 254,
+   "caseNum": 96,
+   "fullName": "Aaron Bradbury",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Assaulted man he accused of \"improper intimacy with a married woman\""
+ },
+ {
+   "accusedID": 255,
+   "caseNum": 97,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 256,
+   "caseNum": 98,
+   "fullName": "John Donahue",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 257,
+   "caseNum": 99,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$100"
+ },
+ {
+   "accusedID": 258,
+   "caseNum": 100,
+   "fullName": "Paddy Welsh",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$400-$500"
+ },
+ {
+   "accusedID": 259,
+   "caseNum": 101,
+   "fullName": "Griffin",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Revolver"
+ },
+ {
+   "accusedID": 260,
+   "caseNum": 102,
+   "fullName": "Little John",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$500"
+ },
+ {
+   "accusedID": 261,
+   "caseNum": 103,
+   "fullName": "W. E. Conkling",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$600"
+ },
+ {
+   "accusedID": 262,
+   "caseNum": 104,
+   "fullName": "Seymour",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,000"
+ },
+ {
+   "accusedID": 263,
+   "caseNum": 106,
+   "fullName": "W. G. Hance",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Accused in Panama City"
+ },
+ {
+   "accusedID": 264,
+   "caseNum": 107,
+   "fullName": "Toby",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Pistol"
+ },
+ {
+   "accusedID": 265,
+   "caseNum": 108,
+   "fullName": "Abner J. Dixon",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": "$200"
+ },
+ {
+   "accusedID": 265,
+   "caseNum": 108,
+   "fullName": "Abner J. Dixon",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 266,
+   "caseNum": 109,
+   "fullName": "Antonio Gonzales",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 267,
+   "caseNum": 110,
+   "fullName": "Domingo",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 267,
+   "caseNum": 110,
+   "fullName": "Domingo",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 268,
+   "caseNum": 112,
+   "fullName": "David Brown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$16,000"
+ },
+ {
+   "accusedID": 269,
+   "caseNum": 113,
+   "fullName": "James Campbell",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 270,
+   "caseNum": 114,
+   "fullName": "Silvermann",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$800"
+ },
+ {
+   "accusedID": 271,
+   "caseNum": 115,
+   "fullName": "Unknown",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 272,
+   "caseNum": 116,
+   "fullName": "Charley Bucroft",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 273,
+   "caseNum": 116,
+   "fullName": "John Bucroft",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 274,
+   "caseNum": 117,
+   "fullName": "Brown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 275,
+   "caseNum": 118,
+   "fullName": "George Tanner",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Provisions"
+ },
+ {
+   "accusedID": 276,
+   "caseNum": 119,
+   "fullName": "Carlos Esclava",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 277,
+   "caseNum": 120,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 278,
+   "caseNum": 121,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 279,
+   "caseNum": 122,
+   "fullName": "Henry George",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$2,500"
+ },
+ {
+   "accusedID": 280,
+   "caseNum": 122,
+   "fullName": "William Miller",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$4,600"
+ },
+ {
+   "accusedID": 281,
+   "caseNum": 123,
+   "fullName": "Mills",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 282,
+   "caseNum": 124,
+   "fullName": "James Hughlett",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 283,
+   "caseNum": 125,
+   "fullName": "John Balthus",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$800"
+ },
+ {
+   "accusedID": 284,
+   "caseNum": 126,
+   "fullName": "Hensley",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 285,
+   "caseNum": 127,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 286,
+   "caseNum": 127,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 287,
+   "caseNum": 127,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 288,
+   "caseNum": 127,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 289,
+   "caseNum": 128,
+   "fullName": "Washington Rideout",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 290,
+   "caseNum": 129,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 291,
+   "caseNum": 129,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 292,
+   "caseNum": 130,
+   "fullName": "John Jackson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 293,
+   "caseNum": 131,
+   "fullName": "Jose Cheverino",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 294,
+   "caseNum": 132,
+   "fullName": "Cruz Flores",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 295,
+   "caseNum": 132,
+   "fullName": "Mariano",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 296,
+   "caseNum": 134,
+   "fullName": "William",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 297,
+   "caseNum": 136,
+   "fullName": "Dunn",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$25,000"
+ },
+ {
+   "accusedID": 298,
+   "caseNum": 138,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Rifled trunk"
+ },
+ {
+   "accusedID": 299,
+   "caseNum": 138,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Rifled trunk"
+ },
+ {
+   "accusedID": 300,
+   "caseNum": 138,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Rifled trunk"
+ },
+ {
+   "accusedID": 301,
+   "caseNum": 138,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Rifled trunk"
+ },
+ {
+   "accusedID": 302,
+   "caseNum": 138,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Rifled trunk"
+ },
+ {
+   "accusedID": 303,
+   "caseNum": 139,
+   "fullName": "Raymond",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 304,
+   "caseNum": 140,
+   "fullName": "Kit Shannon",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 305,
+   "caseNum": 141,
+   "fullName": "Francis Boyd",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Barley"
+ },
+ {
+   "accusedID": 306,
+   "caseNum": 142,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 307,
+   "caseNum": 143,
+   "fullName": "Pablo Panso",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 308,
+   "caseNum": 144,
+   "fullName": "Joshua Robinson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 308,
+   "caseNum": 144,
+   "fullName": "Joshua Robinson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 309,
+   "caseNum": 145,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Oxen"
+ },
+ {
+   "accusedID": 310,
+   "caseNum": 145,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Oxen"
+ },
+ {
+   "accusedID": 311,
+   "caseNum": 146,
+   "fullName": "Dominguez Hernandez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 311,
+   "caseNum": 146,
+   "fullName": "Dominguez Hernandez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 312,
+   "caseNum": 147,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 313,
+   "caseNum": 148,
+   "fullName": "Doroteo Zavaleta",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 313,
+   "caseNum": 148,
+   "fullName": "Doroteo Zavaleta",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 314,
+   "caseNum": 148,
+   "fullName": "Jesus Rivas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 314,
+   "caseNum": 148,
+   "fullName": "Jesus Rivas",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 315,
+   "caseNum": 149,
+   "fullName": "Capistrano",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 316,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 317,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 318,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 319,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 320,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 321,
+   "caseNum": 150,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 322,
+   "caseNum": 151,
+   "fullName": "Johnson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$900"
+ },
+ {
+   "accusedID": 323,
+   "caseNum": 152,
+   "fullName": "Ross",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 324,
+   "caseNum": 153,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Watch"
+ },
+ {
+   "accusedID": 325,
+   "caseNum": 154,
+   "fullName": "Antonio Duarto",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 326,
+   "caseNum": 154,
+   "fullName": "Jesus Brisano",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 327,
+   "caseNum": 155,
+   "fullName": "Dolores Pico",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 328,
+   "caseNum": 156,
+   "fullName": "Michael Grant",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 329,
+   "caseNum": 157,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 330,
+   "caseNum": 158,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$110"
+ },
+ {
+   "accusedID": 331,
+   "caseNum": 159,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 332,
+   "caseNum": 160,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Store"
+ },
+ {
+   "accusedID": 333,
+   "caseNum": 161,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 334,
+   "caseNum": 162,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 335,
+   "caseNum": 163,
+   "fullName": "Walden",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$200"
+ },
+ {
+   "accusedID": 336,
+   "caseNum": 164,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 337,
+   "caseNum": 165,
+   "fullName": "Reyes Feliz",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 338,
+   "caseNum": 166,
+   "fullName": "Barumas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 339,
+   "caseNum": 166,
+   "fullName": "Benito Lopez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 340,
+   "caseNum": 166,
+   "fullName": "Cipriano Sandoval",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 341,
+   "caseNum": 167,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 342,
+   "caseNum": 168,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 343,
+   "caseNum": 169,
+   "fullName": "Unknown",
+   "accusation": "Swindling",
+   "weapon": "",
+   "accusationNotes": "swindled sale of gold dust"
+ },
+ {
+   "accusedID": 344,
+   "caseNum": 170,
+   "fullName": "Jose Delores Velaszques",
+   "accusation": "Prowling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 345,
+   "caseNum": 171,
+   "fullName": "William K. Jones",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 346,
+   "caseNum": 172,
+   "fullName": "James Edmonson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 347,
+   "caseNum": 173,
+   "fullName": "Christopher Ferril",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Tools and other"
+ },
+ {
+   "accusedID": 348,
+   "caseNum": 174,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Watch and other"
+ },
+ {
+   "accusedID": 349,
+   "caseNum": 174,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Watch and other"
+ },
+ {
+   "accusedID": 350,
+   "caseNum": 175,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 351,
+   "caseNum": 176,
+   "fullName": "Unknown",
+   "accusation": "Threatening vengeance",
+   "weapon": "",
+   "accusationNotes": "for raid that had killed 18-20 Indians"
+ },
+ {
+   "accusedID": 352,
+   "caseNum": 177,
+   "fullName": "Antonio Valencia",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 353,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 354,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 355,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 356,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 357,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 358,
+   "caseNum": 178,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 359,
+   "caseNum": 179,
+   "fullName": "Big Bill",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 359,
+   "caseNum": 179,
+   "fullName": "Big Bill",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 360,
+   "caseNum": 179,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 361,
+   "caseNum": 180,
+   "fullName": "Conrad Sacksin",
+   "accusation": "Abuse of a corpse",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 362,
+   "caseNum": 181,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 363,
+   "caseNum": 182,
+   "fullName": "Isaac D. Martin",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 364,
+   "caseNum": 183,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 365,
+   "caseNum": 184,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$900"
+ },
+ {
+   "accusedID": 366,
+   "caseNum": 184,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$900"
+ },
+ {
+   "accusedID": 367,
+   "caseNum": 184,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$900"
+ },
+ {
+   "accusedID": 368,
+   "caseNum": 186,
+   "fullName": "Juan Sanchez",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 369,
+   "caseNum": 187,
+   "fullName": "John Boyd",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 370,
+   "caseNum": 188,
+   "fullName": "C. Kanaska",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 370,
+   "caseNum": 188,
+   "fullName": "C. Kanaska",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 371,
+   "caseNum": 188,
+   "fullName": "George McDonald",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 371,
+   "caseNum": 188,
+   "fullName": "George McDonald",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 372,
+   "caseNum": 189,
+   "fullName": "James Noland",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 373,
+   "caseNum": 190,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 374,
+   "caseNum": 190,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 375,
+   "caseNum": 191,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Instigating murder"
+ },
+ {
+   "accusedID": 376,
+   "caseNum": 192,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$400"
+ },
+ {
+   "accusedID": 377,
+   "caseNum": 193,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 378,
+   "caseNum": 194,
+   "fullName": "Antonio Marto",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 379,
+   "caseNum": 195,
+   "fullName": "Polonia Sanchez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and mule"
+ },
+ {
+   "accusedID": 380,
+   "caseNum": 196,
+   "fullName": "John Clare",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 381,
+   "caseNum": 197,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 382,
+   "caseNum": 198,
+   "fullName": "Jesus Evarra",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 383,
+   "caseNum": 199,
+   "fullName": "Anastacio Higuerre",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 383,
+   "caseNum": 199,
+   "fullName": "Anastacio Higuerre",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 384,
+   "caseNum": 199,
+   "fullName": "Manuel Olivas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 384,
+   "caseNum": 199,
+   "fullName": "Manuel Olivas",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 385,
+   "caseNum": 199,
+   "fullName": "Ramon Espinosa",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 385,
+   "caseNum": 199,
+   "fullName": "Ramon Espinosa",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 386,
+   "caseNum": 200,
+   "fullName": "Prasey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 387,
+   "caseNum": 201,
+   "fullName": "Bernardo Daniel",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 388,
+   "caseNum": 202,
+   "fullName": "Unknown",
+   "accusation": "forced wife into prostitution",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 389,
+   "caseNum": 203,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 390,
+   "caseNum": 203,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 391,
+   "caseNum": 205,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "of a sluice"
+ },
+ {
+   "accusedID": 392,
+   "caseNum": 205,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "of a sluice"
+ },
+ {
+   "accusedID": 393,
+   "caseNum": 207,
+   "fullName": "Jose Arode",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 394,
+   "caseNum": 207,
+   "fullName": "Juan P. Gonzalez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 395,
+   "caseNum": 207,
+   "fullName": "Salvador Valdez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 396,
+   "caseNum": 208,
+   "fullName": "Dolores",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 397,
+   "caseNum": 208,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 398,
+   "caseNum": 209,
+   "fullName": "Peter Nicolas",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 399,
+   "caseNum": 211,
+   "fullName": "Swarz",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 400,
+   "caseNum": 212,
+   "fullName": "William Ritchie",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 401,
+   "caseNum": 213,
+   "fullName": "Henry",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 402,
+   "caseNum": 213,
+   "fullName": "Isaac",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 403,
+   "caseNum": 214,
+   "fullName": "Demasio Berriessa",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 403,
+   "caseNum": 214,
+   "fullName": "Demasio Berriessa",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 404,
+   "caseNum": 215,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 405,
+   "caseNum": 216,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Killed brother in law"
+ },
+ {
+   "accusedID": 406,
+   "caseNum": 217,
+   "fullName": "Amadee Canu",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 407,
+   "caseNum": 217,
+   "fullName": "Pierre Archambault",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 408,
+   "caseNum": 218,
+   "fullName": "Demas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 409,
+   "caseNum": 218,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 410,
+   "caseNum": 218,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 411,
+   "caseNum": 219,
+   "fullName": "Jack Roarke",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 412,
+   "caseNum": 220,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$45"
+ },
+ {
+   "accusedID": 413,
+   "caseNum": 221,
+   "fullName": "Macy",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 414,
+   "caseNum": 222,
+   "fullName": "David Brown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 415,
+   "caseNum": 223,
+   "fullName": "Edward Crane Griffiths",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 415,
+   "caseNum": 223,
+   "fullName": "Edward Crane Griffiths",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 416,
+   "caseNum": 225,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Mule"
+ },
+ {
+   "accusedID": 417,
+   "caseNum": 226,
+   "fullName": "Bob Parker",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and cattle"
+ },
+ {
+   "accusedID": 418,
+   "caseNum": 226,
+   "fullName": "George Seldon",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and cattle"
+ },
+ {
+   "accusedID": 419,
+   "caseNum": 227,
+   "fullName": "William M. Johnson",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 420,
+   "caseNum": 228,
+   "fullName": "James Moran",
+   "accusation": "Manslaughter",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 421,
+   "caseNum": 231,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 422,
+   "caseNum": 233,
+   "fullName": "Justo Betancour",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 423,
+   "caseNum": 234,
+   "fullName": "Adolpheus E. Moore",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 423,
+   "caseNum": 234,
+   "fullName": "Adolpheus E. Moore",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 424,
+   "caseNum": 234,
+   "fullName": "Garretson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 424,
+   "caseNum": 234,
+   "fullName": "Garretson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 425,
+   "caseNum": 234,
+   "fullName": "Pole Wilkerson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 425,
+   "caseNum": 234,
+   "fullName": "Pole Wilkerson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 426,
+   "caseNum": 234,
+   "fullName": "William Hand",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 426,
+   "caseNum": 234,
+   "fullName": "William Hand",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 427,
+   "caseNum": 234,
+   "fullName": "William Watson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 427,
+   "caseNum": 234,
+   "fullName": "William Watson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 428,
+   "caseNum": 235,
+   "fullName": "John Fenning",
+   "accusation": "Suspicious Character",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 429,
+   "caseNum": 236,
+   "fullName": "Jose",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 430,
+   "caseNum": 236,
+   "fullName": "Pertervine",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 431,
+   "caseNum": 236,
+   "fullName": "Trancolino",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 432,
+   "caseNum": 237,
+   "fullName": "Peter Carnes",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 433,
+   "caseNum": 238,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 433,
+   "caseNum": 238,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 434,
+   "caseNum": 239,
+   "fullName": "Shimer",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 435,
+   "caseNum": 240,
+   "fullName": "John S. Barclay",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 436,
+   "caseNum": 241,
+   "fullName": "John Thompson",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 437,
+   "caseNum": 242,
+   "fullName": "Francisco Sanchez",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 438,
+   "caseNum": 242,
+   "fullName": "Francisco Tapia",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 439,
+   "caseNum": 242,
+   "fullName": "James G. Lackner",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 440,
+   "caseNum": 242,
+   "fullName": "Jesus Pino",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 441,
+   "caseNum": 243,
+   "fullName": "Unknown",
+   "accusation": "Insulted a woman",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 442,
+   "caseNum": 244,
+   "fullName": "Unknown",
+   "accusation": "Threatening white men",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 443,
+   "caseNum": 245,
+   "fullName": "Harris",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 444,
+   "caseNum": 245,
+   "fullName": "Hill",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 445,
+   "caseNum": 246,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 446,
+   "caseNum": 248,
+   "fullName": "William A. Mann",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 447,
+   "caseNum": 249,
+   "fullName": "Charles Osborne",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 448,
+   "caseNum": 250,
+   "fullName": "Isadoro Soto",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 449,
+   "caseNum": 251,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 449,
+   "caseNum": 251,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 450,
+   "caseNum": 253,
+   "fullName": "Juan B. Lopez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 451,
+   "caseNum": 253,
+   "fullName": "R. Soto",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 452,
+   "caseNum": 253,
+   "fullName": "R. Zuniga",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 453,
+   "caseNum": 253,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 454,
+   "caseNum": 254,
+   "fullName": "Charles Cora",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 455,
+   "caseNum": 254,
+   "fullName": "James P. Casey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 456,
+   "caseNum": 256,
+   "fullName": "A. J. Goff",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Possibly self defense"
+ },
+ {
+   "accusedID": 457,
+   "caseNum": 257,
+   "fullName": "Joseph Hetheringon",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 458,
+   "caseNum": 257,
+   "fullName": "Philander Brace",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 459,
+   "caseNum": 258,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 460,
+   "caseNum": 260,
+   "fullName": "C. Colebrook",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 461,
+   "caseNum": 261,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 462,
+   "caseNum": 262,
+   "fullName": "Jose Castro",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 463,
+   "caseNum": 264,
+   "fullName": "Chung Yew",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 463,
+   "caseNum": 264,
+   "fullName": "Chung Yew",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 463,
+   "caseNum": 264,
+   "fullName": "Chung Yew",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 464,
+   "caseNum": 264,
+   "fullName": "Huey",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 464,
+   "caseNum": 264,
+   "fullName": "Huey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 464,
+   "caseNum": 264,
+   "fullName": "Huey",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 465,
+   "caseNum": 264,
+   "fullName": "Low Sick",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 465,
+   "caseNum": 264,
+   "fullName": "Low Sick",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 465,
+   "caseNum": 264,
+   "fullName": "Low Sick",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 466,
+   "caseNum": 264,
+   "fullName": "Sam Wau",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 466,
+   "caseNum": 264,
+   "fullName": "Sam Wau",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 466,
+   "caseNum": 264,
+   "fullName": "Sam Wau",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 467,
+   "caseNum": 264,
+   "fullName": "Tom Buc",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 467,
+   "caseNum": 264,
+   "fullName": "Tom Buc",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 467,
+   "caseNum": 264,
+   "fullName": "Tom Buc",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 468,
+   "caseNum": 265,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 469,
+   "caseNum": 266,
+   "fullName": "Unknown",
+   "accusation": "Robbery--money",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 470,
+   "caseNum": 267,
+   "fullName": "Miguel Soto",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 471,
+   "caseNum": 268,
+   "fullName": "Diego Navarro",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 471,
+   "caseNum": 268,
+   "fullName": "Diego Navarro",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 472,
+   "caseNum": 268,
+   "fullName": "Jose Santos",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 472,
+   "caseNum": 268,
+   "fullName": "Jose Santos",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 473,
+   "caseNum": 268,
+   "fullName": "Juan Valenzuela",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 473,
+   "caseNum": 268,
+   "fullName": "Juan Valenzuela",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 474,
+   "caseNum": 268,
+   "fullName": "Pedro Lopez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 474,
+   "caseNum": 268,
+   "fullName": "Pedro Lopez",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 475,
+   "caseNum": 269,
+   "fullName": "Francisco Ardillero",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 475,
+   "caseNum": 269,
+   "fullName": "Francisco Ardillero",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 476,
+   "caseNum": 269,
+   "fullName": "Juan Silvas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 476,
+   "caseNum": 269,
+   "fullName": "Juan Silvas",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 477,
+   "caseNum": 270,
+   "fullName": "Jose Jesus Espinosa",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 477,
+   "caseNum": 270,
+   "fullName": "Jose Jesus Espinosa",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 478,
+   "caseNum": 271,
+   "fullName": "Encarnacion Berreyessa",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 479,
+   "caseNum": 272,
+   "fullName": "Andreas Frontez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 480,
+   "caseNum": 272,
+   "fullName": "Francisco Daniel",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 481,
+   "caseNum": 272,
+   "fullName": "Pequino",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 482,
+   "caseNum": 273,
+   "fullName": "Juan Flores",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 482,
+   "caseNum": 273,
+   "fullName": "Juan Flores",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 483,
+   "caseNum": 274,
+   "fullName": "Anastacio Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 484,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 485,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 486,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 487,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 488,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 489,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 490,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 491,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 492,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 493,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 494,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 495,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 496,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 497,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 498,
+   "caseNum": 276,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": "Invaded white woman's tent"
+ },
+ {
+   "accusedID": 499,
+   "caseNum": 277,
+   "fullName": "Jose Maria Egare",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 500,
+   "caseNum": 278,
+   "fullName": "Johnson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 500,
+   "caseNum": 278,
+   "fullName": "Johnson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 501,
+   "caseNum": 278,
+   "fullName": "Jones",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 501,
+   "caseNum": 278,
+   "fullName": "Jones",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 502,
+   "caseNum": 278,
+   "fullName": "Lake",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 502,
+   "caseNum": 278,
+   "fullName": "Lake",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 503,
+   "caseNum": 278,
+   "fullName": "Ringgold",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 503,
+   "caseNum": 278,
+   "fullName": "Ringgold",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 504,
+   "caseNum": 279,
+   "fullName": "Mrs. C",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 505,
+   "caseNum": 280,
+   "fullName": "Dean",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 506,
+   "caseNum": 282,
+   "fullName": "Julian",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 507,
+   "caseNum": 283,
+   "fullName": "Hoskins",
+   "accusation": "Incest",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 508,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 508,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 509,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 509,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 510,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 510,
+   "caseNum": 284,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 511,
+   "caseNum": 285,
+   "fullName": "Robinson",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": "of children"
+ },
+ {
+   "accusedID": 512,
+   "caseNum": 286,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 513,
+   "caseNum": 286,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 514,
+   "caseNum": 286,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 515,
+   "caseNum": 286,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 516,
+   "caseNum": 287,
+   "fullName": "Henry Lorrenz",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 517,
+   "caseNum": 288,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 518,
+   "caseNum": 289,
+   "fullName": "Aguerra",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 518,
+   "caseNum": 289,
+   "fullName": "Aguerra",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 519,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 520,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 521,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 522,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 523,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 524,
+   "caseNum": 290,
+   "fullName": "Unknown",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 525,
+   "caseNum": 291,
+   "fullName": "Stepplefield",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$9,000"
+ },
+ {
+   "accusedID": 526,
+   "caseNum": 291,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$9,000"
+ },
+ {
+   "accusedID": 527,
+   "caseNum": 291,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$9,000"
+ },
+ {
+   "accusedID": 528,
+   "caseNum": 292,
+   "fullName": "Jesus Anastasia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 528,
+   "caseNum": 292,
+   "fullName": "Jesus Anastasia",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 529,
+   "caseNum": 293,
+   "fullName": "Aaron Bracey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 530,
+   "caseNum": 294,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 531,
+   "caseNum": 294,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 532,
+   "caseNum": 294,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 533,
+   "caseNum": 295,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 534,
+   "caseNum": 296,
+   "fullName": "James E. Carter",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 535,
+   "caseNum": 298,
+   "fullName": "Ysidro Silvas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 536,
+   "caseNum": 299,
+   "fullName": "Anderson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 537,
+   "caseNum": 300,
+   "fullName": "Snow",
+   "accusation": "Accessory to murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 538,
+   "caseNum": 301,
+   "fullName": "William C. Deputy",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 539,
+   "caseNum": 302,
+   "fullName": "John",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 540,
+   "caseNum": 303,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 541,
+   "caseNum": 304,
+   "fullName": "Pancho Daniel",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 542,
+   "caseNum": 305,
+   "fullName": "Harrison Morgan",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 543,
+   "caseNum": 305,
+   "fullName": "Wallace",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 544,
+   "caseNum": 306,
+   "fullName": "Badillo",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 545,
+   "caseNum": 306,
+   "fullName": "Francisco Badillo",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 546,
+   "caseNum": 308,
+   "fullName": "Antonio Ruez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 546,
+   "caseNum": 308,
+   "fullName": "Antonio Ruez",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 547,
+   "caseNum": 309,
+   "fullName": "Benjamin Doyle",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 547,
+   "caseNum": 309,
+   "fullName": "Benjamin Doyle",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 548,
+   "caseNum": 309,
+   "fullName": "George Rush",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 548,
+   "caseNum": 309,
+   "fullName": "George Rush",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 549,
+   "caseNum": 309,
+   "fullName": "William Grey",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 549,
+   "caseNum": 309,
+   "fullName": "William Grey",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 550,
+   "caseNum": 309,
+   "fullName": "William Riddle",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 550,
+   "caseNum": 309,
+   "fullName": "William Riddle",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 551,
+   "caseNum": 310,
+   "fullName": "To-ah-yo-la",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 551,
+   "caseNum": 310,
+   "fullName": "To-ah-yo-la",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 552,
+   "caseNum": 311,
+   "fullName": "Jose Claudio Alvitre",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 552,
+   "caseNum": 311,
+   "fullName": "Jose Claudio Alvitre",
+   "accusation": "Wife Abuse",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 553,
+   "caseNum": 312,
+   "fullName": "Unknown",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 554,
+   "caseNum": 313,
+   "fullName": "Francisco Cota",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 555,
+   "caseNum": 314,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Sluice box"
+ },
+ {
+   "accusedID": 556,
+   "caseNum": 315,
+   "fullName": "Allajo",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 557,
+   "caseNum": 315,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 558,
+   "caseNum": 315,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 559,
+   "caseNum": 315,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 560,
+   "caseNum": 315,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 561,
+   "caseNum": 316,
+   "fullName": "Manuel Vera",
+   "accusation": "Attempted  murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 562,
+   "caseNum": 317,
+   "fullName": "Capitan",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 563,
+   "caseNum": 317,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 564,
+   "caseNum": 317,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 565,
+   "caseNum": 317,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 566,
+   "caseNum": 317,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 567,
+   "caseNum": 318,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 568,
+   "caseNum": 319,
+   "fullName": "Andrew Wood",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 568,
+   "caseNum": 319,
+   "fullName": "Andrew Wood",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 568,
+   "caseNum": 319,
+   "fullName": "Andrew Wood",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 569,
+   "caseNum": 319,
+   "fullName": "Boston Damewood",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 569,
+   "caseNum": 319,
+   "fullName": "Boston Damewood",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 569,
+   "caseNum": 319,
+   "fullName": "Boston Damewood",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 570,
+   "caseNum": 319,
+   "fullName": "Eli Chase",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 570,
+   "caseNum": 319,
+   "fullName": "Eli Chase",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 570,
+   "caseNum": 319,
+   "fullName": "Eli Chase",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 571,
+   "caseNum": 319,
+   "fullName": "José Sylvester Olivas",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 571,
+   "caseNum": 319,
+   "fullName": "José Sylvester Olivas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 571,
+   "caseNum": 319,
+   "fullName": "José Sylvester Olivas",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 572,
+   "caseNum": 319,
+   "fullName": "José Yrreba",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 572,
+   "caseNum": 319,
+   "fullName": "José Yrreba",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 572,
+   "caseNum": 319,
+   "fullName": "José Yrreba",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 573,
+   "caseNum": 320,
+   "fullName": "Unknown",
+   "accusation": "Shooting",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 573,
+   "caseNum": 320,
+   "fullName": "Unknown",
+   "accusation": "Mayhem",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 574,
+   "caseNum": 321,
+   "fullName": "Manuel Ceredel",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 575,
+   "caseNum": 322,
+   "fullName": "Charles Wilkins",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 576,
+   "caseNum": 323,
+   "fullName": "Gregorio Orozco",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 577,
+   "caseNum": 324,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 578,
+   "caseNum": 324,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 579,
+   "caseNum": 324,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 580,
+   "caseNum": 324,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 581,
+   "caseNum": 325,
+   "fullName": "Dickinson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 582,
+   "caseNum": 326,
+   "fullName": "Francisco Lopez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 582,
+   "caseNum": 326,
+   "fullName": "Francisco Lopez",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 583,
+   "caseNum": 326,
+   "fullName": "Patricinio Lopez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 583,
+   "caseNum": 326,
+   "fullName": "Patricinio Lopez",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 584,
+   "caseNum": 326,
+   "fullName": "Salvador Mesquita",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 584,
+   "caseNum": 326,
+   "fullName": "Salvador Mesquita",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 585,
+   "caseNum": 327,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 586,
+   "caseNum": 327,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 587,
+   "caseNum": 328,
+   "fullName": "Juan Iguera",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 588,
+   "caseNum": 329,
+   "fullName": "John Barnhart",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 589,
+   "caseNum": 330,
+   "fullName": "Charles Lee",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 590,
+   "caseNum": 330,
+   "fullName": "Patrick Murphy",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 591,
+   "caseNum": 331,
+   "fullName": "Billy Wilburn",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 592,
+   "caseNum": 331,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 593,
+   "caseNum": 331,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 594,
+   "caseNum": 331,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 595,
+   "caseNum": 332,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 595,
+   "caseNum": 332,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 596,
+   "caseNum": 333,
+   "fullName": "Elder Thompson",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 596,
+   "caseNum": 333,
+   "fullName": "Elder Thompson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 597,
+   "caseNum": 334,
+   "fullName": "Unknown",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 598,
+   "caseNum": 334,
+   "fullName": "Unknown",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 599,
+   "caseNum": 335,
+   "fullName": "Estevan",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 600,
+   "caseNum": 336,
+   "fullName": "Webb",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 601,
+   "caseNum": 337,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 602,
+   "caseNum": 339,
+   "fullName": "Rains",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 603,
+   "caseNum": 341,
+   "fullName": "Lucas Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 604,
+   "caseNum": 342,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and cattle"
+ },
+ {
+   "accusedID": 605,
+   "caseNum": 343,
+   "fullName": "Gregorio Gomez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 606,
+   "caseNum": 343,
+   "fullName": "Jesus Gomez",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 607,
+   "caseNum": 343,
+   "fullName": "Valentine Vargas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 608,
+   "caseNum": 344,
+   "fullName": "Charles Olson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 609,
+   "caseNum": 345,
+   "fullName": "Santana Duartz",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 610,
+   "caseNum": 346,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 611,
+   "caseNum": 346,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 612,
+   "caseNum": 347,
+   "fullName": "Miguel Lachenais",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 613,
+   "caseNum": 348,
+   "fullName": "James McCrory",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 614,
+   "caseNum": 349,
+   "fullName": "George Hargrand",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 615,
+   "caseNum": 350,
+   "fullName": "Matt Tarpey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 616,
+   "caseNum": 351,
+   "fullName": "Pete",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 616,
+   "caseNum": 351,
+   "fullName": "Pete",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 617,
+   "caseNum": 352,
+   "fullName": "Billy Smith",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 618,
+   "caseNum": 352,
+   "fullName": "Charley Howard",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 619,
+   "caseNum": 352,
+   "fullName": "Joe Barbie",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 620,
+   "caseNum": 352,
+   "fullName": "John Blanchon",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 621,
+   "caseNum": 352,
+   "fullName": "John Williams",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 622,
+   "caseNum": 352,
+   "fullName": "Joseph Newell",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 623,
+   "caseNum": 352,
+   "fullName": "Unknown",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 624,
+   "caseNum": 352,
+   "fullName": "Unknown",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 625,
+   "caseNum": 352,
+   "fullName": "Unknown",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 626,
+   "caseNum": 352,
+   "fullName": "Unknown",
+   "accusation": "Immoral Behavior",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 627,
+   "caseNum": 353,
+   "fullName": "Jake Linson",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 628,
+   "caseNum": 354,
+   "fullName": "Blanchard",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 629,
+   "caseNum": 355,
+   "fullName": "Ernst Reusch",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 630,
+   "caseNum": 357,
+   "fullName": "Jesus Ramos",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 631,
+   "caseNum": 358,
+   "fullName": "George Brown",
+   "accusation": "Gambling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 631,
+   "caseNum": 358,
+   "fullName": "George Brown",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 632,
+   "caseNum": 358,
+   "fullName": "Harry Howard",
+   "accusation": "Gambling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 632,
+   "caseNum": 358,
+   "fullName": "Harry Howard",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 633,
+   "caseNum": 358,
+   "fullName": "Potter",
+   "accusation": "Gambling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 633,
+   "caseNum": 358,
+   "fullName": "Potter",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 634,
+   "caseNum": 358,
+   "fullName": "Seth McCain",
+   "accusation": "Gambling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 634,
+   "caseNum": 358,
+   "fullName": "Seth McCain",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 635,
+   "caseNum": 358,
+   "fullName": "Spence",
+   "accusation": "Gambling",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 635,
+   "caseNum": 358,
+   "fullName": "Spence",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 636,
+   "caseNum": 359,
+   "fullName": "Antonio Igarra",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 637,
+   "caseNum": 360,
+   "fullName": "Yereger",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 638,
+   "caseNum": 361,
+   "fullName": "Thomas W. Henley",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 639,
+   "caseNum": 362,
+   "fullName": "Joseph Murphey",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 640,
+   "caseNum": 363,
+   "fullName": "Francisco Arias",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 640,
+   "caseNum": 363,
+   "fullName": "Francisco Arias",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 641,
+   "caseNum": 363,
+   "fullName": "José Chamalis",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 641,
+   "caseNum": 363,
+   "fullName": "José Chamalis",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 642,
+   "caseNum": 364,
+   "fullName": "Justin Arajo",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 643,
+   "caseNum": 365,
+   "fullName": "Antonio Maron",
+   "accusation": "Raiding",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 643,
+   "caseNum": 365,
+   "fullName": "Antonio Maron",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 644,
+   "caseNum": 365,
+   "fullName": "Bessena Ruiz",
+   "accusation": "Raiding",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 644,
+   "caseNum": 365,
+   "fullName": "Bessena Ruiz",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 645,
+   "caseNum": 365,
+   "fullName": "Fermin Elder",
+   "accusation": "Raiding",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 645,
+   "caseNum": 365,
+   "fullName": "Fermin Elder",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 646,
+   "caseNum": 365,
+   "fullName": "Francisco Ensinas",
+   "accusation": "Raiding",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 646,
+   "caseNum": 365,
+   "fullName": "Francisco Ensinas",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 647,
+   "caseNum": 365,
+   "fullName": "Miguel Elias",
+   "accusation": "Raiding",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 647,
+   "caseNum": 365,
+   "fullName": "Miguel Elias",
+   "accusation": "Stock Theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 648,
+   "caseNum": 366,
+   "fullName": "Christian Mutschler",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 648,
+   "caseNum": 366,
+   "fullName": "Christian Mutschler",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 649,
+   "caseNum": 367,
+   "fullName": "Thomas Yoakum",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 650,
+   "caseNum": 367,
+   "fullName": "William Yoakum",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 651,
+   "caseNum": 368,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 652,
+   "caseNum": 369,
+   "fullName": "Abijah Gibson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Saddle and harness"
+ },
+ {
+   "accusedID": 653,
+   "caseNum": 369,
+   "fullName": "Elijah Frost",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Saddle and harness"
+ },
+ {
+   "accusedID": 654,
+   "caseNum": 369,
+   "fullName": "Tom McCracken",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Saddle and harness"
+ },
+ {
+   "accusedID": 655,
+   "caseNum": 370,
+   "fullName": "Victo Miranda",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": "3 small girls"
+ },
+ {
+   "accusedID": 655,
+   "caseNum": 370,
+   "fullName": "Victo Miranda",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 656,
+   "caseNum": 371,
+   "fullName": "Thomas James",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 657,
+   "caseNum": 372,
+   "fullName": "Tom Herbert",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 658,
+   "caseNum": 373,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 659,
+   "caseNum": 374,
+   "fullName": "Jim Moore",
+   "accusation": "Attempted arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 660,
+   "caseNum": 374,
+   "fullName": "Jim Williams",
+   "accusation": "Attempted arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 661,
+   "caseNum": 375,
+   "fullName": "Encarnacion Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 662,
+   "caseNum": 376,
+   "fullName": "William Richardson",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": "Daughter"
+ },
+ {
+   "accusedID": 663,
+   "caseNum": 378,
+   "fullName": "Louis Farthing",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 664,
+   "caseNum": 378,
+   "fullName": "William H. White",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 665,
+   "caseNum": 379,
+   "fullName": "Jimmy Delaney",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 666,
+   "caseNum": 380,
+   "fullName": "A. W. Powers",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 666,
+   "caseNum": 380,
+   "fullName": "A. W. Powers",
+   "accusation": "General nuisance",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 667,
+   "caseNum": 381,
+   "fullName": "J. Hemmi",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 668,
+   "caseNum": 381,
+   "fullName": "Peter Hemmi",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 668,
+   "caseNum": 381,
+   "fullName": "Peter Hemmi",
+   "accusation": "Conspiracy",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 669,
+   "caseNum": 382,
+   "fullName": "Hong Di",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 670,
+   "caseNum": 383,
+   "fullName": "McCutcheon",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 671,
+   "caseNum": 384,
+   "fullName": "Tacho",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 672,
+   "caseNum": 385,
+   "fullName": "E. L. Criswell",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 673,
+   "caseNum": 386,
+   "fullName": "B. D. Yantis",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 674,
+   "caseNum": 386,
+   "fullName": "Calvin Hall",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 675,
+   "caseNum": 386,
+   "fullName": "Frank Hall",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 676,
+   "caseNum": 386,
+   "fullName": "James Hall",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 677,
+   "caseNum": 386,
+   "fullName": "Martin Hall",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 678,
+   "caseNum": 387,
+   "fullName": "Mickey",
+   "accusation": "Thievery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 679,
+   "caseNum": 388,
+   "fullName": "Lewis Ford",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 680,
+   "caseNum": 389,
+   "fullName": "Devine",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 681,
+   "caseNum": 390,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 682,
+   "caseNum": 391,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 682,
+   "caseNum": 391,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 683,
+   "caseNum": 392,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 684,
+   "caseNum": 393,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 685,
+   "caseNum": 394,
+   "fullName": "Pablo",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 686,
+   "caseNum": 395,
+   "fullName": "Starkey",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 687,
+   "caseNum": 396,
+   "fullName": "Eustis",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 688,
+   "caseNum": 396,
+   "fullName": "Grant",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 689,
+   "caseNum": 398,
+   "fullName": "Thomas Fillmore",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,600"
+ },
+ {
+   "accusedID": 690,
+   "caseNum": 399,
+   "fullName": "Robert Fisher",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horse"
+ },
+ {
+   "accusedID": 691,
+   "caseNum": 401,
+   "fullName": "William Wilson",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Shirt and vest"
+ },
+ {
+   "accusedID": 692,
+   "caseNum": 402,
+   "fullName": "Yankee Jim",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 692,
+   "caseNum": 402,
+   "fullName": "Yankee Jim",
+   "accusation": "Threatening murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 693,
+   "caseNum": 405,
+   "fullName": "Sage",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 693,
+   "caseNum": 405,
+   "fullName": "Sage",
+   "accusation": "Aiding escape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 694,
+   "caseNum": 406,
+   "fullName": "Coyote Joe",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 694,
+   "caseNum": 406,
+   "fullName": "Coyote Joe",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 695,
+   "caseNum": 407,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 696,
+   "caseNum": 407,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 697,
+   "caseNum": 408,
+   "fullName": "James Simpson",
+   "accusation": "Trespass",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 698,
+   "caseNum": 408,
+   "fullName": "Unknown",
+   "accusation": "Trespass",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 699,
+   "caseNum": 408,
+   "fullName": "Unknown",
+   "accusation": "Trespass",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 700,
+   "caseNum": 409,
+   "fullName": "James",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 701,
+   "caseNum": 409,
+   "fullName": "Staggers",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 702,
+   "caseNum": 410,
+   "fullName": "Bill Hardin",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 703,
+   "caseNum": 411,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Mule"
+ },
+ {
+   "accusedID": 704,
+   "caseNum": 413,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 705,
+   "caseNum": 414,
+   "fullName": "Unknown",
+   "accusation": "Counterfeiting",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 706,
+   "caseNum": 414,
+   "fullName": "Unknown",
+   "accusation": "Counterfeiting",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 707,
+   "caseNum": 415,
+   "fullName": "Church",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 708,
+   "caseNum": 416,
+   "fullName": "J. B. Isabell",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$700"
+ },
+ {
+   "accusedID": 709,
+   "caseNum": 416,
+   "fullName": "Robert Coulburn",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$701"
+ },
+ {
+   "accusedID": 710,
+   "caseNum": 417,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Food"
+ },
+ {
+   "accusedID": 711,
+   "caseNum": 418,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$20"
+ },
+ {
+   "accusedID": 712,
+   "caseNum": 419,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$6,000"
+ },
+ {
+   "accusedID": 713,
+   "caseNum": 422,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 714,
+   "caseNum": 422,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 715,
+   "caseNum": 423,
+   "fullName": "A. Bardt",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Gold"
+ },
+ {
+   "accusedID": 716,
+   "caseNum": 424,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Gold"
+ },
+ {
+   "accusedID": 717,
+   "caseNum": 425,
+   "fullName": "John Ross",
+   "accusation": "Fraud",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 718,
+   "caseNum": 426,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 719,
+   "caseNum": 427,
+   "fullName": "Henry Miller",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 719,
+   "caseNum": 427,
+   "fullName": "Henry Miller",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 720,
+   "caseNum": 427,
+   "fullName": "Jonathan Pillsbury",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 720,
+   "caseNum": 427,
+   "fullName": "Jonathan Pillsbury",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 721,
+   "caseNum": 427,
+   "fullName": "Tom Parks",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 721,
+   "caseNum": 427,
+   "fullName": "Tom Parks",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 722,
+   "caseNum": 428,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 723,
+   "caseNum": 428,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 724,
+   "caseNum": 428,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 725,
+   "caseNum": 428,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 726,
+   "caseNum": 430,
+   "fullName": "James Taylor",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Gold"
+ },
+ {
+   "accusedID": 727,
+   "caseNum": 431,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 727,
+   "caseNum": 431,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 728,
+   "caseNum": 432,
+   "fullName": "George Wright",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 729,
+   "caseNum": 432,
+   "fullName": "Porter",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 730,
+   "caseNum": 433,
+   "fullName": "George Taylor",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 731,
+   "caseNum": 434,
+   "fullName": "McDivitt",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 732,
+   "caseNum": 435,
+   "fullName": "Charles Thompson",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 733,
+   "caseNum": 436,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and cattle"
+ },
+ {
+   "accusedID": 734,
+   "caseNum": 436,
+   "fullName": "Unknown",
+   "accusation": "Unknown",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 735,
+   "caseNum": 437,
+   "fullName": "William Lomax",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 735,
+   "caseNum": 437,
+   "fullName": "William Lomax",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 736,
+   "caseNum": 438,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 737,
+   "caseNum": 438,
+   "fullName": "Wood",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 738,
+   "caseNum": 439,
+   "fullName": "Rafael Escobar",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 739,
+   "caseNum": 440,
+   "fullName": "Unknown",
+   "accusation": "Robbing a sluice",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 740,
+   "caseNum": 440,
+   "fullName": "Unknown",
+   "accusation": "Robbing a sluice",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 741,
+   "caseNum": 440,
+   "fullName": "Unknown",
+   "accusation": "Robbing a sluice",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 742,
+   "caseNum": 440,
+   "fullName": "Unknown",
+   "accusation": "Robbing a sluice",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 743,
+   "caseNum": 440,
+   "fullName": "Unknown",
+   "accusation": "Robbing a sluice",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 744,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 745,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 746,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 747,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 748,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 749,
+   "caseNum": 441,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 750,
+   "caseNum": 442,
+   "fullName": "Woods",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 751,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 752,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 753,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 754,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 755,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 756,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 757,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 758,
+   "caseNum": 443,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "accused of killing cattle and hogs for food"
+ },
+ {
+   "accusedID": 759,
+   "caseNum": 444,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 760,
+   "caseNum": 445,
+   "fullName": "Unknown",
+   "accusation": "Adultery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 761,
+   "caseNum": 446,
+   "fullName": "Pancho",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 762,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 763,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 764,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 765,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 766,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 767,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 768,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 769,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 770,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 771,
+   "caseNum": 446,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 772,
+   "caseNum": 447,
+   "fullName": "George Wilson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 773,
+   "caseNum": 448,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 774,
+   "caseNum": 449,
+   "fullName": "Pete",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$60"
+ },
+ {
+   "accusedID": 775,
+   "caseNum": 450,
+   "fullName": "George Mitchell",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 776,
+   "caseNum": 451,
+   "fullName": "José Alvitre",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 776,
+   "caseNum": 451,
+   "fullName": "José Alvitre",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 777,
+   "caseNum": 451,
+   "fullName": "Juan Alvitre",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 777,
+   "caseNum": 451,
+   "fullName": "Juan Alvitre",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 778,
+   "caseNum": 452,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Sluice"
+ },
+ {
+   "accusedID": 779,
+   "caseNum": 452,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Sluice"
+ },
+ {
+   "accusedID": 780,
+   "caseNum": 454,
+   "fullName": "Nep",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 781,
+   "caseNum": 454,
+   "fullName": "Nep's father",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 782,
+   "caseNum": 455,
+   "fullName": "Tom",
+   "accusation": "Arson",
+   "weapon": "",
+   "accusationNotes": "Col. Stevenson's house"
+ },
+ {
+   "accusedID": 783,
+   "caseNum": 457,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 783,
+   "caseNum": 457,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 784,
+   "caseNum": 457,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 784,
+   "caseNum": 457,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 785,
+   "caseNum": 458,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 786,
+   "caseNum": 459,
+   "fullName": "John O'Donnell",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 787,
+   "caseNum": 460,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 788,
+   "caseNum": 461,
+   "fullName": "Jesus Arellanes",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 789,
+   "caseNum": 462,
+   "fullName": "Unknown",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": "\"of a white girl\""
+ },
+ {
+   "accusedID": 790,
+   "caseNum": 463,
+   "fullName": "Jack McDowell",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 791,
+   "caseNum": 463,
+   "fullName": "James Welch",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 792,
+   "caseNum": 464,
+   "fullName": "Robbes",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses and cattle"
+ },
+ {
+   "accusedID": 793,
+   "caseNum": 465,
+   "fullName": "Spikey",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 794,
+   "caseNum": 466,
+   "fullName": "Juan de Dios Supulveda",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 794,
+   "caseNum": 466,
+   "fullName": "Juan de Dios Supulveda",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 795,
+   "caseNum": 468,
+   "fullName": "Ah Cut",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 796,
+   "caseNum": 468,
+   "fullName": "Ah Long",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 797,
+   "caseNum": 468,
+   "fullName": "Ah Loo",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 798,
+   "caseNum": 468,
+   "fullName": "Ah Wan",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 799,
+   "caseNum": 468,
+   "fullName": "Ah Was",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 800,
+   "caseNum": 468,
+   "fullName": "Chang Wan",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 801,
+   "caseNum": 468,
+   "fullName": "Chee Long Tong",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 802,
+   "caseNum": 468,
+   "fullName": "Day Kee",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 803,
+   "caseNum": 468,
+   "fullName": "Fun Yu",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 804,
+   "caseNum": 468,
+   "fullName": "Ho Hing",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 805,
+   "caseNum": 468,
+   "fullName": "Joung Burrow",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 806,
+   "caseNum": 468,
+   "fullName": "Lo Hey",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 807,
+   "caseNum": 468,
+   "fullName": "Long Quai",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 808,
+   "caseNum": 468,
+   "fullName": "Tong Wan",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 809,
+   "caseNum": 468,
+   "fullName": "Wa Sin Quai",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 810,
+   "caseNum": 468,
+   "fullName": "Wan Fo",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 811,
+   "caseNum": 468,
+   "fullName": "Wing Chee",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 812,
+   "caseNum": 468,
+   "fullName": "Wong Chin",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 813,
+   "caseNum": 468,
+   "fullName": "Wong Tuck",
+   "accusation": "None",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 814,
+   "caseNum": 470,
+   "fullName": "Carlos Ferman",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 815,
+   "caseNum": 470,
+   "fullName": "Eustagio Santyo",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 816,
+   "caseNum": 470,
+   "fullName": "Frank Doheny",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 817,
+   "caseNum": 470,
+   "fullName": "Gumasindo Palacio",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 818,
+   "caseNum": 471,
+   "fullName": "Indian Charley",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 818,
+   "caseNum": 471,
+   "fullName": "Indian Charley",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 819,
+   "caseNum": 472,
+   "fullName": "Refugio Boca",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 820,
+   "caseNum": 473,
+   "fullName": "John McCoy",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 821,
+   "caseNum": 474,
+   "fullName": "Jose Semferino Fellom",
+   "accusation": "Attempted Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 822,
+   "caseNum": 475,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 823,
+   "caseNum": 475,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 824,
+   "caseNum": 475,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 825,
+   "caseNum": 477,
+   "fullName": "Joseph de Roche",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 826,
+   "caseNum": 478,
+   "fullName": "Francisco Jimeno",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 826,
+   "caseNum": 478,
+   "fullName": "Francisco Jimeno",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 828,
+   "caseNum": 480,
+   "fullName": "Henry D. Benner",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 829,
+   "caseNum": 481,
+   "fullName": "Holden Dick",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 830,
+   "caseNum": 481,
+   "fullName": "Vicente Olivas",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 831,
+   "caseNum": 482,
+   "fullName": "George Vuga",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 832,
+   "caseNum": 483,
+   "fullName": "Julian Ladon",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Cattle"
+ },
+ {
+   "accusedID": 833,
+   "caseNum": 484,
+   "fullName": "John Wright",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 834,
+   "caseNum": 485,
+   "fullName": "Ah Tai",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 835,
+   "caseNum": 486,
+   "fullName": "Charles Ruggles",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 835,
+   "caseNum": 486,
+   "fullName": "Charles Ruggles",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 836,
+   "caseNum": 486,
+   "fullName": "John Ruggles",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 836,
+   "caseNum": 486,
+   "fullName": "John Ruggles",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 837,
+   "caseNum": 487,
+   "fullName": "Francisco Torres",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 838,
+   "caseNum": 488,
+   "fullName": "J. W. Smith",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 839,
+   "caseNum": 489,
+   "fullName": "Jesus Fuen",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 840,
+   "caseNum": 490,
+   "fullName": "William Dean",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 841,
+   "caseNum": 491,
+   "fullName": "Victor Adams",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 842,
+   "caseNum": 492,
+   "fullName": "Garland Stemler",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 843,
+   "caseNum": 492,
+   "fullName": "Lawrence H. Johnson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 844,
+   "caseNum": 492,
+   "fullName": "Luis Moreno",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 845,
+   "caseNum": 492,
+   "fullName": "William Null",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 846,
+   "caseNum": 493,
+   "fullName": "William Archer",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 847,
+   "caseNum": 494,
+   "fullName": "Alfrred Littlefield",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 848,
+   "caseNum": 495,
+   "fullName": "Yung Fook",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 849,
+   "caseNum": 496,
+   "fullName": "Joe Simpson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 850,
+   "caseNum": 497,
+   "fullName": "Charles Valento",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 851,
+   "caseNum": 497,
+   "fullName": "George Boyd",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 852,
+   "caseNum": 497,
+   "fullName": "Terrence Fitts",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 853,
+   "caseNum": 498,
+   "fullName": "John M. Holmes",
+   "accusation": "Kidnapping",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 853,
+   "caseNum": 498,
+   "fullName": "John M. Holmes",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 854,
+   "caseNum": 498,
+   "fullName": "Thomas H. Thurmond",
+   "accusation": "Kidnapping",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 854,
+   "caseNum": 498,
+   "fullName": "Thomas H. Thurmond",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 855,
+   "caseNum": 499,
+   "fullName": "Joe Williams",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 855,
+   "caseNum": 499,
+   "fullName": "Joe Williams",
+   "accusation": "Seduction",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 856,
+   "caseNum": 500,
+   "fullName": "Santos Peralta",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 856,
+   "caseNum": 500,
+   "fullName": "Santos Peralta",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 857,
+   "caseNum": 501,
+   "fullName": "Joaquin Valenzuela",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 857,
+   "caseNum": 501,
+   "fullName": "Joaquin Valenzuela",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 858,
+   "caseNum": 502,
+   "fullName": "Luciano Tapia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 858,
+   "caseNum": 502,
+   "fullName": "Luciano Tapia",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 859,
+   "caseNum": 503,
+   "fullName": "Jose Antonio Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 859,
+   "caseNum": 503,
+   "fullName": "Jose Antonio Garcia",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 860,
+   "caseNum": 504,
+   "fullName": "Pio Linares",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 860,
+   "caseNum": 504,
+   "fullName": "Pio Linares",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 861,
+   "caseNum": 505,
+   "fullName": "Desidero Grijalva",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 861,
+   "caseNum": 505,
+   "fullName": "Desidero Grijalva",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 862,
+   "caseNum": 505,
+   "fullName": "Miguel Blanco",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 862,
+   "caseNum": 505,
+   "fullName": "Miguel Blanco",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 863,
+   "caseNum": 506,
+   "fullName": "Nieves Eduriquez Robles",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 863,
+   "caseNum": 506,
+   "fullName": "Nieves Eduriquez Robles",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 864,
+   "caseNum": 507,
+   "fullName": "Manual Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Rancheria Tragedy"
+ },
+ {
+   "accusedID": 865,
+   "caseNum": 508,
+   "fullName": "Antonio Garcia",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Rancheria Tragedy"
+ },
+ {
+   "accusedID": 866,
+   "caseNum": 509,
+   "fullName": "Manuel Castro",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Rancheria Tragedy"
+ },
+ {
+   "accusedID": 867,
+   "caseNum": 510,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Rancheria Tragedy"
+ },
+ {
+   "accusedID": 868,
+   "caseNum": 510,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Rancheria Tragedy"
+ },
+ {
+   "accusedID": 869,
+   "caseNum": 511,
+   "fullName": "Charley",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 870,
+   "caseNum": 511,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 871,
+   "caseNum": 512,
+   "fullName": "Thomas George",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "150 oz. gold"
+ },
+ {
+   "accusedID": 872,
+   "caseNum": 513,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 873,
+   "caseNum": 514,
+   "fullName": "Black Mow",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 874,
+   "caseNum": 514,
+   "fullName": "Jim",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 875,
+   "caseNum": 514,
+   "fullName": "Narpa",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 876,
+   "caseNum": 515,
+   "fullName": "Dillon",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 877,
+   "caseNum": 516,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Shoes and $5"
+ },
+ {
+   "accusedID": 878,
+   "caseNum": 517,
+   "fullName": "Jonathan Ogle",
+   "accusation": "Unknown",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 879,
+   "caseNum": 518,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 880,
+   "caseNum": 519,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 881,
+   "caseNum": 520,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 882,
+   "caseNum": 520,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 883,
+   "caseNum": 520,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 884,
+   "caseNum": 520,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 885,
+   "caseNum": 520,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 886,
+   "caseNum": 522,
+   "fullName": "Christopher Bennett",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 886,
+   "caseNum": 522,
+   "fullName": "Christopher Bennett",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 887,
+   "caseNum": 523,
+   "fullName": "Tubbs",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "An Indian woman and several Chinese"
+ },
+ {
+   "accusedID": 888,
+   "caseNum": 524,
+   "fullName": "Cruz",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 888,
+   "caseNum": 524,
+   "fullName": "Cruz",
+   "accusation": "Seduction",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 889,
+   "caseNum": 525,
+   "fullName": "Ramon Carillo",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 890,
+   "caseNum": 526,
+   "fullName": "Pancho Redondo",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 891,
+   "caseNum": 527,
+   "fullName": "Chulu Castro",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 892,
+   "caseNum": 528,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 893,
+   "caseNum": 529,
+   "fullName": "Jose Castro",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 893,
+   "caseNum": 529,
+   "fullName": "Jose Castro",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 894,
+   "caseNum": 530,
+   "fullName": "Jose Alvijo",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 895,
+   "caseNum": 530,
+   "fullName": "Rafael Martinez",
+   "accusation": "Attempted murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 896,
+   "caseNum": 531,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 897,
+   "caseNum": 531,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 898,
+   "caseNum": 532,
+   "fullName": "Juan Salazar",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 899,
+   "caseNum": 532,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 900,
+   "caseNum": 532,
+   "fullName": "Unknown",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 901,
+   "caseNum": 533,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Money"
+ },
+ {
+   "accusedID": 902,
+   "caseNum": 534,
+   "fullName": "Flores",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 903,
+   "caseNum": 535,
+   "fullName": "James B. Yates",
+   "accusation": "Attempted Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 904,
+   "caseNum": 536,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 905,
+   "caseNum": 536,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "$1,200"
+ },
+ {
+   "accusedID": 906,
+   "caseNum": 538,
+   "fullName": "Benjamin F. Sprague",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Incident began when Sprague beat a girl for collecting wood"
+ },
+ {
+   "accusedID": 907,
+   "caseNum": 539,
+   "fullName": "Clyde L. Johnson",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": "Of police chief after robbery"
+ },
+ {
+   "accusedID": 908,
+   "caseNum": 540,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 909,
+   "caseNum": 541,
+   "fullName": "Tom Bell",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 909,
+   "caseNum": 541,
+   "fullName": "Tom Bell",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 910,
+   "caseNum": 542,
+   "fullName": "Dennis Haggerty",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 910,
+   "caseNum": 542,
+   "fullName": "Dennis Haggerty",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 911,
+   "caseNum": 542,
+   "fullName": "Henry Dowling",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 911,
+   "caseNum": 542,
+   "fullName": "Henry Dowling",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 912,
+   "caseNum": 543,
+   "fullName": "J. J. Robbins",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 913,
+   "caseNum": 543,
+   "fullName": "Joseph Doan",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 914,
+   "caseNum": 543,
+   "fullName": "McCrellis",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 915,
+   "caseNum": 543,
+   "fullName": "McCrellis",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 916,
+   "caseNum": 543,
+   "fullName": "McCrellis",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 917,
+   "caseNum": 543,
+   "fullName": "McCrellis",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 918,
+   "caseNum": 544,
+   "fullName": "Henry Planz",
+   "accusation": "Unknown",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 919,
+   "caseNum": 545,
+   "fullName": "James Cummings",
+   "accusation": "Rape",
+   "weapon": "",
+   "accusationNotes": "(Implied) of boy"
+ },
+ {
+   "accusedID": 920,
+   "caseNum": 546,
+   "fullName": "B. H. Harrington",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": "of a 4 (or 8) year old girl"
+ },
+ {
+   "accusedID": 921,
+   "caseNum": 547,
+   "fullName": "Joseph Ciserich",
+   "accusation": "Murder ",
+   "weapon": "",
+   "accusationNotes": "of wife, purportedly because she was going to testify that he had assaulted 15 year old daughter"
+ },
+ {
+   "accusedID": 922,
+   "caseNum": 548,
+   "fullName": "John M. Jones",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 923,
+   "caseNum": 549,
+   "fullName": "Russell",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Owner of rendevouz for horse Thieves"
+ },
+ {
+   "accusedID": 924,
+   "caseNum": 550,
+   "fullName": "A. J. Sloan",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 925,
+   "caseNum": 550,
+   "fullName": "Frank Henston",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 926,
+   "caseNum": 550,
+   "fullName": "William F. Cleveland",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 927,
+   "caseNum": 551,
+   "fullName": "John Ryan",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "24 oz. gold"
+ },
+ {
+   "accusedID": 928,
+   "caseNum": 552,
+   "fullName": "William Kid",
+   "accusation": "Banditry",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 929,
+   "caseNum": 553,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 930,
+   "caseNum": 553,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 931,
+   "caseNum": 553,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 932,
+   "caseNum": 554,
+   "fullName": "N. Gray",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 933,
+   "caseNum": 555,
+   "fullName": "Unknown",
+   "accusation": "Assault",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 934,
+   "caseNum": 556,
+   "fullName": "J. W. Bagley",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 935,
+   "caseNum": 556,
+   "fullName": "James Thompson",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 936,
+   "caseNum": 556,
+   "fullName": "John Stephens",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 937,
+   "caseNum": 557,
+   "fullName": "Unknown",
+   "accusation": "Attacked white settlement",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 938,
+   "caseNum": 558,
+   "fullName": "John Fisher",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 939,
+   "caseNum": 559,
+   "fullName": "Unknown",
+   "accusation": "Murder",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 940,
+   "caseNum": 560,
+   "fullName": "Mick",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 941,
+   "caseNum": 561,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 942,
+   "caseNum": 562,
+   "fullName": "George Johnson",
+   "accusation": "Attempted rape",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 943,
+   "caseNum": 563,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 944,
+   "caseNum": 564,
+   "fullName": "Unknown",
+   "accusation": "Robbery",
+   "weapon": "",
+   "accusationNotes": "Chickens"
+ },
+ {
+   "accusedID": 945,
+   "caseNum": 565,
+   "fullName": "Frederick Soltmore",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 946,
+   "caseNum": 565,
+   "fullName": "James Cochrane",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 947,
+   "caseNum": 565,
+   "fullName": "James Niel",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 948,
+   "caseNum": 565,
+   "fullName": "James Wilson",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 949,
+   "caseNum": 565,
+   "fullName": "Jerome Boland",
+   "accusation": "Stock theft",
+   "weapon": "",
+   "accusationNotes": "Horses"
+ },
+ {
+   "accusedID": 950,
+   "caseNum": 566,
+   "fullName": "Bill Carr",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 951,
+   "caseNum": 566,
+   "fullName": "C. P. Duane",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 952,
+   "caseNum": 566,
+   "fullName": "Edgar Bulger",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 952,
+   "caseNum": 570,
+   "fullName": "Edgar Bulger",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 953,
+   "caseNum": 566,
+   "fullName": "Martin Gallagher",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 954,
+   "caseNum": 566,
+   "fullName": "William Mulligan",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 955,
+   "caseNum": 566,
+   "fullName": "Wooley Kearney",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 956,
+   "caseNum": 567,
+   "fullName": "Bill Lewis",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 957,
+   "caseNum": 567,
+   "fullName": "John Crowe",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 958,
+   "caseNum": 567,
+   "fullName": "John Lawler",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 959,
+   "caseNum": 567,
+   "fullName": "Terrence Kelley",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 960,
+   "caseNum": 567,
+   "fullName": "Willliam Hamilton",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 961,
+   "caseNum": 568,
+   "fullName": "Alex Purple",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 962,
+   "caseNum": 568,
+   "fullName": "Dan Aldrich",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 963,
+   "caseNum": 568,
+   "fullName": "J. R. Maloney",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 964,
+   "caseNum": 568,
+   "fullName": "Lewis Mahoney",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 965,
+   "caseNum": 568,
+   "fullName": "T. B. Cunningham",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 966,
+   "caseNum": 568,
+   "fullName": "Tom Mulloy",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 967,
+   "caseNum": 569,
+   "fullName": "Abraham Kraft",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 968,
+   "caseNum": 569,
+   "fullName": "James Burke",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 969,
+   "caseNum": 569,
+   "fullName": "James White",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 970,
+   "caseNum": 569,
+   "fullName": "William F. Mclean",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 971,
+   "caseNum": 570,
+   "fullName": "Chris Lily",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 972,
+   "caseNum": 570,
+   "fullName": "Henry F. Foy",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 973,
+   "caseNum": 570,
+   "fullName": "John Cooney",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ },
+ {
+   "accusedID": 974,
+   "caseNum": 570,
+   "fullName": "Michael Brannegan",
+   "accusation": "Corruption",
+   "weapon": "",
+   "accusationNotes": ""
+ }
+]

@@ -10,6 +10,7 @@ controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl',
 function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
     console.log('root scoped query is ', rootScope.query);
+    this.loading = true;
     this.user = rootScope.user;
     
     this.mapURL = googleMapsUrl;
@@ -43,6 +44,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         for (let i=this.minResult; i <=this.maxResult; i++){
             this.activeIncidents.push(this.incidents[i]);
         }
+        this.loading = false;
     };
 
 
@@ -75,6 +77,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     };
 
     this.nextResults = ()=>{
+        this.loading = true;
         this.minResult += 10;
         this.maxResult += 10;
         if (this.maxResult > this.incidents.length){
@@ -84,6 +87,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     };
 
     this.previousResults = ()=>{
+        this.loading = true;
         if (this.maxResult % 10 !== 0){
             this.maxResult -=(this.maxResult % 10);
         }

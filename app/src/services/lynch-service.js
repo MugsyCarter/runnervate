@@ -25,9 +25,11 @@ export default function lynchService($http, apiUrl) {
                 .then(res => res.data);
         },
 
-        addOther(collection){
-            console.log('In lynch service, adding to this collection ', collection);
-        }
+        addOther(collection, entry){
+            console.log('In lynch service, adding this entry to this collection ', entry, collection);
+            return $http.post(`${apiUrl}/${collection}`, entry)
+            .then(res => res.data);
+        },
 
         // addSource(source, type){
         //     console.log('In lynch service, adding this source ', source);

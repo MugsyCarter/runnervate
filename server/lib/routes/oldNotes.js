@@ -1,7 +1,7 @@
 const bodyParser = require('body-parser').json();
 const express = require('express');
 const router = express.Router();
-const OldNotes= require('../models/oldNote');
+const OldNote= require('../models/oldNote');
 
 
 

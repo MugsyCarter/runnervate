@@ -79,11 +79,11 @@
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
 	//switch between these two lines to switch between local host and heroku api urls
+	//app.value('apiUrl', 'http://localhost:3000/api');
 	
 	
 	// import defaultRoute from 'angular-ui-router-default';
-	app.value('apiUrl', 'http://localhost:3000/api');
-	//app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	

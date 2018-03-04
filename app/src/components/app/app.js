@@ -199,13 +199,21 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             });
     };
 
+    this.collections = [
+        'accused', 'books', 'manuscripts', 'oldNotes', 'newspapers', 'websites'
+    ]; 
+
+    this.accusedInfo = ['accusations', 'names', 'punishments'];
+
     this.findIncidentData = (incident)=>{
         console.log('finding data for this caseNum: ', incident.caseNum);
         //the code still needs to be added here to look up additional case info
-        lynchSvc.getAllData(incident)
-            .then((moreData)=>{
-                console.log(moreData);
-            });
+        for (let i=0; i < this.collections.length; i++){
+            lynchSvc.getAllData(incident, this.collections[i])
+                .then((moreData)=>{
+                    console.log(moreData);
+                });
+        }
         timeout(function(){
             rootScope.$broadcast('locationUpdated', incident);
         },500);

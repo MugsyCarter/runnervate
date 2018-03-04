@@ -37,9 +37,9 @@ export default function lynchService($http, apiUrl) {
             .then(res => res.data);
         },
 
-        getAllData(incident){
-            console.log('in lynch service getting all the data for this incident, ', incident);
-            return $http.get(`${apiUrl}/accused/?caseNum=${incident.caseNum}`)
+        getAllData(incident, collection){
+            console.log('in lynch service getting all the data for this incident and collection, ', incident, collection);
+            return $http.get(`${apiUrl}/${collection}/?caseNum=${incident.caseNum}`)
                 .then(res => res.data);
         },
         

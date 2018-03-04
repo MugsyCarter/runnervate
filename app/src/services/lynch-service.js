@@ -36,6 +36,12 @@ export default function lynchService($http, apiUrl) {
             return $http.get(`${apiUrl}/${collection}`)
             .then(res => res.data);
         },
+
+        getAllData(incident){
+            console.log('in lynch service getting all the data for this incident, ', incident);
+            return $http.get(`${apiUrl}/accused/?caseNum=${incident.caseNum}`)
+                .then(res => res.data);
+        },
         
         // addSource(source, type){
         //     console.log('In lynch service, adding this source ', source);

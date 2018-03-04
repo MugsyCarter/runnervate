@@ -59,9 +59,9 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     // });
 
     rootScope.$on('updateLocation', (event, location)=>{
-        console.log('update location called.  location is ', rootScope.location);
-        timeout(function(){
-            rootScope.$broadcast('locationUpdated', location);},500);});
+        console.log('update location called.  location is ', location);
+        this.findIncidentData(location);
+    });
 
     rootScope.$on('editIncident', (event, incident)=>{
         console.log('incident ', incident);
@@ -199,9 +199,16 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             });
     };
 
-    this.findIncidentData = (caseNum)=>{
-        console.log('finding data for this caseNum: ', caseNum);
+    this.findIncidentData = (incident)=>{
+        console.log('finding data for this caseNum: ', incident.caseNum);
         //the code still needs to be added here to look up additional case info
+        lynchSvc.getAllData(incident)
+            .then((moreData)=>{
+                console.log(moreData);
+            });
+        timeout(function(){
+            rootScope.$broadcast('locationUpdated', incident);
+        },500);
     };
 
     rootScope.findIncidentData = this.findIncidentData;

@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/MugsyCarter/California-Lynching-Database#readme",
   "devDependencies": {
-    "angular-ui-bootstrap": "^2.5.0"
+    "angular-ui-bootstrap": "^2.5.0",
+    "http-server": "^0.11.1"
   },
   "dependencies": {
     "angular-ui-bootstrap": "^2.5.0"

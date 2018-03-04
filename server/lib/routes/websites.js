@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a website
     .delete('/:website', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Website.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.website);
+        Website.remove({_id : req.params.website})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

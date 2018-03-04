@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a name
     .delete('/:name', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Name.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.name);
+        Name.remove({_id : req.params.name})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

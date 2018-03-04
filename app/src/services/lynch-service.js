@@ -31,6 +31,12 @@ export default function lynchService($http, apiUrl) {
             .then(res => res.data);
         },
 
+        getCollection(collection){
+            console.log('in lynch service with this collection, ', collection);
+            return $http.get(`${apiUrl}/${collection}`)
+            .then(res => res.data);
+        },
+        
         // addSource(source, type){
         //     console.log('In lynch service, adding this source ', source);
         //     return $http.post(`${apiUrl}/` + type + incident)
@@ -40,6 +46,12 @@ export default function lynchService($http, apiUrl) {
         deleteIncident(incident){
             console.log('In lynch service, deleting this incident id ', incident._id);
             return $http.delete(apiUrl + '/incidents/' + incident._id)
+                .then(res => res.data);
+        },
+
+        deleteCollection(collection, item){
+            console.log('In lynch service, deleting this item', item);
+            return $http.delete(`${apiUrl}/${collection}/${item._id}`)
                 .then(res => res.data);
         },
 

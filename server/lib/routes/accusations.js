@@ -39,13 +39,11 @@ router
 
 //allows admins to delete a accusation
     .delete('/:accusation', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Accusation.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.accusation);
+        Accusation.remove({_id : req.params.accusation})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });
-
-
 
 
 module.exports = router;

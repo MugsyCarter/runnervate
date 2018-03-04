@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a punishment
     .delete('/:punishment', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Punishment.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.punishment);
+        Punishment.remove({_id : req.params.punishment})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

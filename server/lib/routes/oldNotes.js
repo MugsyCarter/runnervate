@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a oldNote
     .delete('/:oldNote', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        OldNote.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.oldNote);
+        OldNote.remove({_id : req.params.oldNote})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

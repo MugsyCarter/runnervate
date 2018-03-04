@@ -200,7 +200,8 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     };
 
     this.findIncidentData = (caseNum)=>{
-        
+        console.log('finding data for this caseNum: ', caseNum);
+        //the code still needs to be added here to look up additional case info
     };
 
     rootScope.findIncidentData = this.findIncidentData;

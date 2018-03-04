@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a accused
     .delete('/:accused', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Accused.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.accused);
+        Accused.remove({_id : req.params.accused})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

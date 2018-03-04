@@ -149,15 +149,19 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         });
     };
 
-    // this.deleteCollection= (collection)=>{
-    //     console.log('deleting this collection: ', collection);
-    //     for (let i=0; i < this.incidents.length; i++){
-    //         lynchSvc.deleteIncident(this.incidents[i])
-    //         .then((incident)=>{
-    //             console.log(incident + 'was deleted');
-    //         });
-    //     }
-    // };
+    this.deleteCollection= (collection)=>{
+        console.log('deleting this collection: ', collection);
+        lynchSvc.getCollection(collection)
+        .then((items)=>{
+            console.log('items are ', items);
+            for (let i=0; i < items.length; i++){
+                lynchSvc.deleteCollection(collection, items[i])
+                .then((deleted)=>{
+                    console.log(deleted + 'was deleted');
+                });
+            }
+        });
+    };
 
     // this code populates the DB
     this.populateDatabase=()=>{

@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a manuscript
     .delete('/:manuscript', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Manuscript.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.manuscript);
+        Manuscript.remove({_id : req.params.manuscript})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

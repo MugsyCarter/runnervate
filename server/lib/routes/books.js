@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a book
     .delete('/:book', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Book.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.book);
+        Book.remove({_id : req.params.book})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

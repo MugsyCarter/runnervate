@@ -39,8 +39,8 @@ router
 
 //allows admins to delete a newspaper
     .delete('/:newspaper', function (req, res, next) {
-        console.log('in delete route, deletingthis id: ', req.params);
-        Newspaper.remove({_id : req.params.id})
+        console.log('in delete route, deletingthis id: ', req.params.newspaper);
+        Newspaper.remove({_id : req.params.newspaper})
             .then(deleted => res.send(deleted ))
             .catch(next);
     });

@@ -212,6 +212,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             lynchSvc.getAllData(incident, this.collections[i])
                 .then((moreData)=>{
                     console.log(moreData);
+                    incident[this.collections[i]] = moreData;
+                    if (this.collections[i] === 'accused'){
+                        console.log('incident.accused is ', incident.accused);
+                        for (let j=0; j < incident.accused.length; j++){
+                            for (let k=0; k<this.accusedInfo.length; k++){
+                                lynchSvc.getAccusedData(incident, incident.accused[i], this.accusedInfo[k])
+                                    .then((accusedData)=>{
+                                        console.log(accusedData);
+                                        incident.accused[j][this.accusedInfo[k]] = accusedData;
+                                    });
+                            }
+                        }
+                    }
                 });
         }
         timeout(function(){

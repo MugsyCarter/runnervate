@@ -199,6 +199,11 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             });
     };
 
+    this.findIncidentData = (caseNum)=>{
+        
+    };
+
+    rootScope.findIncidentData = this.findIncidentData;
     rootScope.searchIncidents = this.searchIncidents;
 
     

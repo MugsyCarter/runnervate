@@ -69,7 +69,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                 console.log(incident + 'was deleted');
                 this.updateActiveIncidents();
             });
-
     };
 
     this.proposeDeletion = (incident)=>{
@@ -149,6 +148,16 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                 });
         });
     };
+
+    // this.deleteCollection= (collection)=>{
+    //     console.log('deleting this collection: ', collection);
+    //     for (let i=0; i < this.incidents.length; i++){
+    //         lynchSvc.deleteIncident(this.incidents[i])
+    //         .then((incident)=>{
+    //             console.log(incident + 'was deleted');
+    //         });
+    //     }
+    // };
 
     // this code populates the DB
     this.populateDatabase=()=>{

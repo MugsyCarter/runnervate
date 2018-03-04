@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const book = new Schema({
+const bookSchema = new Schema({
     caseNum: Number,
     incomplete: String,
     auFn: String,	

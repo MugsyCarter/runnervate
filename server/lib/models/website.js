@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const website = new Schema({
+const websiteSchema = new Schema({
     caseNum: Number,
     incomplete: String,
-    accessed: Date;
+    accessed: Date,
     url: String,
     title: String,	
     auFn: String,	
@@ -23,7 +23,7 @@ const website = new Schema({
     dateYear: Number,	
     dateMonth: Number,
     dateDay: Number,
-    collection: String,
+    websiteCollection: String,
     repository: String,
     callNumber: String,
     displayPDF: String,

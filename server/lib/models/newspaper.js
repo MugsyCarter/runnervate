@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const newspaper = new Schema({
+const newspaperSchema = new Schema({
     caseNum: Number,
     incomplete: String,
     place: String,

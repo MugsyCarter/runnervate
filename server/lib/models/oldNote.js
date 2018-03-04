@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const oldNote = new Schema({
+const oldNoteSchema = new Schema({
     caseNum: Number,
     pDF: String
 });

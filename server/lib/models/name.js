@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const name = new Schema({
+const nameSchema = new Schema({
     accusedID: Number,
     caseNum: Number,
     fullName: String,

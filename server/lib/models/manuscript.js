@@ -2,11 +2,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const manuscript = new Schema({
+const manuscriptSchema = new Schema({
     caseNum: Number,
     incomplete: String,
     title: String,
-    collection: String,
+    manuscriptCollection: String,
     repository: String,
     location: String,	
     stateProvince: String,

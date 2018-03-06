@@ -50,9 +50,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
 
     this.showIncident= (incident)=>{
-        this.updateMap(incident);
-        incident.fullView = true;
+        // this.updateMap(incident);
+        rootScope.$emit('updateLocation', incident);
     };
+
+    rootScope.$on('locationUpdated', (event, location)=>{
+        console.log('broadcast recieved', location);
+        location.fullView = true;
+    });
 
     this.hideIncident= (incident)=>{
         incident.fullView = false;

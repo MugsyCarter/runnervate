@@ -53,7 +53,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                     // alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
                     this.location = incidents[i];
                     rootScope.$emit('updateLocation', this.location);
-                    console.log('this.incident', this.location);
+                    console.log('this.location', this.location);
                 });
 
                 var bounds = new google.maps.LatLngBounds();

@@ -20,7 +20,7 @@
                                 <p>Date: {{$ctrl.incident.dateString}}</p>
                                 <p>Location: {{$ctrl.incident.place}}, {{$ctrl.incident.county}} County, {{$ctrl.incident.state}}</p>
                                 <p ng-repeat="accused in $ctrl.incident.accused">Name of Accused: {{accused.fullName}}</p>
-                                <p>Summary: {{$ctrl.incident.summary}} summary will go here</p>                            
+                                <p>Summary: {{$ctrl.incident.summary}} summary will go here</p>                    <button class="btn btn-info" ng-click="$ctrl.seeFullIncident()" ><span class="glyphicon glyphicon-notes"></span> See Full Incident Details</button>      
                         </div>
                 </div>
         </div>

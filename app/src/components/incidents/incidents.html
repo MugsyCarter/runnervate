@@ -117,7 +117,7 @@
                         <h4>Accused</h4>
                         <div ng-repeat="accused in incident.accused">
                                 <p class="p-heading">Name:<span class="p-info"> {{accused.fullName}}</span> </p>
-                                <p class="p-heading" ng-if="accused.names.length>0">AKA:<span class="p-info" ng-repeat="name in accused.names"> {{name}}</span> </p>
+                                <p class="p-heading" ng-if="accused.namesString">AKA:<span class="p-info"> {{accused.namesString}}</span> </p>
                                 <p class="p-heading">Race:<span class="p-info"> {{accused.race}}</span> </p>
                                 <p class="p-heading">Nationality:<span class="p-info"> {{accused.nationality}}</span> </p>
                                 <p class="p-heading">Nationality:<span class="p-info">{{accused.gender}}</span> </p>

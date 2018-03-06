@@ -225,7 +225,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                             }
                         }
                     }
+                    for (let l= 0; l < incident.accused.length; l++){
+                        incident.accused[l].namesString = '';
+                        for (let m =0; m < incident.accused[l].names.length; m++){
+                            if (incident.accused[l].names.length-1 === m){
+                                incident.accused[l].namesString += incident.accused[l].names[m].fullName + '.';
+                            }
+                            else{
+                                incident.accused[l].namesString += incident.accused[l].names[m].fullName + ', ';
+                            }
+                        }
+                    }
                 });
+            
         }
         timeout(function(){
             rootScope.$broadcast('locationUpdated', incident);

@@ -1,4 +1,4 @@
-accusedID,caseNum,fullName,accusedFirst,accusedMiddle,accusedLast
+accusedID,caseNum,fullName,first,middle,last
 1,1,Antoine,Antoine,,
 1,27,Antoine,Antoine,,
 2,1,Montreuil ,Montreuil ,,

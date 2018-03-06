@@ -225,21 +225,37 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                             }
                         }
                     }
-                    for (let l= 0; l < incident.accused.length; l++){
-                        incident.accused[l].namesString = '';
-                        for (let m =0; m < incident.accused[l].names.length; m++){
-                            if (incident.accused[l].names.length-1 === m){
-                                incident.accused[l].namesString += incident.accused[l].names[m].fullName + '.';
-                            }
-                            else{
-                                incident.accused[l].namesString += incident.accused[l].names[m].fullName + ', ';
-                            }
-                        }
-                    }
                 });
-            
         }
         timeout(function(){
+            //this code creates a string of all of the names for an accused person
+            console.log('right before loops.  incident.accused is ', incident.accused);
+            console.log('incident.accused.length is ', incident.accused.length);
+            for (let l= 0; l < incident.accused.length; l++){
+                incident.accused[l].namesString = '';
+                console.log('this accused names are ', incident.accused[l].names);
+                if(incident.accused[l].names.length>1){
+                    for (let m =0; m < incident.accused[l].names.length; m++){
+                        let newFullName = '';
+                        if (incident.accused[l].names[m].first){
+                            newFullName += incident.accused[l].names[m].first;  
+                        }
+                        if (incident.accused[l].names[m].middle){
+                            newFullName += ' ' + incident.accused[l].names[m].middle;  
+                        }
+                        if (incident.accused[l].names[m].last){
+                            newFullName += ' ' + incident.accused[l].names[m].last;  
+                        }
+
+                        if (incident.accused[l].names.length-1 === m){
+                            incident.accused[l].namesString += newFullName;
+                        }
+                        else{
+                            incident.accused[l].namesString += newFullName + ', ';
+                        }
+                    }
+                }
+            }
             rootScope.$broadcast('locationUpdated', incident);
         },500);
     };

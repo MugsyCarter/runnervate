@@ -117,11 +117,17 @@
                         <h4>Accused</h4>
                         <div ng-repeat="accused in incident.accused">
                                 <p class="p-heading">Name:<span class="p-info"> {{accused.fullName}}</span> </p>
-                                <p>Race: {{accused.race}}</p>
-                                <p>Nationality: {{accused.nationality}}</p>
-                                <p>Nationality: {{accused.gender}}</p>
-                                <p>Confession or Speech at Gallows: {{accused.confession}}</p>
-                                <p ng-if="accused.notes">Accused Notes: {{accused.notes}}</p>
+                                <p class="p-heading" ng-if="accused.names.length>0">AKA:<span class="p-info" ng-repeat="name in accused.names"> {{name}}</span> </p>
+                                <p class="p-heading">Race:<span class="p-info"> {{accused.race}}</span> </p>
+                                <p class="p-heading">Nationality:<span class="p-info"> {{accused.nationality}}</span> </p>
+                                <p class="p-heading">Nationality:<span class="p-info">{{accused.gender}}</span> </p>
+                                <p class="p-heading">Accusation:<span class="p-info"> {{accused.accusation.accusation}}</span></p>
+                                <p class="p-heading">Weapon Used:<span class="p-info"> {{accused.accusation.weapon}}</span></p>
+                                <p class="p-heading">Punishment:<span class="p-info"> {{accused.punishment.punishment}}</span></p>
+                                <p class="p-heading" ng-if="accused.punishment.lashes">lashes:<span class="p-info"> {{accused.punishment.lashes}}</span></p>
+                                <p class="p-heading" ng-if="accused.punishment-notes">Punishment Notes:<span class="p-info"> {{accused.punishment.notes}}</span></p>
+                                <p class="p-heading">Confession or Speech at Gallows:<span class="p-info"> {{accused.confession}}</span></p>
+                                <p class="p-heading" ng-if="accused.notes">Accused Notes:<span class="p-info"> {{accused.notes}}</span> </p>
                                 <br>
                         </div>
 

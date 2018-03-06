@@ -48,6 +48,12 @@ ul {
 #big-incident {
   margin: 0px; }
 
+.p-heading {
+  color: #3498DB; }
+
+.p-info {
+  color: black; }
+
 .big-map {
   height: 90vh;
   max-width: 60vw; }

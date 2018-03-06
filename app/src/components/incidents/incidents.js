@@ -18,7 +18,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     this.minResult = 0;
     this.maxResult = 10;
 
-    this.nuke = true; 
+    this.nuke = false; 
 
     this.incidents = rootScope.incidents;
     this.activeIncidents = rootScope.ActiveIncidents;

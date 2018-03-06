@@ -206,20 +206,20 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.accusedInfo = ['accusations', 'names', 'punishments'];
 
     this.findIncidentData = (incident)=>{
-        console.log('finding data for this caseNum: ', incident.caseNum);
+        // console.log('finding data for this caseNum: ', incident.caseNum);
         //the code still needs to be added here to look up additional case info
         for (let i=0; i < this.collections.length; i++){
             lynchSvc.getAllData(incident, this.collections[i])
                 .then((moreData)=>{
-                    console.log(moreData);
+                    // console.log(moreData);
                     incident[this.collections[i]] = moreData;
                     if (this.collections[i] === 'accused'){
-                        console.log('incident.accused is ', incident.accused);
+                        // console.log('incident.accused is ', incident.accused);
                         for (let j=0; j < incident.accused.length; j++){
                             for (let k=0; k<this.accusedInfo.length; k++){
                                 lynchSvc.getAccusedData(incident, incident.accused[i], this.accusedInfo[k])
                                     .then((accusedData)=>{
-                                        console.log(accusedData);
+                                        // console.log(accusedData);
                                         incident.accused[j][this.accusedInfo[k]] = accusedData;
                                     });
                             }
@@ -229,11 +229,11 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         }
         timeout(function(){
             //this code creates a string of all of the names for an accused person
-            console.log('right before loops.  incident.accused is ', incident.accused);
-            console.log('incident.accused.length is ', incident.accused.length);
+            // console.log('right before loops.  incident.accused is ', incident.accused);
+            // console.log('incident.accused.length is ', incident.accused.length);
             for (let l= 0; l < incident.accused.length; l++){
                 incident.accused[l].namesString = '';
-                console.log('this accused names are ', incident.accused[l].names);
+                // console.log('this accused names are ', incident.accused[l].names);
                 if(incident.accused[l].names.length>1){
                     for (let m =0; m < incident.accused[l].names.length; m++){
                         let newFullName = '';

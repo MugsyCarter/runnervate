@@ -53,7 +53,7 @@
                                         <div class="col-lg-11" id="incident-panel">
                                                 <!-- title container -->
                                                 <div  class="row">
-                                                        <h3>{{incident.suspectNames}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3>
+                                                        <!-- <h3>{{incident.accused.}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3> -->
                                                 </div>
                                                 <!-- title container ends -->
                                                 
@@ -121,11 +121,14 @@
                                 <p class="p-heading">Race:<span class="p-info"> {{accused.race}}</span> </p>
                                 <p class="p-heading">Nationality:<span class="p-info"> {{accused.nationality}}</span> </p>
                                 <p class="p-heading">Gender:<span class="p-info">{{accused.gender}}</span> </p>
-                                <p class="p-heading">Accusation:<span class="p-info"> {{accused.accusation.accusation}}</span></p>
-                                <p class="p-heading">Weapon Used:<span class="p-info"> {{accused.accusation.weapon}}</span></p>
-                                <p class="p-heading">Punishment:<span class="p-info"> {{accused.punishment.punishment}}</span></p>
-                                <p class="p-heading" ng-if="accused.punishment.lashes">lashes:<span class="p-info"> {{accused.punishment.lashes}}</span></p>
-                                <p class="p-heading" ng-if="accused.punishment-notes">Punishment Notes:<span class="p-info"> {{accused.punishment.notes}}</span></p>
+                                <div ng-repeat="accusation in accused.accusations">
+                                        <p class="p-heading">Accusation:<span class="p-info"> {{accusation.accusation}}</span></p>
+                                        <p class="p-heading">Weapon Used:<span class="p-info"> {{accusation.weapon}}</span></p>
+                                </div>
+                                <div ng-repeat="punishment in accused.punishments">
+                                        <p class="p-heading">Punishment:<span class="p-info"> {{punishment.punishment}}</span> <span class="p-info" ng-if="punishment.lashes">: {{punishment.lashes}} lashes</span></p>
+                                        <p class="p-heading" ng-if="punishment-notes">Punishment Notes:<span class="p-info"> {{punishment.notes}}</span></p>
+                                </div>
                                 <p class="p-heading">Confession or Speech at Gallows:<span class="p-info"> {{accused.confession}}</span></p>
                                 <p class="p-heading" ng-if="accused.notes">Accused Notes:<span class="p-info"> {{accused.notes}}</span> </p>
                                 <br>

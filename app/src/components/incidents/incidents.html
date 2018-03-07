@@ -121,6 +121,15 @@
                         <p class="p-heading" ng-if="incident.locationNotes">Location Notes:<span class="p-info"> {{incident.locationNotes}}</span> </p>
                         <br>
 
+                        <h4>Lynching</h4>
+                        <p class="p-heading">Type of Crowd:<span class="p-info"> {{incident.crowdType}}</span></p>
+                        <p class="p-heading">Size of Crowd:<span class="p-info"> {{incident.croudSize}}</span></p>
+                        <p class="p-heading">Open or Secret:<span class="p-info"> {{incident.open}}</span></p>
+                        <p class="p-heading">Authorities: <span class="p-info"> {{incident.authorities}}</span></p>
+                        <p class="p-heading">Authorities Present: <span class="p-info"> {{incident.authoritiesPresent}}</span></p>
+                        <p class="p-heading">Lethality: <span class="p-info"> {{incident.lethality}}</span></p>
+                        <br>
+
                         <h4>Accused</h4>
                         <div ng-repeat="accused in incident.accused">
                                 <p class="p-heading">Name:<span class="p-info"> {{accused.fullName}}</span> </p>
@@ -140,12 +149,11 @@
                                 <p class="p-heading" ng-if="accused.notes">Accused Notes:<span class="p-info"> {{accused.notes}}</span> </p>
                                 <br>
                         </div>
-
-                        <h4>Victim(s)</h4>
+                        <!-- <h4>Victim(s)</h4>
                         <p>Name(s): {{incident.victimNames}}</p>
                         <p>Gender(s): {{incident.victimGenders}}</p>
                         <p>Race(s): {{incident.victimRaces}}</p>
-                        <p>Victim Notes: {{incident.victimNotes}}</p>
+                        <p>Victim Notes: {{incident.victimNotes}}</p> -->
                 </div>
         
                 <div class="col-lg-6">
@@ -163,6 +171,9 @@
                         <h4>Sources</h4>  
                         <p>Sources:  <em>{{incident.oldSources}}</em></p>
                         <p>Notes:  <em>{{incident.oldNotes}}</em></p>
+
+
+                        
                 </div>
               </div>
                         <button class="btn btn-success" id="hide-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>

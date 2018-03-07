@@ -69,8 +69,7 @@
         <div class="row" ng-if="incident.fullView===true">                                       
       <div class="jumbotron" id="big-incident">
                 <h2>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h2>
-                <!-- <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p> -->
-                <!-- <p><a class="btn btn-lg btn-success" href="#" role="button" ng-click="$ctrl.hideIncident(incident)" >Sign up today</a></p> -->
+
                 <div class="row">
                         <div class="col-lg-10">
                                 <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7" id="'map-' + {{incident._id}}">
@@ -82,37 +81,19 @@
         </div>
               <div class="row marketing">
                 <div class="col-lg-6">
-                                <p>0{{incident.caseNum}}</p>
-                                <p>1{{incident.incidentNotes}}</p>
-                                <p>2{{incident.year}}</p>
-                                <p>3{{incident.month}}</p>
-                                <p>4{{incident.day}}</p>
-                                <p>5{{incident.dateNotes}}</p>
-                                <!-- <p>6{{incident.latDecimal}}</p>
-                                <p>7{{incident.lonDecimal}}</p>
-                                <p>8{{incident.latDegrees}}</p>
-                                <p>9{{incident.latMinutes}}</p>
-                                <p>10{{incident.latSeconds}}</p>
-                                <p>11{{incident.lonDegrees}}</p>
-                                <p>12{{incident.lonMinutes}}</p>
-                                <p>13{{incident.lonSeconds}}</p>
-                                <p>14{{incident.state}}</p>
-                                <p>15{{incident.place}}</p>
-                                <p>16{{incident.county}}</p>
-                                <p>17{{incident.locationNotes}}</p> -->
-                                <p>18{{incident.crowdType}}</p>
-                                <p>19{{incident.crowdSize}}</p>
-                                <p>20{{incident.open}}</p>
-                                <p>21{{incident.authorities}}</p>
-                                <p>22{{incident.authoritiesPresent}}</p>
-                                <p>23{{incident.lethality}}</p>
-                                <p>24{{incident.cwIndex}}</p>
-                                <p>25{{incident.gdIndex}}</p>
-                                <p>26{{incident.crossRefNotesCwGd}}</p>
-                                <p>27{{incident.dateString}}</p>
-                                <p>28{{incident.summary}}</p>
+                             
+                        <div ng-if="$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'">
+                                <h4>Database Information</h4>
+                                <p class="p-heading">Case Number:<span class="p-info"> {{incident.caseNum}}</span></p>
+                                <p class="p-heading">CW Index:<span class="p-info"> {{incident.cwIndex}}</span></p>
+                                <p class="p-heading">GD Index:<span class="p-info"> {{incident.gdIndex}}</span></p>
+                                <p class="p-heading">Cross Reference Notes: <span class="p-info"> {{incident.crossRefNotesCwGd}}</span></p>
+                                <br>
+                        </div>
 
-                        <h4>Location</h4>
+                        <h4>Date and Location</h4>
+                        <p class="p-heading">Date:<span class="p-info"> {{incident.dateString}}</span> </p>
+                        <p class="p-heading" ng-if="incident.dateNotes">Date Notes:<span class="p-info"> {{incident.dateNotes}}</span> </p>
                         <p class="p-heading">State:<span class="p-info"> {{incident.state}}</span></p>
                         <p class="p-heading">County:<span class="p-info"> {{incident.county}}</span></p>
                         <p class="p-heading">Place:<span class="p-info"> {{incident.place}}</span></p>
@@ -121,14 +102,10 @@
                         <p class="p-heading" ng-if="incident.locationNotes">Location Notes:<span class="p-info"> {{incident.locationNotes}}</span> </p>
                         <br>
 
-                        <h4>Lynching</h4>
-                        <p class="p-heading">Type of Crowd:<span class="p-info"> {{incident.crowdType}}</span></p>
-                        <p class="p-heading">Size of Crowd:<span class="p-info"> {{incident.croudSize}}</span></p>
-                        <p class="p-heading">Open or Secret:<span class="p-info"> {{incident.open}}</span></p>
-                        <p class="p-heading">Authorities: <span class="p-info"> {{incident.authorities}}</span></p>
-                        <p class="p-heading">Authorities Present: <span class="p-info"> {{incident.authoritiesPresent}}</span></p>
-                        <p class="p-heading">Lethality: <span class="p-info"> {{incident.lethality}}</span></p>
-                        <br>
+                        <div ng-if="incident.summary">
+                                <h4> Summary</h4>
+                                <p class="p-info" ng-if="incident.dateNotes">{{incident.summary}} </p>
+                        </div>
 
                         <h4>Accused</h4>
                         <div ng-repeat="accused in incident.accused">
@@ -149,6 +126,7 @@
                                 <p class="p-heading" ng-if="accused.notes">Accused Notes:<span class="p-info"> {{accused.notes}}</span> </p>
                                 <br>
                         </div>
+                       
                         <!-- <h4>Victim(s)</h4>
                         <p>Name(s): {{incident.victimNames}}</p>
                         <p>Gender(s): {{incident.victimGenders}}</p>
@@ -157,20 +135,58 @@
                 </div>
         
                 <div class="col-lg-6">
+        
                         <h4>Lynching</h4>
-                        <p>Crowd Type:  <em>{{incident.crowdType}}</em></p>
-                        <p>Crowd Size: {{incident.crowdSize}}</p>
-                        <p>Open or Secret?: {{incident.open}}</p>
-                        <p>Authorities Present: {{incident.oldAuthorities}}</p>
-                        <p>Crime: {{incident.crime}}</p>
-                        <p>Punishment: {{incident.punishment}}</p>
-                        <p>Lethality: {{incident.lethality}}</p>
-                        <p>Other Names Mentioned: {{incident.otherNamesMentioned}}</p>
+                        <p class="p-heading">Type of Crowd:<span class="p-info"> {{incident.crowdType}}</span></p>
+                        <p class="p-heading">Size of Crowd:<span class="p-info"> {{incident.croudSize}}</span></p>
+                        <p class="p-heading">Open or Secret:<span class="p-info"> {{incident.open}}</span></p>
+                        <p class="p-heading">Authorities: <span class="p-info"> {{incident.authorities}}</span></p>
+                        <p class="p-heading">Authorities Present: <span class="p-info"> {{incident.authoritiesPresent}}</span></p>
+                        <p class="p-heading">Lethality: <span class="p-info"> {{incident.lethality}}</span></p>
+                        <p class="p-heading">Lynching Notes: <span class="p-info"> {{incident.incidentNotes}}</span></p>
                         <br>
+                        
+                        <h4>Sources</h4>
+                        <br>
+                        <!-- newspapers -->
+                        <h4 ng-if="incident.newspapers.length>1">Newspapers</h4>
+                        <div ng-if="incident.newspapers.length>1" ng-repeat="source in incident.newspapers"> 
+                        <p class="p-heading">Article Title:<span class="p-info"> {{source.articleTitle}}</span> </p>
+                        <p class="p-heading">Newspaper:<span class="p-info">{{source.newspaper}}</span> </p>
+                        <p class="p-heading">Place:<span class="p-info"> {{source.place}}, </span><span class="p-heading">State:</span><span class="p-info"> {{source.state}},</span> <span class="p-heading">Country: </span><span class="p-info"> {{source.country}}</span> </p>
+                        <p class="p-heading">Date:<span class="p-info"> {{source.dateString}}</span> </p>
+                        <p class="p-heading" ng-if="source.section">Section:<span class="p-info"> {{source.section}}</span><span class="p-heading" ng-if="source.page">Page</span><span class="p-info"> {{source.page}}</span> <span class="p-heading" ng-if="source.column">Column</span><span class="p-info"> {{source.column}}</span> </p>
+                        <p class="p-heading" ng-if="source.continuedPage">Continued on Page:<span class="p-info"> {{source.continuedPage}}</span> </p>
+                        <p class="p-heading" ng-if="source.continuedColumn">Continued on Column:<span class="p-info"> {{source.continuedColumn}}</span> </p>
+                        <p class="p-heading" ng-if="source.link">link:<a> {{source.link}}</a> </p>
+                        <p class="p-heading" ng-if="source.incomplete">Incomplete?<a> {{source.incomplete}}</a> </p>
+                        <p class="p-heading" ng-if="source.displayPDF">Display PDF<a> {{source.displayPDF}}</a> </p>
+                        <br>
+                        </div>
 
-                        <h4>Sources</h4>  
-                        <p>Sources:  <em>{{incident.oldSources}}</em></p>
-                        <p>Notes:  <em>{{incident.oldNotes}}</em></p>
+
+                        <!-- caseNum: Number,
+                        incomplete: String,
+                        auFn: String,	
+                        auMn: String,	
+                        auLn: String,	
+                        auSuffix: String,
+                        edComp: String,
+                        editorFn: String,
+                        editorMn: String,
+                        editorLn: String,
+                        editorSuffix: String,
+                        title: String,
+                        placePub: String,
+                        publisher: String,
+                        yearPub: String,
+                        volume: String,	
+                        pages: String,
+                        displayPDF: String,
+                        pDF: String -->
+
+
+
 
 
                         
@@ -178,175 +194,6 @@
               </div>
                         <button class="btn btn-success" id="hide-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button>
         </div>
-<!-- 
-                                                <div class="row">
-                                                        <div class="col-sm-4"><h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                                <h4>Accused</h4>
-                                                        </div>
-                                                        <div class="col-sm-4">
-                                                                <p>Names: {{incident.suspectNames}}</p>
-                                                        </div>
-                                                                <p>Races: {{incident.suspectRaces}}</p></div>
-                                                                <br>
-                                                                <p>Confession or Speech at Gallows: {{incident.confession}}</p>
-                                                        </div>
-                                                        <div class="col-sm-2"> <button class="btn btn-secondary" id="show-incident-button" ng-click="$ctrl.hideIncident(incident)" ><span class="glyphicon glyphicon-minus"><h6>Show Less</h6></span></button></div>
-                                                        <div class="col-sm-4">
-                                                                <ng-map class="small-map" center="{{incident.latDecimal}}, {{incident.lonDecimal}}" zoom="7">
-                                                                        <marker position=“{{incident.latDecimal}},{{incident.lonDecimal}}”/>
-                                                                        
-                                                                </ng-map>
-                                                        </div>
-                                                        </div>
-                                                        <div class="row">
-                                                        <div class="col-sm-10">  
-                                                                <p>{{incident.summary}} summary will go here</p>
-                                                        </div>
-                                                        </div> -->
-                                                       
-
-                                                        <!-- <div class="row">
-                                                        <div class="col-sm-9">   
-                                                                <h4>Accused</h4>
-                                                        </div>
-                                                        </div>  
-
-                                                        <div class="row">               
-                                                        <div class="col-sm-3"><p>Names: {{incident.suspectNames}}</p></div>
-                                                        <div class="col-sm-3"> <p>Races: {{incident.suspectRaces}}</p></div>
-                                                        <div class="col-sm-3"><p>Confession or Speech at Gallows: {{incident.confession}}</p>
-                                                         </div> -->
-                                                             
-                                                         <!-- <div class="row">
-                                                        <div class="col-sm-9">   
-                                                                <p>Accused Notes: {{incident.suspectNotes}}</p>
-                                                        </div>
-                                                        </div>   -->
-
-                                                        <!-- <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <h4>Victims</h4>
-                                                        </div>
-                                                        </div>             
-                                                        
-                                                        <div class="row">
-                                                        <div class="col-sm-3">   
-                                                                <p>Names: {{incident.victimNames}}</p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Genders: {{incident.victimGenders}}</p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Races: {{incident.victimRaces}}</p>
-                                                        </div>
-                                                        </div>     
-                                                        
-                                                        <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <p>Victim Notes: {{incident.victimNotes}}</p>
-                                                        </div>
-                                                        </div>  -->
-                                                
-                                                        <!-- <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <h4>Lynching</h4>
-                                                        </div>
-                                                        </div> 
-
-                                                        <div class="row">
-                                                        <div class="col-sm-3">   
-                                                                <p>Crowd Type:  <em>{{incident.crowdType}}</em></p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Crowd Size: {{incident.crowdSize}}</p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Open or Closed?: {{incident.open}}</p>
-                                                        </div>
-                                                        </div>  
-
-                                                        <div class="row">
-                                                        <div class="col-sm-3">   
-                                                                <p>Authorities Present: {{incident.oldAuthorities}}</p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Crime: {{incident.crime}}</p>
-                                                        </div>
-                                                        <div class="col-sm-3">   
-                                                                <p>Punishment: {{incident.punishment}}</p>
-                                                        </div>
-                                                        </div>
-
-                                                        <div class="row">
-                                                        <div class="col-sm-3">   
-                                                                <p>Lethality: {{incident.lethality}}</p>
-                                                        </div>
-                                                        <div class="col-sm-6">   
-                                                                <p>Other Names Mentioned: {{incident.otherNamesMentioned}}</p>
-                                                        </div>
-                                                        </div> -->
-
-                                                        <div class="row" ng-if="$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'">
-                                                                <div class="row">
-                                                                <div class="col-sm-10">   
-                                                                        <h4>Database Indices</h4>
-                                                                </div>
-                                                                </div> 
-
-                                                                <h4>Database Indices</h4>
-                                                                <div class="row">
-                                                                <div class="col-sm-3">   
-                                                                        <p>Case Number:  <em>{{incident.caseNum}}</em></p>
-                                                                </div>
-                                                                <div class="col-sm-3">   
-                                                                        <p>Current Database ID:  <em>{{incident._id}}</em></p>
-                                                                </div>
-                                                                <div class="col-sm-3">   
-                                                                        <p>Original Database Index: {{incident.origDBIndex}}</p>
-                                                                </div>
-                                                                </div>
-                                                                
-                                                                <div class="row">
-                                                                <div class="col-sm-3">   
-                                                                        <p>C-W Index: {{incident.cwIndex}}</p>
-                                                                </div>
-                                                                <div class="col-sm-3">   
-                                                                        <p>G-D Index: {{incident.gdIndex}}</p>
-                                                                </div>
-                                                                <div class="col-sm-3">   
-                                                                        <p>Original Database Index: {{incident.origDBIndex}}</p>
-                                                                </div>
-                                                                </div>
-                                                               
-                                                                <div class="row">
-                                                                <div class="col-sm-10">   
-                                                                        <p>Index Notes: {{incident.crossRefNotesCwGd}}</p>
-                                                                </div>
-                                                                </div> 
-                                                        </div>
-
-
-                                                        <!-- <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <h4>Sources</h4>
-                                                        </div>
-                                                        </div> 
-
-
-                                                        <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <p>Sources:  <em>{{incident.oldSources}}</em></p>
-                                                        </div>
-                                                        </div> 
-
-                                                        <div class="row">
-                                                        <div class="col-sm-10">   
-                                                                <p>Notes:  <em>{{incident.oldNotes}}</em></p>
-                                                        </div>
-                                                        </div>  -->
-
 
                                                         <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='admin'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Edit Incident</h6></span></button>
                                                         <button class="btn btn-danger" id="delete-incident-button" ng-if="$ctrl.user.role=='admin'" ng-click="$ctrl.deleteIncident(incident)" ><span class="glyphicon glyphicon-trash"><h6>Delete Incident</h6></span></button>
@@ -354,22 +201,6 @@
                                                         <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Propose Edits to incident</h6></span></button>
                                                         <button class="btn btn-danger" id="delete-incident-button" ng-if="$ctrl.user.role=='contributor'" ng-click="$ctrl.proposeDeletion(incident)" ><span class="glyphicon glyphicon-trash"><h6>Propose Delete Incident</h6></span></button>
 
-        <!-- latDecimal}}</p>
-        lonDecimal}}</p>
-        latNDegrees:Number,
-        latNMinutes:Number,
-        latNSeconds:Number,
-        lonWDegrees:Number,
-        lonWMinutes:Number,
-        lonWSeconds:Number,
-        year: requiredNumber,
-        month}}</p>
-        day}}</p>
-        dateNotes}}</p>,
-        state}}</p>,
-        place}}</p>,
-        county}}</p>,
-        locationNotes}}</p>, -->
                                                 <!-- long view ends -->
                                                 </div>
                                         </div>

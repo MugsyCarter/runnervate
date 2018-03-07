@@ -88,7 +88,7 @@
                                 <p>3{{incident.month}}</p>
                                 <p>4{{incident.day}}</p>
                                 <p>5{{incident.dateNotes}}</p>
-                                <p>6{{incident.latDecimal}}</p>
+                                <!-- <p>6{{incident.latDecimal}}</p>
                                 <p>7{{incident.lonDecimal}}</p>
                                 <p>8{{incident.latDegrees}}</p>
                                 <p>9{{incident.latMinutes}}</p>
@@ -99,7 +99,7 @@
                                 <p>14{{incident.state}}</p>
                                 <p>15{{incident.place}}</p>
                                 <p>16{{incident.county}}</p>
-                                <p>17{{incident.locationNotes}}</p>
+                                <p>17{{incident.locationNotes}}</p> -->
                                 <p>18{{incident.crowdType}}</p>
                                 <p>19{{incident.crowdSize}}</p>
                                 <p>20{{incident.open}}</p>
@@ -112,8 +112,15 @@
                                 <p>27{{incident.dateString}}</p>
                                 <p>28{{incident.summary}}</p>
 
+                        <h4>Location</h4>
+                        <p class="p-heading">State:<span class="p-info"> {{incident.state}}</span></p>
+                        <p class="p-heading">County:<span class="p-info"> {{incident.county}}</span></p>
+                        <p class="p-heading">Place:<span class="p-info"> {{incident.place}}</span></p>
+                        <p class="p-heading">Latitude: <span class="p-info"> {{incident.latDecimal}}</span></p>
+                        <p class="p-heading">Longitude: <span class="p-info"> {{incident.lonDecimal}}</span></p>
+                        <p class="p-heading" ng-if="incident.locationNotes">Location Notes:<span class="p-info"> {{incident.locationNotes}}</span> </p>
+                        <br>
 
-                        
                         <h4>Accused</h4>
                         <div ng-repeat="accused in incident.accused">
                                 <p class="p-heading">Name:<span class="p-info"> {{accused.fullName}}</span> </p>

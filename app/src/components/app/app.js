@@ -259,16 +259,24 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 }
             }
             //this code adds author strings for the books
+            
             incident.books.forEach((book)=>{
-                book.authorString = '';
-                if (book.auFn){
-                    book.authorString += book.auFn + ' ';
-                } 
-                if(book.auMn){
-                    book.authorString += book.auMn + ' ';
-                }
-                if(book.auLn){
-                    book.authorString += book.auLn;
+                let bookPeople = ['au', 'editor'];
+                for (let n = 0; n < bookPeople.length; n++){
+                    let str = bookPeople[n] + 'String';
+                    book[str] = '';
+                    if (book[bookPeople[n] + 'Fn']){
+                        book[str] += book.auFn + ' ';
+                    } 
+                    if(book[bookPeople[n] + 'Mn']){
+                        book[str] += book.auMn + ' ';
+                    }
+                    if(book[bookPeople[n] + 'Ln']){
+                        book[str] += book.auLn;
+                    }
+                    if (book[bookPeople[n] + 'suffix']){
+                        book[str] += ' ' + book.auSuffix + ' ';
+                    } 
                 }
             });
             rootScope.$broadcast('locationUpdated', incident);

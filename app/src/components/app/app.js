@@ -189,7 +189,6 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         lynchSvc.getByQuery(queryString)
             .then((incidents)=>{
                 this.incidents=incidents;
-                console.log(this.incidents);
                 this.incidentNumber = this.incidents.length;
                 this.incidents.sort((a,b)=>{
                     return a.year > b.year;
@@ -213,6 +212,9 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 .then((moreData)=>{
                     // console.log(moreData);
                     incident[this.collections[i]] = moreData;
+                    console.log('incident is ', incident);
+               
+                 
                     if (this.collections[i] === 'accused'){
                         // console.log('incident.accused is ', incident.accused);
                         for (let j=0; j < incident.accused.length; j++){
@@ -256,6 +258,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                     }
                 }
             }
+            //this code adds author strings for the books
+            incident.books.forEach((book)=>{
+                book.authorString = '';
+                if (book.auFn){
+                    book.authorString += book.auFn + ' ';
+                } 
+                if(book.auMn){
+                    book.authorString += book.auMn + ' ';
+                }
+                if(book.auLn){
+                    book.authorString += book.auLn;
+                }
+            });
             rootScope.$broadcast('locationUpdated', incident);
         },500);
     };

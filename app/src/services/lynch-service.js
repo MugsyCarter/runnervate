@@ -32,19 +32,19 @@ export default function lynchService($http, apiUrl) {
         },
 
         getCollection(collection){
-            console.log('in lynch service with this collection, ', collection);
+            // console.log('in lynch service with this collection, ', collection);
             return $http.get(`${apiUrl}/${collection}`)
             .then(res => res.data);
         },
 
         getAllData(incident, collection){
-            console.log('in lynch service getting all the data for this incident and collection, ', incident, collection);
+            // console.log('in lynch service getting all the data for this incident and collection, ', incident, collection);
             return $http.get(`${apiUrl}/${collection}/?caseNum=${incident.caseNum}`)
                 .then(res => res.data);
         },
 
         getAccusedData(incident, accused, collection){
-            console.log('in lynch service getting all the data for this incident and collection, ', incident, collection, accused);
+            // console.log('in lynch service getting all the data for this incident and collection, ', incident, collection, accused);
             return $http.get(`${apiUrl}/${collection}/?caseNum=${incident.caseNum}&accusedID=${accused.accusedID}`)
                 .then(res => res.data);
         },

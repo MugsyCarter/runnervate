@@ -127,15 +127,6 @@
                                 <br>
                         </div>
                        
-                        <!-- <h4>Victim(s)</h4>
-                        <p>Name(s): {{incident.victimNames}}</p>
-                        <p>Gender(s): {{incident.victimGenders}}</p>
-                        <p>Race(s): {{incident.victimRaces}}</p>
-                        <p>Victim Notes: {{incident.victimNotes}}</p> -->
-                </div>
-        
-                <div class="col-lg-6">
-        
                         <h4>Lynching</h4>
                         <p class="p-heading">Type of Crowd:<span class="p-info"> {{incident.crowdType}}</span></p>
                         <p class="p-heading">Size of Crowd:<span class="p-info"> {{incident.croudSize}}</span></p>
@@ -145,12 +136,22 @@
                         <p class="p-heading">Lethality: <span class="p-info"> {{incident.lethality}}</span></p>
                         <p class="p-heading">Lynching Notes: <span class="p-info"> {{incident.incidentNotes}}</span></p>
                         <br>
-                        
+                        <!-- <h4>Victim(s)</h4>
+                        <p>Name(s): {{incident.victimNames}}</p>
+                        <p>Gender(s): {{incident.victimGenders}}</p>
+                        <p>Race(s): {{incident.victimRaces}}</p>
+                        <p>Victim Notes: {{incident.victimNotes}}</p> -->
+                </div>
+        
+                <div class="col-lg-6">
+        
+             
+
                         <h4>Sources</h4>
                         <br>
                         <!-- newspapers -->
-                        <h4 ng-if="incident.newspapers.length>1">Newspapers</h4>
-                        <div ng-if="incident.newspapers.length>1" ng-repeat="source in incident.newspapers"> 
+                        <h4 ng-if="incident.newspapers.length>0">Newspapers</h4>
+                        <div ng-if="incident.newspapers.length>0" ng-repeat="source in incident.newspapers"> 
                         <p class="p-heading">Article Title:<span class="p-info"> {{source.articleTitle}}</span> </p>
                         <p class="p-heading">Newspaper:<span class="p-info">{{source.newspaper}}</span> </p>
                         <p class="p-heading">Place:<span class="p-info"> {{source.place}}, </span><span class="p-heading">State:</span><span class="p-info"> {{source.state}},</span> <span class="p-heading">Country: </span><span class="p-info"> {{source.country}}</span> </p>
@@ -185,7 +186,21 @@
                         displayPDF: String,
                         pDF: String -->
 
-
+                        <!-- books -->
+                        <h4 ng-if="incident.books.length>0">Books</h4>
+                        <div ng-if="incident.books.length>0" ng-repeat="source in incident.books"> 
+                        <p class="p-heading">Title:<span class="p-info"> {{source.title}}</span> </p>
+                        <p class="p-heading">Author:<span class="p-info"> {{source.authorString}}</span> </p>
+                        <!-- <p class="p-heading">Place:<span class="p-info"> {{source.place}}, </span><span class="p-heading">State:</span><span class="p-info"> {{source.state}},</span> <span class="p-heading">Country: </span><span class="p-info"> {{source.country}}</span> </p>
+                        <p class="p-heading">Date:<span class="p-info"> {{source.dateString}}</span> </p>
+                        <p class="p-heading" ng-if="source.section">Section:<span class="p-info"> {{source.section}}</span><span class="p-heading" ng-if="source.page">Page</span><span class="p-info"> {{source.page}}</span> <span class="p-heading" ng-if="source.column">Column</span><span class="p-info"> {{source.column}}</span> </p>
+                        <p class="p-heading" ng-if="source.continuedPage">Continued on Page:<span class="p-info"> {{source.continuedPage}}</span> </p>
+                        <p class="p-heading" ng-if="source.continuedColumn">Continued on Column:<span class="p-info"> {{source.continuedColumn}}</span> </p>
+                        <p class="p-heading" ng-if="source.link">link:<a> {{source.link}}</a> </p>
+                        <p class="p-heading" ng-if="source.incomplete">Incomplete?<a> {{source.incomplete}}</a> </p>
+                        <p class="p-heading" ng-if="source.displayPDF">Display PDF<a> {{source.displayPDF}}</a> </p> -->
+                        <br>
+                        </div>
 
 
 

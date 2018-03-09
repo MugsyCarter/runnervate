@@ -24,6 +24,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         console.log('and this is ', this);
     });
 
+    
 
     this.updateMap= (incidents) =>{
         console.log('incidents loaded: ', incidents);
@@ -44,16 +45,22 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
             for (let i =0; i < incidents.length; i++){
                 console.log('add marker called');
                 let newMarker = new google.maps.Marker({
-                    title: incidents[i].suspectNames
+                    title: incidents[i].dateString
+                    // icon: goldStar
                 });
-            
+
                 newMarker.addListener('click', function() {
+                    map.markers.forEach((marker)=>{
+                        marker.setAnimation(null);
+                    });
+                    console.log('newMarker ', newMarker);
+                    newMarker.setAnimation(google.maps.Animation.BOUNCE);
                     map.setZoom(10);
                     map.setCenter(newMarker.getPosition());
-                    // alert(incidents[i].year + incidents[i].place + incidents[i].county + incidents[i].suspectNames);
                     this.location = incidents[i];
                     rootScope.$emit('updateLocation', this.location);
                     console.log('this.location', this.location);
+                    newMarker.setMap(map);
                 });
 
                 var bounds = new google.maps.LatLngBounds();
@@ -67,6 +74,12 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
             };
             console.log('map is ', map);
             console.log('markers are', map.markers);
+
+            let markerCluster = new MarkerClusterer(map, map.markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
+                // markerCluster(map, map.markers);
+
             //add new markers
             map.markers.forEach((marker)=>{
                 marker.setMap(map);

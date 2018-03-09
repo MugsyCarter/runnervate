@@ -24,6 +24,7 @@ const incidentSchema = new Schema({
     place: String,
     county: String,
     locationNotes: String,
+    locationString: String,
     crowdType: String,
     crowdSize: String,
     open: String,

@@ -233,10 +233,10 @@
 
         <div id="search-results-footer" class="jumbotron" ng-if="$ctrl.incidents.length>0">
                 <div class="panel-md-10">
-                        <button class="btn btn-info" ng-if="$ctrl.minResult>9" ng-click="$ctrl.previousResults()"><span class="glyphicon glyphicon-arrow-left"><h6>Previous</h6></button>
-                        <button class="btn btn-info" ng-if="$ctrl.maxResult<$ctrl.incidentNumber" ng-click="$ctrl.nextResults()"><span class="glyphicon glyphicon-arrow-right"><h6>Next</h6></button>
+                        <h4><button class="btn btn-info" id="more-incidents-button" ng-if="$ctrl.minResult>9" ng-click="$ctrl.previousResults()"><span class="glyphicon glyphicon-arrow-left"><h5>Previous</h5></button>
+                        <button class="btn btn-info" id="more-incidents-button" ng-if="$ctrl.maxResult<$ctrl.incidentNumber" ng-click="$ctrl.nextResults()"><span class="glyphicon glyphicon-arrow-right"><h5>Next</h5></button>
                         <span>Results {{$ctrl.minResult}}-{{$ctrl.maxResult}}</span>
-                        <span> (of {{$ctrl.incidentNumber}})</h3>
+                        <span> (of {{$ctrl.incidentNumber}})</h4>
                 </div>
         </div>
               

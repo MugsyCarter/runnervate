@@ -41,13 +41,12 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
    
     this.updateActiveIncidents = ()=>{
         this.activeIncidents = [];
-        for (let i=this.minResult; i <=this.maxResult; i++){
+        console.log('these are the incidents', this.incidents);
+        for (let i=this.minResult-1; i <this.maxResult; i++){
             this.activeIncidents.push(this.incidents[i]);
+            rootScope.$emit('updateLocation', this.incidents[i]);
         }
-        this.activeIncidents.forEach((activeIncident)=>{
-            rootScope.$emit('updateLocation', activeIncident);
-        });
-    
+        console.log('these are the active incidents ', this.activeIncidents);
         this.loading = false;
     };
 

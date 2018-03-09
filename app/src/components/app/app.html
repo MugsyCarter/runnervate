@@ -1,7 +1,7 @@
  <section>        
        
         <nav class="navbar navbar-default navbar-dark bg-primary">
-                <div class="container-fluid">
+                <div class="container-fluid" ng-if="$ctrl.user.role==='admin' || $ctrl.user.role=='contributor' || $ctrl.user.role=='user'" >
                   <div class="navbar-header">
                     <a class="navbar-brand" ui-sref="home">CaLynchDB</a>
                   </div>

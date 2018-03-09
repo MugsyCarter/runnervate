@@ -169,15 +169,16 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         });
     };
 
-    // this code populates the DB
     this.populateDatabase=()=>{
         console.log(this.oldJSON);    
+        //this code makes date strings
         this.oldJSON.forEach((entry)=>{
             if(entry.yearMonthDay !== null){
                 let splitDate = entry.yearMonthDay.split('/');
                 console.log('split date is ', splitDate);
                 entry.month = parseInt(splitDate[1]);
-                entry.day = parseInt(splitDate[2]);   
+                entry.day = parseInt(splitDate[2]);  
+                // 
                 if (entry.month === 0){
                     entry.month = null;
                     entry.day = null;
@@ -211,6 +212,14 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
             }
             else{
                 entry.dateString = entry.year;
+            }
+            //this code makes location strings
+            entry.locationString = entry.location;
+            if (entry.county){
+                entry.locationString += '.  ' + entry.county ;
+            }
+            if (entry.state){
+                entry.location.string + ', ' + entry.state
             }
             lynchSvc.addIncident(entry)
                 .then((incident)=>{

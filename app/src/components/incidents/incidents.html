@@ -63,8 +63,9 @@
                                                 <!-- short view starts -->
                                                 <div class="row" ng-hide="incident.fullView===true"> 
                                                         <button class="btn btn-primary" id="show-incident-button" ng-click="$ctrl.showIncident(incident)"><span class="glyphicon glyphicon-plus"><h6>Show More</h6></span></button>
-                                                        <h4>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h4>
-                                                        <p>{{incident.summary}} summary will go here</p>          
+                                                        <h4>{{incident.dateString}}</h4>
+                                                        <h4> {{incident.locationString}}</h4>
+                                                        <!-- <p>{{incident.summary}} summary will go here</p>           -->
                                                 </div>
                                                 <!-- short view ends -->
                                                 <!-- long view starts -->

@@ -38,7 +38,10 @@
         </div> -->
 
         <h2>Browse Lynchings</h2>
-        <div class="loader" ng-if="$ctrl.loading===true"></div>
+        <div ng-if="$ctrl.loading===true">
+                        <h3>lynchings loading</h3>
+                        <div class="loader" ></div>
+                </div>
        
         <div id="No Results Message" ng-if="$ctrl.incidents.length===0" class="panel-group">
                 <h3>No Results Found</h3>

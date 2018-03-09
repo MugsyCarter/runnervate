@@ -2,8 +2,13 @@
 <section>
        
         <h1>Lynching Map</h1>
-               
-        <div class="container" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
+        <div ng-if="$ctrl.loading===true">
+                <h3>map loading</h3>
+                <div class="loader" ></div>
+        </div>
+       
+
+        <div class="container" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}" ng-if="$ctrl.loading===false">
                 <div class="row">
                         <div class="col-sm-9">
                                 <ng-map class="big-map" center="37.897894, -119.340420" zoom="6">

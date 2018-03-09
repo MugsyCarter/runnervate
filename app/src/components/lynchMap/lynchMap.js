@@ -15,6 +15,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
     this.states = rootScope.states;
     this.counties = rootScope.counties;
     this.weapons = rootScope.weapons;
+    this.loading = true;
 
     console.log('this is ', this);
 
@@ -85,7 +86,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
                 marker.setMap(map);
             });
         });
-   
+        this.loading = false;
     };
     
     this.updateMapIncidents = ()=>{

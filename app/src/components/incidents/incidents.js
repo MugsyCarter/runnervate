@@ -191,13 +191,13 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
 
                 else{
                     let suffix = 'th';
-                    if (entry.day === 1){
+                    if (entry.day === 1 || entry.day === 21 || entry.day ==31){
                         suffix = 'st';
                     }
-                    else if (entry.day === 2){
+                    else if (entry.day === 2 || entry.day === 22){
                         suffix = 'nd';
                     }
-                    else if (entry.day === 3){
+                    else if (entry.day === 3 || entry.day === 33){
                         suffix = 'rd';
                     }
                     entry.dateString = this.months[entry.month] + ' ' + entry.day + suffix + ', ' + entry.year;

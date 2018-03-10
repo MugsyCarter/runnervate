@@ -51,7 +51,7 @@
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">
                         <li ng-repeat="incident in $ctrl.activeIncidents">
-                                <div class="row">
+                                <div class="row"  ng-attr-id="{{incident.caseNum}}">
                                         <!-- full container -->
                                         <div class="col-lg-11" id="incident-panel">
                                                 <!-- title container -->
@@ -212,6 +212,7 @@
                         
                 </div>
                 </div>
+                <h4><button class="btn btn-success" id="go-to-top-button" ng-click="$ctrl.goToTop(incident.caseNum)"><span class="glyphicon glyphicon-arrow-up"><h5>Go To Top</h5></button>
         </div>
 
                                                         <button class="btn btn-warning" id="edit-incident-button" ng-if="$ctrl.user.role=='admin'" ng-click="$ctrl.editIncident(incident)" ><span class="glyphicon glyphicon-wrench"><h6>Edit Incident</h6></span></button>

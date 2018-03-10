@@ -43,6 +43,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         this.activeIncidents = [];
         console.log('these are the incidents', this.incidents);
         for (let i=this.minResult-1; i <this.maxResult; i++){
+            this.incidents[i].fullView = false;
             this.activeIncidents.push(this.incidents[i]);
             rootScope.$emit('updateLocation', this.incidents[i]);
         }

@@ -44,6 +44,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         console.log('these are the incidents', this.incidents);
         for (let i=this.minResult-1; i <this.maxResult; i++){
             this.incidents[i].fullView = false;
+            this.incidents[i].showSources = false;
             this.activeIncidents.push(this.incidents[i]);
             rootScope.$emit('updateLocation', this.incidents[i]);
         }
@@ -253,6 +254,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
 
     this.loadIncidents(); 
 
+
     this.goToTop = function(loc) {
         // set the location.hash to the id of
         // the element you wish to scroll to.
@@ -261,4 +263,12 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         $anchorScroll();
     };
 
+    this.toggleSources = function (incident, toggle) {
+        if (toggle==='show'){
+            incident.showSources = true;
+        }
+        else{
+            incident.showSources = false;
+        }
+    };
 };

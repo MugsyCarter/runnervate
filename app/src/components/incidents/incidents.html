@@ -150,8 +150,8 @@
         
                 <div class="col-lg-6">
                         <h4>Sources</h4>
-                        <h4><button ng-if="incident.showSources===false"class="btn btn-success" id="show-source-button" ng-click="$ctrl.toggleSources(incident, 'show')"><span class="glyphicon glyphicon-book"><h5>Show Sources</h5></button>
-                        <h4><button ng-if="incident.showSources===true"class="btn btn-success" id="show-source-button" ng-click="$ctrl.toggleSources(incident, 'hide')"><span class="glyphicon glyphicon-book"><h5>Hide Sources</h5></button>
+                        <button ng-if="incident.showSources===false"class="btn btn-success" id="show-source-button" ng-click="$ctrl.toggleSources(incident, 'show')"><span class="glyphicon glyphicon-book"><h5>Show Sources</h5></button>
+                        <button ng-if="incident.showSources===true"class="btn btn-success" id="show-source-button" ng-click="$ctrl.toggleSources(incident, 'hide')"><span class="glyphicon glyphicon-book"><h5>Hide Sources</h5></button>
                         <div ng-if="incident.showSources===true">
                             
                                 <!-- newspapers -->

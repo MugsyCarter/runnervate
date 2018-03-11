@@ -54,6 +54,12 @@ ul {
 .p-info {
   color: black; }
 
+#search-results-footer {
+  padding: 0em; }
+
+#more-incidents-button {
+  width: 8vw; }
+
 .big-map {
   height: 90vh;
   max-width: 60vw; }

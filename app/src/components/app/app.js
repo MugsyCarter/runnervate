@@ -54,6 +54,16 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         // this.updateMenu();
     });
 
+    rootScope.$on('seeFullIncident', (event, incident)=>{
+        console.log('incident is ', incident);
+        this.incidentQuery = {
+            category:   {name: 'Case Number',value: 'caseNum'},
+            target: incident.caseNum,
+            number: null
+        };
+        this.queries.push(this.incidentQuery);
+        $state.go('incidents');
+    });
     // rootScope.$on('updateActiveIncidents', (event)=>{
     //     console.log('updatingActiveIncidents', this.incidents);
     // });
@@ -171,7 +181,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             this.filters.splice(index,1);
 
             this.newQuery = {
-                catergory: null,
+                category: null,
                 target: null,
                 number: null
             };

@@ -25,7 +25,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap) {
         console.log('and this is ', this);
     });
 
-    
+    this.seeFullIncident = ()=>{
+        rootScope.$emit('seeFullIncident', this.incident);
+    };
 
     this.updateMap= (incidents) =>{
         console.log('incidents loaded: ', incidents);

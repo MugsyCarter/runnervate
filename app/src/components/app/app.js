@@ -205,7 +205,21 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 this.incidents=incidents;
                 this.incidentNumber = this.incidents.length;
                 this.sorted = this.incidents.sort((a,b)=>{
-                    return parseInt(a.year) - parseInt(b.year);
+                    let newA = (a.year*365);
+                    let newB = (b.year*365);
+                    if (a.month){
+                        newA+=(a.month*30);
+                    }
+                    if (a.day){
+                        newA += a.day;
+                    }
+                    if (b.month){
+                        newB+=(b.month*30);
+                    }
+                    if (b.day){
+                        newB += b.day;
+                    }
+                    return newA-newB;
                 });
                 console.log('#SORTED: calling update incidents with these incidents', this.sorted);
                 this.updateIncidents(this.sorted);
@@ -214,7 +228,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
 
 
-    
+
     this.collections = [
         'accused', 'books', 'manuscripts', 'oldNotes', 'newspapers', 'websites'
     ]; 
@@ -304,7 +318,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     rootScope.searchIncidents = this.searchIncidents;
 
     
-    rootScope.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    rootScope.months = this.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
     this.races = rootScope.races = ['white', 'asian', 'native american', 'black', 'latino'];
 

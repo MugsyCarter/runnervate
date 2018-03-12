@@ -27,23 +27,17 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
     this.counties = rootScope.counties;
     this.months = rootScope.months;
     
-    rootScope.$on('incidentsUpdated', (event, incidents)=>{
-        console.log('incident update broadcast recieved', incidents);
-        this.incidents = incidents;
-        this.incidentNumber = this.incidents.length;
-        this.minResult = 1;
-        this.maxResult = this.incidents.length;
-        if ((this.incidents.length)>9){
-            this.maxResult = 10;
-        }
-        this.updateActiveIncidents();
-    });
-   
     this.updateActiveIncidents = ()=>{
         this.activeIncidents = [];
         console.log('these are the incidents', this.incidents);
         for (let i=this.minResult-1; i <this.maxResult; i++){
-            this.incidents[i].fullView = false;
+            console.log('Before If', this.incidents);
+            if(this.incidents.length>1){
+                this.incidents[i].fullView = false;
+            }
+            else{
+                this.incidents[i].fullView = true;
+            }
             this.incidents[i].showSources = false;
             this.activeIncidents.push(this.incidents[i]);
             rootScope.$emit('updateLocation', this.incidents[i]);
@@ -56,10 +50,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         // this.updateMap(incident);
         incident.fullView = true;
     };
-
-    rootScope.$on('locationUpdated', (event, location)=>{
-        console.log('broadcast recieved', location);
-    });
 
     this.hideIncident= (incident)=>{
         incident.fullView = false;
@@ -256,6 +246,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
 
 
     this.goToTop = function(loc) {
+        console.log('this gototop called', loc);
         // set the location.hash to the id of
         // the element you wish to scroll to.
         $location.hash(loc);
@@ -271,4 +262,29 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
             incident.showSources = false;
         }
     };
+
+
+    rootScope.$on('incidentsUpdated', (event, incidents)=>{
+        console.log('incident update broadcast recieved', incidents);
+        this.incidents = incidents;
+        this.incidentNumber = this.incidents.length;
+        this.minResult = 1;
+        this.maxResult = this.incidents.length;
+        if ((this.incidents.length)>9){
+            this.maxResult = 10;
+        }
+        this.updateActiveIncidents();
+    });
+   
+    // rootScope.$on('fullIncident', (event, incident)=>{
+    //     this.activeIncidents[0].fullView = true;
+    //     this.goToTop(incident.caseNum);
+    // });
+   
+    rootScope.$on('locationUpdated', (event, location)=>{
+        console.log('broadcast recieved', location);
+        if(this.activeIncidents.length === 1){
+            this.goToTop(this.activeIncidents[0].caseNum);
+        }
+    });
 };

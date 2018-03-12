@@ -56,13 +56,17 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     rootScope.$on('seeFullIncident', (event, incident)=>{
         console.log('incident is ', incident);
+        incident.fullView = true;
         this.incidentQuery = {
             category:   {name: 'Case Number',value: 'caseNum'},
             target: incident.caseNum,
             number: null
         };
         this.queries.push(this.incidentQuery);
-        $state.go('incidents');
+        
+        // rootScope.$broadcast('fullIncident', incident);
+        timeout(function(){
+            $state.go('incidents');},500);
     });
     // rootScope.$on('updateActiveIncidents', (event)=>{
     //     console.log('updatingActiveIncidents', this.incidents);
@@ -201,7 +205,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 this.incidents=incidents;
                 this.incidentNumber = this.incidents.length;
                 this.incidents.sort((a,b)=>{
-                    return a.year > b.year;
+                    return parseInt(a.year) > parseInt(b.year);
                 });
                 console.log('calling update incidents with these incidents', this.incidents);
                 this.updateIncidents(this.incidents);

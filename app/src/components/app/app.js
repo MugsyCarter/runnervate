@@ -204,14 +204,17 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             .then((incidents)=>{
                 this.incidents=incidents;
                 this.incidentNumber = this.incidents.length;
-                this.incidents.sort((a,b)=>{
-                    return parseInt(a.year) > parseInt(b.year);
+                this.sorted = this.incidents.sort((a,b)=>{
+                    return parseInt(a.year) - parseInt(b.year);
                 });
-                console.log('calling update incidents with these incidents', this.incidents);
-                this.updateIncidents(this.incidents);
+                console.log('#SORTED: calling update incidents with these incidents', this.sorted);
+                this.updateIncidents(this.sorted);
             });
     };
 
+
+
+    
     this.collections = [
         'accused', 'books', 'manuscripts', 'oldNotes', 'newspapers', 'websites'
     ]; 

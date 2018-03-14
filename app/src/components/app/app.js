@@ -129,7 +129,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     //loads all incidens and incident data
     this.loadIncidents = ()=>{
-        rootScope.loading = true;
+        this.loading = true;
         lynchSvc.get()
             .then((incidents)=>{
                 //get all incidents
@@ -172,10 +172,11 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         rootScope.incidents = incidents;
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', incidents);},500);
+        // this.loading = false;
     };
 
     this.searchIncidents = ()=>{
-        rootScope.loading = true;
+        this.loading = true;
         console.log('this.incidents ', this.incidents);
         console.log('this.queries ', this.queries);
         //  if (this.newFilter = true){
@@ -259,6 +260,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     //send results
         let searchResults = this.filtered;
         console.log('search results are');
+        this.loading = false;
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', searchResults);
         },500);

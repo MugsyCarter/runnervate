@@ -29,13 +29,16 @@ ul{
 }
 
 //incident results
+.loader-container {
+  padding-left: 30vw;
+}
 
 .loader {
-    border: 16px solid $grey; /* Light grey */
-    border-top: 16px solid $cyan;
+    border: 5vw solid $blue; /* Light grey */
+    border-top: 5vw solid $cyan;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 20vw;
+    height: 20vw;
     animation: spin 2s linear infinite;
 }
 

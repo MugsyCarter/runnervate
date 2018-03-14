@@ -86,8 +86,12 @@
                     </div>
             </div>
 
-  
     <div class="container-fluid">
+        <div class="loader-container" ng-if="$ctrl.loading===true">
+            <h3> Lynchings Loading</h3>
+            <div class="loader" ></div>
+        </div>
+    </div>
         <ui-view></ui-view>
     </div>
 

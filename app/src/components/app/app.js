@@ -105,7 +105,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         {name: 'place',value: 'place'},
         {name: 'open or secret',value: 'open'},
         {name: 'lethality',value: 'lethality'},
-        {name: 'crime',value: 'crime', collection: 'accused', subCollection: 'accusations'},
+        {name: 'crime',value: 'accusation', collection: 'accused', subCollection: 'accusations'},
         {name: 'punishment',value: 'punishment', collection: 'accused', subCollection: 'punishments'},
         {name: 'race of accused',value: 'race', collection: 'accused'},
         {name: 'nationality of accused',value: 'nationality', collection: 'accused'}
@@ -172,7 +172,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         rootScope.incidents = incidents;
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', incidents);},500);
-        // this.loading = false;
+        this.loading = false;
     };
 
     this.searchIncidents = ()=>{
@@ -410,6 +410,8 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.weapons = rootScope.weapons = ['gun', 'knife', 'none'];
 
     this.punishments = rootScope.punishments = ['Banished', 'Whipped', 'Remanded', 'Shot', 'Hanged', 'Hanged to extort confession', 'Branded', 'Head Shaved', 'Scalped', 'Beaten', 'Tarred and feathered', 'Fined', 'Released', 'Escaped', 'Assessed damages', 'Unknown'];
+
+    this.crimes = rootScope.crimes = ['Robbery', 'Murder', 'Attempted Murder', 'Stock theft', 'Arson', 'Counterfeiting', 'Assault', 'Escaped Prison', 'Prowling', 'Threatening vengeance', 'Abuse of a corpse', 'Banditry'];
 
     this.oldCounties = ['Alameda County', 'Alpine County',
         'Amador County',

@@ -214,9 +214,9 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         // if(this.queries.length>1){
         console.log('filtered is ', this.filtered);
         for (let i = 0; i < this.queries.length; i++){
-            if (this.queries[0].category.collection){
+            if (this.queries[i].category.collection){
                 console.log('collection');
-                if(this.queries[0].category.collection.subCollection){
+                if(this.queries[i].category.collection.subCollection){
                     //if looking for a something in accuse.punishments or accused.crimes
                     console.log('subcollection is ', this.queries[0].category.collection.subCollection);
                     this.filtered = this.filtered.filter((incident)=>{
@@ -239,6 +239,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             }
             else{
                 //if looking for something on the incident
+                console.log('in else, this.filtered is ', this.filtered);
                 this.filtered = this.filtered.filter((incident)=>{
                     return incident[this.queries[i].category.value] === this.queries[i].target;
                 });
@@ -248,6 +249,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     // }
     //send results
         let searchResults = this.filtered;
+        console.log('search results are');
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', searchResults);
         },500);

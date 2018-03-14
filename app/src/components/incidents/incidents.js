@@ -39,7 +39,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
             }
             this.incidents[i].showSources = false;
             this.activeIncidents.push(this.incidents[i]);
-            rootScope.$emit('updateLocation', this.incidents[i]);
         }
         console.log('these are the active incidents ', this.activeIncidents);
         this.loading = false;

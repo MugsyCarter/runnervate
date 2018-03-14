@@ -162,16 +162,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         this.updateIncidents(this.sorted);
     };
 
-    //broadcast incidents downstream
+    //add all incident data and broadcast incidents downstream
     this.updateIncidents = (incidents)=>{
-        rootScope.incidents = incidents;
-        // this.incidents = incidents;
         console.log('updating rootscope active incidents', incidents);
+        for (let i = 0; i < incidents.length; i++){
+            this.findIncidentData(incidents[i]);
+        }
+        rootScope.incidents = incidents;
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', incidents);},500);
     };
 
     this.searchIncidents = ()=>{
+        rootScope.loading = true;
         console.log('this.incidents ', this.incidents);
         console.log('this.queries ', this.queries);
         //  if (this.newFilter = true){
@@ -184,8 +187,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             //if there is a new query add it
             console.log('new query is ', this.newQuery);
             this.queries.push(this.newQuery);
-            //wipe newQuery
-            this.newQuery = null;
+            let index = this.filters.findIndex((filter)=>{
+                return filter.name === this.newQuery.category.name;
+            });
+
+            this.filters.splice(index,1);
+
+            this.newQuery = {
+                category: null,
+                target: null,
+                number: null
+            };
+            console.log('filters are ', this.filters);
+         
         }
         //apply queries to all incidents
         this.filtered = this.incidents;
@@ -198,46 +212,45 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         //     });
         // }
         // if(this.queries.length>1){
-            console.log('filtered is ', this.filtered);
-            for (let i = 0; i < this.queries.length; i++){
-                if (this.queries[0].category.collection){
-                    console.log('collection');
-                    if(this.queries[0].category.collection.subCollection){
-                        //if looking for a something in accuse.punishments or accused.crimes
-                        console.log('subcollection is ', this.queries[0].category.collection.subCollection);
-                        this.filtered = this.filtered.filter((incident)=>{
-                            return incident[this.queries[i].category.collection][this.queries[i].category.subCollection][this.queries[i].category.value] === this.queries[i].target;
-                        });
-                    }
-                    else{
-                        //if looking for something in accused
-                        console.log('collection is ', this.queries[0].category.collection);
-                        
-                        this.filtered = this.filtered.filter((incident)=>{
-                            // if(incident.accused){
-                                console.log(incident);
-                                // for(let j = 0; j < incident.accused.length; j++){
-                                //     console.log(incident.accused[j][this.queries[i].category.value]); 
-                                //     return incident.accused[j][this.queries[i].category.value] === this.queries[i].target;
-                                // }
-                            //}
-                        });
-                    }
-                }
-                else{
-                    //if looking for something on the incident
+        console.log('filtered is ', this.filtered);
+        for (let i = 0; i < this.queries.length; i++){
+            if (this.queries[0].category.collection){
+                console.log('collection');
+                if(this.queries[0].category.collection.subCollection){
+                    //if looking for a something in accuse.punishments or accused.crimes
+                    console.log('subcollection is ', this.queries[0].category.collection.subCollection);
                     this.filtered = this.filtered.filter((incident)=>{
-                        return incident[this.queries[i].category.value] === this.queries[i].target;
+                        return incident[this.queries[i].category.collection][this.queries[i].category.subCollection][this.queries[i].category.value] === this.queries[i].target;
                     });
                 }
-                // this.incidents = filtered;
+                else{
+                    //if looking for something in accused
+                    console.log('collection is ', this.queries[0].category.collection);
+                    
+                    this.filtered = this.filtered.filter((incident)=>{
+                        // if(incident.accused){
+                        for(let j = 0; j < incident.accused.length; j++){
+                            // console.log(incident.accused[j][this.queries[i].category.value]); 
+                            return incident.accused[j][this.queries[i].category.value] === this.queries[i].target;
+                        }
+                        //}
+                    });
+                }
             }
-        // }
-        //sort results
-        console.log(this.filtered);
-        this.newQuery = null;
-        console.log(this.incidents);
-        this.sortResults(this.filtered);
+            else{
+                //if looking for something on the incident
+                this.filtered = this.filtered.filter((incident)=>{
+                    return incident[this.queries[i].category.value] === this.queries[i].target;
+                });
+            }
+            // this.incidents = filtered;
+        }
+    // }
+    //send results
+        let searchResults = this.filtered;
+        timeout(function(){
+            rootScope.$broadcast('incidentsUpdated', searchResults);
+        },500);
     };
 
         //if a filter needs to be added
@@ -268,18 +281,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
         //         this.queries.push(this.newQuery);
 
-        //         let index = this.filters.findIndex((filter)=>{
-        //             return filter.name === this.newQuery.category.name;
-        //         });
-
-        //         this.filters.splice(index,1);
-
-        //         this.newQuery = {
-        //             category: null,
-        //             target: null,
-        //             number: null
-        //         };
-        //         console.log('filters are ', this.filters);
+ 
         //     }
         //     console.log('searching incidents with these queries ', this.queries);
         //     let queryString = '';

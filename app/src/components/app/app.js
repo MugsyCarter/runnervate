@@ -105,10 +105,10 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         {name: 'place',value: 'place'},
         {name: 'open or secret',value: 'open'},
         {name: 'lethality',value: 'lethality'},
-        {name: 'crime',value: 'accusiations.crime', accused: true, collection: 'accusations'},
-        {name: 'punishment',value: 'punishment.punishment', accused: true, collection: 'punishments'},
-        {name: 'race of accused',value: 'accused.race', accused: true, collection: 'accused'},
-        {name: 'nationality of accused',value: 'accused.nationality', accused: true, collection: 'accused'}
+        {name: 'crime',value: 'crime', collection: 'accused', subCollection: 'accusations'},
+        {name: 'punishment',value: 'punishment', collection: 'accused', subCollection: 'punishments'},
+        {name: 'race of accused',value: 'race', collection: 'accused'},
+        {name: 'nationality of accused',value: 'nationality', collection: 'accused'}
     ];
     this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
     this.buttonClass = 'btn btn-outline-primary';
@@ -165,10 +165,10 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     //broadcast incidents downstream
     this.updateIncidents = (incidents)=>{
         rootScope.incidents = incidents;
-        this.incidents = incidents;
+        // this.incidents = incidents;
         console.log('updating rootscope active incidents', incidents);
         timeout(function(){
-            rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
+            rootScope.$broadcast('incidentsUpdated', incidents);},500);
     };
 
     this.searchIncidents = ()=>{
@@ -188,25 +188,55 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             this.newQuery = null;
         }
         //apply queries to all incidents
-        if(this.queries.length>0){
-            console.log(this.queries[0].category.value);
-            console.log(this.incidents[0]);
-            console.log(this.incidents[0] + '===' + this.queries[0].target);
-            this.filtered = this.incidents.filter((incident)=>{
-                return incident[this.queries[0].category.value] === this.queries[0].target;
-            });
-        }
-        if(this.queries.length>1){
-            for (let i = 1; i < this.queries.length; i++){
-                this.filtered = this.filtered.filter((incident)=>{
-                    return incident[this.queries[i].category.value] === this.queries[i].target;
-                });
+        this.filtered = this.incidents;
+        // if(this.queries.length>0){
+        //     console.log(this.queries[0].category.value);
+        //     console.log(this.incidents[0]);
+        //     console.log(this.incidents[0][this.queries[0].category.value] + '===' + this.queries[0].target);
+        //     this.filtered = this.incidents.filter((incident)=>{
+        //         return incident[this.queries[0].category.value] === this.queries[0].target;
+        //     });
+        // }
+        // if(this.queries.length>1){
+            console.log('filtered is ', this.filtered);
+            for (let i = 0; i < this.queries.length; i++){
+                if (this.queries[0].category.collection){
+                    console.log('collection');
+                    if(this.queries[0].category.collection.subCollection){
+                        //if looking for a something in accuse.punishments or accused.crimes
+                        console.log('subcollection is ', this.queries[0].category.collection.subCollection);
+                        this.filtered = this.filtered.filter((incident)=>{
+                            return incident[this.queries[i].category.collection][this.queries[i].category.subCollection][this.queries[i].category.value] === this.queries[i].target;
+                        });
+                    }
+                    else{
+                        //if looking for something in accused
+                        console.log('collection is ', this.queries[0].category.collection);
+                        
+                        this.filtered = this.filtered.filter((incident)=>{
+                            // if(incident.accused){
+                                console.log(incident);
+                                // for(let j = 0; j < incident.accused.length; j++){
+                                //     console.log(incident.accused[j][this.queries[i].category.value]); 
+                                //     return incident.accused[j][this.queries[i].category.value] === this.queries[i].target;
+                                // }
+                            //}
+                        });
+                    }
+                }
+                else{
+                    //if looking for something on the incident
+                    this.filtered = this.filtered.filter((incident)=>{
+                        return incident[this.queries[i].category.value] === this.queries[i].target;
+                    });
+                }
                 // this.incidents = filtered;
             }
-        }
+        // }
         //sort results
         console.log(this.filtered);
         this.newQuery = null;
+        console.log(this.incidents);
         this.sortResults(this.filtered);
     };
 

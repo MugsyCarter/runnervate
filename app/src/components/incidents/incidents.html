@@ -167,42 +167,40 @@
                                 <br>
                                 </div>
 
-
-                                <!-- caseNum: Number,
-                                incomplete: String,
-                        
-                                
-                                edComp: String,
-                                editorFn: String,
-                                editorMn: String,
-                                editorLn: String,
-                                editorSuffix: String,
-                                title: String,
-                                placePub: String,
-                                publisher: String,
-                                yearPub: String,
-                                volume: String,	
-                                pages: String,
-                                displayPDF: String,
-                                pDF: String -->
-
                                 <!-- books -->
                                 <h4 ng-if="incident.books.length>0">Books</h4>
                                 <div ng-if="incident.books.length>0" ng-repeat="source in incident.books"> 
                                 <p class="p-heading">Title:<span class="p-info"> {{source.title}}</span> </p>
                                 <p class="p-heading">Author:<span class="p-info"> {{source.auString}}</span> </p>
                                 <p class="p-heading">Editor:<span class="p-info"> {{source.editorString}}</span> </p>
+                                <p class="p-heading">Publisher:<span class="p-info"> {{source.publisher}}</span> </p>
+                                <p class="p-heading">Pub Place:<span class="p-info"> {{source.placePub}}</span> </p>
+                                <p class="p-heading">Published:<span class="p-info"> {{source.yearPub}}</span> </p>
+                                <p class="p-heading">Volume:<span class="p-info"> {{source.volume}}</span> </p>
+                                <p class="p-heading">Pages:<span class="p-info"> {{source.pages}}</span> </p>
+                                <p class="p-heading">Ed Comp:<span class="p-info"> {{source.edComp}}</span> </p>
                                 <p class="p-heading" ng-if="source.incomplete">Incomplete?<a> {{source.incomplete}}</a> </p>
+                                <p class="p-heading">pDF:<span class="p-info"> {{source.pDF}}</span> </p>
                                 <p class="p-heading" ng-if="source.displayPDF">Display PDF<a> {{source.displayPDF}}</a> </p>
-                                <!-- <p class="p-heading">Place:<span class="p-info"> {{source.place}}, </span><span class="p-heading">State:</span><span class="p-info"> {{source.state}},</span> <span class="p-heading">Country: </span><span class="p-info"> {{source.country}}</span> </p>
-                                <p class="p-heading">Date:<span class="p-info"> {{source.dateString}}</span> </p>
-                                <p class="p-heading" ng-if="source.section">Section:<span class="p-info"> {{source.section}}</span><span class="p-heading" ng-if="source.page">Page</span><span class="p-info"> {{source.page}}</span> <span class="p-heading" ng-if="source.column">Column</span><span class="p-info"> {{source.column}}</span> </p>
-                                <p class="p-heading" ng-if="source.continuedPage">Continued on Page:<span class="p-info"> {{source.continuedPage}}</span> </p>
-                                <p class="p-heading" ng-if="source.continuedColumn">Continued on Column:<span class="p-info"> {{source.continuedColumn}}</span> </p>
-                                <p class="p-heading" ng-if="source.link">link:<a> {{source.link}}</a> </p> -->
-                                
                                 <br>
                                 </div>
+
+                                <!-- manuscripts -->
+                                <h4 ng-if="incident.manuscripts.length>0">Manuscripts</h4>
+                                <div ng-if="incident.manuscripts.length>0" ng-repeat="source in incident.books"> 
+                                <p class="p-heading">Title:<span class="p-info"> {{source.title}}</span> </p>
+                                <p class="p-heading">Collection:<span class="p-info"> {{source.manuscriptCollection}}</span> </p>
+                                <p class="p-heading">Call Number:<span class="p-info"> {{source.callNumber}}</span> </p>
+                                <p class="p-heading">Repository:<span class="p-info"> {{source.repository}}</span> </p>
+                                <span class="p-info"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> 
+                                <p class="p-heading" ng-if="source.incomplete">Incomplete?<a> {{source.incomplete}}</a> </p>
+                                <span class="p-info"> {{source.month}}/{{source.day}}/{{source.year}}</span> 
+                                <p class="p-heading">pDF:<span class="p-info"> {{source.pDF}}</span> </p>
+                                <p class="p-heading" ng-if="source.displayPDF">Display PDF<a> {{source.displayPDF}}</a> </p>
+                                <br>
+                                </div>
+                                
+                                
 
                         </div>
 

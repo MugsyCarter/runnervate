@@ -62,10 +62,10 @@
                                                 <option value="Not Lethal">Not Lethal</option>                   
                                             </select>
                                         </div>
-                                    <div ng-if="$ctrl.newQuery.category.value==='suspectRace'">
+                                    <div ng-if="$ctrl.newQuery.category.value==='accused.race'">
                                         <select ng-model="$ctrl.newQuery.target" ng-options="race for race in $ctrl.races"></select>
                                     </div>
-                                    <div ng-if="$ctrl.newQuery.category.value==='suspectNationality'">
+                                    <div ng-if="$ctrl.newQuery.category.value==='accused.nationality'">
                                         <input ng-model="$ctrl.newQuery.target" type="text" class="form-control" id="inputNat" placeholder="Nationality">
                                     </div>
                             </div>

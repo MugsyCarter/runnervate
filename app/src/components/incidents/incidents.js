@@ -9,7 +9,7 @@ export default {
 controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl', 'NgMap', '$location', '$anchorScroll'];
 
 function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $location, $anchorScroll) {
-    console.log('root scoped query is ', rootScope.query);
+    // console.log('root scoped query is ', rootScope.query);
     this.loading = true;
     this.user = rootScope.user;
 
@@ -31,7 +31,6 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         this.activeIncidents = [];
         console.log('these are the incidents', this.incidents);
         for (let i=this.minResult-1; i <this.maxResult; i++){
-            console.log('Before If', this.incidents);
             if(this.incidents.length>1){
                 this.incidents[i].fullView = false;
             }
@@ -222,27 +221,27 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
 
 
     //on load
-    this.loadIncidents = ()=>{
+    this.loadAllIncidents = ()=>{
         this.loading = true;
-        console.log('1');
-        if (rootScope.query){
-            console.log('query found: ', rootScope.query);
-            this.newQuery = 
-            {
-                category: {name: 'place', value: 'place'},
-                target: rootScope.query,
-                number: null
-            };
-            this.addFilter();
-        }
-        else{
-            console.log('no rootscope query found');
-        }
-        rootScope.map = false;
+        // console.log('1');
+        // if (rootScope.query){
+        //     console.log('query found: ', rootScope.query);
+        //     this.newQuery = 
+        //     {
+        //         category: {name: 'place', value: 'place'},
+        //         target: rootScope.query,
+        //         number: null
+        //     };
+        //     this.addFilter();
+        // }
+        // else{
+        //     console.log('no rootscope query found');
+        // }
+        // rootScope.map = false;
         rootScope.searchIncidents();
     };   
 
-    this.loadIncidents(); 
+    this.loadAllIncidents(); 
 
 
     this.goToTop = function(loc) {

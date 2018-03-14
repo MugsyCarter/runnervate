@@ -9,7 +9,7 @@ export default function lynchService($http, apiUrl) {
         },
 
         getById(incidentId) {
-            console.log('in get by Id ,', apiUrl);
+            // console.log('in get by Id ,', apiUrl);
             return $http.get(`${apiUrl}/incidents/${incidentId}`)
                 .then(res => res.data);
         },
@@ -20,13 +20,13 @@ export default function lynchService($http, apiUrl) {
         },
 
         addIncident(incident){
-            console.log('In lynch service, adding this incident ', incident);
+            // console.log('In lynch service, adding this incident ', incident);
             return $http.post(`${apiUrl}/incidents`, incident)
                 .then(res => res.data);
         },
 
         addOther(collection, entry){
-            console.log('In lynch service, adding this entry to this collection ', entry, collection);
+            // console.log('In lynch service, adding this entry to this collection ', entry, collection);
             return $http.post(`${apiUrl}/${collection}`, entry)
             .then(res => res.data);
         },
@@ -41,6 +41,23 @@ export default function lynchService($http, apiUrl) {
             // console.log('in lynch service getting all the data for this incident and collection, ', incident, collection);
             return $http.get(`${apiUrl}/${collection}/?caseNum=${incident.caseNum}`)
                 .then(res => res.data);
+        },
+
+        getIncidentByAccused(collection, query){
+            // console.log('in lynch service getting all the data for this collection, ', collection);
+            // console.log('in lynch service getting all the data for this query, ', query);
+            if (collection === 'accused'){
+                return $http.get(`${apiUrl}/accused/${query}`)
+                .then(res => res.data); 
+            }
+            else if (collection === 'punishments'){
+                return $http.get(`${apiUrl}/punishments/${query}`)
+                .then(res => res.data); 
+            }
+            else if (collection === 'accusations'){
+                return $http.get(`${apiUrl}/accusations/${query}`)
+                .then(res => res.data); 
+            }
         },
 
         getAccusedData(incident, accused, collection){

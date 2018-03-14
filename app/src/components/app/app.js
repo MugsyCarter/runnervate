@@ -73,7 +73,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     // });
 
     rootScope.$on('updateLocation', (event, location)=>{
-        console.log('update location called.  location is ', location);
+        // console.log('update location called.  location is ', location);
         this.findIncidentData(location);
     });
 
@@ -105,40 +105,13 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         {name: 'place',value: 'place'},
         {name: 'open or secret',value: 'open'},
         {name: 'lethality',value: 'lethality'},
-        {name: 'crime',value: 'crime'},
-        {name: 'punishment',value: 'punishment'},
-        {name: 'race of accused',value: 'suspectRace'},
-        {name: 'nationality of accused',value: 'suspectNationality'}
+        {name: 'crime',value: 'accusiations.crime', accused: true, collection: 'accusations'},
+        {name: 'punishment',value: 'punishment.punishment', accused: true, collection: 'punishments'},
+        {name: 'race of accused',value: 'accused.race', accused: true, collection: 'accused'},
+        {name: 'nationality of accused',value: 'accused.nationality', accused: true, collection: 'accused'}
     ];
     this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
     this.buttonClass = 'btn btn-outline-primary';
-
-    // this.addFilter = ()=>{
-    //     this.newFilter=true;
-    //     if (this.newQuery.category !== null && this.newQuery.target !== null){
-    //         this.queryNumber ++;
-    //         if (this.queryNumber > 3){
-    //             this.queryNumber = 0;
-    //         }
-
-    //         this.newQuery.number = this.queryNumber;
-
-    //         this.queries.push(this.newQuery);
-
-    //         let index = this.filters.findIndex((filter)=>{
-    //             return filter.name === this.newQuery.category.name;
-    //         });
-
-    //         this.filters.splice(index,1);
-
-    //         this.newQuery = {
-    //             catergory: null,
-    //             target: null,
-    //             number: null
-    //         };
-    //         console.log('filters are ', this.filters);
-    //     }
-    // };
 
     this.removeFilter = (filter)=>{
         console.log('removing this filter ', filter);
@@ -155,78 +128,135 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     };
 
     this.updateIncidents = (incidents)=>{
-        console.log(3);
-        console.log(this.incidents);
-        rootScope.incidents = this.incidents;
-        console.log('updating rootscope active incidents', this.incidents);
+        rootScope.incidents = incidents;
+        this.incidents = incidents;
+        console.log('updating rootscope active incidents', incidents);
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
     };
 
 
     this.searchIncidents = ()=>{
-        //if a filter needs to be added
-        console.log(2);
-        this.newFilter=true;
-        if (this.newQuery.category !== null && this.newQuery.target !== null){
-            this.queryNumber ++;
-            if (this.queryNumber > 3){
-                this.queryNumber = 0;
-            }
+        //get all incidents if a new filter 
+        // if (this.newFilter = true){
+        //     console.log('newFilter is true')
+        //     this.incidents = [];
+        // }
 
-            this.newQuery.number = this.queryNumber;
 
-            this.queries.push(this.newQuery);
-
-            let index = this.filters.findIndex((filter)=>{
-                return filter.name === this.newQuery.category.name;
-            });
-
-            this.filters.splice(index,1);
-
-            this.newQuery = {
-                category: null,
-                target: null,
-                number: null
-            };
-            console.log('filters are ', this.filters);
-        }
-        console.log('searching incidents with these queries ', this.queries);
-        let queryString = '';
-        if (this.queries.length > 0){
-            queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;
-            for (let i=1; i < this.queries.length; i++){
-                queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
-            }
-        }
-        console.log(queryString);
-        lynchSvc.getByQuery(queryString)
+        lynchSvc.get()
             .then((incidents)=>{
-                this.incidents=incidents;
-                this.incidentNumber = this.incidents.length;
-                this.sorted = this.incidents.sort((a,b)=>{
-                    let newA = (a.year*365);
-                    let newB = (b.year*365);
-                    if (a.month){
-                        newA+=(a.month*30);
+                //get all incidents
+                this.incidents = incidents;
+                if(this.newQuery.target){
+                    //if there is a new query add it
+                    console.log('new query is ', this.newQuery);
+                    this.queries.push(this.newQuery);
+                    //wipe newQuery
+                    this.newQuery = null;
+                }
+                //apply queries to all incidents
+                if(this.queries.length>0){
+                    this.incidents = incidents.filter((incident)=>{
+                        return incident[this.queries[0].category.value] === this.queries[0].target;
+                    });
+                }
+                if(this.queries.length>1){
+                    for (let i = 1; i < this.queries.length; i++){
+                        let filtered = this.incidents.filter((incident)=>{
+                            return incident[this.queries[i].category.value] === this.queries[i].target;
+                        });
+                        this.incidents = filtered;
                     }
-                    if (a.day){
-                        newA += a.day;
-                    }
-                    if (b.month){
-                        newB+=(b.month*30);
-                    }
-                    if (b.day){
-                        newB += b.day;
-                    }
-                    return newA-newB;
-                });
-                console.log('#SORTED: calling update incidents with these incidents', this.sorted);
-                this.updateIncidents(this.sorted);
+                }
+                //sort results
+                this.newQuery = null;
+                this.sortResults(this.incidents);
             });
+
+        //if a filter needs to be added
+        // this.incidents = [];
+        // console.log(2);
+        // this.newFilter=true;
+        // //if query cant be found by incident
+        // if (this.newQuery.category.accused){
+        //     console.log('ACCUSED');
+        //     queryString = '?' +  this.queries[0].category.value + '=' + this.queries[0].target;
+        //     lynchSvc.getIncidentByAccused(this.queries[0].category.collection, queryString)
+        //         .then((results)=>{
+        //             console.log('these results came back ', results);
+
+        //         });
+        //     queryString = '';
+        // }
+        // //the the query can only be incident
+        // else{
+        //     console.log('INCIDENT');  
+        //     if (this.newQuery.category !== null && this.newQuery.target !== null){
+        //         this.queryNumber ++;
+        //         if (this.queryNumber > 3){
+        //             this.queryNumber = 0;
+        //         }
+
+        //         this.newQuery.number = this.queryNumber;
+
+        //         this.queries.push(this.newQuery);
+
+        //         let index = this.filters.findIndex((filter)=>{
+        //             return filter.name === this.newQuery.category.name;
+        //         });
+
+        //         this.filters.splice(index,1);
+
+        //         this.newQuery = {
+        //             category: null,
+        //             target: null,
+        //             number: null
+        //         };
+        //         console.log('filters are ', this.filters);
+        //     }
+        //     console.log('searching incidents with these queries ', this.queries);
+        //     let queryString = '';
+        //     if (this.queries.length > 0){  
+        //         queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;           
+        //         }
+        //         for (let i=1; i < this.queries.length; i++){
+        //             queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
+        //         }
+        //     }
+        //     console.log(queryString);
+        //     lynchSvc.getByQuery(queryString)
+        //         .then((incidents)=>{
+        //             incidents.forEach((incident)=>{
+        //                 this.incidents.push(incident);
+        //             });
+        //             this.sortResults(this.incidents);
+        //         });
     };
 
 
+    this.sortResults = (incidents)=>{
+        let incidentNumber = incidents.length;
+        this.sorted = incidents.sort((a,b)=>{
+            let newA = (a.year*365);
+            let newB = (b.year*365);
+            if (a.month){
+                newA+=(a.month*30);
+            }
+            if (a.day){
+                newA += a.day;
+            }
+            if (b.month){
+                newB+=(b.month*30);
+            }
+            if (b.day){
+                newB += b.day;
+            }
+            return newA-newB;
+        });
+        console.log('#SORTED: calling update incidents with these incidents', this.sorted);
+        this.updateIncidents(this.sorted);
+    };
 
 
     this.collections = [
@@ -243,7 +273,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
                 .then((moreData)=>{
                     // console.log(moreData);
                     incident[this.collections[i]] = moreData;
-                    console.log('incident is ', incident);
+                    // console.log('incident is ', incident);
                
                  
                     if (this.collections[i] === 'accused'){
@@ -320,7 +350,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     
     rootScope.months = this.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
-    this.races = rootScope.races = ['white', 'asian', 'native american', 'black', 'latino'];
+    this.races = rootScope.races = ['White', 'Native American', 'African American', 'Latinx', 'Asian', 'Pacific Islander', 'Mixed Race'];
 
     this.weapons = rootScope.weapons = ['gun', 'knife', 'none'];
 

@@ -129,6 +129,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     //loads all incidens and incident data
     this.loadIncidents = ()=>{
+        rootScope.loading = true;
         lynchSvc.get()
             .then((incidents)=>{
                 //get all incidents
@@ -216,11 +217,19 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         for (let i = 0; i < this.queries.length; i++){
             if (this.queries[i].category.collection){
                 console.log('collection');
-                if(this.queries[i].category.collection.subCollection){
+                if(this.queries[i].category.subCollection){
                     //if looking for a something in accuse.punishments or accused.crimes
-                    console.log('subcollection is ', this.queries[0].category.collection.subCollection);
+                    console.log('subcollection is ', this.queries[0].category.subCollection);
                     this.filtered = this.filtered.filter((incident)=>{
-                        return incident[this.queries[i].category.collection][this.queries[i].category.subCollection][this.queries[i].category.value] === this.queries[i].target;
+                        //look at each accused
+                        for(let j = 0; j < incident.accused.length; j++){
+                            //look at each accusation or crime
+                            console.log(incident.accused[j][this.queries[i].category.subCollection]);
+                            for(let k = 0; k < incident.accused[j][this.queries[i].category.subCollection].length; k++){
+                                // console.log('##', incident.accused[j][this.queries[i].category.subCollection][k][this.queries[i].category.value]);
+                                return incident.accused[j][this.queries[i].category.subCollection][k][this.queries[i].category.value] === this.queries[i].target;
+                            }
+                        }
                     });
                 }
                 else{
@@ -397,6 +406,8 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.races = rootScope.races = ['White', 'Native American', 'African American', 'Latinx', 'Asian', 'Pacific Islander', 'Mixed Race'];
 
     this.weapons = rootScope.weapons = ['gun', 'knife', 'none'];
+
+    this.punishments = rootScope.punishments = ['Banished', 'Whipped', 'Remanded', 'Shot', 'Hanged', 'Hanged to extort confession', 'Branded', 'Head Shaved', 'Scalped', 'Beaten', 'Tarred and feathered', 'Fined', 'Released', 'Escaped', 'Assessed damages', 'Unknown'];
 
     this.oldCounties = ['Alameda County', 'Alpine County',
         'Amador County',

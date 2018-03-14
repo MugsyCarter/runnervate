@@ -69,7 +69,7 @@
                                         <input ng-model="$ctrl.newQuery.target" type="text" class="form-control" id="inputNat" placeholder="Nationality">
                                     </div>
                                     <div ng-if="$ctrl.newQuery.category.value==='punishment'">
-                                            <input ng-model="$ctrl.newQuery.target" type="text" class="form-control" id="inputNat" placeholder="Punishment">
+                                            <select ng-model="$ctrl.newQuery.target" ng-options="punishment for punishment in $ctrl.punishments"></select>
                                     </div>
                             </div>
                     <!-- </div> -->

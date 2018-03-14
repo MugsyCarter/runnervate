@@ -238,7 +238,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         //     console.log('no rootscope query found');
         // }
         // rootScope.map = false;
-        rootScope.searchIncidents();
+        rootScope.loadIncidents();
     };   
 
     this.loadAllIncidents(); 

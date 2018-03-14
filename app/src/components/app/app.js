@@ -127,6 +127,42 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     };
 
+    //loads all incidens and incident data
+    this.loadIncidents = ()=>{
+        lynchSvc.get()
+            .then((incidents)=>{
+                //get all incidents
+                this.incidents = incidents;
+                this.sortResults(incidents);
+            });
+       
+    };
+
+    //sorts all incidents by date
+    this.sortResults = (incidents)=>{
+        let incidentNumber = incidents.length;
+        this.sorted = incidents.sort((a,b)=>{
+            let newA = (a.year*365);
+            let newB = (b.year*365);
+            if (a.month){
+                newA+=(a.month*30);
+            }
+            if (a.day){
+                newA += a.day;
+            }
+            if (b.month){
+                newB+=(b.month*30);
+            }
+            if (b.day){
+                newB += b.day;
+            }
+            return newA-newB;
+        });
+        console.log('#SORTED: calling update incidents with these incidents', this.sorted);
+        this.updateIncidents(this.sorted);
+    };
+
+    //broadcast incidents downstream
     this.updateIncidents = (incidents)=>{
         rootScope.incidents = incidents;
         this.incidents = incidents;
@@ -135,44 +171,44 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             rootScope.$broadcast('incidentsUpdated', rootScope.incidents);},500);
     };
 
-
     this.searchIncidents = ()=>{
-        //get all incidents if a new filter 
-        // if (this.newFilter = true){
-        //     console.log('newFilter is true')
-        //     this.incidents = [];
-        // }
+        console.log('this.incidents ', this.incidents);
+        console.log('this.queries ', this.queries);
+        //  if (this.newFilter = true){
+        //      console.log('newFilter is true')
+        //      this.filteredIncidents = [];
+        //  }
 
-
-        lynchSvc.get()
-            .then((incidents)=>{
-                //get all incidents
-                this.incidents = incidents;
-                if(this.newQuery.target){
-                    //if there is a new query add it
-                    console.log('new query is ', this.newQuery);
-                    this.queries.push(this.newQuery);
-                    //wipe newQuery
-                    this.newQuery = null;
-                }
-                //apply queries to all incidents
-                if(this.queries.length>0){
-                    this.incidents = incidents.filter((incident)=>{
-                        return incident[this.queries[0].category.value] === this.queries[0].target;
-                    });
-                }
-                if(this.queries.length>1){
-                    for (let i = 1; i < this.queries.length; i++){
-                        let filtered = this.incidents.filter((incident)=>{
-                            return incident[this.queries[i].category.value] === this.queries[i].target;
-                        });
-                        this.incidents = filtered;
-                    }
-                }
-                //sort results
-                this.newQuery = null;
-                this.sortResults(this.incidents);
+       //add new query to others if present
+        if(this.newQuery.target){
+            //if there is a new query add it
+            console.log('new query is ', this.newQuery);
+            this.queries.push(this.newQuery);
+            //wipe newQuery
+            this.newQuery = null;
+        }
+        //apply queries to all incidents
+        if(this.queries.length>0){
+            console.log(this.queries[0].category.value);
+            console.log(this.incidents[0]);
+            console.log(this.incidents[0] + '===' + this.queries[0].target);
+            this.filtered = this.incidents.filter((incident)=>{
+                return incident[this.queries[0].category.value] === this.queries[0].target;
             });
+        }
+        if(this.queries.length>1){
+            for (let i = 1; i < this.queries.length; i++){
+                this.filtered = this.filtered.filter((incident)=>{
+                    return incident[this.queries[i].category.value] === this.queries[i].target;
+                });
+                // this.incidents = filtered;
+            }
+        }
+        //sort results
+        console.log(this.filtered);
+        this.newQuery = null;
+        this.sortResults(this.filtered);
+    };
 
         //if a filter needs to be added
         // this.incidents = [];
@@ -232,32 +268,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         //             });
         //             this.sortResults(this.incidents);
         //         });
-    };
-
-
-    this.sortResults = (incidents)=>{
-        let incidentNumber = incidents.length;
-        this.sorted = incidents.sort((a,b)=>{
-            let newA = (a.year*365);
-            let newB = (b.year*365);
-            if (a.month){
-                newA+=(a.month*30);
-            }
-            if (a.day){
-                newA += a.day;
-            }
-            if (b.month){
-                newB+=(b.month*30);
-            }
-            if (b.day){
-                newB += b.day;
-            }
-            return newA-newB;
-        });
-        console.log('#SORTED: calling update incidents with these incidents', this.sorted);
-        this.updateIncidents(this.sorted);
-    };
-
+    
 
     this.collections = [
         'accused', 'books', 'manuscripts', 'oldNotes', 'newspapers', 'websites'
@@ -345,8 +356,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     };
 
     rootScope.findIncidentData = this.findIncidentData;
-    rootScope.searchIncidents = this.searchIncidents;
-
+    rootScope.loadIncidents = this.loadIncidents;
     
     rootScope.months = this.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     

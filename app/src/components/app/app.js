@@ -62,8 +62,8 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             target: incident.caseNum,
             number: null
         };
-        this.queries.push(this.incidentQuery);
-        
+        rootScope.activeIncidents = [];
+        rootScope.activeIncidents.push(incident);
         // rootScope.$broadcast('fullIncident', incident);
         timeout(function(){
             $state.go('incidents');},500);
@@ -175,8 +175,11 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
         this.loading = false;
     };
 
-    this.searchIncidents = ()=>{
+    rootScope.searchIncidents = this.searchIncidents = ()=>{
         this.loading = true;
+        if (!this.incidents){
+            this.loadIncidents();
+        }
         console.log('this.incidents ', this.incidents);
         console.log('this.queries ', this.queries);
         //  if (this.newFilter = true){
@@ -260,10 +263,9 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     //send results
         let searchResults = this.filtered;
         console.log('search results are');
-       
+        this.loading = false;
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', searchResults);
-            this.loading = false;
         },500);
     };
 

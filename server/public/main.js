@@ -79,11 +79,11 @@
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
 	//switch between these two lines to switch between local host and heroku api urls
+	//app.value('apiUrl', 'http://localhost:3000/api');
 	
 	
 	//import defaultRoute from 'angular-ui-router-default';
-	app.value('apiUrl', 'http://localhost:3000/api');
-	//app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	
@@ -35281,8 +35281,8 @@
 	            target: incident.caseNum,
 	            number: null
 	        };
-	        _this.queries.push(_this.incidentQuery);
-	
+	        rootScope.activeIncidents = [];
+	        rootScope.activeIncidents.push(incident);
 	        // rootScope.$broadcast('fullIncident', incident);
 	        timeout(function () {
 	            $state.go('incidents');
@@ -35382,8 +35382,11 @@
 	        _this.loading = false;
 	    };
 	
-	    this.searchIncidents = function () {
+	    rootScope.searchIncidents = this.searchIncidents = function () {
 	        _this.loading = true;
+	        if (!_this.incidents) {
+	            _this.loadIncidents();
+	        }
 	        console.log('this.incidents ', _this.incidents);
 	        console.log('this.queries ', _this.queries);
 	        //  if (this.newFilter = true){
@@ -35469,10 +35472,9 @@
 	        //send results
 	        var searchResults = _this.filtered;
 	        console.log('search results are');
-	
+	        _this.loading = false;
 	        timeout(function () {
 	            rootScope.$broadcast('incidentsUpdated', searchResults);
-	            this.loading = false;
 	        }, 500);
 	    };
 	
@@ -35798,6 +35800,7 @@
 	            _this.activeIncidents.push(_this.incidents[i]);
 	        }
 	        console.log('these are the active incidents ', _this.activeIncidents);
+	        rootScope.activeIncidents = _this.activeIncidents;
 	        _this.loading = false;
 	    };
 	
@@ -35960,7 +35963,14 @@
 	
 	    //on load
 	    this.loadAllIncidents = function () {
-	        _this.loading = true;
+	        if (!rootScope.activeIncidents) {
+	            console.log('no active incidents');
+	            _this.loading = true;
+	            rootScope.loadIncidents();
+	        } else {
+	            _this.activeIncidents = rootScope.activeIncidents;
+	            console.log('no need to load, dawg');
+	        }
 	        // console.log('1');
 	        // if (rootScope.query){
 	        //     console.log('query found: ', rootScope.query);
@@ -35975,8 +35985,7 @@
 	        // else{
 	        //     console.log('no rootscope query found');
 	        // }
-	        // rootScope.map = false;
-	        rootScope.loadIncidents();
+	        // rootScope.map = false;   
 	    };
 	
 	    this.loadAllIncidents();

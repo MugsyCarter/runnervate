@@ -41,6 +41,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
             this.activeIncidents.push(this.incidents[i]);
         }
         console.log('these are the active incidents ', this.activeIncidents);
+        rootScope.activeIncidents = this.activeIncidents;
         this.loading = false;
     };
 
@@ -221,23 +222,30 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
 
     //on load
     this.loadAllIncidents = ()=>{
-        this.loading = true;
-        // console.log('1');
-        // if (rootScope.query){
-        //     console.log('query found: ', rootScope.query);
-        //     this.newQuery = 
-        //     {
-        //         category: {name: 'place', value: 'place'},
-        //         target: rootScope.query,
-        //         number: null
-        //     };
-        //     this.addFilter();
-        // }
-        // else{
-        //     console.log('no rootscope query found');
-        // }
-        // rootScope.map = false;
-        rootScope.loadIncidents();
+        if(!rootScope.activeIncidents){
+            console.log('no active incidents');
+            this.loading = true;
+            rootScope.loadIncidents();
+        }
+        else{
+            this.activeIncidents = rootScope.activeIncidents;
+            console.log('no need to load, dawg');
+        }
+            // console.log('1');
+            // if (rootScope.query){
+            //     console.log('query found: ', rootScope.query);
+            //     this.newQuery = 
+            //     {
+            //         category: {name: 'place', value: 'place'},
+            //         target: rootScope.query,
+            //         number: null
+            //     };
+            //     this.addFilter();
+            // }
+            // else{
+            //     console.log('no rootscope query found');
+            // }
+            // rootScope.map = false;   
     };   
 
     this.loadAllIncidents(); 

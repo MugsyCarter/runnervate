@@ -36,15 +36,13 @@
         <!-- <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{$ctrl.mapURL}}">
         <ng-map center="41,-87" zoom="3"></ng-map>
         </div> -->
-
-        <h2>Browse Lynchings</h2>
-     
        
         <div id="No Results Message" ng-if="$ctrl.incidents.length===0" class="panel-group">
                 <h3>No Results Found</h3>
         </div>
 
         <div id="incident-gallery" ng-if="$ctrl.activeIncidents.length" class="container">
+                <h2>Browse Lynchings</h2>
                 <h3>{{$ctrl.incidentNumber}} Results Found</h3>
                 <ul id="incident-list">
                         <li ng-repeat="incident in $ctrl.activeIncidents">
@@ -200,6 +198,29 @@
                                 <br>
                                 </div>
                                 
+                                <!-- Websites -->
+                                <h4 ng-if="incident.manuscripts.length>0">Websites</h4>
+                                <div ng-if="incident.manuscripts.length>0" ng-repeat="source in incident.books"> 
+                                <p class="p-heading">Title:<span class="p-info"> {{source.title}}</span> </p>
+                                <p class="p-heading" ng-if="source.displayPDF">URL<a> {{source.url}}</a> </p>
+                                <p class="p-heading">Accessed On:<span class="p-info"> {{source.accessed}}</span> </p>
+                                <p class="p-heading">Book Title:<span class="p-info"> {{source.bookTitle}}</span> </p>
+                                <p class="p-heading">Author:<span class="p-info"> {{source.auString}}</span> </p>
+                                <p class="p-heading">Publisher:<span class="p-info"> {{source.publisher}}</span> </p>
+                                <p class="p-heading">Ed Comp:<span class="p-info"> {{source.edComp}}</span> </p>
+                                <p class="p-heading">Volume:<span class="p-info"> {{source.volume}}</span> </p>
+                                <p class="p-heading">Pages:<span class="p-info"> {{source.pages}}</span> </p>
+
+                                <p class="p-heading">Collection:<span class="p-info"> {{source.websiteCollection}}</span> </p>
+                                <p class="p-heading">Call Number:<span class="p-info"> {{source.callNumber}}</span> </p>
+                                <p class="p-heading">Repository:<span class="p-info"> {{source.repository}}</span> </p>
+                                <span class="p-info"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> 
+                                <span class="p-info"> {{source.dateMonth}}/{{source.dateDay}}/{{source.dateYear}}</span> 
+                                <p class="p-heading" ng-if="source.incomplete">Incomplete?<a> {{source.incomplete}}</a> </p>
+                                <p class="p-heading">pDF:<span class="p-info"> {{source.pDF}}</span> </p>
+                                <p class="p-heading" ng-if="source.displayPDF">Display PDF<a> {{source.displayPDF}}</a> </p>
+                                <br>
+                                </div>
                                 
 
                         </div>

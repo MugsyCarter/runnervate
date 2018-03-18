@@ -79,11 +79,11 @@
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
 	//switch between these two lines to switch between local host and heroku api urls
-	//app.value('apiUrl', 'http://localhost:3000/api');
 	
 	
 	//import defaultRoute from 'angular-ui-router-default';
-	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	app.value('apiUrl', 'http://localhost:3000/api');
+	//app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	
@@ -35293,7 +35293,7 @@
 	    // });
 	
 	    rootScope.$on('updateLocation', function (event, location) {
-	        console.log('update location called.  location is ', location);
+	        // console.log('update location called.  location is ', location);
 	        _this.findIncidentData(location);
 	    });
 	
@@ -35318,36 +35318,9 @@
 	    };
 	    this.queries = [];
 	    this.queryNumber = -1;
-	    this.filters = [{ name: 'year', value: 'year' }, { name: 'county', value: 'county' }, { name: 'place', value: 'place' }, { name: 'open or secret', value: 'open' }, { name: 'lethality', value: 'lethality' }, { name: 'crime', value: 'crime' }, { name: 'punishment', value: 'punishment' }, { name: 'race of accused', value: 'suspectRace' }, { name: 'nationality of accused', value: 'suspectNationality' }];
+	    this.filters = [{ name: 'year', value: 'year' }, { name: 'county', value: 'county' }, { name: 'place', value: 'place' }, { name: 'open or secret', value: 'open' }, { name: 'lethality', value: 'lethality' }, { name: 'crime', value: 'accusation', collection: 'accused', subCollection: 'accusations' }, { name: 'punishment', value: 'punishment', collection: 'accused', subCollection: 'punishments' }, { name: 'race of accused', value: 'race', collection: 'accused' }, { name: 'nationality of accused', value: 'nationality', collection: 'accused' }];
 	    this.classes = ['btn btn-primary', 'btn btn-secondary', 'btn btn-warning', 'btn btn-danger'];
 	    this.buttonClass = 'btn btn-outline-primary';
-	
-	    // this.addFilter = ()=>{
-	    //     this.newFilter=true;
-	    //     if (this.newQuery.category !== null && this.newQuery.target !== null){
-	    //         this.queryNumber ++;
-	    //         if (this.queryNumber > 3){
-	    //             this.queryNumber = 0;
-	    //         }
-	
-	    //         this.newQuery.number = this.queryNumber;
-	
-	    //         this.queries.push(this.newQuery);
-	
-	    //         let index = this.filters.findIndex((filter)=>{
-	    //             return filter.name === this.newQuery.category.name;
-	    //         });
-	
-	    //         this.filters.splice(index,1);
-	
-	    //         this.newQuery = {
-	    //             catergory: null,
-	    //             target: null,
-	    //             number: null
-	    //         };
-	    //         console.log('filters are ', this.filters);
-	    //     }
-	    // };
 	
 	    this.removeFilter = function (filter) {
 	        console.log('removing this filter ', filter);
@@ -35362,30 +35335,67 @@
 	        _this.queries.splice(index, 1);
 	    };
 	
+	    //loads all incidens and incident data
+	    this.loadIncidents = function () {
+	        _this.loading = true;
+	        lynchSvc.get().then(function (incidents) {
+	            //get all incidents
+	            _this.incidents = incidents;
+	            _this.sortResults(incidents);
+	        });
+	    };
+	
+	    //sorts all incidents by date
+	    this.sortResults = function (incidents) {
+	        var incidentNumber = incidents.length;
+	        _this.sorted = incidents.sort(function (a, b) {
+	            var newA = a.year * 365;
+	            var newB = b.year * 365;
+	            if (a.month) {
+	                newA += a.month * 30;
+	            }
+	            if (a.day) {
+	                newA += a.day;
+	            }
+	            if (b.month) {
+	                newB += b.month * 30;
+	            }
+	            if (b.day) {
+	                newB += b.day;
+	            }
+	            return newA - newB;
+	        });
+	        console.log('#SORTED: calling update incidents with these incidents', _this.sorted);
+	        _this.updateIncidents(_this.sorted);
+	    };
+	
+	    //add all incident data and broadcast incidents downstream
 	    this.updateIncidents = function (incidents) {
-	        console.log(3);
-	        console.log(_this.incidents);
-	        rootScope.incidents = _this.incidents;
-	        console.log('updating rootscope active incidents', _this.incidents);
+	        console.log('updating rootscope active incidents', incidents);
+	        for (var i = 0; i < incidents.length; i++) {
+	            _this.findIncidentData(incidents[i]);
+	        }
+	        rootScope.incidents = incidents;
 	        timeout(function () {
-	            rootScope.$broadcast('incidentsUpdated', rootScope.incidents);
+	            rootScope.$broadcast('incidentsUpdated', incidents);
 	        }, 500);
+	        _this.loading = false;
 	    };
 	
 	    this.searchIncidents = function () {
-	        //if a filter needs to be added
-	        console.log(2);
-	        _this.newFilter = true;
-	        if (_this.newQuery.category !== null && _this.newQuery.target !== null) {
-	            _this.queryNumber++;
-	            if (_this.queryNumber > 3) {
-	                _this.queryNumber = 0;
-	            }
+	        _this.loading = true;
+	        console.log('this.incidents ', _this.incidents);
+	        console.log('this.queries ', _this.queries);
+	        //  if (this.newFilter = true){
+	        //      console.log('newFilter is true')
+	        //      this.filteredIncidents = [];
+	        //  }
 	
-	            _this.newQuery.number = _this.queryNumber;
-	
+	        //add new query to others if present
+	        if (_this.newQuery.target) {
+	            //if there is a new query add it
+	            console.log('new query is ', _this.newQuery);
 	            _this.queries.push(_this.newQuery);
-	
 	            var index = _this.filters.findIndex(function (filter) {
 	                return filter.name === _this.newQuery.category.name;
 	            });
@@ -35399,40 +35409,136 @@
 	            };
 	            console.log('filters are ', _this.filters);
 	        }
-	        console.log('searching incidents with these queries ', _this.queries);
-	        var queryString = '';
-	        if (_this.queries.length > 0) {
-	            queryString += '?' + _this.queries[0].category.value + '=' + _this.queries[0].target;
-	            for (var i = 1; i < _this.queries.length; i++) {
-	                queryString += '&' + _this.queries[i].category.value + '=' + _this.queries[i].target;
+	        //apply queries to all incidents
+	        _this.filtered = _this.incidents;
+	        // if(this.queries.length>0){
+	        //     console.log(this.queries[0].category.value);
+	        //     console.log(this.incidents[0]);
+	        //     console.log(this.incidents[0][this.queries[0].category.value] + '===' + this.queries[0].target);
+	        //     this.filtered = this.incidents.filter((incident)=>{
+	        //         return incident[this.queries[0].category.value] === this.queries[0].target;
+	        //     });
+	        // }
+	        // if(this.queries.length>1){
+	        console.log('filtered is ', _this.filtered);
+	
+	        var _loop = function _loop(i) {
+	            if (_this.queries[i].category.collection) {
+	                console.log('collection');
+	                if (_this.queries[i].category.subCollection) {
+	                    //if looking for a something in accuse.punishments or accused.crimes
+	                    console.log('subcollection is ', _this.queries[0].category.subCollection);
+	                    _this.filtered = _this.filtered.filter(function (incident) {
+	                        //look at each accused
+	                        for (var j = 0; j < incident.accused.length; j++) {
+	                            //look at each accusation or crime
+	                            console.log(incident.accused[j][_this.queries[i].category.subCollection]);
+	                            for (var k = 0; k < incident.accused[j][_this.queries[i].category.subCollection].length; k++) {
+	                                // console.log('##', incident.accused[j][this.queries[i].category.subCollection][k][this.queries[i].category.value]);
+	                                return incident.accused[j][_this.queries[i].category.subCollection][k][_this.queries[i].category.value] === _this.queries[i].target;
+	                            }
+	                        }
+	                    });
+	                } else {
+	                    //if looking for something in accused
+	                    console.log('collection is ', _this.queries[0].category.collection);
+	
+	                    _this.filtered = _this.filtered.filter(function (incident) {
+	                        // if(incident.accused){
+	                        for (var j = 0; j < incident.accused.length; j++) {
+	                            // console.log(incident.accused[j][this.queries[i].category.value]); 
+	                            return incident.accused[j][_this.queries[i].category.value] === _this.queries[i].target;
+	                        }
+	                        //}
+	                    });
+	                }
+	            } else {
+	                //if looking for something on the incident
+	                console.log('in else, this.filtered is ', _this.filtered);
+	                _this.filtered = _this.filtered.filter(function (incident) {
+	                    return incident[_this.queries[i].category.value] === _this.queries[i].target;
+	                });
 	            }
+	            // this.incidents = filtered;
+	        };
+	
+	        for (var i = 0; i < _this.queries.length; i++) {
+	            _loop(i);
 	        }
-	        console.log(queryString);
-	        lynchSvc.getByQuery(queryString).then(function (incidents) {
-	            _this.incidents = incidents;
-	            _this.incidentNumber = _this.incidents.length;
-	            _this.incidents.sort(function (a, b) {
-	                return parseInt(a.year) > parseInt(b.year);
-	            });
-	            console.log('calling update incidents with these incidents', _this.incidents);
-	            _this.updateIncidents(_this.incidents);
-	        });
+	        // }
+	        //send results
+	        var searchResults = _this.filtered;
+	        console.log('search results are');
+	        _this.loading = false;
+	        timeout(function () {
+	            rootScope.$broadcast('incidentsUpdated', searchResults);
+	        }, 500);
 	    };
+	
+	    //if a filter needs to be added
+	    // this.incidents = [];
+	    // console.log(2);
+	    // this.newFilter=true;
+	    // //if query cant be found by incident
+	    // if (this.newQuery.category.accused){
+	    //     console.log('ACCUSED');
+	    //     queryString = '?' +  this.queries[0].category.value + '=' + this.queries[0].target;
+	    //     lynchSvc.getIncidentByAccused(this.queries[0].category.collection, queryString)
+	    //         .then((results)=>{
+	    //             console.log('these results came back ', results);
+	
+	    //         });
+	    //     queryString = '';
+	    // }
+	    // //the the query can only be incident
+	    // else{
+	    //     console.log('INCIDENT');  
+	    //     if (this.newQuery.category !== null && this.newQuery.target !== null){
+	    //         this.queryNumber ++;
+	    //         if (this.queryNumber > 3){
+	    //             this.queryNumber = 0;
+	    //         }
+	
+	    //         this.newQuery.number = this.queryNumber;
+	
+	    //         this.queries.push(this.newQuery);
+	
+	
+	    //     }
+	    //     console.log('searching incidents with these queries ', this.queries);
+	    //     let queryString = '';
+	    //     if (this.queries.length > 0){  
+	    //         queryString += '?' + this.queries[0].category.value + '=' + this.queries[0].target;           
+	    //         }
+	    //         for (let i=1; i < this.queries.length; i++){
+	    //             queryString += '&' + this.queries[i].category.value + '=' + this.queries[i].target; 
+	    //         }
+	    //     }
+	    //     console.log(queryString);
+	    //     lynchSvc.getByQuery(queryString)
+	    //         .then((incidents)=>{
+	    //             incidents.forEach((incident)=>{
+	    //                 this.incidents.push(incident);
+	    //             });
+	    //             this.sortResults(this.incidents);
+	    //         });
+	
 	
 	    this.collections = ['accused', 'books', 'manuscripts', 'oldNotes', 'newspapers', 'websites'];
 	
 	    this.accusedInfo = ['accusations', 'names', 'punishments'];
 	
 	    this.findIncidentData = function (incident) {
-	        var _loop = function _loop(i) {
+	        var _loop2 = function _loop2(i) {
 	            lynchSvc.getAllData(incident, _this.collections[i]).then(function (moreData) {
 	                // console.log(moreData);
 	                incident[_this.collections[i]] = moreData;
-	                console.log('incident is ', incident);
+	                // console.log('incident is ', incident);
+	
 	
 	                if (_this.collections[i] === 'accused') {
-	                    var _loop2 = function _loop2(j) {
-	                        var _loop3 = function _loop3(k) {
+	                    var _loop3 = function _loop3(j) {
+	                        var _loop4 = function _loop4(k) {
 	                            lynchSvc.getAccusedData(incident, incident.accused[i], _this.accusedInfo[k]).then(function (accusedData) {
 	                                // console.log(accusedData);
 	                                incident.accused[j][_this.accusedInfo[k]] = accusedData;
@@ -35440,13 +35546,13 @@
 	                        };
 	
 	                        for (var k = 0; k < _this.accusedInfo.length; k++) {
-	                            _loop3(k);
+	                            _loop4(k);
 	                        }
 	                    };
 	
 	                    // console.log('incident.accused is ', incident.accused);
 	                    for (var j = 0; j < incident.accused.length; j++) {
-	                        _loop2(j);
+	                        _loop3(j);
 	                    }
 	                }
 	            });
@@ -35455,7 +35561,7 @@
 	        // console.log('finding data for this caseNum: ', incident.caseNum);
 	        //the code still needs to be added here to look up additional case info
 	        for (var i = 0; i < _this.collections.length; i++) {
-	            _loop(i);
+	            _loop2(i);
 	        }
 	        timeout(function () {
 	            //this code creates a string of all of the names for an accused person
@@ -35511,13 +35617,17 @@
 	    };
 	
 	    rootScope.findIncidentData = this.findIncidentData;
-	    rootScope.searchIncidents = this.searchIncidents;
+	    rootScope.loadIncidents = this.loadIncidents;
 	
-	    rootScope.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	    rootScope.months = this.months = ['none', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	
-	    this.races = rootScope.races = ['white', 'asian', 'native american', 'black', 'latino'];
+	    this.races = rootScope.races = ['White', 'Native American', 'African American', 'Latinx', 'Asian', 'Pacific Islander', 'Mixed Race'];
 	
 	    this.weapons = rootScope.weapons = ['gun', 'knife', 'none'];
+	
+	    this.punishments = rootScope.punishments = ['Banished', 'Whipped', 'Remanded', 'Shot', 'Hanged', 'Hanged to extort confession', 'Branded', 'Head Shaved', 'Scalped', 'Beaten', 'Tarred and feathered', 'Fined', 'Released', 'Escaped', 'Assessed damages', 'Unknown'];
+	
+	    this.crimes = rootScope.crimes = ['Robbery', 'Murder', 'Attempted Murder', 'Stock theft', 'Arson', 'Counterfeiting', 'Assault', 'Escaped Prison', 'Prowling', 'Threatening vengeance', 'Abuse of a corpse', 'Banditry'];
 	
 	    this.oldCounties = ['Alameda County', 'Alpine County', 'Amador County', 'Butte County', 'Calaveras County', 'Colusa County', 'Contra Costa County', 'Del Norte County', 'El Dorado County', 'Fresno County', 'Glenn County', 'Humboldt County', 'Imperial County', 'Inyo County', 'Kern County', 'Kings County', 'Lake County', 'Lassen County', 'Los Angeles County', 'Madera County', 'Marin County', 'Mariposa County', 'Mendocino County', 'Merced County', 'Modoc County', 'Mono County', 'Monterey County', 'Napa County', 'Nevada County', 'Orange County', 'Placer County', 'Plumas County', 'Riverside County', 'Sacramento County', 'San Benito County', 'San Bernardino County', 'San Diego County', 'San Francisco County', 'San Joaquin County', 'San Luis Obispo County', 'San Mateo County', 'Santa Barbara County', 'Santa Clara County', 'Santa Cruz County', 'Shasta County', 'Sierra County', 'Siskiyou County', 'Solano County', 'Sonoma County', 'Stanislaus County', 'Sutter County', 'Tehama County', 'Trinity County', 'Tulare County', 'Tuolumne County', 'Ventura County', 'Yolo County', 'Yuba County'];
 	
@@ -35539,7 +35649,7 @@
 /* 17 */
 /***/ (function(module, exports) {
 
-	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n            <!-- temporary code to hide content at David's request, switch between the following two lines of code -->\n                <!-- <div class=\"container-fluid\" ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor' || $ctrl.user.role=='user'\" > -->\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\" ng-hide=\"$ctrl.state.current.name==='incidents'\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\" ng-model=\"$ctrl.searchQuery\">\n                                <div class=\"input-group-btn\">\n                                    <button ng-click=\"$ctrl.searchFor()\" class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav>\n\n              <div id=\"filters\" ng-if=\"$ctrl.state.current.name=='lynchMap' || $ctrl.state.current.name=='incidents'\">\n                    <div class=\"row\">\n                            <label for=\"inputFilter\" class=\"col-sm-1 control-label\" id=\"filter-label\">Filter by </label>\n                            <div class=col-sm-2>\n                                    <select ng-model=\"$ctrl.newQuery.category\" ng-options=\"filter.name for filter in $ctrl.filters\">\n                                    </select>\n                            </div>\n                            <div class=col-sm-2>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='county'\">\n                                            <select  ng-model=\"$ctrl.newQuery.target\" ng-options=\"county for county in $ctrl.counties\">\n                                            </select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='place'\" >\n                                            <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='year'\">\n                                            <input ng-model=\"$ctrl.newQuery.target\" type=\"number\" class=\"form-control\" id=\"inputYear\" min=1500 max=2100>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='open'\">\n                                        <select ng-model=\"$ctrl.newQuery.target\">\n                                            <option value=\"Open\">Open</option>\n                                            <option value=\"Secret\">Secret</option>\n                                            <option value=\"Unknown\">unknown</option>\n                                        </select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='lethality'\">\n                                            <select ng-model=\"$ctrl.newQuery.target\">\n                                                <option value=\"Lethal\">Lethal</option>\n                                                <option value=\"Not Lethal\">Not Lethal</option>                   \n                                            </select>\n                                        </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='suspectRace'\">\n                                        <select ng-model=\"$ctrl.newQuery.target\" ng-options=\"race for race in $ctrl.races\"></select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='suspectNationality'\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputNat\" placeholder=\"Nationality\">\n                                    </div>\n                            </div>\n                    <!-- </div> -->\n                            <!-- <button ng-if=\"$ctrl.newQuery.target!==null\" class=\"btn btn-success\"  ng-click=\"$ctrl.addFilter()\" ><span class=\"glyphicon glyphicon-plus\"><h6>Add</h6></span></button> -->\n\n                    <!-- <div class=\"row\"> -->\n                        <div class=\"col-sm-2\">\n                                <button class=\"btn btn-info\" ng-click=\"$ctrl.searchIncidents()\" ><span class=\"glyphicon glyphicon-search\"></span> Search Lynchings</button>\n                        </div>  \n                        <label ng-if=\"$ctrl.queries.length\" for=\"inputFilter\" class=\"col-sm-2 control-label\" id=\"filter-label\">Active Filters: <em>Click a Filter to Remove</em></label>\n                        <div class=\"col-sm-2\" ng-if=\"$ctrl.queries.length\" ng-repeat=\"query in $ctrl.queries\" >\n                                <button type='button' class=\"{{$ctrl.classes[query.number]}}\" ng-click=\"$ctrl.removeFilter(query)\">{{query.category.name}} is {{query.target}}</button>\n                        </div>\n                    </div>\n            </div>\n\n  \n    <div class=\"container-fluid\">\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; David A. Johnson, 2018.  </span></p>\n        <p>Email Questions and Concerns:<a href=\"mailto:calynchings@gmail.com?Subject=Hello\" target=\"_top\"> calynchings@gmail.com</a></p>\n    </div>\n  </section>";
+	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n            <!-- temporary code to hide content at David's request, switch between the following two lines of code -->\n                <!-- <div class=\"container-fluid\" ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor' || $ctrl.user.role=='user'\" > -->\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\" ng-hide=\"$ctrl.state.current.name==='incidents'\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\" ng-model=\"$ctrl.searchQuery\">\n                                <div class=\"input-group-btn\">\n                                    <button ng-click=\"$ctrl.searchFor()\" class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav>\n\n              <div id=\"filters\" ng-if=\"$ctrl.state.current.name=='lynchMap' || $ctrl.state.current.name=='incidents'\">\n                    <div class=\"row\">\n                            <label for=\"inputFilter\" class=\"col-sm-1 control-label\" id=\"filter-label\">Filter by </label>\n                            <div class=col-sm-2>\n                                    <select ng-model=\"$ctrl.newQuery.category\" ng-options=\"filter.name for filter in $ctrl.filters\">\n                                    </select>\n                            </div>\n                            <div class=col-sm-2>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='county'\">\n                                            <select  ng-model=\"$ctrl.newQuery.target\" ng-options=\"county for county in $ctrl.counties\">\n                                            </select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='place'\" >\n                                            <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.name==='year'\">\n                                            <input ng-model=\"$ctrl.newQuery.target\" type=\"number\" class=\"form-control\" id=\"inputYear\" min=1500 max=2100>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='open'\">\n                                        <select ng-model=\"$ctrl.newQuery.target\">\n                                            <option value=\"Open\">Open</option>\n                                            <option value=\"Secret\">Secret</option>\n                                            <option value=\"Unknown\">unknown</option>\n                                        </select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='lethality'\">\n                                            <select ng-model=\"$ctrl.newQuery.target\">\n                                                <option value=\"Lethal\">Lethal</option>\n                                                <option value=\"Not Lethal\">Not Lethal</option>                   \n                                            </select>\n                                        </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='race'\">\n                                        <select ng-model=\"$ctrl.newQuery.target\" ng-options=\"race for race in $ctrl.races\"></select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='nationality'\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputNat\" placeholder=\"Nationality\">\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='punishment'\">\n                                            <select ng-model=\"$ctrl.newQuery.target\" ng-options=\"punishment for punishment in $ctrl.punishments\"></select>\n                                    </div>\n                                    <div ng-if=\"$ctrl.newQuery.category.value==='accusation'\">\n                                            <select ng-model=\"$ctrl.newQuery.target\" ng-options=\"crime for crime in $ctrl.crimes\"></select>\n                                    </div>\n                            </div>\n                    <!-- </div> -->\n                            <!-- <button ng-if=\"$ctrl.newQuery.target!==null\" class=\"btn btn-success\"  ng-click=\"$ctrl.addFilter()\" ><span class=\"glyphicon glyphicon-plus\"><h6>Add</h6></span></button> -->\n\n                    <!-- <div class=\"row\"> -->\n                        <div class=\"col-sm-2\">\n                                <button class=\"btn btn-info\" ng-click=\"$ctrl.searchIncidents()\" ><span class=\"glyphicon glyphicon-search\"></span> Search Lynchings</button>\n                        </div>  \n                        <label ng-if=\"$ctrl.queries.length\" for=\"inputFilter\" class=\"col-sm-2 control-label\" id=\"filter-label\">Active Filters: <em>Click a Filter to Remove</em></label>\n                        <div class=\"col-sm-2\" ng-if=\"$ctrl.queries.length\" ng-repeat=\"query in $ctrl.queries\" >\n                                <button type='button' class=\"{{$ctrl.classes[query.number]}}\" ng-click=\"$ctrl.removeFilter(query)\">{{query.category.name}} is {{query.target}}</button>\n                        </div>\n                    </div>\n            </div>\n\n    <div class=\"container-fluid\">\n        <div class=\"loader-container\" ng-if=\"$ctrl.loading===true\">\n            <h3> Lynchings Loading</h3>\n            <div class=\"loader\" ></div>\n        </div>\n    </div>\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; David A. Johnson, 2018.  </span></p>\n        <p>Email Questions and Concerns:<a href=\"mailto:calynchings@gmail.com?Subject=Hello\" target=\"_top\"> calynchings@gmail.com</a></p>\n    </div>\n  </section>";
 
 /***/ }),
 /* 18 */
@@ -35656,7 +35766,7 @@
 	function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $location, $anchorScroll) {
 	    var _this = this;
 	
-	    console.log('root scoped query is ', rootScope.query);
+	    // console.log('root scoped query is ', rootScope.query);
 	    this.loading = true;
 	    this.user = rootScope.user;
 	
@@ -35678,7 +35788,6 @@
 	        _this.activeIncidents = [];
 	        console.log('these are the incidents', _this.incidents);
 	        for (var i = _this.minResult - 1; i < _this.maxResult; i++) {
-	            console.log('Before If', _this.incidents);
 	            if (_this.incidents.length > 1) {
 	                _this.incidents[i].fullView = false;
 	            } else {
@@ -35686,7 +35795,6 @@
 	            }
 	            _this.incidents[i].showSources = false;
 	            _this.activeIncidents.push(_this.incidents[i]);
-	            rootScope.$emit('updateLocation', _this.incidents[i]);
 	        }
 	        console.log('these are the active incidents ', _this.activeIncidents);
 	        _this.loading = false;
@@ -35850,25 +35958,27 @@
 	    };
 	
 	    //on load
-	    this.loadIncidents = function () {
+	    this.loadAllIncidents = function () {
 	        _this.loading = true;
-	        console.log('1');
-	        if (rootScope.query) {
-	            console.log('query found: ', rootScope.query);
-	            _this.newQuery = {
-	                category: { name: 'place', value: 'place' },
-	                target: rootScope.query,
-	                number: null
-	            };
-	            _this.addFilter();
-	        } else {
-	            console.log('no rootscope query found');
-	        }
-	        rootScope.map = false;
-	        rootScope.searchIncidents();
+	        // console.log('1');
+	        // if (rootScope.query){
+	        //     console.log('query found: ', rootScope.query);
+	        //     this.newQuery = 
+	        //     {
+	        //         category: {name: 'place', value: 'place'},
+	        //         target: rootScope.query,
+	        //         number: null
+	        //     };
+	        //     this.addFilter();
+	        // }
+	        // else{
+	        //     console.log('no rootscope query found');
+	        // }
+	        // rootScope.map = false;
+	        rootScope.loadIncidents();
 	    };
 	
-	    this.loadIncidents();
+	    this.loadAllIncidents();
 	
 	    this.goToTop = function (loc) {
 	        console.log('this gototop called', loc);
@@ -35916,7 +36026,7 @@
 /* 23 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<section>\n\n     <div class=\"container\">\n \n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDatabase()\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Incidents</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteIncidents()\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Incidents</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accusations')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accusations</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accusations')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accusations</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accused')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accused</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accused')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accused</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('names')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Names</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('names')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Names</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('punishments')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Punishments</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('punishments')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Punishments</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('books')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Books</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('books')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Books</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('newspapers')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Newspapers</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('newspapers')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Newspapers</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('manuscripts')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Manuscripts</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('manuscripts')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Manuscripts</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('oldNotes')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate old notes</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('oldNotes')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke oldNotes</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('websites')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate websites</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('websites')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Websites</h6></span></button>\n\n        <!-- <div map-lazy-load=\"https://maps.google.com/maps/api/js\" map-lazy-load-params=\"{{$ctrl.mapURL}}\">\n        <ng-map center=\"41,-87\" zoom=\"3\"></ng-map>\n        </div> -->\n\n        <h2>Browse Lynchings</h2>\n        <div ng-if=\"$ctrl.loading===true\">\n                        <h3>lynchings loading</h3>\n                        <div class=\"loader\" ></div>\n                </div>\n       \n        <div id=\"No Results Message\" ng-if=\"$ctrl.incidents.length===0\" class=\"panel-group\">\n                <h3>No Results Found</h3>\n        </div>\n\n        <div id=\"incident-gallery\" ng-if=\"$ctrl.activeIncidents.length\" class=\"container\">\n                <h3>{{$ctrl.incidentNumber}} Results Found</h3>\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.activeIncidents\">\n                                <div class=\"row\"  ng-attr-id=\"{{incident.caseNum}}\">\n                                        <!-- full container -->\n                                        <div class=\"col-lg-11\" id=\"incident-panel\">\n                                                <!-- title container -->\n                                                <div  class=\"row\">\n                                                        <!-- <h3>{{incident.accused.}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3> -->\n                                                </div>\n                                                <!-- title container ends -->\n                                                \n                                                <!-- short view starts -->\n                                                <div class=\"row\"> \n                                                        <button ng-if=\"incident.fullView===false\" class=\"btn btn-primary\" id=\"show-incident-button\" ng-click=\"$ctrl.showIncident(incident)\"><span class=\"glyphicon glyphicon-plus\"><h6>Show More</h6></span></button>\n                                                        <button ng-if=\"incident.fullView===true\"class=\"btn btn-success\" id=\"hide-incident-button\" ng-click=\"$ctrl.hideIncident(incident)\" ><span class=\"glyphicon glyphicon-minus\"><h6>Show Less</h6></span></button>\n                                                        <h4>{{incident.dateString}}</h4>\n                                                        <h4> {{incident.locationString}}</h4>\n                                                        <!-- <p>{{incident.summary}} summary will go here</p>           -->\n                                                </div>\n                                                <!-- short view ends -->\n                                                <!-- long view starts -->\n        \n        <div class=\"row\" ng-if=\"incident.fullView===true\">                                       \n      <div class=\"jumbotron\" id=\"big-incident\">\n                <h2>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h2>\n\n                <div class=\"row\">\n                        <div class=\"col-lg-10\">\n                                <ng-map class=\"small-map\" center=\"{{incident.latDecimal}}, {{incident.lonDecimal}}\" zoom=\"7\" id=\"'map-' + {{incident._id}}\">\n                                        <marker position=\"{{incident.latDecimal}},{{incident.lonDecimal}}\"/>\n                                        \n                                </ng-map>\n                        </div>\n                </div>\n        </div>\n              <div class=\"row marketing\">\n                <div class=\"col-lg-6\">\n                             \n                        <div ng-if=\"$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'\">\n                                <h4>Database Information</h4>\n                                <p class=\"p-heading\">Case Number:<span class=\"p-info\"> {{incident.caseNum}}</span></p>\n                                <p class=\"p-heading\">CW Index:<span class=\"p-info\"> {{incident.cwIndex}}</span></p>\n                                <p class=\"p-heading\">GD Index:<span class=\"p-info\"> {{incident.gdIndex}}</span></p>\n                                <p class=\"p-heading\">Cross Reference Notes: <span class=\"p-info\"> {{incident.crossRefNotesCwGd}}</span></p>\n                                <br>\n                        </div>\n\n                        <h4>Date and Location</h4>\n                        <p class=\"p-heading\">Date:<span class=\"p-info\"> {{incident.dateString}}</span> </p>\n                        <p class=\"p-heading\" ng-if=\"incident.dateNotes\">Date Notes:<span class=\"p-info\"> {{incident.dateNotes}}</span> </p>\n                        <p class=\"p-heading\">State:<span class=\"p-info\"> {{incident.state}}</span></p>\n                        <p class=\"p-heading\">County:<span class=\"p-info\"> {{incident.county}}</span></p>\n                        <p class=\"p-heading\">Place:<span class=\"p-info\"> {{incident.place}}</span></p>\n                        <p class=\"p-heading\">Latitude: <span class=\"p-info\"> {{incident.latDecimal}}</span></p>\n                        <p class=\"p-heading\">Longitude: <span class=\"p-info\"> {{incident.lonDecimal}}</span></p>\n                        <p class=\"p-heading\" ng-if=\"incident.locationNotes\">Location Notes:<span class=\"p-info\"> {{incident.locationNotes}}</span> </p>\n                        <br>\n\n                        <div ng-if=\"incident.summary\">\n                                <h4> Summary</h4>\n                                <p class=\"p-info\" ng-if=\"incident.dateNotes\">{{incident.summary}} </p>\n                        </div>\n\n                        <h4>Accused</h4>\n                        <div ng-repeat=\"accused in incident.accused\">\n                                <p class=\"p-heading\">Name:<span class=\"p-info\"> {{accused.fullName}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"accused.namesString\">AKA:<span class=\"p-info\"> {{accused.namesString}}</span> </p>\n                                <p class=\"p-heading\">Race:<span class=\"p-info\"> {{accused.race}}</span> </p>\n                                <p class=\"p-heading\">Nationality:<span class=\"p-info\"> {{accused.nationality}}</span> </p>\n                                <p class=\"p-heading\">Gender:<span class=\"p-info\">{{accused.gender}}</span> </p>\n                                <div ng-repeat=\"accusation in accused.accusations\">\n                                        <p class=\"p-heading\">Accusation:<span class=\"p-info\"> {{accusation.accusation}}</span></p>\n                                        <p class=\"p-heading\">Weapon Used:<span class=\"p-info\"> {{accusation.weapon}}</span></p>\n                                </div>\n                                <div ng-repeat=\"punishment in accused.punishments\">\n                                        <p class=\"p-heading\">Punishment:<span class=\"p-info\"> {{punishment.punishment}}</span> <span class=\"p-info\" ng-if=\"punishment.lashes\">: {{punishment.lashes}} lashes</span></p>\n                                        <p class=\"p-heading\" ng-if=\"punishment-notes\">Punishment Notes:<span class=\"p-info\"> {{punishment.notes}}</span></p>\n                                </div>\n                                <p class=\"p-heading\">Confession or Speech at Gallows:<span class=\"p-info\"> {{accused.confession}}</span></p>\n                                <p class=\"p-heading\" ng-if=\"accused.notes\">Accused Notes:<span class=\"p-info\"> {{accused.notes}}</span> </p>\n                                <br>\n                        </div>\n                       \n                        <h4>Lynching</h4>\n                        <p class=\"p-heading\">Type of Crowd:<span class=\"p-info\"> {{incident.crowdType}}</span></p>\n                        <p class=\"p-heading\">Size of Crowd:<span class=\"p-info\"> {{incident.croudSize}}</span></p>\n                        <p class=\"p-heading\">Open or Secret:<span class=\"p-info\"> {{incident.open}}</span></p>\n                        <p class=\"p-heading\">Authorities: <span class=\"p-info\"> {{incident.authorities}}</span></p>\n                        <p class=\"p-heading\">Authorities Present: <span class=\"p-info\"> {{incident.authoritiesPresent}}</span></p>\n                        <p class=\"p-heading\">Lethality: <span class=\"p-info\"> {{incident.lethality}}</span></p>\n                        <p class=\"p-heading\">Lynching Notes: <span class=\"p-info\"> {{incident.incidentNotes}}</span></p>\n                        <br>\n                        <!-- <h4>Victim(s)</h4>\n                        <p>Name(s): {{incident.victimNames}}</p>\n                        <p>Gender(s): {{incident.victimGenders}}</p>\n                        <p>Race(s): {{incident.victimRaces}}</p>\n                        <p>Victim Notes: {{incident.victimNotes}}</p> -->\n                </div>\n        \n                <div class=\"col-lg-6\">\n                        <h4>Sources</h4>\n                        <button ng-if=\"incident.showSources===false\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'show')\"><span class=\"glyphicon glyphicon-book\"><h5>Show Sources</h5></button>\n                        <button ng-if=\"incident.showSources===true\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'hide')\"><span class=\"glyphicon glyphicon-book\"><h5>Hide Sources</h5></button>\n                        <div ng-if=\"incident.showSources===true\">\n                            \n                                <!-- newspapers -->\n                                <h4 ng-if=\"incident.newspapers.length>0\">Newspapers</h4>\n                                <div ng-if=\"incident.newspapers.length>0\" ng-repeat=\"source in incident.newspapers\"> \n                                <p class=\"p-heading\">Article Title:<span class=\"p-info\"> {{source.articleTitle}}</span> </p>\n                                <p class=\"p-heading\">Newspaper:<span class=\"p-info\">{{source.newspaper}}</span> </p>\n                                <p class=\"p-heading\">Place:<span class=\"p-info\"> {{source.place}}, </span><span class=\"p-heading\">State:</span><span class=\"p-info\"> {{source.state}},</span> <span class=\"p-heading\">Country: </span><span class=\"p-info\"> {{source.country}}</span> </p>\n                                <p class=\"p-heading\">Date:<span class=\"p-info\"> {{source.dateString}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.section\">Section:<span class=\"p-info\"> {{source.section}}</span><span class=\"p-heading\" ng-if=\"source.page\">Page</span><span class=\"p-info\"> {{source.page}}</span> <span class=\"p-heading\" ng-if=\"source.column\">Column</span><span class=\"p-info\"> {{source.column}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedPage\">Continued on Page:<span class=\"p-info\"> {{source.continuedPage}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedColumn\">Continued on Column:<span class=\"p-info\"> {{source.continuedColumn}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.link\">link:<a> {{source.link}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n\n\n                                <!-- caseNum: Number,\n                                incomplete: String,\n                        \n                                \n                                edComp: String,\n                                editorFn: String,\n                                editorMn: String,\n                                editorLn: String,\n                                editorSuffix: String,\n                                title: String,\n                                placePub: String,\n                                publisher: String,\n                                yearPub: String,\n                                volume: String,\t\n                                pages: String,\n                                displayPDF: String,\n                                pDF: String -->\n\n                                <!-- books -->\n                                <h4 ng-if=\"incident.books.length>0\">Books</h4>\n                                <div ng-if=\"incident.books.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\">Author:<span class=\"p-info\"> {{source.auString}}</span> </p>\n                                <p class=\"p-heading\">Editor:<span class=\"p-info\"> {{source.editorString}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <!-- <p class=\"p-heading\">Place:<span class=\"p-info\"> {{source.place}}, </span><span class=\"p-heading\">State:</span><span class=\"p-info\"> {{source.state}},</span> <span class=\"p-heading\">Country: </span><span class=\"p-info\"> {{source.country}}</span> </p>\n                                <p class=\"p-heading\">Date:<span class=\"p-info\"> {{source.dateString}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.section\">Section:<span class=\"p-info\"> {{source.section}}</span><span class=\"p-heading\" ng-if=\"source.page\">Page</span><span class=\"p-info\"> {{source.page}}</span> <span class=\"p-heading\" ng-if=\"source.column\">Column</span><span class=\"p-info\"> {{source.column}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedPage\">Continued on Page:<span class=\"p-info\"> {{source.continuedPage}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedColumn\">Continued on Column:<span class=\"p-info\"> {{source.continuedColumn}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.link\">link:<a> {{source.link}}</a> </p> -->\n                                \n                                <br>\n                                </div>\n\n                        </div>\n\n                        \n                </div>\n                </div>\n                <h4><button class=\"btn btn-success\" id=\"go-to-top-button\" ng-click=\"$ctrl.goToTop(incident.caseNum)\"><span class=\"glyphicon glyphicon-arrow-up\"><h5>Go To Top</h5></button>\n        </div>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Edit Incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.deleteIncident(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Delete Incident</h6></span></button>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Propose Edits to incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.proposeDeletion(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Propose Delete Incident</h6></span></button>\n\n                                                <!-- long view ends -->\n                                                </div>\n                                        </div>\n                                        <!-- full container ends -->\n                                </div>\n                                \n                        </li>\n                </ul>\n        </div>\n</div> \n\n        <div id=\"search-results-footer\" class=\"jumbotron\" ng-if=\"$ctrl.incidents.length>0\">\n                <div class=\"panel-md-10\">\n                        <h4><button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.minResult>9\" ng-click=\"$ctrl.previousResults()\"><span class=\"glyphicon glyphicon-arrow-left\"><h5>Previous</h5></button>\n                        <button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.maxResult<$ctrl.incidentNumber\" ng-click=\"$ctrl.nextResults()\"><span class=\"glyphicon glyphicon-arrow-right\"><h5>Next</h5></button>\n                        <span>Results {{$ctrl.minResult}}-{{$ctrl.maxResult}}</span>\n                        <span> (of {{$ctrl.incidentNumber}})</h4>\n                </div>\n        </div>\n              \n</section>";
+	module.exports = "\n<section>\n\n     <div class=\"container\">\n \n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDatabase()\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Incidents</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteIncidents()\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Incidents</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accusations')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accusations</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accusations')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accusations</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accused')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accused</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accused')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accused</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('names')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Names</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('names')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Names</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('punishments')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Punishments</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('punishments')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Punishments</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('books')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Books</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('books')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Books</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('newspapers')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Newspapers</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('newspapers')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Newspapers</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('manuscripts')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Manuscripts</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('manuscripts')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Manuscripts</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('oldNotes')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate old notes</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('oldNotes')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke oldNotes</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('websites')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate websites</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('websites')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Websites</h6></span></button>\n\n        <!-- <div map-lazy-load=\"https://maps.google.com/maps/api/js\" map-lazy-load-params=\"{{$ctrl.mapURL}}\">\n        <ng-map center=\"41,-87\" zoom=\"3\"></ng-map>\n        </div> -->\n       \n        <div id=\"No Results Message\" ng-if=\"$ctrl.incidents.length===0\" class=\"panel-group\">\n                <h3>No Results Found</h3>\n        </div>\n\n        <div id=\"incident-gallery\" ng-if=\"$ctrl.activeIncidents.length\" class=\"container\">\n                <h2>Browse Lynchings</h2>\n                <h3>{{$ctrl.incidentNumber}} Results Found</h3>\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.activeIncidents\">\n                                <div class=\"row\"  ng-attr-id=\"{{incident.caseNum}}\">\n                                        <!-- full container -->\n                                        <div class=\"col-lg-11\" id=\"incident-panel\">\n                                                <!-- title container -->\n                                                <div  class=\"row\">\n                                                        <!-- <h3>{{incident.accused.}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3> -->\n                                                </div>\n                                                <!-- title container ends -->\n                                                \n                                                <!-- short view starts -->\n                                                <div class=\"row\"> \n                                                        <button ng-if=\"incident.fullView===false\" class=\"btn btn-primary\" id=\"show-incident-button\" ng-click=\"$ctrl.showIncident(incident)\"><span class=\"glyphicon glyphicon-plus\"><h6>Show More</h6></span></button>\n                                                        <button ng-if=\"incident.fullView===true\"class=\"btn btn-success\" id=\"hide-incident-button\" ng-click=\"$ctrl.hideIncident(incident)\" ><span class=\"glyphicon glyphicon-minus\"><h6>Show Less</h6></span></button>\n                                                        <h4>{{incident.dateString}}</h4>\n                                                        <h4> {{incident.locationString}}</h4>\n                                                        <!-- <p>{{incident.summary}} summary will go here</p>           -->\n                                                </div>\n                                                <!-- short view ends -->\n                                                <!-- long view starts -->\n        \n        <div class=\"row\" ng-if=\"incident.fullView===true\">                                       \n      <div class=\"jumbotron\" id=\"big-incident\">\n                <h2>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h2>\n\n                <div class=\"row\">\n                        <div class=\"col-lg-10\">\n                                <ng-map class=\"small-map\" center=\"{{incident.latDecimal}}, {{incident.lonDecimal}}\" zoom=\"7\" id=\"'map-' + {{incident._id}}\">\n                                        <marker position=\"{{incident.latDecimal}},{{incident.lonDecimal}}\"/>\n                                        \n                                </ng-map>\n                        </div>\n                </div>\n        </div>\n              <div class=\"row marketing\">\n                <div class=\"col-lg-6\">\n                             \n                        <div ng-if=\"$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'\">\n                                <h4>Database Information</h4>\n                                <p class=\"p-heading\">Case Number:<span class=\"p-info\"> {{incident.caseNum}}</span></p>\n                                <p class=\"p-heading\">CW Index:<span class=\"p-info\"> {{incident.cwIndex}}</span></p>\n                                <p class=\"p-heading\">GD Index:<span class=\"p-info\"> {{incident.gdIndex}}</span></p>\n                                <p class=\"p-heading\">Cross Reference Notes: <span class=\"p-info\"> {{incident.crossRefNotesCwGd}}</span></p>\n                                <br>\n                        </div>\n\n                        <h4>Date and Location</h4>\n                        <p class=\"p-heading\">Date:<span class=\"p-info\"> {{incident.dateString}}</span> </p>\n                        <p class=\"p-heading\" ng-if=\"incident.dateNotes\">Date Notes:<span class=\"p-info\"> {{incident.dateNotes}}</span> </p>\n                        <p class=\"p-heading\">State:<span class=\"p-info\"> {{incident.state}}</span></p>\n                        <p class=\"p-heading\">County:<span class=\"p-info\"> {{incident.county}}</span></p>\n                        <p class=\"p-heading\">Place:<span class=\"p-info\"> {{incident.place}}</span></p>\n                        <p class=\"p-heading\">Latitude: <span class=\"p-info\"> {{incident.latDecimal}}</span></p>\n                        <p class=\"p-heading\">Longitude: <span class=\"p-info\"> {{incident.lonDecimal}}</span></p>\n                        <p class=\"p-heading\" ng-if=\"incident.locationNotes\">Location Notes:<span class=\"p-info\"> {{incident.locationNotes}}</span> </p>\n                        <br>\n\n                        <div ng-if=\"incident.summary\">\n                                <h4> Summary</h4>\n                                <p class=\"p-info\" ng-if=\"incident.dateNotes\">{{incident.summary}} </p>\n                        </div>\n\n                        <h4>Accused</h4>\n                        <div ng-repeat=\"accused in incident.accused\">\n                                <p class=\"p-heading\">Name:<span class=\"p-info\"> {{accused.fullName}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"accused.namesString\">AKA:<span class=\"p-info\"> {{accused.namesString}}</span> </p>\n                                <p class=\"p-heading\">Race:<span class=\"p-info\"> {{accused.race}}</span> </p>\n                                <p class=\"p-heading\">Nationality:<span class=\"p-info\"> {{accused.nationality}}</span> </p>\n                                <p class=\"p-heading\">Gender:<span class=\"p-info\">{{accused.gender}}</span> </p>\n                                <div ng-repeat=\"accusation in accused.accusations\">\n                                        <p class=\"p-heading\">Accusation:<span class=\"p-info\"> {{accusation.accusation}}</span></p>\n                                        <p class=\"p-heading\">Weapon Used:<span class=\"p-info\"> {{accusation.weapon}}</span></p>\n                                </div>\n                                <div ng-repeat=\"punishment in accused.punishments\">\n                                        <p class=\"p-heading\">Punishment:<span class=\"p-info\"> {{punishment.punishment}}</span> <span class=\"p-info\" ng-if=\"punishment.lashes\">: {{punishment.lashes}} lashes</span></p>\n                                        <p class=\"p-heading\" ng-if=\"punishment-notes\">Punishment Notes:<span class=\"p-info\"> {{punishment.notes}}</span></p>\n                                </div>\n                                <p class=\"p-heading\">Confession or Speech at Gallows:<span class=\"p-info\"> {{accused.confession}}</span></p>\n                                <p class=\"p-heading\" ng-if=\"accused.notes\">Accused Notes:<span class=\"p-info\"> {{accused.notes}}</span> </p>\n                                <br>\n                        </div>\n                       \n                        <h4>Lynching</h4>\n                        <p class=\"p-heading\">Type of Crowd:<span class=\"p-info\"> {{incident.crowdType}}</span></p>\n                        <p class=\"p-heading\">Size of Crowd:<span class=\"p-info\"> {{incident.croudSize}}</span></p>\n                        <p class=\"p-heading\">Open or Secret:<span class=\"p-info\"> {{incident.open}}</span></p>\n                        <p class=\"p-heading\">Authorities: <span class=\"p-info\"> {{incident.authorities}}</span></p>\n                        <p class=\"p-heading\">Authorities Present: <span class=\"p-info\"> {{incident.authoritiesPresent}}</span></p>\n                        <p class=\"p-heading\">Lethality: <span class=\"p-info\"> {{incident.lethality}}</span></p>\n                        <p class=\"p-heading\">Lynching Notes: <span class=\"p-info\"> {{incident.incidentNotes}}</span></p>\n                        <br>\n                        <!-- <h4>Victim(s)</h4>\n                        <p>Name(s): {{incident.victimNames}}</p>\n                        <p>Gender(s): {{incident.victimGenders}}</p>\n                        <p>Race(s): {{incident.victimRaces}}</p>\n                        <p>Victim Notes: {{incident.victimNotes}}</p> -->\n                </div>\n        \n                <div class=\"col-lg-6\">\n                        <h4>Sources</h4>\n                        <button ng-if=\"incident.showSources===false\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'show')\"><span class=\"glyphicon glyphicon-book\"><h5>Show Sources</h5></button>\n                        <button ng-if=\"incident.showSources===true\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'hide')\"><span class=\"glyphicon glyphicon-book\"><h5>Hide Sources</h5></button>\n                        <div ng-if=\"incident.showSources===true\">\n                            \n                                <!-- newspapers -->\n                                <h4 ng-if=\"incident.newspapers.length>0\">Newspapers</h4>\n                                <div ng-if=\"incident.newspapers.length>0\" ng-repeat=\"source in incident.newspapers\"> \n                                <p class=\"p-heading\">Article Title:<span class=\"p-info\"> {{source.articleTitle}}</span> </p>\n                                <p class=\"p-heading\">Newspaper:<span class=\"p-info\">{{source.newspaper}}</span> </p>\n                                <p class=\"p-heading\">Place:<span class=\"p-info\"> {{source.place}}, </span><span class=\"p-heading\">State:</span><span class=\"p-info\"> {{source.state}},</span> <span class=\"p-heading\">Country: </span><span class=\"p-info\"> {{source.country}}</span> </p>\n                                <p class=\"p-heading\">Date:<span class=\"p-info\"> {{source.dateString}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.section\">Section:<span class=\"p-info\"> {{source.section}}</span><span class=\"p-heading\" ng-if=\"source.page\">Page</span><span class=\"p-info\"> {{source.page}}</span> <span class=\"p-heading\" ng-if=\"source.column\">Column</span><span class=\"p-info\"> {{source.column}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedPage\">Continued on Page:<span class=\"p-info\"> {{source.continuedPage}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedColumn\">Continued on Column:<span class=\"p-info\"> {{source.continuedColumn}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.link\">link:<a> {{source.link}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n\n                                <!-- books -->\n                                <h4 ng-if=\"incident.books.length>0\">Books</h4>\n                                <div ng-if=\"incident.books.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\">Author:<span class=\"p-info\"> {{source.auString}}</span> </p>\n                                <p class=\"p-heading\">Editor:<span class=\"p-info\"> {{source.editorString}}</span> </p>\n                                <p class=\"p-heading\">Publisher:<span class=\"p-info\"> {{source.publisher}}</span> </p>\n                                <p class=\"p-heading\">Pub Place:<span class=\"p-info\"> {{source.placePub}}</span> </p>\n                                <p class=\"p-heading\">Published:<span class=\"p-info\"> {{source.yearPub}}</span> </p>\n                                <p class=\"p-heading\">Volume:<span class=\"p-info\"> {{source.volume}}</span> </p>\n                                <p class=\"p-heading\">Pages:<span class=\"p-info\"> {{source.pages}}</span> </p>\n                                <p class=\"p-heading\">Ed Comp:<span class=\"p-info\"> {{source.edComp}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n\n                                <!-- manuscripts -->\n                                <h4 ng-if=\"incident.manuscripts.length>0\">Manuscripts</h4>\n                                <div ng-if=\"incident.manuscripts.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\">Collection:<span class=\"p-info\"> {{source.manuscriptCollection}}</span> </p>\n                                <p class=\"p-heading\">Call Number:<span class=\"p-info\"> {{source.callNumber}}</span> </p>\n                                <p class=\"p-heading\">Repository:<span class=\"p-info\"> {{source.repository}}</span> </p>\n                                <span class=\"p-info\"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> \n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <span class=\"p-info\"> {{source.month}}/{{source.day}}/{{source.year}}</span> \n                                <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n                                \n                                  <!-- Websites -->\n                                  <h4 ng-if=\"incident.manuscripts.length>0\">Websitess</h4>\n                                  <div ng-if=\"incident.manuscripts.length>0\" ng-repeat=\"source in incident.books\"> \n                                  <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                  <p class=\"p-heading\">Collection:<span class=\"p-info\"> {{source.manuscriptCollection}}</span> </p>\n                                  <p class=\"p-heading\">Call Number:<span class=\"p-info\"> {{source.callNumber}}</span> </p>\n                                  <p class=\"p-heading\">Repository:<span class=\"p-info\"> {{source.repository}}</span> </p>\n                                  <span class=\"p-info\"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> \n                                  <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                  <span class=\"p-info\"> {{source.month}}/{{source.day}}/{{source.year}}</span> \n                                  <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                  <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                  <br>\n                                  </div>\n                                \n\n                        </div>\n\n                        \n                </div>\n                </div>\n                <h4><button class=\"btn btn-success\" id=\"go-to-top-button\" ng-click=\"$ctrl.goToTop(incident.caseNum)\"><span class=\"glyphicon glyphicon-arrow-up\"><h5>Go To Top</h5></button>\n        </div>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Edit Incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.deleteIncident(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Delete Incident</h6></span></button>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Propose Edits to incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.proposeDeletion(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Propose Delete Incident</h6></span></button>\n\n                                                <!-- long view ends -->\n                                                </div>\n                                        </div>\n                                        <!-- full container ends -->\n                                </div>\n                                \n                        </li>\n                </ul>\n        </div>\n</div> \n\n        <div id=\"search-results-footer\" class=\"jumbotron\" ng-if=\"$ctrl.incidents.length>0\">\n                <div class=\"panel-md-10\">\n                        <h4><button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.minResult>9\" ng-click=\"$ctrl.previousResults()\"><span class=\"glyphicon glyphicon-arrow-left\"><h5>Previous</h5></button>\n                        <button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.maxResult<$ctrl.incidentNumber\" ng-click=\"$ctrl.nextResults()\"><span class=\"glyphicon glyphicon-arrow-right\"><h5>Next</h5></button>\n                        <span>Results {{$ctrl.minResult}}-{{$ctrl.maxResult}}</span>\n                        <span> (of {{$ctrl.incidentNumber}})</h4>\n                </div>\n        </div>\n              \n</section>";
 
 /***/ }),
 /* 24 */
@@ -36378,7 +36488,7 @@
 	            });
 	        },
 	        getById: function getById(incidentId) {
-	            console.log('in get by Id ,', apiUrl);
+	            // console.log('in get by Id ,', apiUrl);
 	            return $http.get(apiUrl + '/incidents/' + incidentId).then(function (res) {
 	                return res.data;
 	            });
@@ -36389,13 +36499,13 @@
 	            });
 	        },
 	        addIncident: function addIncident(incident) {
-	            console.log('In lynch service, adding this incident ', incident);
+	            // console.log('In lynch service, adding this incident ', incident);
 	            return $http.post(apiUrl + '/incidents', incident).then(function (res) {
 	                return res.data;
 	            });
 	        },
 	        addOther: function addOther(collection, entry) {
-	            console.log('In lynch service, adding this entry to this collection ', entry, collection);
+	            // console.log('In lynch service, adding this entry to this collection ', entry, collection);
 	            return $http.post(apiUrl + '/' + collection, entry).then(function (res) {
 	                return res.data;
 	            });
@@ -36411,6 +36521,23 @@
 	            return $http.get(apiUrl + '/' + collection + '/?caseNum=' + incident.caseNum).then(function (res) {
 	                return res.data;
 	            });
+	        },
+	        getIncidentByAccused: function getIncidentByAccused(collection, query) {
+	            // console.log('in lynch service getting all the data for this collection, ', collection);
+	            // console.log('in lynch service getting all the data for this query, ', query);
+	            if (collection === 'accused') {
+	                return $http.get(apiUrl + '/accused/' + query).then(function (res) {
+	                    return res.data;
+	                });
+	            } else if (collection === 'punishments') {
+	                return $http.get(apiUrl + '/punishments/' + query).then(function (res) {
+	                    return res.data;
+	                });
+	            } else if (collection === 'accusations') {
+	                return $http.get(apiUrl + '/accusations/' + query).then(function (res) {
+	                    return res.data;
+	                });
+	            }
 	        },
 	        getAccusedData: function getAccusedData(incident, accused, collection) {
 	            // console.log('in lynch service getting all the data for this incident and collection, ', incident, collection, accused);

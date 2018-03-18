@@ -17,13 +17,16 @@ ul {
 #filter-label {
   color: white; }
 
+.loader-container {
+  padding-left: 30vw; }
+
 .loader {
-  border: 16px solid #95a5a6;
+  border: 5vw solid #2C3E50;
   /* Light grey */
-  border-top: 16px solid #3498DB;
+  border-top: 5vw solid #3498DB;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 20vw;
+  height: 20vw;
   animation: spin 2s linear infinite; }
 
 @keyframes spin {

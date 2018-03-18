@@ -260,9 +260,10 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     //send results
         let searchResults = this.filtered;
         console.log('search results are');
-        this.loading = false;
+       
         timeout(function(){
             rootScope.$broadcast('incidentsUpdated', searchResults);
+            this.loading = false;
         },500);
     };
 

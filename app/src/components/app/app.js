@@ -129,6 +129,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     //loads all incidens and incident data
     this.loadIncidents = ()=>{
+        console.log('1 getting all incidents');
         this.loading = true;
         lynchSvc.get()
             .then((incidents)=>{
@@ -141,6 +142,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     //sorts all incidents by date
     this.sortResults = (incidents)=>{
+        console.log('2 sorting incidents by date');
         let incidentNumber = incidents.length;
         this.sorted = incidents.sort((a,b)=>{
             let newA = (a.year*365);
@@ -165,13 +167,15 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     //add all incident data and broadcast incidents downstream
     this.updateIncidents = (incidents)=>{
+        console.log('3 finding data for the sorted incidents');
         console.log('updating rootscope active incidents', incidents);
         for (let i = 0; i < incidents.length; i++){
             this.findIncidentData(incidents[i]);
         }
         rootScope.incidents = incidents;
         timeout(function(){
-            rootScope.$broadcast('incidentsUpdated', incidents);},500);
+            console.log('5 incidents have been updated');
+            rootScope.$broadcast('incidentsUpdated', incidents);},100);
         this.loading = false;
     };
 
@@ -325,6 +329,7 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
     this.accusedInfo = ['accusations', 'names', 'punishments'];
 
     this.findIncidentData = (incident)=>{
+        console.log('4 finding all the data for this incident');
         // console.log('finding data for this caseNum: ', incident.caseNum);
         //the code still needs to be added here to look up additional case info
         for (let i=0; i < this.collections.length; i++){

@@ -79,11 +79,11 @@
 	var app = _angular2.default.module('myApp', [_components2.default, _services2.default, _angularUiRouter2.default, _ngmap2.default]);
 	
 	//switch between these two lines to switch between local host and heroku api urls
-	//app.value('apiUrl', 'http://localhost:3000/api');
 	
 	
 	//import defaultRoute from 'angular-ui-router-default';
-	app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
+	app.value('apiUrl', 'http://localhost:3000/api');
+	//app.value('apiUrl', 'https://lynching-database.herokuapp.com/api');
 	
 	app.value('googleMapsUrl', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyC2HGq4Hh7k7CUBs6VNkEJDI6UbPchNQyY');
 	
@@ -35570,24 +35570,28 @@
 	            //this code creates a string of all of the names for an accused person
 	            // console.log('right before loops.  incident.accused is ', incident.accused);
 	            // console.log('incident.accused.length is ', incident.accused.length);
-	            for (var l = 0; l < incident.accused.length; l++) {
-	                incident.accused[l].namesString = '';
-	                // console.log('this accused names are ', incident.accused[l].names);
-	                if (incident.accused[l].names.length > 1) {
-	                    for (var m = 0; m < incident.accused[l].names.length; m++) {
-	                        var newFullName = '';
-	                        if (incident.accused[l].names[m].first) {
-	                            newFullName += incident.accused[l].names[m].first;
-	                        }
-	                        if (incident.accused[l].names[m].middle) {
-	                            newFullName += ' ' + incident.accused[l].names[m].middle;
-	                        }
-	                        if (incident.accused[l].names[m].last) {
-	                            newFullName += ' ' + incident.accused[l].names[m].last;
-	                        }
+	            if (incident.accused) {
+	                for (var l = 0; l < incident.accused.length; l++) {
+	                    incident.accused[l].namesString = '';
+	                    // console.log('this accused names are ', incident.accused[l].names);
+	                    if (incident.accused[l].names) {
+	                        if (incident.accused[l].names.length > 1) {
+	                            for (var m = 0; m < incident.accused[l].names.length; m++) {
+	                                var _newFullName = '';
+	                                if (incident.accused[l].names[m].first) {
+	                                    _newFullName += incident.accused[l].names[m].first;
+	                                }
+	                                if (incident.accused[l].names[m].middle) {
+	                                    _newFullName += ' ' + incident.accused[l].names[m].middle;
+	                                }
+	                                if (incident.accused[l].names[m].last) {
+	                                    _newFullName += ' ' + incident.accused[l].names[m].last;
+	                                }
 	
-	                        if (incident.accused[l].names.length - 1 === m) {
-	                            incident.accused[l].namesString += newFullName;
+	                                if (incident.accused[l].names.length - 1 === m) {
+	                                    incident.accused[l].namesString += _newFullName;
+	                                }
+	                            }
 	                        } else {
 	                            incident.accused[l].namesString += newFullName + ', ';
 	                        }
@@ -35595,26 +35599,27 @@
 	                }
 	            }
 	            //this code adds author strings for the books
-	
-	            incident.books.forEach(function (book) {
-	                var bookPeople = ['au', 'editor'];
-	                for (var n = 0; n < bookPeople.length; n++) {
-	                    var str = bookPeople[n] + 'String';
-	                    book[str] = '';
-	                    if (book[bookPeople[n] + 'Fn']) {
-	                        book[str] += book.auFn + ' ';
+	            if (incident.books) {
+	                incident.books.forEach(function (book) {
+	                    var bookPeople = ['au', 'editor'];
+	                    for (var n = 0; n < bookPeople.length; n++) {
+	                        var str = bookPeople[n] + 'String';
+	                        book[str] = '';
+	                        if (book[bookPeople[n] + 'Fn']) {
+	                            book[str] += book.auFn + ' ';
+	                        }
+	                        if (book[bookPeople[n] + 'Mn']) {
+	                            book[str] += book.auMn + ' ';
+	                        }
+	                        if (book[bookPeople[n] + 'Ln']) {
+	                            book[str] += book.auLn;
+	                        }
+	                        if (book[bookPeople[n] + 'suffix']) {
+	                            book[str] += ' ' + book.auSuffix + ' ';
+	                        }
 	                    }
-	                    if (book[bookPeople[n] + 'Mn']) {
-	                        book[str] += book.auMn + ' ';
-	                    }
-	                    if (book[bookPeople[n] + 'Ln']) {
-	                        book[str] += book.auLn;
-	                    }
-	                    if (book[bookPeople[n] + 'suffix']) {
-	                        book[str] += ' ' + book.auSuffix + ' ';
-	                    }
-	                }
-	            });
+	                });
+	            }
 	            rootScope.$broadcast('locationUpdated', incident);
 	        }, 500);
 	    };
@@ -36026,8 +36031,10 @@
 	
 	    rootScope.$on('locationUpdated', function (event, location) {
 	        console.log('broadcast recieved', location);
-	        if (_this.activeIncidents.length === 1) {
-	            _this.goToTop(_this.activeIncidents[0].caseNum);
+	        if (_this.activeIncidents) {
+	            if (_this.activeIncidents.length === 1) {
+	                _this.goToTop(_this.activeIncidents[0].caseNum);
+	            }
 	        }
 	    });
 	};

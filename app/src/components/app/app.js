@@ -356,25 +356,27 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
             for (let l= 0; l < incident.accused.length; l++){
                 incident.accused[l].namesString = '';
                 // console.log('this accused names are ', incident.accused[l].names);
-                if(incident.accused[l].names.length>1){
-                    for (let m =0; m < incident.accused[l].names.length; m++){
-                        let newFullName = '';
-                        if (incident.accused[l].names[m].first){
-                            newFullName += incident.accused[l].names[m].first;  
-                        }
-                        if (incident.accused[l].names[m].middle){
-                            newFullName += ' ' + incident.accused[l].names[m].middle;  
-                        }
-                        if (incident.accused[l].names[m].last){
-                            newFullName += ' ' + incident.accused[l].names[m].last;  
-                        }
+                if(incident.accused[l].names){
+                    if(incident.accused[l].names.length>1){
+                        for (let m =0; m < incident.accused[l].names.length; m++){
+                            let newFullName = '';
+                            if (incident.accused[l].names[m].first){
+                                newFullName += incident.accused[l].names[m].first;  
+                            }
+                            if (incident.accused[l].names[m].middle){
+                                newFullName += ' ' + incident.accused[l].names[m].middle;  
+                            }
+                            if (incident.accused[l].names[m].last){
+                                newFullName += ' ' + incident.accused[l].names[m].last;  
+                            }
 
-                        if (incident.accused[l].names.length-1 === m){
-                            incident.accused[l].namesString += newFullName;
+                            if (incident.accused[l].names.length-1 === m){
+                                incident.accused[l].namesString += newFullName;
+                            }
                         }
-                        else{
-                            incident.accused[l].namesString += newFullName + ', ';
-                        }
+                    }    
+                    else{
+                        incident.accused[l].namesString += newFullName + ', ';
                     }
                 }
             }

@@ -289,8 +289,10 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
    
     rootScope.$on('locationUpdated', (event, location)=>{
         console.log('broadcast recieved', location);
-        if(this.activeIncidents.length === 1){
-            this.goToTop(this.activeIncidents[0].caseNum);
+        if (this.activeIncidents){
+            if(this.activeIncidents.length === 1){
+                this.goToTop(this.activeIncidents[0].caseNum);
+            }
         }
     });
 };

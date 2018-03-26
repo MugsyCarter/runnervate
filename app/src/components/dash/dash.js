@@ -1,4 +1,4 @@
-import template from './incidents.html';
+import template from './dash.html';
 
 
 export default {
@@ -11,5 +11,4 @@ controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl',
 function controller(runSvc, timeout, rootScope, googleMapsUrl, NgMap, $location, $anchorScroll) {
     // console.log('root scoped query is ', rootScope.query);
     this.loading = true;
-    
 };

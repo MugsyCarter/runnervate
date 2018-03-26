@@ -35228,6 +35228,32 @@
 	controller.$inject = ['$scope', '$state', '$rootScope', 'userService', 'runService', '$timeout'];
 	
 	function controller($scope, $state, rootScope, userSvc, runSvc, timeout) {
+	    var _this = this;
+	
+	    this.loggedIn = rootScope.loggedIn = false;
+	    this.active = rootScope.active = {
+	        home: true,
+	        about: false,
+	        profile: false,
+	        calendar: false,
+	        login: false,
+	        signup: false,
+	        logout: false
+	    };
+	
+	    this.changeActive = function (page) {
+	        _this.active = rootScope.active = {
+	            home: false,
+	            about: false,
+	            profile: false,
+	            calendar: false,
+	            login: false,
+	            signup: false,
+	            logout: false
+	        };
+	        rootScope.active[page] = true;
+	        _this.active = rootScope.active;
+	    };
 	
 	    // this.state = $state;
 	    // console.log('state is ', this.state);
@@ -35643,14 +35669,13 @@
 	    //     },500);
 	    // };
 	
-	
 	};
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports) {
 
-	module.exports = " <section>        \n       \n        <nav class=\"navbar navbar-default navbar-dark bg-primary\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">CaLynchDB</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <form class=\"navbar-form navbar-left\">\n                        <div class=\"input-group\" ng-hide=\"$ctrl.state.current.name==='incidents'\">\n                            <input type=\"text\" class=\"form-control\" placeholder=\"Search Lynchings by Location\" ng-model=\"$ctrl.searchQuery\">\n                                <div class=\"input-group-btn\">\n                                    <button ng-click=\"$ctrl.searchFor()\" class=\"btn btn-default\" type=\"submit\">\n                                        <i class=\"glyphicon glyphicon-search\"></i>\n                                    </button>\n                                </div>\n                        </div>\n                    </form>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav>\n\n\n    <div class=\"container-fluid\">\n        <div class=\"loader-container\" ng-if=\"$ctrl.loading===true\">\n            <h3> Loading</h3>\n            <div class=\"loader\" ></div>\n        </div>\n\n    </div>\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2018.  </span></p>\n    </div>\n  </section>";
+	module.exports = " <section>        \n       \n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand\" href=\"#\">runnervate</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" style=\"\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n      \n        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.home}}}\">\n              <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Features</a>\n            </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"profile\">Profile</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n              <a class=\"nav-link\" ui-sref=\"calendar\">Calendar</a>\n            </li>\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.about}}}\">\n                <a class=\"nav-link\" ui-sref=\"about\">About</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"signup\">Sign Up</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"login\">Login</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"logout\">Log Out</a>\n            </li>\n          </ul>\n          <form class=\"form-inline my-2 my-lg-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\n          </form>\n        </div>\n      </nav>\n\n\n\n    <!-- <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">runnervate</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav> -->\n\n\n    <div class=\"container-fluid\">\n        <div class=\"loader-container\" ng-if=\"$ctrl.loading===true\">\n            <h3> Loading</h3>\n            <div class=\"loader\" ></div>\n        </div>\n\n    </div>\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2018.  </span></p>\n    </div>\n  </section>";
 
 /***/ }),
 /* 18 */
@@ -35715,7 +35740,7 @@
 	    this.loggedIn = rootScope.loggedIn;
 	    console.log(this.loggedIn);
 	
-	    rootScope.searchIncidents();
+	    // rootScope.searchRuns();
 	    //     this.letters=[];
 	    //     this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
 	
@@ -35740,7 +35765,7 @@
 /* 21 */
 /***/ (function(module, exports) {
 
-	module.exports = "\n<section class =\"page\" id=\"home-page\">\n\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">runnervate</h1>\n    <p class=\"lead\">energize your running</p>\n    <hr class=\"my-4\">\n    <p>Track and monitor every aspect of your workouts to take your running to the next level</p>\n    <p class=\"lead\" ng-if=\"$ctrl.loggedIn===false\">\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"login\" role=\"button\">Login</a>\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"signup\" role=\"button\">Sign Up</a>\n    </p>\n  </div>\n\n</section>\n";
+	module.exports = "\n<section class =\"page\" id=\"home-page\">\n\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">runnervate</h1>\n    <p class=\"lead\">energize your running</p>\n    <hr class=\"my-4\">\n    <p>Track and monitor every aspect of your workouts to take your running to the next level</p>\n    <p class=\"lead\" ng-if=\"$ctrl.loggedIn===false\">\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"login\" role=\"button\">Login</a>\n      <a class=\"btn btn-success btn-lg\" ui-sref=\"signup\" role=\"button\">Sign Up</a>\n    </p>\n  </div>\n\n</section>\n";
 
 /***/ }),
 /* 22 */
@@ -36089,7 +36114,7 @@
 /* 25 */
 /***/ (function(module, exports) {
 
-	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<button type=\"submit\" ng-click=\"$ctrl.authenticate\">Login</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
+	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<a class=\"btn btn-primary btn-lg\" ui-sref=\"signup\" role=\"button\" ng-click=\"$ctrl.authenticate\">Login</a>\n\t\t<!-- <button type=\"submit\" ng-click=\"$ctrl.authenticate\">Login</button> -->\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ }),
 /* 26 */
@@ -36494,7 +36519,7 @@
 	});
 	exports.default = runService;
 	
-	lynchService.$inject = ['$http', 'apiUrl'];
+	runService.$inject = ['$http', 'apiUrl'];
 	
 	function runService($http, apiUrl) {
 	    return {

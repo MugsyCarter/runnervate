@@ -1,5 +1,7 @@
+// @import 'bootswatch';
 @import 'colors';
 @import 'buttons';
+@import 'variables';
 
 select {
   margin: 3vh
@@ -9,80 +11,10 @@ ul{
   list-style: none;
 }
 
-.navbar{
-  border-radius: 4px 4px 0px 0px;
-  margin-bottom: 0px;
-}
-
-
-//browse Incidents
-//search filters
-#filters{
-  background-color: #1C2328;
-  margin: 0em;
-  padding: 0em;
-  border-radius: 0px 0px 4px 4px;
-}
-
-#filter-label{
-  color: white;
-}
-
-//incident results
-.loader-container {
-  padding-left: 30vw;
-}
-
-.loader {
-    border: 5vw solid $blue; /* Light grey */
-    border-top: 5vw solid $cyan;
-    border-radius: 50%;
-    width: 20vw;
-    height: 20vw;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-#incident-panel{
-  border: none;
-  :hover{
-    cursor: pointer;
-  }
-  margin: 1vh;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
-#show-incident-button{
-  float: right;
-}
-
-#hide-incident-button{
-  float: right;
-}
-
-#big-incident{
-  margin: 0px;
-}
-
-.p-heading{
-  color: $cyan;
-}
-
-.p-info{
-  color: black;
-}
-
-#search-results-footer{
-  padding: 0em;
-}
-
-#more-incidents-button{
-  width: 8vw
-}
+// .navbar{
+//   border-radius: 4px 4px 0px 0px;
+//   margin-bottom: 0px;
+// }
 
 //map stuff
 .big-map{

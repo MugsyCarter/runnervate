@@ -10,6 +10,31 @@ controller.$inject = ['$scope', '$state', '$rootScope', 'userService', 'runServi
 
 function controller($scope, $state, rootScope, userSvc, runSvc, timeout) {
 
+    this.loggedIn = rootScope.loggedIn = false;
+    this.active = rootScope.active = {
+        home: true,
+        about: false,
+        profile: false,
+        calendar: false,
+        login: false,
+        signup: false,
+        logout: false
+    };
+
+    this.changeActive = (page)=>{
+        this.active = rootScope.active = {
+            home: false,
+            about: false,
+            profile: false,
+            calendar: false,
+            login: false,
+            signup: false,
+            logout: false
+        };
+        rootScope.active[page] = true;
+        this.active = rootScope.active;
+    };
+
     // this.state = $state;
     // console.log('state is ', this.state);
     // rootScope.map = false;

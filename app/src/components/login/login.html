@@ -13,7 +13,8 @@
 			</label>
 		</div>
 
-		<button type="submit" ng-click="$ctrl.authenticate">Login</button>
+		<a class="btn btn-primary btn-lg" ui-sref="signup" role="button" ng-click="$ctrl.authenticate">Login</a>
+		<!-- <button type="submit" ng-click="$ctrl.authenticate">Login</button> -->
 	</form>
 	<div class="error" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>
 </section>

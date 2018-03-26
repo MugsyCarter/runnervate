@@ -1,5 +1,5 @@
 
-lynchService.$inject = ['$http', 'apiUrl'];
+runService.$inject = ['$http', 'apiUrl'];
 
 export default function runService($http, apiUrl) {
     return {

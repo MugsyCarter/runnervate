@@ -4,65 +4,6 @@ select {
 ul {
   list-style: none; }
 
-.navbar {
-  border-radius: 4px 4px 0px 0px;
-  margin-bottom: 0px; }
-
-#filters {
-  background-color: #1C2328;
-  margin: 0em;
-  padding: 0em;
-  border-radius: 0px 0px 4px 4px; }
-
-#filter-label {
-  color: white; }
-
-.loader-container {
-  padding-left: 30vw; }
-
-.loader {
-  border: 5vw solid #2C3E50;
-  /* Light grey */
-  border-top: 5vw solid #3498DB;
-  border-radius: 50%;
-  width: 20vw;
-  height: 20vw;
-  animation: spin 2s linear infinite; }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-
-#incident-panel {
-  border: none;
-  margin: 1vh;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
-  #incident-panel :hover {
-    cursor: pointer; }
-
-#show-incident-button {
-  float: right; }
-
-#hide-incident-button {
-  float: right; }
-
-#big-incident {
-  margin: 0px; }
-
-.p-heading {
-  color: #3498DB; }
-
-.p-info {
-  color: black; }
-
-#search-results-footer {
-  padding: 0em; }
-
-#more-incidents-button {
-  width: 8vw; }
-
 .big-map {
   height: 90vh;
   max-width: 60vw; }

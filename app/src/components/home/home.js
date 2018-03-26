@@ -13,7 +13,7 @@ function controller($timeout, rootScope) {
     this.loggedIn = rootScope.loggedIn;
     console.log(this.loggedIn);
 
-    rootScope.searchIncidents();
+    // rootScope.searchRuns();
 //     this.letters=[];
 //     this.letterOptions = [['I', 'E'],['N', 'S'],['T','F'],['J','P']];
 

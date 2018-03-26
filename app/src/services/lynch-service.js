@@ -8,6 +8,11 @@ export default function lynchService($http, apiUrl) {
                 .then(res => res.data);
         },
 
+        getCompleteIncidents() {
+            return $http.get(`${apiUrl}/completeIncidents`)
+                .then(res => res.data);
+        },
+
         getById(incidentId) {
             // console.log('in get by Id ,', apiUrl);
             return $http.get(`${apiUrl}/incidents/${incidentId}`)

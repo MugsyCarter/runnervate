@@ -6,6 +6,9 @@
                 <button ng-if="$ctrl.nuke===true" class="btn btn-success"  ng-click="$ctrl.populateDatabase()" ><span class="glyphicon glyphicon-book"><h6>Populate Incidents</h6></span></button>
                 <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.deleteIncidents()" ><span class="glyphicon glyphicon-fire"><h6>Nuke Incidents</h6></span></button>
 
+                <button ng-if="$ctrl.nuke===true" class="btn btn-success"  ng-click="$ctrl.populateDB('completeIncidents')" ><span class="glyphicon glyphicon-book"><h6>Populate Complete Incidents</h6></span></button>
+                <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.deleteCollection('completeIncidents')" ><span class="glyphicon glyphicon-fire"><h6>Nuke Complete Incidents</h6></span></button>
+
                 <button ng-if="$ctrl.nuke===true" class="btn btn-success"  ng-click="$ctrl.populateDB('accusations')" ><span class="glyphicon glyphicon-book"><h6>Populate Accusations</h6></span></button>
                 <button ng-if="$ctrl.nuke===true" class="btn btn-danger"  ng-click="$ctrl.deleteCollection('accusations')" ><span class="glyphicon glyphicon-fire"><h6>Nuke Accusations</h6></span></button>
 

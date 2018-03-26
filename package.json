@@ -1,7 +1,7 @@
 {
-  "name": "California-Lynching-Database",
+  "name": "runnervate",
   "version": "1.0.0",
-  "description": "Web portal for entering data to a project studying Lynchings in California",
+  "description": "Web-based running mileage and activity tracker, to help runners track and improve their workouts.",
   "main": "index.js",
   "scripts": {
     "start": "cd app && npm i && cd ../server && npm i && node server.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/California-Lynching-Database.git"
+    "url": "git+https://github.com/MugsyCarter/runnervate.git"
   },
   "author": "Mugsy carter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MugsyCarter/California-Lynching-Database/issues"
+    "url": "https://github.com/MugsyCarter/runnervate/issues"
   },
-  "homepage": "https://github.com/MugsyCarter/California-Lynching-Database#readme",
+  "homepage": "https://github.com/MugsyCarter/runnervate#readme",
   "devDependencies": {
     "angular-ui-bootstrap": "^2.5.0",
     "http-server": "^0.11.1"

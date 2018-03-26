@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/caLynchDB';
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/runOn';
 mongoose.Promise = Promise;
 
 mongoose.connect( dbURI );

@@ -1,7 +1,7 @@
 {
-  "name": "California-Lynching-Database",
+  "name": "runnervate",
   "version": "1.0.0",
-  "description": "The frontend of the California-Lynching-Database site.",
+  "description": "The frontend of the runnervate site.",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MugsyCarter/California-Lynching-Database.git"
+    "url": "git+https://github.com/MugsyCarter/runnervate.git"
   },
   "author": "Mugsy Carter",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MugsyCarter/California-Lynching-Database/issues"
+    "url": "https://github.com/MugsyCarter/runnervate/issues"
   },
-  "homepage": "https://github.com/MugsyCarter/California-Lynching-Database#readme",
+  "homepage": "https://github.com/MugsyCarter/runnervate#readme",
   "devDependencies": {
     "angular-mocks": "^1.5.9",
     "babel-core": "^6.18.2",

@@ -1,3 +1,3 @@
-# California-Lynching-Database
-A Web portal for entering data to a project studying Lynchings in California.
+# Runnervate
+Web-based running mileage and activity tracker, to help runners track and improve their workouts.
 

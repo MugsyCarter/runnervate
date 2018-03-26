@@ -127,6 +127,17 @@ function controller($scope, $state, rootScope, userSvc, lynchSvc, timeout) {
 
     };
 
+    //loads all completeIncidents
+    this.getCompleteIncidents = rootScope.getCompleteIncidents= ()=>{
+        this.loading = true;
+        lynchSvc.getCompleteIncidents()
+        .then((completeIncidents)=>{
+            //get all incidents
+            console.log('complete incidents are ', completeIncidents);
+            this.loading = false;
+        });
+    };
+
     //loads all incidens and incident data
     this.loadIncidents = ()=>{
         console.log('1 getting all incidents');

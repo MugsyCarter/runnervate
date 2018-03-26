@@ -18,7 +18,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
     this.minResult = 0;
     this.maxResult = 10;
 
-    this.nuke = false; 
+    this.nuke = true; 
 
     this.incidents = rootScope.incidents;
     this.activeIncidents = rootScope.ActiveIncidents;
@@ -42,7 +42,9 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
         }
         console.log('these are the active incidents ', this.activeIncidents);
         rootScope.activeIncidents = this.activeIncidents;
+        this.completeIncidents = this.incidents;
         this.loading = false;
+        // rootScope.getCompleteIncidents();
     };
 
     this.showIncident= (incident)=>{
@@ -136,6 +138,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
     };
 
     this.populateDB = (collection)=>{
+        console.log('this.incidents ', this.incidents);
         console.log('adding this collection', collection);
         this[collection].forEach((entry)=>{
             lynchSvc.addOther(collection, entry)
@@ -226,6 +229,7 @@ function controller(lynchSvc, timeout, rootScope, googleMapsUrl, NgMap, $locatio
             console.log('no active incidents');
             this.loading = true;
             rootScope.loadIncidents();
+            rootScope.getCompleteIncidents();
         }
         else{
             this.activeIncidents = rootScope.activeIncidents;

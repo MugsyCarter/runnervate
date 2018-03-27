@@ -1,33 +1,24 @@
-//model for the website schema
+//model for the run schema
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const requiredString = {type: String, required: true};
+const requiredNumber = {type: Number, required: true};
 
-const websiteSchema = new Schema({
-    caseNum: Number,
-    incomplete: String,
-    accessed: Date,
-    url: String,
-    title: String,	
-    auFn: String,	
-    auMn: String,
-    auLn: String,
-    auSuffix: String,
-    edComp: String,
-    publisher: String,
-    volume: String,	
-    pages: String,	
-    bookTitle: String,
-    location: String,	
-    stateProvince: String,
-    country: String,
-    dateYear: Number,	
-    dateMonth: Number,
-    dateDay: Number,
-    websiteCollection: String,
-    repository: String,
-    callNumber: String,
-    displayPDF: String,
-    pDF: String
+const runSchema = new Schema({
+    type: requiredString,
+    date: Date,
+    miles: requiredNumber,
+    time: requiredNumber,
+    elevation: Number,
+    pace: Number,
+    speed: Number,
+    pain: Number,
+    painLocation: String,
+    hunger: Number,
+    energy: Number,
+    wind: Number,
+    location: String,
+    notes: String,
 });
 
-module.exports = mongoose.model('Website', websiteSchema);
+module.exports = mongoose.model('Run', runSchema);

@@ -56,23 +56,23 @@
 	
 	var _components2 = _interopRequireDefault(_components);
 	
-	var _services = __webpack_require__(34);
+	var _services = __webpack_require__(36);
 	
 	var _services2 = _interopRequireDefault(_services);
 	
-	var _angularUiRouter = __webpack_require__(40);
+	var _angularUiRouter = __webpack_require__(42);
 	
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 	
-	var _ngmap = __webpack_require__(126);
+	var _ngmap = __webpack_require__(128);
 	
 	var _ngmap2 = _interopRequireDefault(_ngmap);
 	
-	var _routes = __webpack_require__(127);
+	var _routes = __webpack_require__(129);
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	__webpack_require__(128);
+	__webpack_require__(130);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -35014,16 +35014,17 @@
 
 	var map = {
 		"./about/about.js": 12,
-		"./addIncident/addIncident.js": 14,
+		"./addRun/addRun.js": 14,
 		"./app/app.js": 16,
-		"./editIncident/editIncident.js": 18,
-		"./home/home.js": 20,
-		"./incidents/incidents.js": 22,
-		"./login/login.js": 24,
-		"./logout/logout.js": 26,
-		"./lynchMap/lynchMap.js": 28,
-		"./signup/signup.js": 30,
-		"./user/user.js": 32
+		"./dash/dash.js": 18,
+		"./editIncident/editIncident.js": 20,
+		"./home/home.js": 22,
+		"./incidents/incidents.js": 24,
+		"./login/login.js": 26,
+		"./logout/logout.js": 28,
+		"./lynchMap/lynchMap.js": 30,
+		"./signup/signup.js": 32,
+		"./user/user.js": 34
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -35079,117 +35080,62 @@
 	    value: true
 	});
 	
-	var _addIncident = __webpack_require__(15);
+	var _addRun = __webpack_require__(15);
 	
-	var _addIncident2 = _interopRequireDefault(_addIncident);
+	var _addRun2 = _interopRequireDefault(_addRun);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	exports.default = {
-	    template: _addIncident2.default,
+	    template: _addRun2.default,
 	    controller: controller
 	};
 	
 	
-	controller.$inject = ['$rootScope', 'lynchService', '$state'];
+	controller.$inject = ['$rootScope', 'runService', '$state'];
 	
-	function controller(rootScope, lynchSvc, $state) {
-	    var _ref,
-	        _source,
+	function controller(rootScope, runSvc, $state) {
+	    var _run,
 	        _this = this;
 	
 	    this.user = rootScope.user;
 	
 	    this.showFormData = false;
-	    this.decimal = 'true';
-	    this.incident = {
-	        cwIndex: null,
-	        gdIndex: null,
-	        origDBindex: null,
-	        caseNum: null,
-	        crossRefNotesCwGd: null,
 	
-	        year: null,
-	        month: null,
-	        day: null,
-	        dateNotes: null,
-	        state: 'California',
-	        place: null,
-	        county: null,
-	        locationNotes: null,
-	        latDecimal: null,
-	        lonDecimal: null,
-	        latNDegrees: null,
-	        latNMinutes: null,
-	        latNSeconds: null,
-	        lonWDegrees: null,
-	        lonWMinutes: null,
-	        lonWSeconds: null,
-	        crowdType: null,
-	        crowdSize: null,
-	        open: true,
-	        authoritiesPresent: null,
-	        authoritiesNotes: null,
-	        crime: null,
-	        punishment: null,
-	        lethality: null,
-	        otherNamesMentioned: null,
-	        suspects: [{
-	            suspectNames: [],
-	            suspectRace: [],
-	            suspectGender: null,
-	            confessionOrSpeech: null,
-	            confessionNotes: null,
-	            attendedByClergy: false,
-	            suspectNotes: null
-	        }],
-	        victims: [{
-	            victimNames: [],
-	            victimGender: null,
-	            victimRace: null,
-	            victimNotes: null
-	        }],
-	        sources: [(_ref = {
-	            type: null,
-	            publicationDate: null,
-	            publicationCity: null
-	        }, _defineProperty(_ref, 'publicationDate', null), _defineProperty(_ref, 'author', null), _defineProperty(_ref, 'title', null), _defineProperty(_ref, 'volumeNumber', null), _defineProperty(_ref, 'pageNumbers', null), _defineProperty(_ref, 'sourceNotes', null), _defineProperty(_ref, 'url', null), _ref)],
-	        abstract: null
-	    };
-	
-	    this.source = (_source = {
+	    this.run = (_run = {
 	        type: null,
-	        publicationDate: null,
-	        publicationCity: null
-	    }, _defineProperty(_source, 'publicationDate', null), _defineProperty(_source, 'author', null), _defineProperty(_source, 'title', null), _defineProperty(_source, 'volumeNumber', null), _defineProperty(_source, 'pageNumber', null), _defineProperty(_source, 'notes', null), _defineProperty(_source, 'url', null), _defineProperty(_source, 'day', null), _defineProperty(_source, 'month', null), _defineProperty(_source, 'year', null), _defineProperty(_source, 'pageStart', null), _defineProperty(_source, 'pageEnd', null), _defineProperty(_source, 'state', 'California'), _defineProperty(_source, 'city', null), _source);
+	        miles: null,
+	        time: null,
+	        elevation: null,
+	        pace: null,
+	        speed: null
+	    }, _defineProperty(_run, 'time', null), _defineProperty(_run, 'pain', null), _defineProperty(_run, 'hunger', null), _defineProperty(_run, 'energy', null), _defineProperty(_run, 'wind', null), _defineProperty(_run, 'location', null), _defineProperty(_run, 'notes', null), _run);
 	
-	    this.sourceTypes = ['book', 'newspaper', 'magazine', 'journal', 'website'];
+	    this.runTypes = ['Long Run', 'Intervals', 'Speed Work', 'Fartlek', 'Steady', 'Recovery'];
 	
-	    this.races = rootScope.races;
+	    this.criteria = ['type', 'miles', 'time'];
+	    this.workouts = ['run', 'walk', 'strength training', 'sports/other'];
 	
-	    this.suffs = ['jr.', 'sr.', 'III'];
+	    this.workoutType = 'run';
 	
-	    this.states = rootScope.states;
-	
-	    this.counties = rootScope.counties;
-	
-	    this.weapons = rootScope.weapons;
-	
-	    this.addThisIncident = function () {
-	        if (_this.decimal === 'false') {
-	            //write code to convert here
-	            _this.incident.latDecimal = _this.incident.latNDegrees + _this.incident.latNMinutes / 60 + _this.incident.latNSeconds / 3600;;
-	            _this.incident.lonDecimal = 0 - (_this.incident.lonWDegrees + _this.incident.lonWMinutes / 60 + _this.incident.lonWSeconds / 3600);
-	            console.log(_this.incident.lonDecimal);
+	    this.addRun = function () {
+	        var count = 0;
+	        for (var i = 0; i < _this.criteria.length; i++) {
+	            if (_this.run[criteria[i]]) {
+	                count++;
+	            }
 	        }
-	        console.log('adding this incident ', _this.incident);
-	        _this.showFormData = true;
-	        // lynchSvc.addIncident(this.incident)
-	        //     .then((incident)=>{
-	        //         console.log('this incident was added to the DB ', incident);
-	        //     });
+	        if (count === 3) {
+	            console.log('adding this incident ', _this.incident);
+	            _this.showFormData = true;
+	            runSvc.addRun(_this.run).then(function (run) {
+	                console.log('this run was added to the DB ', run);
+	            });
+	        } else {
+	            alert('Fill in the required fields before adding this run.');
+	        }
 	    };
 	
 	    this.addThisSource = function () {
@@ -35201,7 +35147,7 @@
 /* 15 */
 /***/ (function(module, exports) {
 
-	module.exports = "<section>\n    <h1>Add Incident</h1>\n    <form class=\"form-horizontal\">\n            <fieldset>\n              <legend>Enter Lynching Incident Details</legend>\n              \n              <div class =\"form-section\">\n                  <h2> Database Indices </h2>\n                  <div class=\"form-group\">\n\n                      <label for=\"inputCwIndex\" class=\"col-lg-2 control-label\">C-W Index\n                      </label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.cwIndex\" type=\"text\" class=\"form-control\" id=\"inputCwIndex\" placeholder=\"C-W Index\">\n                      </div>\n\n                        <label for=\"inputGdIndex\" class=\"col-lg-1 control-label\">G-D Index\n                        </label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.gdIndex\" type=\"text\" class=\"form-control\" id=\"inputCwIndex\" placeholder=\"G-D Index\">\n                        </div>\n\n                        <label for=\"inputOrigDBIndex\" class=\"col-lg-1 control-label\">Original Database Index\n                          </label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.origDBIndex\" type=\"text\" class=\"form-control\" id=\"inputOrigDBIndex\" placeholder=\"Original DB Index\">\n                          </div>\n\n                      </div>\n                  </div>\n\n              <div class =\"form-section\">\n                <h2> Location </h2>\n                <div class=\"form-group\">\n\n                      <label for=\"inputCounty\" class=\"col-lg-2 control-label\">State</label>\n                      <div class=\"col-lg-2\">\n                        <select ng-model=\"$ctrl.incident.state\" ng-options=\"state for state in $ctrl.states\">\n                            <option value=\"\">California </option>\n                          </select>\n                       </div>\n\n                        <label for=\"inputCounty\" class=\"col-lg-1 control-label\">County</label>\n                        <div class=\"col-lg-2\">\n                          <select ng-model=\"$ctrl.incident.county\" ng-options=\"county for county in $ctrl.counties\">\n                          </select>\n                        </div>\n\n                        <label for=\"inputStartLocation\" class=\"col-lg-1 control-label\">Place</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.place\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                        </div>\n\n                        </div>\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Location Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.locationNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the location here.</span>\n                        </div>\n          \n            <div class =\"form-section\">\n              <h2> Location Coordinates </h2>\n              <div class=\"form-group\">\n\n                <label for=\"inputLatDec\" class=\"col-lg-2 control-label\">Coordinate Units</label>\n                <div class=\"col-lg-2\">\n                  <input ng-model=\"$ctrl.decimal\" type=\"radio\" name=\"decimal\" value=\"true\" checked> Decimal<br>\n                  <input ng-model=\"$ctrl.decimal\" type=\"radio\" name=\"false\" value=\"false\"> Degrees/minutes/seconds<br>\n              </div>\n            </div>\n\n            <div class=\"form-group\" ng-if=\"$ctrl.decimal==='true'\">\n                <label for=\"inputLatDec\" class=\"col-lg-1 control-label\">Latitude</label>\n                <div class=\"col-lg-1\">\n                  <input ng-model=\"$ctrl.incident.latDecimal\" type=\"number\" min=\"-90\" max=\"90\" class=\"form-control\" id=\"inputLatDec\">\n                </div>\n\n                <label for=\"inputLonDec\" class=\"col-lg-1 control-label\">Longitude</label>\n                <div class=\"col-lg-1\">\n                  <input ng-model=\"$ctrl.incident.lonDecimal\" type=\"number\" min=\"-180\" max=\"180\" class=\"form-control\" id=\"inputLonDec\">\n                </div>\n              </div>\n\n              <div class=\"form-group\" ng-if=\"$ctrl.decimal==='false'\">\n                  <label for=\"inputLat\" class=\"col-lg-1 control-label\">Latitude</label>\n\n                  <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Degrees</label>\n                  <div class=\"col-lg-1\">\n                    <input ng-model=\"$ctrl.incident.latNDegrees\" type=\"number\" min=\"0\" max=\"90\" class=\"form-control\" id=\"inputLatNDegrees\">\n                  </div>\n                  <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Minutes</label>\n                  <div class=\"col-lg-1\">\n                    <input ng-model=\"$ctrl.incident.latNMinutes\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLatNMinutes\">\n                  </div>\n                  <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Seconds</label>\n                  <div class=\"col-lg-1\">\n                    <input ng-model=\"$ctrl.incident.latNSeconds\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLatNSeconds\">\n                  </div>\n                </div>\n\n                <div class=\"form-group\" ng-if=\"$ctrl.decimal==='false'\">\n                <label for=\"inputLonDec\" class=\"col-lg-1 control-label\">Longitude</label>\n                <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Degrees</label>\n                <div class=\"col-lg-1\">\n                  <input ng-model=\"$ctrl.incident.lonWDegrees\" type=\"number\" min=\"0\" max=\"180\" class=\"form-control\" id=\"inputlonWDegrees\">\n                </div>\n                <label for=\"inputLonDeg\" class=\"col-lg-1 control-label\">Minutes</label>\n                <div class=\"col-lg-1\">\n                  <input ng-model=\"$ctrl.incident.lonWMinutes\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLonWMinutes\">\n                </div>\n                <label for=\"inputlonDeg\" class=\"col-lg-1 control-label\">Seconds</label>\n                <div class=\"col-lg-1\">\n                  <input ng-model=\"$ctrl.incident.lonWSeconds\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLonWSeconds\">\n                </div>\n              </div>\n\n          </div>\n        </div>\n\n              <div class =\"form-section\">\n                <h2> Date </h2>\n                <div class=\"form-group\">\n                      <label for=\"inputYear\" class=\"col-lg-2 control-label\">Year</label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputYear\">\n                      </div>\n                          <label for=\"inputMonth\" class=\"col-lg-1 control-label\">Month</label>\n                          <div class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.incident.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputMonth\">\n                            </div>\n                          <label for=\"inputDay\" class=\"col-lg-1 control-label\">Day</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputMonth\">\n                          </div>\n                        </div>\n                          <label for=\"textArea\" class=\"col-lg-2 control-label\">Date Notes</label>\n                          <div class=\"col-lg-10\">\n                            <textarea ng-model=\"$ctrl.incident.dateNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                            <span class=\"help-block\">Write notes concerning the date here.</span>\n                          </div>         \n              </div>\n\n\n              <div class =\"form-section\">\n                  <h2> Lynching </h2>\n                  <div class=\"form-group\">\n                      <label for=\"inputCrowdType\" class=\"col-lg-2 control-label\">Crowd Type</label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.crowdType\" type=\"text\" class=\"form-control\" id=\"inputCrowdType\" placeholder=\"Crowd Type\">\n                      </div>\n\n                      <div class=\"form-group\">\n                          <label for=\"inputCrowdSize\" class=\"col-lg-2 control-label\">Crowd Size</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.incident.crowdSize\" type=\"text\" class=\"form-control\" id=\"inputCrowdSize\" placeholder=\"Crowd Size\">\n                          </div>\n\n                        <label for=\"inputOpen\" class=\"col-lg-2 control-label\">Open or Secret?</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Open\" value=\"Open\" checked> Open<br>\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Secret\" value=\"Secret\"> Secret<br>\n                            <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Unknown\" value=\"Unknown\"> Unknown\n                        </div>\n\n                        <label for=\"inputCrime\" class=\"col-lg-2 control-label\">Crime</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.crime\" type=\"text\" class=\"form-control\" id=\"inputCrime\" placeholder=\"Crime\">\n                        </div>\n\n                        <label for=\"inputPunishment\" class=\"col-lg-2 control-label\">Punishment</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.punishment\" type=\"text\" class=\"form-control\" id=\"inputPunishment\" placeholder=\"Punishment\">\n                        </div>\n\n                        <label for=\"inputLethality\" class=\"col-lg-2 control-label\">Lethality</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"lethal\" value=\"lethal\" checked> Lethal<br>\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"non-lethal\" value=\"non-lethal\"> Non-Lethal<br>\n                            <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"unknown\" value=\"unknown\"> unknown\n                        </div>\n\n                        <label for=\"inputOtherNamesMentioned\" class=\"col-lg-2 control-label\">Other Names Mentioned</label>\n                        <div class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.incident.otherNamesMentioned\" type=\"text\" class=\"form-control\" id=\"inputOtherNamesMentioned\" placeholder=\"Other Names Mentioned\">\n                        </div>\n                    \n                        <label for=\"inputAuthorities\" class=\"col-lg-2 control-label\">Authorities Present?</label>\n                        <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"present\" value=\"present\" checked> Present<br>\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"not\" value=\"not\"> Not Present<br>\n                            <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"unknown\" value=\"unknown\"> Unknown\n                        </div>\n                      </div>\n\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Authorities Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.authoritiesNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the authorities here.</span>\n                        </div> \n                </div>\n\n\n                <div class =\"form-section\">\n                    <h2> Accused </h2>\n                    <div class=\"form-group\">\n\n                        <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Suspects</label>\n                        <div class=\"col-lg-1\">\n                            <input type=\"number\" name=\"quantity\" min=\"1\"> \n                        </div>\n\n                        <label for=\"inputSuspectGender\" class=\"col-lg-2 control-label\">Suspect Gender(s)</label>\n                        <div class=\"col-lg-1\">\n                            <input type=\"radio\" name=\"gender\" value=\"male\" checked>  Male<br>\n                            <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                            <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                        </div>\n                        <label for=\"inputSuspectRaces\" class=\"col-lg-2 control-label\">Suspect Race(s)</label>\n                        <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                            <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                        </div>\n                        <br>\n                      </div>\n\n                      <label for=\"inputWeapon\" class=\"col-lg-1 control-label\">Weapon Used</label>\n                      <div class=\"col-lg-2\">\n                        <select ng-model=\"$ctrl.accused.weapon\" ng-options=\"weapon for weapon in $ctrl.weapons\">\n                        </select>\n                      </div>\n\n                      <label for=\"textArea\" class=\"col-lg-2 control-label\">Suspect Notes</label>\n                      <div class=\"col-lg-10\">\n                        <textarea ng-model=\"$ctrl.incident.suspectNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                        <span class=\"help-block\">Write notes concerning the suspect here.</span>\n                      </div>\n                  </div>\n\n                  <div class =\"form-section\">\n                      <div class =\"form-section\">\n                          <h2> Victims </h2>\n                          <div class=\"form-group\">\n      \n                              <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Victims</label>\n                              <div class=\"col-lg-2\">\n                                  <input type=\"number\" name=\"quantity\" min=\"1\"> \n                                  <span class=\"help-block\">Leave blank if unknown.</span>\n                              </div>\n      \n                              <label for=\"inputVictimGender\" class=\"col-lg-2 control-label\">Victim Gender(s)</label>\n                              <div class=\"col-lg-1\">\n                                  <input type=\"radio\" name=\"gender\" value=\"male\"> Male<br>\n                                  <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                                  <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                              </div>\n      \n                            <label for=\"inputVictimRaces\" class=\"col-lg-2 control-label\">Victim Race(s)</label>\n                            <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                                <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                            </div>\n                            <br>\n                        </div>\n\n                        <label for=\"textArea\" class=\"col-lg-2 control-label\">Victim Notes</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.victimNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write notes concerning the victim here.</span>\n                        </div>\n                    </div>\n\n                    <div class =\"form-section\">\n                        <h2> Sources and Notes </h2>\n                        <div class=\"form-group\">\n\n                            <label for=\"inputSourceType\" class=\"col-lg-1 control-label\">Source Type</label>\n                            <div class=\"col-lg-1\">\n                              <select ng-model=\"$ctrl.source.type\" ng-options=\"type for type in $ctrl.sourceTypes\">\n                              </select>\n                            </div>\n\n                            <label ng-if=\"$ctrl.source.type === 'book' || $ctrl.source.type === 'journal'\" for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Volume #</label>\n                            <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'book'\">\n                              <input ng-model=\"$ctrl.source.volumeNumber\" type=\"number\" min=\"0\" max=\"20000\" class=\"form-control\" id=\"inputVolumeNumber\">\n                            </div>\n\n                            <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">Page #</label>\n                            <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.pageNumberStart\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                            </div>\n\n                            <label ng-if=\"$ctrl.source.type === 'newspaper'\" for=\"inputSourceColumn\" class=\"col-lg-1 control-label\">Column #</label>\n                            <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'newspaper'\">\n                              <input ng-model=\"$ctrl.source.columnNumber\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputColumnNumber\">\n                            </div>\n\n                         \n\n                            <!-- <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">to</label>\n                            <div class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.source.pageNumberEnd\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                            </div> -->\n                           \n                            <label ng-if=\"$ctrl.source.type === 'book'\" for=\"inputSourcePublisher\" class=\"col-lg-1 control-label\">Publisher</label>\n                            <div ng-if=\"$ctrl.source.type === 'book'\" class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.source.publisher\" type=\"text\" class=\"form-control\" id=\"inputSourcePublisher\" placeholder=\"Source Publisher\">\n                            </div>\n\n                            <label for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Publication Year</label>\n                            <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputSourceYear\">\n                            </div>\n\n                                <label for=\"inputSourceMonth\" class=\"col-lg-1 control-label\">Publication Month</label>\n                                <div class=\"col-lg-1\">\n                                    <input ng-model=\"$ctrl.source.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputsourceMonth\">\n                                  </div>\n\n                                <label for=\"inputSourceDay\" class=\"col-lg-1 control-label\">Publication Day</label>\n                                <div class=\"col-lg-1\">\n                                  <input ng-model=\"$ctrl.source.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputSourceMonth\">\n                                </div>\n                              </div>\n\n                              <label ng-if=\"$ctrl.source.type === 'magazine'\" for=\"inputSourcePublication\" class=\"col-lg-1 control-label\">Publication</label>\n                              <div ng-if=\"$ctrl.source.type === 'book'\" class=\"col-lg-2\">\n                                <input ng-model=\"$ctrl.source.publiaction\" type=\"text\" class=\"form-control\" id=\"inputSourcePublication\" placeholder=\"Source Publication\">\n                              </div>\n\n                              <div class=\"form-group\">\n                                <label for=\"inputTitle\" class=\"col-lg-1 control-label\">Article Title</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.articleTitle\" type=\"text\" class=\"form-control\" id=\"inputSourceTitle\" placeholder=\"Source Title\">\n                                </div>\n\n                                <label for=\"inputAuthor\" class=\"col-lg-1 control-label\">Author</label>\n                                <label for=\"inputAuthor\" class=\"col-lg-1 control-label\">First</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.authorFirst\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"First Name\">\n                                </div>\n                                <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Middle Initial</label>\n                                <div class=\"col-lg-1\">\n                                    <input ng-model=\"$ctrl.source.authorMI\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Middle Intial\">\n                                </div>\n                                <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Last</label>\n                                <div class=\"col-lg-2\">\n                                    <input ng-model=\"$ctrl.source.authorLast\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Last Name\">\n                                </div>\n                                <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Suffix</label>\n                                <div class=\"col-lg-1\">\n                                  <select ng-model=\"$ctrl.source.authorSuffix\" ng-options=\"suff for suff in $ctrl.suffs\">\n                                      <option value=\"\"> </option>\n                                  </select>\n                                 </div>\n                                </div>\n\n\n                                <label for=\"inputPublicationState\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\" class=\"col-lg-2 control-label\">Publication State</label>\n                                <div class=\"col-lg-1\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\">\n                                  <select ng-model=\"$ctrl.source.state\" ng-options=\"state for state in $ctrl.states\">\n                                      <option value=\"\">California </option>\n                                  </select>\n                                 </div>\n                                </div>\n                                \n                                <div class=\"form-group\">\n                                <label ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\" class=\"col-lg-1 control-label\">Publication City</label>\n                                <div class=\"col-lg-2\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\">\n                                  <input ng-model=\"$ctrl.source.city\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Publication City\">\n                                </div>\n\n                                <label for=\"inputUrl\" class=\"col-lg-1 control-label\">URL</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.url\" type=\"url\" class=\"form-control\" id=\"inputUrl\" placeholder=\"source location URL\">\n                                </div>\n                                \n                                <label for=\"inputUrl\" class=\"col-lg-1 control-label\">URL</label>\n                                <div class=\"col-lg-2\">\n                                  <input ng-model=\"$ctrl.source.url\" type=\"url\" class=\"form-control\" id=\"inputUrl\" placeholder=\"source location URL\">\n                                </div>\n\n                              </div>\n\n                              <div class=\"form-group\">\n                                <label for=\"textArea\" class=\"col-lg-2 control-label\"> Source Notes</label>\n                                <div class=\"col-lg-10\">\n                                  <textarea ng-model=\"$ctrl.source.notes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                                  <span class=\"help-block\">Write notes concerning this source here.</span>\n                                </div>\n\n                            <div class=\"col-lg-10 col-lg-offset-2\">\n                                <button ng-click=\"$ctrl.addThisSource()\" type=\"submit\" class=\"btn btn-primary\">Add Source</button>\n                              </div>\n                          </div>\n                  \n\n                      <div class=\"form-group\">\n                       <label for=\"textArea\" class=\"col-lg-2 control-label\">Abstract</label>\n                              <div class=\"col-lg-10\">\n                                <textarea ng-model=\"$ctrl.incident.abstract\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                                <span class=\"help-block\">Write a brief abstract of the Incident here.</span>\n                              </div>\n                      </div>\n\n\n             \n\n              <div class=\"form-group\">\n                <div class=\"col-lg-10 col-lg-offset-2\">\n                  <button type=\"reset\" class=\"btn btn-default\">Cancel</button>\n                  <button ng-click=\"$ctrl.addThisIncident()\" type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                </div>\n              </div>\n            </fieldset>\n          </form>\n               \n          <div ng-if=\"$ctrl.showFormData===true\">\n            <h2>Data Check</h2>\n            <p>{{$ctrl.incident}}</p>\n          </div>\n\n\n\n\n</section>";
+	module.exports = "<section>\n    <h1>Add Workout</h1>\n    <form class=\"form-horizontal\">\n      <fieldset>\n        <div class =\"form-section\">\n          <div class=\"form-group\">\n            <label for=\"inputCounty\" class=\"col-lg-2 control-label\">Workout Type</label>\n              <div class=\"col-lg-2\">\n                <select class=\"custom-select\" ng-model=\"$ctrl.workoutType\" ng-options=\"state for state in $ctrl.workouts\">\n                  <option value=\"run\">Run</option>\n                </select>\n              </div>\n            </div>\n\n            <!-- run data go here -->\n            <div class=\"row\" ng-if=\"$ctrl.workoutType==='run'\">\n              <div class=\"col-lg-2\">\n                <label for=\"inputCounty\" class=\"control-label\">Run Type</label><br>\n                <select class=\"custom-select\" ng-model=\"$ctrl.run.runType\" ng-options=\"type for type in $ctrl.runTypes\">\n                </select>\n              </div>\n\n            <div class=\"col-lg-2\">\n              <label for=\"inputLatDec\" class=\"control-label\">Miles</label><br>\n              <input ng-model=\"$ctrl.run.miles\" class=\"form-control-lg\" type=\"number\" min=\"0\" max=\"300\" id=\"inputLatDec\">\n            </div>\n\n            <div class=\"col-lg-3\"> \n              <label for=\"inputLatDec\" class=\"control-label\">Time</label><br>\n              <input ng-model=\"$ctrl.run.hour\" type=\"number\" min=\"0\" max=\"300\"  id=\"inputLatDec\" class=\"form-control-lg\" placeholder=\"hours\">\n              <input  class=\"form-control-lg\" ng-model=\"$ctrl.run.min\" type=\"number\" min=\"0\" max=\"2000\"  id=\"inputLatDec\">\n              <input  class=\"form-control-lg\" ng-model=\"$ctrl.run.sec\" type=\"number\" min=\"0\" max=\"2000\"  id=\"inputLatDec\">\n            </div>\n\n                \n\n\n\n              <label for=\"inputStartLocation\" class=\"col-lg-1 control-label\">Place</label>\n              <div class=\"col-lg-2\">\n                <input ng-model=\"$ctrl.incident.place\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n              </div>\n\n              <label for=\"textArea\" class=\"col-lg-2 control-label\">Location Notes</label>\n              <div class=\"col-lg-10\">\n                <textarea ng-model=\"$ctrl.incident.locationNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                <span class=\"help-block\">Write notes concerning the location here.</span>\n              </div>\n\n            </div>\n\n\n\n\n      <div class =\"form-section\">\n        <h2> Location Coordinates </h2>\n        <div class=\"form-group\">\n\n          <label for=\"inputLatDec\" class=\"col-lg-2 control-label\">Coordinate Units</label>\n          <div class=\"col-lg-2\">\n            <input ng-model=\"$ctrl.decimal\" type=\"radio\" name=\"decimal\" value=\"true\" checked> Decimal<br>\n            <input ng-model=\"$ctrl.decimal\" type=\"radio\" name=\"false\" value=\"false\"> Degrees/minutes/seconds<br>\n        </div>\n      </div>\n\n      <div class=\"form-group\" ng-if=\"$ctrl.decimal==='true'\">\n          <label for=\"inputLatDec\" class=\"col-lg-1 control-label\">Latitude</label>\n          <div class=\"col-lg-1\">\n            <input ng-model=\"$ctrl.incident.latDecimal\" type=\"number\" min=\"-90\" max=\"90\" class=\"form-control\" id=\"inputLatDec\">\n          </div>\n\n          <label for=\"inputLonDec\" class=\"col-lg-1 control-label\">Longitude</label>\n          <div class=\"col-lg-1\">\n            <input ng-model=\"$ctrl.incident.lonDecimal\" type=\"number\" min=\"-180\" max=\"180\" class=\"form-control\" id=\"inputLonDec\">\n          </div>\n        </div>\n\n        <div class=\"form-group\" ng-if=\"$ctrl.decimal==='false'\">\n            <label for=\"inputLat\" class=\"col-lg-1 control-label\">Latitude</label>\n\n            <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Degrees</label>\n            <div class=\"col-lg-1\">\n              <input ng-model=\"$ctrl.incident.latNDegrees\" type=\"number\" min=\"0\" max=\"90\" class=\"form-control\" id=\"inputLatNDegrees\">\n            </div>\n            <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Minutes</label>\n            <div class=\"col-lg-1\">\n              <input ng-model=\"$ctrl.incident.latNMinutes\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLatNMinutes\">\n            </div>\n            <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Seconds</label>\n            <div class=\"col-lg-1\">\n              <input ng-model=\"$ctrl.incident.latNSeconds\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLatNSeconds\">\n            </div>\n          </div>\n\n          <div class=\"form-group\" ng-if=\"$ctrl.decimal==='false'\">\n          <label for=\"inputLonDec\" class=\"col-lg-1 control-label\">Longitude</label>\n          <label for=\"inputLatDeg\" class=\"col-lg-1 control-label\">Degrees</label>\n          <div class=\"col-lg-1\">\n            <input ng-model=\"$ctrl.incident.lonWDegrees\" type=\"number\" min=\"0\" max=\"180\" class=\"form-control\" id=\"inputlonWDegrees\">\n          </div>\n          <label for=\"inputLonDeg\" class=\"col-lg-1 control-label\">Minutes</label>\n          <div class=\"col-lg-1\">\n            <input ng-model=\"$ctrl.incident.lonWMinutes\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLonWMinutes\">\n          </div>\n          <label for=\"inputlonDeg\" class=\"col-lg-1 control-label\">Seconds</label>\n          <div class=\"col-lg-1\">\n            <input ng-model=\"$ctrl.incident.lonWSeconds\" type=\"number\" min=\"0\" max=\"60\" class=\"form-control\" id=\"inputLonWSeconds\">\n          </div>\n        </div>\n\n    </div>\n  </div>\n\n        <div class =\"form-section\">\n          <h2> Date </h2>\n          <div class=\"form-group\">\n                <label for=\"inputYear\" class=\"col-lg-2 control-label\">Year</label>\n                <div class=\"col-lg-2\">\n                  <input ng-model=\"$ctrl.incident.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputYear\">\n                </div>\n                    <label for=\"inputMonth\" class=\"col-lg-1 control-label\">Month</label>\n                    <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.incident.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputMonth\">\n                      </div>\n                    <label for=\"inputDay\" class=\"col-lg-1 control-label\">Day</label>\n                    <div class=\"col-lg-2\">\n                      <input ng-model=\"$ctrl.incident.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputMonth\">\n                    </div>\n                  </div>\n                    <label for=\"textArea\" class=\"col-lg-2 control-label\">Date Notes</label>\n                    <div class=\"col-lg-10\">\n                      <textarea ng-model=\"$ctrl.incident.dateNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                      <span class=\"help-block\">Write notes concerning the date here.</span>\n                    </div>         \n        </div>\n\n\n        <div class =\"form-section\">\n            <h2> Lynching </h2>\n            <div class=\"form-group\">\n                <label for=\"inputCrowdType\" class=\"col-lg-2 control-label\">Crowd Type</label>\n                <div class=\"col-lg-2\">\n                  <input ng-model=\"$ctrl.incident.crowdType\" type=\"text\" class=\"form-control\" id=\"inputCrowdType\" placeholder=\"Crowd Type\">\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"inputCrowdSize\" class=\"col-lg-2 control-label\">Crowd Size</label>\n                    <div class=\"col-lg-2\">\n                      <input ng-model=\"$ctrl.incident.crowdSize\" type=\"text\" class=\"form-control\" id=\"inputCrowdSize\" placeholder=\"Crowd Size\">\n                    </div>\n\n                  <label for=\"inputOpen\" class=\"col-lg-2 control-label\">Open or Secret?</label>\n                  <div class=\"col-lg-1\">\n                      <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Open\" value=\"Open\" checked> Open<br>\n                      <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Secret\" value=\"Secret\"> Secret<br>\n                      <input ng-model=\"$ctrl.incident.open\" type=\"radio\" name=\"Unknown\" value=\"Unknown\"> Unknown\n                  </div>\n\n                  <label for=\"inputCrime\" class=\"col-lg-2 control-label\">Crime</label>\n                  <div class=\"col-lg-2\">\n                    <input ng-model=\"$ctrl.incident.crime\" type=\"text\" class=\"form-control\" id=\"inputCrime\" placeholder=\"Crime\">\n                  </div>\n\n                  <label for=\"inputPunishment\" class=\"col-lg-2 control-label\">Punishment</label>\n                  <div class=\"col-lg-2\">\n                    <input ng-model=\"$ctrl.incident.punishment\" type=\"text\" class=\"form-control\" id=\"inputPunishment\" placeholder=\"Punishment\">\n                  </div>\n\n                  <label for=\"inputLethality\" class=\"col-lg-2 control-label\">Lethality</label>\n                  <div class=\"col-lg-1\">\n                      <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"lethal\" value=\"lethal\" checked> Lethal<br>\n                      <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"non-lethal\" value=\"non-lethal\"> Non-Lethal<br>\n                      <input ng-model=\"$ctrl.incident.lethality\" type=\"radio\" name=\"unknown\" value=\"unknown\"> unknown\n                  </div>\n\n                  <label for=\"inputOtherNamesMentioned\" class=\"col-lg-2 control-label\">Other Names Mentioned</label>\n                  <div class=\"col-lg-2\">\n                    <input ng-model=\"$ctrl.incident.otherNamesMentioned\" type=\"text\" class=\"form-control\" id=\"inputOtherNamesMentioned\" placeholder=\"Other Names Mentioned\">\n                  </div>\n              \n                  <label for=\"inputAuthorities\" class=\"col-lg-2 control-label\">Authorities Present?</label>\n                  <div class=\"col-lg-1\">\n                      <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"present\" value=\"present\" checked> Present<br>\n                      <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"not\" value=\"not\"> Not Present<br>\n                      <input ng-model=\"$ctrl.incident.authoritiesPresent\" type=\"radio\" name=\"unknown\" value=\"unknown\"> Unknown\n                  </div>\n                </div>\n\n                  <label for=\"textArea\" class=\"col-lg-2 control-label\">Authorities Notes</label>\n                  <div class=\"col-lg-10\">\n                    <textarea ng-model=\"$ctrl.incident.authoritiesNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                    <span class=\"help-block\">Write notes concerning the authorities here.</span>\n                  </div> \n          </div>\n\n\n          <div class =\"form-section\">\n              <h2> Accused </h2>\n              <div class=\"form-group\">\n\n                  <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Suspects</label>\n                  <div class=\"col-lg-1\">\n                      <input type=\"number\" name=\"quantity\" min=\"1\"> \n                  </div>\n\n                  <label for=\"inputSuspectGender\" class=\"col-lg-2 control-label\">Suspect Gender(s)</label>\n                  <div class=\"col-lg-1\">\n                      <input type=\"radio\" name=\"gender\" value=\"male\" checked>  Male<br>\n                      <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                      <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                  </div>\n                  <label for=\"inputSuspectRaces\" class=\"col-lg-2 control-label\">Suspect Race(s)</label>\n                  <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                      <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                  </div>\n                  <br>\n                </div>\n\n                <label for=\"inputWeapon\" class=\"col-lg-1 control-label\">Weapon Used</label>\n                <div class=\"col-lg-2\">\n                  <select ng-model=\"$ctrl.accused.weapon\" ng-options=\"weapon for weapon in $ctrl.weapons\">\n                  </select>\n                </div>\n\n                <label for=\"textArea\" class=\"col-lg-2 control-label\">Suspect Notes</label>\n                <div class=\"col-lg-10\">\n                  <textarea ng-model=\"$ctrl.incident.suspectNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                  <span class=\"help-block\">Write notes concerning the suspect here.</span>\n                </div>\n            </div>\n\n            <div class =\"form-section\">\n                <div class =\"form-section\">\n                    <h2> Victims </h2>\n                    <div class=\"form-group\">\n\n                        <label for=\"inputSuspectNumber\" class=\"col-lg-2 control-label\">Number of Victims</label>\n                        <div class=\"col-lg-2\">\n                            <input type=\"number\" name=\"quantity\" min=\"1\"> \n                            <span class=\"help-block\">Leave blank if unknown.</span>\n                        </div>\n\n                        <label for=\"inputVictimGender\" class=\"col-lg-2 control-label\">Victim Gender(s)</label>\n                        <div class=\"col-lg-1\">\n                            <input type=\"radio\" name=\"gender\" value=\"male\"> Male<br>\n                            <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br>\n                            <input type=\"radio\" name=\"gender\" value=\"both\"> both\n                        </div>\n\n                      <label for=\"inputVictimRaces\" class=\"col-lg-2 control-label\">Victim Race(s)</label>\n                      <div class=\"col-lg-1\" ng-repeat=\"race in $ctrl.races\" >\n                          <input type=\"checkbox\" name=\"{{race}}\" value=\"{race}\"> {{race}}<br>\n                      </div>\n                      <br>\n                  </div>\n\n                  <label for=\"textArea\" class=\"col-lg-2 control-label\">Victim Notes</label>\n                  <div class=\"col-lg-10\">\n                    <textarea ng-model=\"$ctrl.incident.victimNotes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                    <span class=\"help-block\">Write notes concerning the victim here.</span>\n                  </div>\n              </div>\n\n              <div class =\"form-section\">\n                  <h2> Sources and Notes </h2>\n                  <div class=\"form-group\">\n\n                      <label for=\"inputSourceType\" class=\"col-lg-1 control-label\">Source Type</label>\n                      <div class=\"col-lg-1\">\n                        <select ng-model=\"$ctrl.source.type\" ng-options=\"type for type in $ctrl.sourceTypes\">\n                        </select>\n                      </div>\n\n                      <label ng-if=\"$ctrl.source.type === 'book' || $ctrl.source.type === 'journal'\" for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Volume #</label>\n                      <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'book'\">\n                        <input ng-model=\"$ctrl.source.volumeNumber\" type=\"number\" min=\"0\" max=\"20000\" class=\"form-control\" id=\"inputVolumeNumber\">\n                      </div>\n\n                      <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">Page #</label>\n                      <div class=\"col-lg-1\">\n                        <input ng-model=\"$ctrl.source.pageNumberStart\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                      </div>\n\n                      <label ng-if=\"$ctrl.source.type === 'newspaper'\" for=\"inputSourceColumn\" class=\"col-lg-1 control-label\">Column #</label>\n                      <div class=\"col-lg-1\" ng-if=\"$ctrl.source.type === 'newspaper'\">\n                        <input ng-model=\"$ctrl.source.columnNumber\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputColumnNumber\">\n                      </div>\n\n                    \n\n                      <!-- <label for=\"inputSourcePage\" class=\"col-lg-1 control-label\">to</label>\n                      <div class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.source.pageNumberEnd\" type=\"number\" min=\"0\" max=\"200\" class=\"form-control\" id=\"inputPageNumber\">\n                      </div> -->\n                      \n                      <label ng-if=\"$ctrl.source.type === 'book'\" for=\"inputSourcePublisher\" class=\"col-lg-1 control-label\">Publisher</label>\n                      <div ng-if=\"$ctrl.source.type === 'book'\" class=\"col-lg-2\">\n                        <input ng-model=\"$ctrl.source.publisher\" type=\"text\" class=\"form-control\" id=\"inputSourcePublisher\" placeholder=\"Source Publisher\">\n                      </div>\n\n                      <label for=\"inputSourceYear\" class=\"col-lg-1 control-label\">Publication Year</label>\n                      <div class=\"col-lg-1\">\n                        <input ng-model=\"$ctrl.source.year\" type=\"number\" min=\"1500\" max=\"2100\" class=\"form-control\" id=\"inputSourceYear\">\n                      </div>\n\n                          <label for=\"inputSourceMonth\" class=\"col-lg-1 control-label\">Publication Month</label>\n                          <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.month\" type=\"number\" min=\"1\" max=\"12\" class=\"form-control\" id=\"inputsourceMonth\">\n                            </div>\n\n                          <label for=\"inputSourceDay\" class=\"col-lg-1 control-label\">Publication Day</label>\n                          <div class=\"col-lg-1\">\n                            <input ng-model=\"$ctrl.source.day\" type=\"number\" min=\"1\" max=\"31\" class=\"form-control\" id=\"inputSourceMonth\">\n                          </div>\n                        </div>\n\n                        <label ng-if=\"$ctrl.source.type === 'magazine'\" for=\"inputSourcePublication\" class=\"col-lg-1 control-label\">Publication</label>\n                        <div ng-if=\"$ctrl.source.type === 'book'\" class=\"col-lg-2\">\n                          <input ng-model=\"$ctrl.source.publiaction\" type=\"text\" class=\"form-control\" id=\"inputSourcePublication\" placeholder=\"Source Publication\">\n                        </div>\n\n                        <div class=\"form-group\">\n                          <label for=\"inputTitle\" class=\"col-lg-1 control-label\">Article Title</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.source.articleTitle\" type=\"text\" class=\"form-control\" id=\"inputSourceTitle\" placeholder=\"Source Title\">\n                          </div>\n\n                          <label for=\"inputAuthor\" class=\"col-lg-1 control-label\">Author</label>\n                          <label for=\"inputAuthor\" class=\"col-lg-1 control-label\">First</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.source.authorFirst\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"First Name\">\n                          </div>\n                          <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Middle Initial</label>\n                          <div class=\"col-lg-1\">\n                              <input ng-model=\"$ctrl.source.authorMI\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Middle Intial\">\n                          </div>\n                          <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Last</label>\n                          <div class=\"col-lg-2\">\n                              <input ng-model=\"$ctrl.source.authorLast\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Last Name\">\n                          </div>\n                          <label for=\"inputAuthorSuffix\" class=\"col-lg-1 control-label\">Suffix</label>\n                          <div class=\"col-lg-1\">\n                            <select ng-model=\"$ctrl.source.authorSuffix\" ng-options=\"suff for suff in $ctrl.suffs\">\n                                <option value=\"\"> </option>\n                            </select>\n                            </div>\n                          </div>\n\n\n                          <label for=\"inputPublicationState\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\" class=\"col-lg-2 control-label\">Publication State</label>\n                          <div class=\"col-lg-1\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\">\n                            <select ng-model=\"$ctrl.source.state\" ng-options=\"state for state in $ctrl.states\">\n                                <option value=\"\">California </option>\n                            </select>\n                            </div>\n                          </div>\n                          \n                          <div class=\"form-group\">\n                          <label ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\" class=\"col-lg-1 control-label\">Publication City</label>\n                          <div class=\"col-lg-2\"  ng-hide=\"$ctrl.source.type === 'magazine' || $ctrl.source.type === 'journal'\">\n                            <input ng-model=\"$ctrl.source.city\" type=\"text\" class=\"form-control\" id=\"inputAuthor\" placeholder=\"Publication City\">\n                          </div>\n\n                          <label for=\"inputUrl\" class=\"col-lg-1 control-label\">URL</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.source.url\" type=\"url\" class=\"form-control\" id=\"inputUrl\" placeholder=\"source location URL\">\n                          </div>\n                          \n                          <label for=\"inputUrl\" class=\"col-lg-1 control-label\">URL</label>\n                          <div class=\"col-lg-2\">\n                            <input ng-model=\"$ctrl.source.url\" type=\"url\" class=\"form-control\" id=\"inputUrl\" placeholder=\"source location URL\">\n                          </div>\n\n                        </div>\n\n                        <div class=\"form-group\">\n                          <label for=\"textArea\" class=\"col-lg-2 control-label\"> Source Notes</label>\n                          <div class=\"col-lg-10\">\n                            <textarea ng-model=\"$ctrl.source.notes\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                            <span class=\"help-block\">Write notes concerning this source here.</span>\n                          </div>\n\n                      <div class=\"col-lg-10 col-lg-offset-2\">\n                          <button ng-click=\"$ctrl.addThisSource()\" type=\"submit\" class=\"btn btn-primary\">Add Source</button>\n                        </div>\n                    </div>\n            \n\n                <div class=\"form-group\">\n                  <label for=\"textArea\" class=\"col-lg-2 control-label\">Abstract</label>\n                        <div class=\"col-lg-10\">\n                          <textarea ng-model=\"$ctrl.incident.abstract\" class=\"form-control\" rows=\"3\" id=\"textArea\"></textarea>\n                          <span class=\"help-block\">Write a brief abstract of the Incident here.</span>\n                        </div>\n                </div>\n\n\n        \n\n        <div class=\"form-group\">\n          <div class=\"col-lg-10 col-lg-offset-2\">\n            <button type=\"reset\" class=\"btn btn-default\">Cancel</button>\n            <button ng-click=\"$ctrl.addRun()\" type=\"submit\" class=\"btn btn-primary\">Add Run</button>\n          </div>\n        </div>\n    </fieldset>\n  </form>\n        \n  <div ng-if=\"$ctrl.showFormData===true\">\n    <h2>Data Check</h2>\n    <p>{{$ctrl.incident}}</p>\n  </div>\n\n\n\n\n</section>";
 
 /***/ }),
 /* 16 */
@@ -35231,11 +35177,32 @@
 	    var _this = this;
 	
 	    this.loggedIn = rootScope.loggedIn = false;
+	
+	    rootScope.$on('login', function (event, user) {
+	        _this.user = user.user;
+	        rootScope.loggedIn = true;
+	        _this.loggedIn = true;
+	        userSvc.getById(_this.user.userId).then(function (user) {
+	            rootScope.user = user[0];
+	            console.log('user is ', rootScope.user);
+	            _this.user = rootScope.user;
+	        });
+	    });
+	
+	    rootScope.$on('logout', function (event) {
+	        _this.user = null;
+	        _this.loggedIn = false;
+	        $state.go('home');
+	        rootScope.user = null;
+	        rootScope.loggedIn = false;
+	    });
+	
 	    this.active = rootScope.active = {
 	        home: true,
 	        about: false,
 	        profile: false,
 	        calendar: false,
+	        addRun: false,
 	        login: false,
 	        signup: false,
 	        logout: false
@@ -35247,6 +35214,7 @@
 	            about: false,
 	            profile: false,
 	            calendar: false,
+	            addRun: false,
 	            login: false,
 	            signup: false,
 	            logout: false
@@ -35675,7 +35643,7 @@
 /* 17 */
 /***/ (function(module, exports) {
 
-	module.exports = " <section>        \n       \n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand\" href=\"#\">runnervate</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" style=\"\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n      \n        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.home}}}\">\n              <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Features</a>\n            </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"profile\">Profile</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n              <a class=\"nav-link\" ui-sref=\"calendar\">Calendar</a>\n            </li>\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.about}}}\">\n                <a class=\"nav-link\" ui-sref=\"about\">About</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"signup\">Sign Up</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"login\">Login</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"logout\">Log Out</a>\n            </li>\n          </ul>\n          <form class=\"form-inline my-2 my-lg-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\n          </form>\n        </div>\n      </nav>\n\n\n\n    <!-- <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">runnervate</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav> -->\n\n\n    <div class=\"container-fluid\">\n        <div class=\"loader-container\" ng-if=\"$ctrl.loading===true\">\n            <h3> Loading</h3>\n            <div class=\"loader\" ></div>\n        </div>\n\n    </div>\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2018.  </span></p>\n    </div>\n  </section>";
+	module.exports = " <section>        \n       \n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand\" href=\"#\">runnervate</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" style=\"\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n      \n        <div class=\"collapse navbar-collapse\" id=\"navbarColor02\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.home}}}\">\n              <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Features</a>\n            </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"profile\">Profile</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n              <a class=\"nav-link\" ui-sref=\"calendar\">Calendar</a>\n            </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"addRun\">Add Workout</a>\n            </li>\n            <li class=\"nav-item\" ng-class=\"{'nav-item active': {{$ctrl.active.about}}}\">\n                <a class=\"nav-link\" ui-sref=\"about\">About</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"signup\">Sign Up</a>\n              </li>\n              <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===false\">\n                <a class=\"nav-link\" ui-sref=\"login\">Login</a>\n              </li>\n            <li class=\"nav-item\" ng-if=\"$ctrl.loggedIn===true\">\n                <a class=\"nav-link\" ui-sref=\"logout\">Log Out</a>\n            </li>\n          </ul>\n          <form class=\"form-inline my-2 my-lg-0\">\n            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\n            <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\n          </form>\n        </div>\n      </nav>\n\n\n\n    <!-- <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n                <div class=\"container-fluid\">\n                  <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" ui-sref=\"home\">runnervate</a>\n                  </div>\n                  <ul class=\"nav navbar-nav\">\n                    <li><a ui-sref=\"home\" class=\"active\"><span class=\"glyphicon glyphicon-home\"></span>Home</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"user\"><span class=\"glyphicon glyphicon-user\"></span>My Account</a></li>\n                    <li><a ui-sref=\"lynchMap\"><span class=\"glyphicon glyphicon-globe\"></span>Lynching Map</a></li>\n                    <li><a ui-sref=\"incidents\"><span class=\"glyphicon glyphicon-list\"></span>Browse Lynchings</a></li>\n                    <li ng-if=\"$ctrl.user.role==='admin' || $ctrl.user.role=='contributor'\"><a ui-sref=\"addIncident\"><span class=\"glyphicon glyphicon-plus\"></span>Add Lynching</a></li>\n                    <li><a ui-sref=\"about\"><span class=\"glyphicon glyphicon-apple\"></span>About</a></li>\n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"login\"><span class=\"glyphicon glyphicon-log-in\"></span>Login</a></li> \n                    <li ng-if=\"$ctrl.loggedIn===true\"><a ui-sref=\"logout\"><span class=\"glyphicon glyphicon-log-out\"></span>Log Out</a></li>   \n                    <li ng-if=\"$ctrl.loggedIn===false\"><a ui-sref=\"signup\"><span class=\"glyphicon glyphicon-edit\"></span>Sign Up</a></li>    \n                  </ul>\n                </div>\n              </nav> -->\n\n\n    <div class=\"container-fluid\">\n        <div class=\"loader-container\" ng-if=\"$ctrl.loading===true\">\n            <h3> Loading</h3>\n            <div class=\"loader\" ></div>\n        </div>\n\n    </div>\n        <ui-view></ui-view>\n    </div>\n\n    <div class=\"container-fluid\">\n        <p class=\"footer-text\"><span class=\"branding\">&copy; Mugsy Carter, 2018.  </span></p>\n    </div>\n  </section>";
 
 /***/ }),
 /* 18 */
@@ -35687,7 +35655,42 @@
 	    value: true
 	});
 	
-	var _editIncident = __webpack_require__(19);
+	var _dash = __webpack_require__(19);
+	
+	var _dash2 = _interopRequireDefault(_dash);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    template: _dash2.default,
+	    controller: controller
+	};
+	
+	
+	controller.$inject = ['lynchService', '$timeout', '$rootScope', 'googleMapsUrl', 'NgMap', '$location', '$anchorScroll'];
+	
+	function controller(runSvc, timeout, rootScope, googleMapsUrl, NgMap, $location, $anchorScroll) {
+	    // console.log('root scoped query is ', rootScope.query);
+	    this.loading = true;
+	};
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+	module.exports = "\n<section>\n        <h1>My Dashboard</h1>\n        <div class=\"container\">\n        </div>\n \n               \n              \n</section>";
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _editIncident = __webpack_require__(21);
 	
 	var _editIncident2 = _interopRequireDefault(_editIncident);
 	
@@ -35706,13 +35709,13 @@
 	}
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n <section>\n         <h1> EditIncident Page</h1>\n</section>\n";
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35721,7 +35724,7 @@
 	    value: true
 	});
 	
-	var _home = __webpack_require__(21);
+	var _home = __webpack_require__(23);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
@@ -35762,13 +35765,13 @@
 	};
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<section class =\"page\" id=\"home-page\">\n\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">runnervate</h1>\n    <p class=\"lead\">energize your running</p>\n    <hr class=\"my-4\">\n    <p>Track and monitor every aspect of your workouts to take your running to the next level</p>\n    <p class=\"lead\" ng-if=\"$ctrl.loggedIn===false\">\n      <a class=\"btn btn-primary btn-lg\" ui-sref=\"login\" role=\"button\">Login</a>\n      <a class=\"btn btn-success btn-lg\" ui-sref=\"signup\" role=\"button\">Sign Up</a>\n    </p>\n  </div>\n\n</section>\n";
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35777,7 +35780,7 @@
 	    value: true
 	});
 	
-	var _incidents = __webpack_require__(23);
+	var _incidents = __webpack_require__(25);
 	
 	var _incidents2 = _interopRequireDefault(_incidents);
 	
@@ -36064,13 +36067,13 @@
 	};
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<section>\n\n     <div class=\"container\">\n \n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDatabase()\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Incidents</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteIncidents()\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Incidents</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('completeIncidents')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Complete Incidents</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('completeIncidents')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Complete Incidents</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accusations')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accusations</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accusations')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accusations</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('accused')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Accused</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('accused')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Accused</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('names')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Names</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('names')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Names</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('punishments')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Punishments</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('punishments')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Punishments</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('books')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Books</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('books')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Books</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('newspapers')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Newspapers</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('newspapers')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Newspapers</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('manuscripts')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate Manuscripts</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('manuscripts')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Manuscripts</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('oldNotes')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate old notes</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('oldNotes')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke oldNotes</h6></span></button>\n\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-success\"  ng-click=\"$ctrl.populateDB('websites')\" ><span class=\"glyphicon glyphicon-book\"><h6>Populate websites</h6></span></button>\n                <button ng-if=\"$ctrl.nuke===true\" class=\"btn btn-danger\"  ng-click=\"$ctrl.deleteCollection('websites')\" ><span class=\"glyphicon glyphicon-fire\"><h6>Nuke Websites</h6></span></button>\n\n        <!-- <div map-lazy-load=\"https://maps.google.com/maps/api/js\" map-lazy-load-params=\"{{$ctrl.mapURL}}\">\n        <ng-map center=\"41,-87\" zoom=\"3\"></ng-map>\n        </div> -->\n       \n        <div id=\"No Results Message\" ng-if=\"$ctrl.incidents.length===0\" class=\"panel-group\">\n                <h3>No Results Found</h3>\n        </div>\n\n        <div id=\"incident-gallery\" ng-if=\"$ctrl.activeIncidents.length\" class=\"container\">\n                <h2>Browse Lynchings</h2>\n                <h3>{{$ctrl.incidentNumber}} Results Found</h3>\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.activeIncidents\">\n                                <div class=\"row\"  ng-attr-id=\"{{incident.caseNum}}\">\n                                        <!-- full container -->\n                                        <div class=\"col-lg-11\" id=\"incident-panel\">\n                                                <!-- title container -->\n                                                <div  class=\"row\">\n                                                        <!-- <h3>{{incident.accused.}} accused of {{incident.crime}}.    Punishment: {{incident.punishment}}.</h3> -->\n                                                </div>\n                                                <!-- title container ends -->\n                                                \n                                                <!-- short view starts -->\n                                                <div class=\"row\"> \n                                                        <button ng-if=\"incident.fullView===false\" class=\"btn btn-primary\" id=\"show-incident-button\" ng-click=\"$ctrl.showIncident(incident)\"><span class=\"glyphicon glyphicon-plus\"><h6>Show More</h6></span></button>\n                                                        <button ng-if=\"incident.fullView===true\"class=\"btn btn-success\" id=\"hide-incident-button\" ng-click=\"$ctrl.hideIncident(incident)\" ><span class=\"glyphicon glyphicon-minus\"><h6>Show Less</h6></span></button>\n                                                        <h4>{{incident.dateString}}</h4>\n                                                        <h4> {{incident.locationString}}</h4>\n                                                        <!-- <p>{{incident.summary}} summary will go here</p>           -->\n                                                </div>\n                                                <!-- short view ends -->\n                                                <!-- long view starts -->\n        \n        <div class=\"row\" ng-if=\"incident.fullView===true\">                                       \n      <div class=\"jumbotron\" id=\"big-incident\">\n                <h2>{{incident.dateString}}.  {{incident.place}}, {{incident.county}} County {{incident.state}}</h2>\n\n                <div class=\"row\">\n                        <div class=\"col-lg-10\">\n                                <ng-map class=\"small-map\" center=\"{{incident.latDecimal}}, {{incident.lonDecimal}}\" zoom=\"7\" id=\"'map-' + {{incident._id}}\">\n                                        <marker position=\"{{incident.latDecimal}},{{incident.lonDecimal}}\"/>\n                                        \n                                </ng-map>\n                        </div>\n                </div>\n        </div>\n              <div class=\"row marketing\">\n                <div class=\"col-lg-6\">\n                             \n                        <div ng-if=\"$ctrl.user.role=='admin' || $ctrl.user.role=='contributor'\">\n                                <h4>Database Information</h4>\n                                <p class=\"p-heading\">Case Number:<span class=\"p-info\"> {{incident.caseNum}}</span></p>\n                                <p class=\"p-heading\">CW Index:<span class=\"p-info\"> {{incident.cwIndex}}</span></p>\n                                <p class=\"p-heading\">GD Index:<span class=\"p-info\"> {{incident.gdIndex}}</span></p>\n                                <p class=\"p-heading\">Cross Reference Notes: <span class=\"p-info\"> {{incident.crossRefNotesCwGd}}</span></p>\n                                <br>\n                        </div>\n\n                        <h4>Date and Location</h4>\n                        <p class=\"p-heading\">Date:<span class=\"p-info\"> {{incident.dateString}}</span> </p>\n                        <p class=\"p-heading\" ng-if=\"incident.dateNotes\">Date Notes:<span class=\"p-info\"> {{incident.dateNotes}}</span> </p>\n                        <p class=\"p-heading\">State:<span class=\"p-info\"> {{incident.state}}</span></p>\n                        <p class=\"p-heading\">County:<span class=\"p-info\"> {{incident.county}}</span></p>\n                        <p class=\"p-heading\">Place:<span class=\"p-info\"> {{incident.place}}</span></p>\n                        <p class=\"p-heading\">Latitude: <span class=\"p-info\"> {{incident.latDecimal}}</span></p>\n                        <p class=\"p-heading\">Longitude: <span class=\"p-info\"> {{incident.lonDecimal}}</span></p>\n                        <p class=\"p-heading\" ng-if=\"incident.locationNotes\">Location Notes:<span class=\"p-info\"> {{incident.locationNotes}}</span> </p>\n                        <br>\n\n                        <div ng-if=\"incident.summary\">\n                                <h4> Summary</h4>\n                                <p class=\"p-info\" ng-if=\"incident.dateNotes\">{{incident.summary}} </p>\n                        </div>\n\n                        <h4>Accused</h4>\n                        <div ng-repeat=\"accused in incident.accused\">\n                                <p class=\"p-heading\">Name:<span class=\"p-info\"> {{accused.fullName}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"accused.namesString\">AKA:<span class=\"p-info\"> {{accused.namesString}}</span> </p>\n                                <p class=\"p-heading\">Race:<span class=\"p-info\"> {{accused.race}}</span> </p>\n                                <p class=\"p-heading\">Nationality:<span class=\"p-info\"> {{accused.nationality}}</span> </p>\n                                <p class=\"p-heading\">Gender:<span class=\"p-info\">{{accused.gender}}</span> </p>\n                                <div ng-repeat=\"accusation in accused.accusations\">\n                                        <p class=\"p-heading\">Accusation:<span class=\"p-info\"> {{accusation.accusation}}</span></p>\n                                        <p class=\"p-heading\">Weapon Used:<span class=\"p-info\"> {{accusation.weapon}}</span></p>\n                                </div>\n                                <div ng-repeat=\"punishment in accused.punishments\">\n                                        <p class=\"p-heading\">Punishment:<span class=\"p-info\"> {{punishment.punishment}}</span> <span class=\"p-info\" ng-if=\"punishment.lashes\">: {{punishment.lashes}} lashes</span></p>\n                                        <p class=\"p-heading\" ng-if=\"punishment-notes\">Punishment Notes:<span class=\"p-info\"> {{punishment.notes}}</span></p>\n                                </div>\n                                <p class=\"p-heading\">Confession or Speech at Gallows:<span class=\"p-info\"> {{accused.confession}}</span></p>\n                                <p class=\"p-heading\" ng-if=\"accused.notes\">Accused Notes:<span class=\"p-info\"> {{accused.notes}}</span> </p>\n                                <br>\n                        </div>\n                       \n                        <h4>Lynching</h4>\n                        <p class=\"p-heading\">Type of Crowd:<span class=\"p-info\"> {{incident.crowdType}}</span></p>\n                        <p class=\"p-heading\">Size of Crowd:<span class=\"p-info\"> {{incident.croudSize}}</span></p>\n                        <p class=\"p-heading\">Open or Secret:<span class=\"p-info\"> {{incident.open}}</span></p>\n                        <p class=\"p-heading\">Authorities: <span class=\"p-info\"> {{incident.authorities}}</span></p>\n                        <p class=\"p-heading\">Authorities Present: <span class=\"p-info\"> {{incident.authoritiesPresent}}</span></p>\n                        <p class=\"p-heading\">Lethality: <span class=\"p-info\"> {{incident.lethality}}</span></p>\n                        <p class=\"p-heading\">Lynching Notes: <span class=\"p-info\"> {{incident.incidentNotes}}</span></p>\n                        <br>\n                        <!-- <h4>Victim(s)</h4>\n                        <p>Name(s): {{incident.victimNames}}</p>\n                        <p>Gender(s): {{incident.victimGenders}}</p>\n                        <p>Race(s): {{incident.victimRaces}}</p>\n                        <p>Victim Notes: {{incident.victimNotes}}</p> -->\n                </div>\n        \n                <div class=\"col-lg-6\">\n                        <h4>Sources</h4>\n                        <button ng-if=\"incident.showSources===false\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'show')\"><span class=\"glyphicon glyphicon-book\"><h5>Show Sources</h5></button>\n                        <button ng-if=\"incident.showSources===true\"class=\"btn btn-success\" id=\"show-source-button\" ng-click=\"$ctrl.toggleSources(incident, 'hide')\"><span class=\"glyphicon glyphicon-book\"><h5>Hide Sources</h5></button>\n                        <div ng-if=\"incident.showSources===true\">\n                            \n                                <!-- newspapers -->\n                                <h4 ng-if=\"incident.newspapers.length>0\">Newspapers</h4>\n                                <div ng-if=\"incident.newspapers.length>0\" ng-repeat=\"source in incident.newspapers\"> \n                                <p class=\"p-heading\">Article Title:<span class=\"p-info\"> {{source.articleTitle}}</span> </p>\n                                <p class=\"p-heading\">Newspaper:<span class=\"p-info\">{{source.newspaper}}</span> </p>\n                                <p class=\"p-heading\">Place:<span class=\"p-info\"> {{source.place}}, </span><span class=\"p-heading\">State:</span><span class=\"p-info\"> {{source.state}},</span> <span class=\"p-heading\">Country: </span><span class=\"p-info\"> {{source.country}}</span> </p>\n                                <p class=\"p-heading\">Date:<span class=\"p-info\"> {{source.dateString}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.section\">Section:<span class=\"p-info\"> {{source.section}}</span><span class=\"p-heading\" ng-if=\"source.page\">Page</span><span class=\"p-info\"> {{source.page}}</span> <span class=\"p-heading\" ng-if=\"source.column\">Column</span><span class=\"p-info\"> {{source.column}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedPage\">Continued on Page:<span class=\"p-info\"> {{source.continuedPage}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.continuedColumn\">Continued on Column:<span class=\"p-info\"> {{source.continuedColumn}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.link\">link:<a> {{source.link}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n\n                                <!-- books -->\n                                <h4 ng-if=\"incident.books.length>0\">Books</h4>\n                                <div ng-if=\"incident.books.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\">Author:<span class=\"p-info\"> {{source.auString}}</span> </p>\n                                <p class=\"p-heading\">Editor:<span class=\"p-info\"> {{source.editorString}}</span> </p>\n                                <p class=\"p-heading\">Publisher:<span class=\"p-info\"> {{source.publisher}}</span> </p>\n                                <p class=\"p-heading\">Pub Place:<span class=\"p-info\"> {{source.placePub}}</span> </p>\n                                <p class=\"p-heading\">Published:<span class=\"p-info\"> {{source.yearPub}}</span> </p>\n                                <p class=\"p-heading\">Volume:<span class=\"p-info\"> {{source.volume}}</span> </p>\n                                <p class=\"p-heading\">Pages:<span class=\"p-info\"> {{source.pages}}</span> </p>\n                                <p class=\"p-heading\">Ed Comp:<span class=\"p-info\"> {{source.edComp}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n\n                                <!-- manuscripts -->\n                                <h4 ng-if=\"incident.manuscripts.length>0\">Manuscripts</h4>\n                                <div ng-if=\"incident.manuscripts.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\">Collection:<span class=\"p-info\"> {{source.manuscriptCollection}}</span> </p>\n                                <p class=\"p-heading\">Call Number:<span class=\"p-info\"> {{source.callNumber}}</span> </p>\n                                <p class=\"p-heading\">Repository:<span class=\"p-info\"> {{source.repository}}</span> </p>\n                                <span class=\"p-info\"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> \n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <span class=\"p-info\"> {{source.month}}/{{source.day}}/{{source.year}}</span> \n                                <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n                                \n                                <!-- Websites -->\n                                <h4 ng-if=\"incident.manuscripts.length>0\">Websites</h4>\n                                <div ng-if=\"incident.manuscripts.length>0\" ng-repeat=\"source in incident.books\"> \n                                <p class=\"p-heading\">Title:<span class=\"p-info\"> {{source.title}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">URL<a> {{source.url}}</a> </p>\n                                <p class=\"p-heading\">Accessed On:<span class=\"p-info\"> {{source.accessed}}</span> </p>\n                                <p class=\"p-heading\">Book Title:<span class=\"p-info\"> {{source.bookTitle}}</span> </p>\n                                <p class=\"p-heading\">Author:<span class=\"p-info\"> {{source.auString}}</span> </p>\n                                <p class=\"p-heading\">Publisher:<span class=\"p-info\"> {{source.publisher}}</span> </p>\n                                <p class=\"p-heading\">Ed Comp:<span class=\"p-info\"> {{source.edComp}}</span> </p>\n                                <p class=\"p-heading\">Volume:<span class=\"p-info\"> {{source.volume}}</span> </p>\n                                <p class=\"p-heading\">Pages:<span class=\"p-info\"> {{source.pages}}</span> </p>\n\n                                <p class=\"p-heading\">Collection:<span class=\"p-info\"> {{source.websiteCollection}}</span> </p>\n                                <p class=\"p-heading\">Call Number:<span class=\"p-info\"> {{source.callNumber}}</span> </p>\n                                <p class=\"p-heading\">Repository:<span class=\"p-info\"> {{source.repository}}</span> </p>\n                                <span class=\"p-info\"> {{source.location}}, {{source.stateProvince}}. {{source.country}}</span> \n                                <span class=\"p-info\"> {{source.dateMonth}}/{{source.dateDay}}/{{source.dateYear}}</span> \n                                <p class=\"p-heading\" ng-if=\"source.incomplete\">Incomplete?<a> {{source.incomplete}}</a> </p>\n                                <p class=\"p-heading\">pDF:<span class=\"p-info\"> {{source.pDF}}</span> </p>\n                                <p class=\"p-heading\" ng-if=\"source.displayPDF\">Display PDF<a> {{source.displayPDF}}</a> </p>\n                                <br>\n                                </div>\n                                \n\n                        </div>\n\n                        \n                </div>\n                </div>\n                <h4><button class=\"btn btn-success\" id=\"go-to-top-button\" ng-click=\"$ctrl.goToTop(incident.caseNum)\"><span class=\"glyphicon glyphicon-arrow-up\"><h5>Go To Top</h5></button>\n        </div>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Edit Incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='admin'\" ng-click=\"$ctrl.deleteIncident(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Delete Incident</h6></span></button>\n\n                                                        <button class=\"btn btn-warning\" id=\"edit-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.editIncident(incident)\" ><span class=\"glyphicon glyphicon-wrench\"><h6>Propose Edits to incident</h6></span></button>\n                                                        <button class=\"btn btn-danger\" id=\"delete-incident-button\" ng-if=\"$ctrl.user.role=='contributor'\" ng-click=\"$ctrl.proposeDeletion(incident)\" ><span class=\"glyphicon glyphicon-trash\"><h6>Propose Delete Incident</h6></span></button>\n\n                                                <!-- long view ends -->\n                                                </div>\n                                        </div>\n                                        <!-- full container ends -->\n                                </div>\n                                \n                        </li>\n                </ul>\n        </div>\n</div> \n\n        <div id=\"search-results-footer\" class=\"jumbotron\" ng-if=\"$ctrl.incidents.length>0\">\n                <div class=\"panel-md-10\">\n                        <h4><button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.minResult>9\" ng-click=\"$ctrl.previousResults()\"><span class=\"glyphicon glyphicon-arrow-left\"><h5>Previous</h5></button>\n                        <button class=\"btn btn-info\" id=\"more-incidents-button\" ng-if=\"$ctrl.maxResult<$ctrl.incidentNumber\" ng-click=\"$ctrl.nextResults()\"><span class=\"glyphicon glyphicon-arrow-right\"><h5>Next</h5></button>\n                        <span>Results {{$ctrl.minResult}}-{{$ctrl.maxResult}}</span>\n                        <span> (of {{$ctrl.incidentNumber}})</h4>\n                </div>\n        </div>\n              \n</section>";
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36079,7 +36082,7 @@
 	    value: true
 	});
 	
-	var _login = __webpack_require__(25);
+	var _login = __webpack_require__(27);
 	
 	var _login2 = _interopRequireDefault(_login);
 	
@@ -36111,13 +36114,13 @@
 	};
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports) {
 
-	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<a class=\"btn btn-primary btn-lg\" ui-sref=\"signup\" role=\"button\" ng-click=\"$ctrl.authenticate\">Login</a>\n\t\t<!-- <button type=\"submit\" ng-click=\"$ctrl.authenticate\">Login</button> -->\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
+	module.exports = "<section id=\"signin-page\">\n    <h2>Login to access your account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<a class=\"btn btn-primary btn-lg\" ui-sref=\"signup\" role=\"button\" ng-click=\"$ctrl.authenticate()\">Login</a>\n\t\t<!-- <button type=\"submit\" ng-click=\"$ctrl.authenticate\">Login</button> -->\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36126,7 +36129,7 @@
 	    value: true
 	});
 	
-	var _logout = __webpack_require__(27);
+	var _logout = __webpack_require__(29);
 	
 	var _logout2 = _interopRequireDefault(_logout);
 	
@@ -36150,13 +36153,13 @@
 	}
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports) {
 
 	module.exports = "<section>\n    <h2>You've been logged out of your account.</h2>\n</section>";
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36165,7 +36168,7 @@
 	    value: true
 	});
 	
-	var _lynchMap = __webpack_require__(29);
+	var _lynchMap = __webpack_require__(31);
 	
 	var _lynchMap2 = _interopRequireDefault(_lynchMap);
 	
@@ -36289,13 +36292,13 @@
 	}
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports) {
 
 	module.exports = "\n<section>\n       \n        <h1>Lynching Map</h1>\n        <div ng-if=\"$ctrl.loading===true\">\n                <h3>map loading</h3>\n                <div class=\"loader\" ></div>\n        </div>\n       \n\n        <div class=\"container\" map-lazy-load=\"https://maps.google.com/maps/api/js\" map-lazy-load-params=\"{{$ctrl.mapURL}}\" ng-if=\"$ctrl.loading===false\">\n                <div class=\"row\">\n                        <div class=\"col-sm-9\">\n                                <ng-map class=\"big-map\" center=\"37.897894, -119.340420\" zoom=\"6\">\n                                        <!-- <marker position=“{{$ctrl.incidents[0].latDecimal}},{{$ctrl.incidents[0].lonDecimal}}” /> -->\n                                        <!-- <marker ng-repeat=\"incident in $ctrl.incidents\" position=“{{incident.latDecimal}},{{incident.lonDecimal}}” on-click=\"$ctrl.fart()\"/>  -->\n                                </ng-map>\n                        </div>\n\n                        <!-- <div class=\"col-sm-3\" ng-hide=\"$ctrl.incident!==null\">\n                                <h3>Click a map marker to view lynching incident details</h3>                     \n                        </div> -->\n\n                        <div id=\"big-map-textbox\" class=\"col-sm-3\" ng-if=\"$ctrl.incident\">\n                                <p>Date: {{$ctrl.incident.dateString}}</p>\n                                <p>Location: {{$ctrl.incident.place}}, {{$ctrl.incident.county}} County, {{$ctrl.incident.state}}</p>\n                                <p ng-repeat=\"accused in $ctrl.incident.accused\">Name of Accused: {{accused.fullName}}</p>\n                                <p>Summary: {{$ctrl.incident.summary}} summary will go here</p>                    <button class=\"btn btn-info\" ng-click=\"$ctrl.seeFullIncident()\" ><span class=\"glyphicon glyphicon-notes\"></span> See Full Incident Details</button>      \n                        </div>\n                </div>\n        </div>\n\n\n        <!-- <ng-map class=\"lynch-map\" center=\"37.897894, -119.340420\" zoom=\"6\">\n                <marker ng-repeat=\"incident in $ctrl.incidents\" position=“{{incident.latDecimal}},{{incident.lonDecimal}}” on-click=\"$ctrl.fart()\"/> \n        </ng-map> -->\n\n        <!-- ng-repeat=\"incident in $ctrl.incidents\"  -->\n\n        \n\n\n        <!-- <h2>Browse Incidents</h2>\n        <div id=\"filters\">\n                <div class=\"jumbotron\">\n                        <label for=\"inputFilter\" class=\"col-lg-1 control-label\">Filter by </label>\n                        <div class=\"col-lg-1\">\n                                <select ng-model=\"$ctrl.newQuery.category\" ng-options=\"filter.name for filter in $ctrl.filters\">\n                                </select>\n                        </div>\n                        <div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='county'\" class=\"col-lg-2\" >\n                                        <select  ng-model=\"$ctrl.newQuery.target\" ng-options=\"county for county in $ctrl.counties\">\n                                        </select>\n                                </div>\n                                <div ng-if=\"$ctrl.newQuery.category.name==='place'\" class=\"col-lg-2\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"text\" class=\"form-control\" id=\"inputPlace\" placeholder=\"Place\">\n                                </div>\n                                <div class=\"col-lg-2\" ng-if=\"$ctrl.newQuery.category.name==='year'\">\n                                        <input ng-model=\"$ctrl.newQuery.target\" type=\"number\" class=\"form-control\" id=\"inputYear\" min=1500 max=2100>\n                                </div>\n                        </div>\n                        <button ng-if=\"$ctrl.newQuery.target!==null\" class=\"btn btn-success\"  ng-click=\"$ctrl.addFilter()\" ><span class=\"glyphicon glyphicon-plus\"><h6>Add</h6></span></button>\n\n                </div>\n        </div>\n\n        <div class=\"jumbotron mb-3\" ng-if=\"$ctrl.queries.length\">\n                <label for=\"inputFilter\" class=\"col-lg-3 control-label\">Active Filters: Click a Filter to Remove</label>\n                <div class=\"col-lg-2\" ng-repeat=\"query in $ctrl.queries\" >\n                        <button type='button' class=\"{{$ctrl.classes[query.number]}}\" ng-click=\"$ctrl.removeFilter(query)\">{{query.category.name}} is {{query.target}}</button>\n                </div>\n        </div>\n\n        <div class=\"form-group\">\n                <button class=\"btn btn-info\"  ng-click=\"$ctrl.searchIncidents()\" ><span class=\"glyphicon glyphicon-search\"><h6>Search Incidents</h6></span></button>\n        </div>\n\n        <div id=\"incident-gallery\" ng-if=\"$ctrl.incidents.length\" class=\"panel-group\">\n                <h3>{{$ctrl.incidentNumber}} Results Found</h3>\n                <ul id=\"incident-list\">\n                        <li ng-repeat=\"incident in $ctrl.incidents\">\n                                <div class=\"panel panel-primary col-lg-11\" id=\"incident-panel\">\n                                        <div  class=\"panel-header\">\n                                                <h3>{{incident.suspectNames}}</h3>\n                                        </div>\n                                        <div class=\"panel-body\" ng-hide=\"incident.fullView===true\"> \n                                                <button class=\"btn btn-primary\" id=\"show-incident-button\" ng-click=\"$ctrl.showIncident(incident)\"><span class=\"glyphicon glyphicon-view\"><h6>Show More</h6></span></button>\n                                                <h3>{{incident.year}}</h3>\n                                                <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>\n                                                <p>{{incident.summary}} summary will go here</p>          \n                                        </div>\n                                        <div class=\"panel-body\" ng-if=\"incident.fullView===true\">\n                                                <button class=\"btn btn-secondary\" id=\"show-incident-button\" ng-click=\"$ctrl.hideIncident(incident)\" ><span class=\"glyphicon glyphicon-view\"><h6>Show Less</h6></span></button>\n                                                <h3>{{incident.year}}</h3>\n                                                <h4>{{incident.place}}, {{incident.county}} County {{incident.state}}</h4>\n                                                <p>{{incident.summary}} summary will go here</p>\n\n                                                <div class=\"panel-body\">\n                                                        <h4>Accused</h4>\n                                                        <p>Number: {{incident.numberSuspects}}</p>\n                                                        <p>Names: {{incident.suspectNames}}</p>\n                                                        <p>Races: {{incident.suspectRaces}}</p>\n                                                        <p>Confession or Speech at Gallows: {{incident.confession}}</p>\n                                                        <p>Accused Notes: {{incident.suspectNotes}}</p>\n                                                </div>\n                                            \n                                                <div class=\"panel-body\">\n                                                        <h4>Victims</h4>\n                                                        <p>Number:  <em>{{incident.victimNumber}}</em></p>\n                                                        <p>Names: {{incident.victimNames}}</p>\n                                                        <p>Genders: {{incident.victimGenders}}</p>\n                                                        <p>Races: {{incident.victimRaces}}</p>\n                                                        <p>Victim Notes: {{incident.victimNotes}}</p>\n                                                </div>\n\n                                                <div class=\"panel-body\">\n                                                        <h4>Lynching</h4>\n                                                        <p>Type of Crowd:  <em>{{incident.crowdType}}</em></p>\n                                                        <p>Size of Crowd: {{incident.crowdSize}}</p>\n                                                        <p>Open or Closed?: {{incident.open}}</p>\n                                                        <p>Authorities Present: {{incident.oldAuthorities}}</p>\n                                                        <p>Crime: {{incident.crime}}</p>\n                                                        <p>Punishment: {{incident.punishment}}</p>\n                                                        <p>Lethality: {{incident.Lethality}}</p>\n                                                        <p>Other Names Mentioned: {{incident.otherNamesMentioned}}</p>\n                                                </div>\n                                    \n                                                <div class=\"panel-body\">\n                                                        <h4>Database Indices</h4>\n                                                        <p>Case Number:  <em>{{incident.caseNum}}</em></p>\n                                                        <p>Current Database ID:  <em>{{incident._id}}</em></p>\n                                                        <p>Original Database Index: {{incident.origDBIndex}}</p>\n                                                        <p>cwIndex: {{incident.cwIndex}}</p>\n                                                        <p>gdIndex: {{incident.gdIndex}}</p>\n                                                        <p>Index Notes: {{incident.crossRefNotesCwGd}}</p>\n                                                </div>\n\n                                                <div class=\"panel-body\">\n                                                        <h4>Sources</h4>\n                                                        <p>Sources:  <em>{{incident.oldSources}}</em></p>\n                                                        <p>Notes:  <em>{{incident.oldNotes}}</em></p>\n                                                </div>\n\n    latDecimal: Number,\n    lonDecimal: Number,\n    latNDegrees:Number,\n    latNMinutes:Number,\n    latNSeconds:Number,\n    lonWDegrees:Number,\n    lonWMinutes:Number,\n    lonWSeconds:Number,\n    year: requiredNumber,\n    month: Number,\n    day: Number,\n    dateNotes: String,\n    state: String,\n    place: String,\n    county: String,\n    locationNotes: String,\n\n                                        </div>\n                                </div>\n                        </li>\n                </ul>\n        <div> -->\n</section>";
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36304,7 +36307,7 @@
 	    value: true
 	});
 	
-	var _signup = __webpack_require__(31);
+	var _signup = __webpack_require__(33);
 	
 	var _signup2 = _interopRequireDefault(_signup);
 	
@@ -36348,13 +36351,13 @@
 	};
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports) {
 
 	module.exports = "<section class=\"signup-box\">\n   \t<h2 id=\"signup-header\">Sign up for a user account</h2>\n\t<form name=\"auth\" ng-submit=\"$ctrl.authenticate()\">\n\t\t<div>\n\t\t\t<label id=\"username\">\n\t\t\t\tUsername: <input required ng-model=\"$ctrl.credentials.username\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"name\">\n\t\t\t\tName<br>       \n\t\t\t\tFirst: <input type=\"text\" ng-model=\"$ctrl.first\">\n\t\t\t\tLast: <input type=\"text\" ng-model=\"$ctrl.last\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"password\">\n\t\t\t\tPassword: <input required type=\"password\" ng-model=\"$ctrl.credentials.password\">\n\t\t\t</label>\n\t\t</div>\n\n\t\t<div>\n\t\t\t<label id=\"email\">\n\t\t\t\tEmail: <input type=\"email\" ng-model=\"$ctrl.credentials.email\">\n\t\t\t</label>\n\t\t</div>\n\n        <div id=\"dob\">\n\t\t\tDate of Birth: <input type=\"date\" ng-model=\"$ctrl.credentials.dob\">\n\t\t</div>\n\n\t\t<button type=\"submit\">Sign Up</button>\n\t</form>\n\t<div class=\"error\" ng-if='$ctrl.error'>{{$ctrl.error.message}}</div>\n</section>";
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36363,7 +36366,7 @@
 	    value: true
 	});
 	
-	var _user = __webpack_require__(33);
+	var _user = __webpack_require__(35);
 	
 	var _user2 = _interopRequireDefault(_user);
 	
@@ -36389,13 +36392,13 @@
 	};
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ (function(module, exports) {
 
 	module.exports = "<section>\n    <h1>User Portfolio Section</h1>\n    \n    <h3>Username: {{$ctrl.user.username}}</h3>\n    <h3>Name: {{$ctrl.user.name}}</h3>\n    <h3>Password: {{$ctrl.user.password}}</h3>\n    <h3>Email: {{$ctrl.user.email}}</h3>\n    <h3>Date of Birth: {{$ctrl.user.dob}}</h3>\n    <h3 ng-if=\"$ctrl.user.role==='user'\">role: User (can comment on lynching entries)</h3>\n    <h3 ng-if=\"$ctrl.user.role==='contributor'\">role: User (can create and edit lynching entries with admin approval)</h3>  \n    <h3 ng-if=\"$ctrl.user.role==='admin'\">role: Admin (can create, edit, and delete lynching entries.  Can approve changes submitted by contributors.  Can add contributor accounts.)</h3>     \n</section>\n";
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36419,7 +36422,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// .context is a method webpack adds to require 
-	var context = __webpack_require__(35);
+	var context = __webpack_require__(37);
 	
 	// create the module to put the resources in,
 	// in this case directives
@@ -36438,14 +36441,14 @@
 	exports.default = _module.name;
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./auth-service.js": 36,
-		"./run-service.js": 37,
-		"./token-service.js": 38,
-		"./user-service.js": 39
+		"./auth-service.js": 38,
+		"./run-service.js": 39,
+		"./token-service.js": 40,
+		"./user-service.js": 41
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -36458,11 +36461,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 35;
+	webpackContext.id = 37;
 
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -36509,7 +36512,7 @@
 	}
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -36561,7 +36564,7 @@
 	};
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -36590,7 +36593,7 @@
 	}
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -36646,7 +36649,7 @@
 	};
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -36658,23 +36661,23 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var core = __webpack_require__(41);
+	var core = __webpack_require__(43);
 	exports.core = core;
-	__export(__webpack_require__(41));
-	__export(__webpack_require__(113));
+	__export(__webpack_require__(43));
 	__export(__webpack_require__(115));
 	__export(__webpack_require__(117));
-	__export(__webpack_require__(120));
-	__webpack_require__(121);
-	__webpack_require__(122);
+	__export(__webpack_require__(119));
+	__export(__webpack_require__(122));
 	__webpack_require__(123);
 	__webpack_require__(124);
 	__webpack_require__(125);
+	__webpack_require__(126);
+	__webpack_require__(127);
 	exports.default = "ui.router";
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -36686,22 +36689,22 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(42));
-	__export(__webpack_require__(66));
-	__export(__webpack_require__(69));
-	__export(__webpack_require__(70));
+	__export(__webpack_require__(44));
+	__export(__webpack_require__(68));
 	__export(__webpack_require__(71));
-	__export(__webpack_require__(97));
-	__export(__webpack_require__(98));
+	__export(__webpack_require__(72));
+	__export(__webpack_require__(73));
 	__export(__webpack_require__(99));
-	__export(__webpack_require__(85));
-	__export(__webpack_require__(79));
 	__export(__webpack_require__(100));
-	__export(__webpack_require__(112));
+	__export(__webpack_require__(101));
+	__export(__webpack_require__(87));
+	__export(__webpack_require__(81));
+	__export(__webpack_require__(102));
+	__export(__webpack_require__(114));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -36710,18 +36713,18 @@
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module common */ /** for typedoc */
-	__export(__webpack_require__(43));
-	__export(__webpack_require__(48));
-	__export(__webpack_require__(47));
 	__export(__webpack_require__(45));
-	__export(__webpack_require__(44));
-	__export(__webpack_require__(49));
 	__export(__webpack_require__(50));
-	__export(__webpack_require__(53));
+	__export(__webpack_require__(49));
+	__export(__webpack_require__(47));
+	__export(__webpack_require__(46));
+	__export(__webpack_require__(51));
+	__export(__webpack_require__(52));
+	__export(__webpack_require__(55));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -36735,9 +36738,9 @@
 	 * @module common
 	 */
 	/** for typedoc */
-	var predicates_1 = __webpack_require__(44);
-	var hof_1 = __webpack_require__(45);
-	var coreservices_1 = __webpack_require__(48);
+	var predicates_1 = __webpack_require__(46);
+	var hof_1 = __webpack_require__(47);
+	var coreservices_1 = __webpack_require__(50);
 	var w = typeof window === 'undefined' ? {} : window;
 	var angular = w.angular || {};
 	exports.fromJson = angular.fromJson || JSON.parse.bind(JSON);
@@ -37373,7 +37376,7 @@
 	//# sourceMappingURL=common.js.map
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37386,8 +37389,8 @@
 	 * @module common_predicates
 	 */
 	/** */
-	var hof_1 = __webpack_require__(45);
-	var stateObject_1 = __webpack_require__(46);
+	var hof_1 = __webpack_require__(47);
+	var stateObject_1 = __webpack_require__(48);
 	var toStr = Object.prototype.toString;
 	var tis = function (t) { return function (x) { return typeof (x) === t; }; };
 	exports.isUndefined = tis('undefined');
@@ -37425,7 +37428,7 @@
 	//# sourceMappingURL=predicates.js.map
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -37675,15 +37678,15 @@
 	//# sourceMappingURL=hof.js.map
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var glob_1 = __webpack_require__(47);
-	var predicates_1 = __webpack_require__(44);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var glob_1 = __webpack_require__(49);
+	var predicates_1 = __webpack_require__(46);
 	/**
 	 * Internal representation of a UI-Router state.
 	 *
@@ -37794,7 +37797,7 @@
 	//# sourceMappingURL=stateObject.js.map
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -37882,7 +37885,7 @@
 	//# sourceMappingURL=glob.js.map
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -37898,7 +37901,7 @@
 	//# sourceMappingURL=coreservices.js.map
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -37949,7 +37952,7 @@
 	//# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -37961,12 +37964,12 @@
 	 * @module common_strings
 	 */ /** */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var predicates_1 = __webpack_require__(44);
-	var rejectFactory_1 = __webpack_require__(51);
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var transition_1 = __webpack_require__(52);
-	var resolvable_1 = __webpack_require__(63);
+	var predicates_1 = __webpack_require__(46);
+	var rejectFactory_1 = __webpack_require__(53);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var transition_1 = __webpack_require__(54);
+	var resolvable_1 = __webpack_require__(65);
 	/**
 	 * Returns a string shortened to a maximum length
 	 *
@@ -38106,7 +38109,7 @@
 	//# sourceMappingURL=strings.js.map
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -38115,9 +38118,9 @@
 	 */ /** for typedoc */
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
-	var strings_1 = __webpack_require__(50);
-	var hof_1 = __webpack_require__(45);
+	var common_1 = __webpack_require__(45);
+	var strings_1 = __webpack_require__(52);
+	var hof_1 = __webpack_require__(47);
 	var RejectType;
 	(function (RejectType) {
 	    RejectType[RejectType["SUPERSEDED"] = 2] = "SUPERSEDED";
@@ -38200,7 +38203,7 @@
 	//# sourceMappingURL=rejectFactory.js.map
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38210,20 +38213,20 @@
 	 * @module transition
 	 */
 	/** for typedoc */
-	var trace_1 = __webpack_require__(53);
-	var coreservices_1 = __webpack_require__(48);
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var hof_1 = __webpack_require__(45);
-	var interface_1 = __webpack_require__(54); // has or is using
-	var transitionHook_1 = __webpack_require__(55);
-	var hookRegistry_1 = __webpack_require__(57);
-	var hookBuilder_1 = __webpack_require__(58);
-	var pathFactory_1 = __webpack_require__(59);
-	var targetState_1 = __webpack_require__(56);
-	var param_1 = __webpack_require__(61);
-	var resolvable_1 = __webpack_require__(63);
-	var resolveContext_1 = __webpack_require__(64);
+	var trace_1 = __webpack_require__(55);
+	var coreservices_1 = __webpack_require__(50);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var hof_1 = __webpack_require__(47);
+	var interface_1 = __webpack_require__(56); // has or is using
+	var transitionHook_1 = __webpack_require__(57);
+	var hookRegistry_1 = __webpack_require__(59);
+	var hookBuilder_1 = __webpack_require__(60);
+	var pathFactory_1 = __webpack_require__(61);
+	var targetState_1 = __webpack_require__(58);
+	var param_1 = __webpack_require__(63);
+	var resolvable_1 = __webpack_require__(65);
+	var resolveContext_1 = __webpack_require__(66);
 	/** @hidden */
 	var stateSelf = hof_1.prop("self");
 	/**
@@ -38832,7 +38835,7 @@
 	//# sourceMappingURL=transition.js.map
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38872,9 +38875,9 @@
 	 * @coreapi
 	 * @module trace
 	 */ /** for typedoc */
-	var hof_1 = __webpack_require__(45);
-	var predicates_1 = __webpack_require__(44);
-	var strings_1 = __webpack_require__(50);
+	var hof_1 = __webpack_require__(47);
+	var predicates_1 = __webpack_require__(46);
+	var strings_1 = __webpack_require__(52);
 	/** @hidden */
 	function uiViewString(viewData) {
 	    if (!viewData)
@@ -39080,7 +39083,7 @@
 	//# sourceMappingURL=trace.js.map
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -39101,7 +39104,7 @@
 	//# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39111,15 +39114,15 @@
 	 * @module transition
 	 */
 	/** for typedoc */
-	var interface_1 = __webpack_require__(54);
-	var common_1 = __webpack_require__(43);
-	var strings_1 = __webpack_require__(50);
-	var predicates_1 = __webpack_require__(44);
-	var hof_1 = __webpack_require__(45);
-	var trace_1 = __webpack_require__(53);
-	var coreservices_1 = __webpack_require__(48);
-	var rejectFactory_1 = __webpack_require__(51);
-	var targetState_1 = __webpack_require__(56);
+	var interface_1 = __webpack_require__(56);
+	var common_1 = __webpack_require__(45);
+	var strings_1 = __webpack_require__(52);
+	var predicates_1 = __webpack_require__(46);
+	var hof_1 = __webpack_require__(47);
+	var trace_1 = __webpack_require__(55);
+	var coreservices_1 = __webpack_require__(50);
+	var rejectFactory_1 = __webpack_require__(53);
+	var targetState_1 = __webpack_require__(58);
 	var defaultOptions = {
 	    current: common_1.noop,
 	    transition: null,
@@ -39326,7 +39329,7 @@
 	//# sourceMappingURL=transitionHook.js.map
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39335,8 +39338,8 @@
 	 * @module state
 	 */ /** for typedoc */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
 	/**
 	 * Encapsulate the target (destination) state/params/options of a [[Transition]].
 	 *
@@ -39445,7 +39448,7 @@
 	//# sourceMappingURL=targetState.js.map
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39454,10 +39457,10 @@
 	 * @coreapi
 	 * @module transition
 	 */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var interface_1 = __webpack_require__(54); // has or is using
-	var glob_1 = __webpack_require__(47);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var interface_1 = __webpack_require__(56); // has or is using
+	var glob_1 = __webpack_require__(49);
 	/**
 	 * Determines if the given state matches the matchCriteria
 	 *
@@ -39606,7 +39609,7 @@
 	//# sourceMappingURL=hookRegistry.js.map
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39615,10 +39618,10 @@
 	 * @module transition
 	 */ /** for typedoc */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var interface_1 = __webpack_require__(54);
-	var transitionHook_1 = __webpack_require__(55);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var interface_1 = __webpack_require__(56);
+	var transitionHook_1 = __webpack_require__(57);
 	/**
 	 * This class returns applicable TransitionHooks for a specific Transition instance.
 	 *
@@ -39730,16 +39733,16 @@
 	//# sourceMappingURL=hookBuilder.js.map
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	/** @module path */ /** for typedoc */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var targetState_1 = __webpack_require__(56);
-	var pathNode_1 = __webpack_require__(60);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var targetState_1 = __webpack_require__(58);
+	var pathNode_1 = __webpack_require__(62);
 	/**
 	 * This class contains functions which convert TargetStates, Nodes and paths from one type to another.
 	 */
@@ -39908,15 +39911,15 @@
 	//# sourceMappingURL=pathFactory.js.map
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module path */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var param_1 = __webpack_require__(61);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var param_1 = __webpack_require__(63);
 	/**
 	 * @internalapi
 	 *
@@ -39990,7 +39993,7 @@
 	//# sourceMappingURL=pathNode.js.map
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39999,11 +40002,11 @@
 	 * @coreapi
 	 * @module params
 	 */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var predicates_1 = __webpack_require__(44);
-	var coreservices_1 = __webpack_require__(48);
-	var paramType_1 = __webpack_require__(62);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var predicates_1 = __webpack_require__(46);
+	var coreservices_1 = __webpack_require__(50);
+	var paramType_1 = __webpack_require__(64);
 	/** @hidden */ var hasOwn = Object.prototype.hasOwnProperty;
 	/** @hidden */ var isShorthand = function (cfg) {
 	    return ["value", "type", "squash", "array", "dynamic"].filter(hasOwn.bind(cfg || {})).length === 0;
@@ -40193,7 +40196,7 @@
 	//# sourceMappingURL=param.js.map
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40203,8 +40206,8 @@
 	 * @module params
 	 */
 	/** */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
 	/**
 	 * An internal class which implements [[ParamTypeDefinition]].
 	 *
@@ -40340,7 +40343,7 @@
 	//# sourceMappingURL=paramType.js.map
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40349,11 +40352,11 @@
 	 * @coreapi
 	 * @module resolve
 	 */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var coreservices_1 = __webpack_require__(48);
-	var trace_1 = __webpack_require__(53);
-	var strings_1 = __webpack_require__(50);
-	var predicates_1 = __webpack_require__(44);
+	var common_1 = __webpack_require__(45);
+	var coreservices_1 = __webpack_require__(50);
+	var trace_1 = __webpack_require__(55);
+	var strings_1 = __webpack_require__(52);
+	var predicates_1 = __webpack_require__(46);
 	// TODO: explicitly make this user configurable
 	exports.defaultResolvePolicy = {
 	    when: "LAZY",
@@ -40478,21 +40481,21 @@
 	//# sourceMappingURL=resolvable.js.map
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module resolve */
 	/** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var trace_1 = __webpack_require__(53);
-	var coreservices_1 = __webpack_require__(48);
-	var interface_1 = __webpack_require__(65);
-	var resolvable_1 = __webpack_require__(63);
-	var pathFactory_1 = __webpack_require__(59);
-	var strings_1 = __webpack_require__(50);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var trace_1 = __webpack_require__(55);
+	var coreservices_1 = __webpack_require__(50);
+	var interface_1 = __webpack_require__(67);
+	var resolvable_1 = __webpack_require__(65);
+	var pathFactory_1 = __webpack_require__(61);
+	var strings_1 = __webpack_require__(52);
 	var when = interface_1.resolvePolicies.when;
 	var ALL_WHENS = [when.EAGER, when.LAZY];
 	var EAGER_WHENS = [when.EAGER];
@@ -40683,7 +40686,7 @@
 	//# sourceMappingURL=resolveContext.js.map
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -40703,7 +40706,7 @@
 	//# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40711,14 +40714,14 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(61));
-	__export(__webpack_require__(67));
-	__export(__webpack_require__(68));
-	__export(__webpack_require__(62));
+	__export(__webpack_require__(63));
+	__export(__webpack_require__(69));
+	__export(__webpack_require__(70));
+	__export(__webpack_require__(64));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40728,11 +40731,11 @@
 	 * @module params
 	 */
 	/** */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var hof_1 = __webpack_require__(45);
-	var coreservices_1 = __webpack_require__(48);
-	var paramType_1 = __webpack_require__(62);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var hof_1 = __webpack_require__(47);
+	var coreservices_1 = __webpack_require__(50);
+	var paramType_1 = __webpack_require__(64);
 	/**
 	 * A registry for parameter types.
 	 *
@@ -40879,7 +40882,7 @@
 	//# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40889,7 +40892,7 @@
 	 * @module params
 	 */
 	/** */
-	var common_1 = __webpack_require__(43);
+	var common_1 = __webpack_require__(45);
 	/** @internalapi */
 	var StateParams = (function () {
 	    function StateParams(params) {
@@ -40928,35 +40931,6 @@
 	//# sourceMappingURL=stateParams.js.map
 
 /***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	Object.defineProperty(exports, "__esModule", { value: true });
-	/** @module path */ /** for typedoc */
-	__export(__webpack_require__(60));
-	__export(__webpack_require__(59));
-	//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	Object.defineProperty(exports, "__esModule", { value: true });
-	/** @module resolve */ /** for typedoc */
-	__export(__webpack_require__(65));
-	__export(__webpack_require__(63));
-	__export(__webpack_require__(64));
-	//# sourceMappingURL=index.js.map
-
-/***/ }),
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40965,13 +40939,9 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(72));
-	__export(__webpack_require__(46));
-	__export(__webpack_require__(73));
-	__export(__webpack_require__(74));
-	__export(__webpack_require__(75));
-	__export(__webpack_require__(76));
-	__export(__webpack_require__(56));
+	/** @module path */ /** for typedoc */
+	__export(__webpack_require__(62));
+	__export(__webpack_require__(61));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -40979,14 +40949,47 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	/** @module resolve */ /** for typedoc */
+	__export(__webpack_require__(67));
+	__export(__webpack_require__(65));
+	__export(__webpack_require__(66));
+	//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	__export(__webpack_require__(74));
+	__export(__webpack_require__(48));
+	__export(__webpack_require__(75));
+	__export(__webpack_require__(76));
+	__export(__webpack_require__(77));
+	__export(__webpack_require__(78));
+	__export(__webpack_require__(58));
+	//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module state */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var strings_1 = __webpack_require__(50);
-	var hof_1 = __webpack_require__(45);
-	var resolvable_1 = __webpack_require__(63);
-	var coreservices_1 = __webpack_require__(48);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var strings_1 = __webpack_require__(52);
+	var hof_1 = __webpack_require__(47);
+	var resolvable_1 = __webpack_require__(65);
+	var coreservices_1 = __webpack_require__(50);
 	var parseUrl = function (url) {
 	    if (!predicates_1.isString(url))
 	        return false;
@@ -41255,14 +41258,14 @@
 	//# sourceMappingURL=stateBuilder.js.map
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module state */ /** for typedoc */
-	var predicates_1 = __webpack_require__(44);
-	var common_1 = __webpack_require__(43);
+	var predicates_1 = __webpack_require__(46);
+	var common_1 = __webpack_require__(45);
 	var StateMatcher = (function () {
 	    function StateMatcher(_states) {
 	        this._states = _states;
@@ -41323,16 +41326,16 @@
 	//# sourceMappingURL=stateMatcher.js.map
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module state */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var stateObject_1 = __webpack_require__(46);
-	var hof_1 = __webpack_require__(45);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var stateObject_1 = __webpack_require__(48);
+	var hof_1 = __webpack_require__(47);
 	/** @internalapi */
 	var StateQueueManager = (function () {
 	    function StateQueueManager($registry, $urlRouter, states, builder, listeners) {
@@ -41420,7 +41423,7 @@
 	//# sourceMappingURL=stateQueueManager.js.map
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41429,11 +41432,11 @@
 	 * @module state
 	 */ /** for typedoc */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var stateMatcher_1 = __webpack_require__(73);
-	var stateBuilder_1 = __webpack_require__(72);
-	var stateQueueManager_1 = __webpack_require__(74);
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
+	var stateMatcher_1 = __webpack_require__(75);
+	var stateBuilder_1 = __webpack_require__(74);
+	var stateQueueManager_1 = __webpack_require__(76);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
 	var StateRegistry = (function () {
 	    /** @internalapi */
 	    function StateRegistry(_router) {
@@ -41581,7 +41584,7 @@
 	//# sourceMappingURL=stateRegistry.js.map
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41591,20 +41594,20 @@
 	 * @module state
 	 */
 	/** */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var queue_1 = __webpack_require__(49);
-	var coreservices_1 = __webpack_require__(48);
-	var pathFactory_1 = __webpack_require__(59);
-	var pathNode_1 = __webpack_require__(60);
-	var transitionService_1 = __webpack_require__(77);
-	var rejectFactory_1 = __webpack_require__(51);
-	var targetState_1 = __webpack_require__(56);
-	var param_1 = __webpack_require__(61);
-	var glob_1 = __webpack_require__(47);
-	var resolveContext_1 = __webpack_require__(64);
-	var lazyLoad_1 = __webpack_require__(93);
-	var hof_1 = __webpack_require__(45);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var queue_1 = __webpack_require__(51);
+	var coreservices_1 = __webpack_require__(50);
+	var pathFactory_1 = __webpack_require__(61);
+	var pathNode_1 = __webpack_require__(62);
+	var transitionService_1 = __webpack_require__(79);
+	var rejectFactory_1 = __webpack_require__(53);
+	var targetState_1 = __webpack_require__(58);
+	var param_1 = __webpack_require__(63);
+	var glob_1 = __webpack_require__(49);
+	var resolveContext_1 = __webpack_require__(66);
+	var lazyLoad_1 = __webpack_require__(95);
+	var hof_1 = __webpack_require__(47);
 	/**
 	 * Provides state related service functions
 	 *
@@ -42159,7 +42162,7 @@
 	//# sourceMappingURL=stateService.js.map
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42169,24 +42172,24 @@
 	 * @module transition
 	 */
 	/** for typedoc */
-	var interface_1 = __webpack_require__(54);
-	var transition_1 = __webpack_require__(52);
-	var hookRegistry_1 = __webpack_require__(57);
-	var coreResolvables_1 = __webpack_require__(78);
-	var redirectTo_1 = __webpack_require__(87);
-	var onEnterExitRetain_1 = __webpack_require__(88);
-	var resolve_1 = __webpack_require__(89);
-	var views_1 = __webpack_require__(90);
-	var updateGlobals_1 = __webpack_require__(91);
-	var url_1 = __webpack_require__(92);
-	var lazyLoad_1 = __webpack_require__(93);
-	var transitionEventType_1 = __webpack_require__(94);
-	var transitionHook_1 = __webpack_require__(55);
-	var predicates_1 = __webpack_require__(44);
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var ignoredTransition_1 = __webpack_require__(95);
-	var invalidTransition_1 = __webpack_require__(96);
+	var interface_1 = __webpack_require__(56);
+	var transition_1 = __webpack_require__(54);
+	var hookRegistry_1 = __webpack_require__(59);
+	var coreResolvables_1 = __webpack_require__(80);
+	var redirectTo_1 = __webpack_require__(89);
+	var onEnterExitRetain_1 = __webpack_require__(90);
+	var resolve_1 = __webpack_require__(91);
+	var views_1 = __webpack_require__(92);
+	var updateGlobals_1 = __webpack_require__(93);
+	var url_1 = __webpack_require__(94);
+	var lazyLoad_1 = __webpack_require__(95);
+	var transitionEventType_1 = __webpack_require__(96);
+	var transitionHook_1 = __webpack_require__(57);
+	var predicates_1 = __webpack_require__(46);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var ignoredTransition_1 = __webpack_require__(97);
+	var invalidTransition_1 = __webpack_require__(98);
 	/**
 	 * The default [[Transition]] options.
 	 *
@@ -42403,14 +42406,14 @@
 	//# sourceMappingURL=transitionService.js.map
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module hooks */ /** */
-	var transition_1 = __webpack_require__(52);
-	var router_1 = __webpack_require__(79);
+	var transition_1 = __webpack_require__(54);
+	var router_1 = __webpack_require__(81);
 	function addCoreResolvables(trans) {
 	    trans.addResolvable({ token: router_1.UIRouter, deps: [], resolveFn: function () { return trans.router; }, data: trans.router }, "");
 	    trans.addResolvable({ token: transition_1.Transition, deps: [], resolveFn: function () { return trans; }, data: trans }, "");
@@ -42426,7 +42429,7 @@
 	//# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42435,17 +42438,17 @@
 	 * @coreapi
 	 * @module core
 	 */ /** */
-	var urlMatcherFactory_1 = __webpack_require__(80);
-	var urlRouter_1 = __webpack_require__(82);
-	var transitionService_1 = __webpack_require__(77);
-	var view_1 = __webpack_require__(84);
-	var stateRegistry_1 = __webpack_require__(75);
-	var stateService_1 = __webpack_require__(76);
-	var globals_1 = __webpack_require__(85);
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var urlService_1 = __webpack_require__(86);
-	var trace_1 = __webpack_require__(53);
+	var urlMatcherFactory_1 = __webpack_require__(82);
+	var urlRouter_1 = __webpack_require__(84);
+	var transitionService_1 = __webpack_require__(79);
+	var view_1 = __webpack_require__(86);
+	var stateRegistry_1 = __webpack_require__(77);
+	var stateService_1 = __webpack_require__(78);
+	var globals_1 = __webpack_require__(87);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var urlService_1 = __webpack_require__(88);
+	var trace_1 = __webpack_require__(55);
 	/** @hidden */
 	var _routerInstance = 0;
 	/**
@@ -42615,7 +42618,7 @@
 	//# sourceMappingURL=router.js.map
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42624,11 +42627,11 @@
 	 * @internalapi
 	 * @module url
 	 */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var urlMatcher_1 = __webpack_require__(81);
-	var param_1 = __webpack_require__(61);
-	var paramTypes_1 = __webpack_require__(67);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var urlMatcher_1 = __webpack_require__(83);
+	var param_1 = __webpack_require__(63);
+	var paramTypes_1 = __webpack_require__(69);
 	/**
 	 * Factory for [[UrlMatcher]] instances.
 	 *
@@ -42747,7 +42750,7 @@
 	//# sourceMappingURL=urlMatcherFactory.js.map
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -42757,11 +42760,11 @@
 	 * @module url
 	 */
 	/** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var predicates_1 = __webpack_require__(44);
-	var param_1 = __webpack_require__(61);
-	var strings_1 = __webpack_require__(50);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var predicates_1 = __webpack_require__(46);
+	var param_1 = __webpack_require__(63);
+	var strings_1 = __webpack_require__(52);
 	/** @hidden */
 	function quoteRegExp(string, param) {
 	    var surroundPattern = ['', ''], result = string.replace(/[\\\[\]\^$*+?.()|{}]/g, "\\$&");
@@ -43255,7 +43258,7 @@
 	//# sourceMappingURL=urlMatcher.js.map
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43265,12 +43268,12 @@
 	 * @module url
 	 */
 	/** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var predicates_1 = __webpack_require__(44);
-	var urlMatcher_1 = __webpack_require__(81);
-	var hof_1 = __webpack_require__(45);
-	var urlRule_1 = __webpack_require__(83);
-	var targetState_1 = __webpack_require__(56);
+	var common_1 = __webpack_require__(45);
+	var predicates_1 = __webpack_require__(46);
+	var urlMatcher_1 = __webpack_require__(83);
+	var hof_1 = __webpack_require__(47);
+	var urlRule_1 = __webpack_require__(85);
+	var targetState_1 = __webpack_require__(58);
 	/** @hidden */
 	function appendBasePath(url, isHtml5, absolute, baseHref) {
 	    if (baseHref === '/')
@@ -43533,7 +43536,7 @@
 	//# sourceMappingURL=urlRouter.js.map
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43542,10 +43545,10 @@
 	 * @coreapi
 	 * @module url
 	 */ /** */
-	var urlMatcher_1 = __webpack_require__(81);
-	var predicates_1 = __webpack_require__(44);
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
+	var urlMatcher_1 = __webpack_require__(83);
+	var predicates_1 = __webpack_require__(46);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
 	/**
 	 * Creates a [[UrlRule]]
 	 *
@@ -43747,7 +43750,7 @@
 	//# sourceMappingURL=urlRule.js.map
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -43756,10 +43759,10 @@
 	 * @coreapi
 	 * @module view
 	 */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var hof_1 = __webpack_require__(45);
-	var predicates_1 = __webpack_require__(44);
-	var trace_1 = __webpack_require__(53);
+	var common_1 = __webpack_require__(45);
+	var hof_1 = __webpack_require__(47);
+	var predicates_1 = __webpack_require__(46);
+	var trace_1 = __webpack_require__(55);
 	/**
 	 * The View service
 	 *
@@ -44035,7 +44038,7 @@
 	//# sourceMappingURL=view.js.map
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44044,8 +44047,8 @@
 	 * @coreapi
 	 * @module core
 	 */ /** */
-	var stateParams_1 = __webpack_require__(68);
-	var queue_1 = __webpack_require__(49);
+	var stateParams_1 = __webpack_require__(70);
+	var queue_1 = __webpack_require__(51);
 	/**
 	 * Global router state
 	 *
@@ -44078,7 +44081,7 @@
 	//# sourceMappingURL=globals.js.map
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44087,8 +44090,8 @@
 	 * @module url
 	 */ /** */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var coreservices_1 = __webpack_require__(48);
-	var common_1 = __webpack_require__(43);
+	var coreservices_1 = __webpack_require__(50);
+	var common_1 = __webpack_require__(45);
 	/** @hidden */
 	var makeStub = function (keys) {
 	    return keys.reduce(function (acc, key) { return (acc[key] = coreservices_1.notImplemented(key), acc); }, { dispose: common_1.noop });
@@ -44163,15 +44166,15 @@
 	//# sourceMappingURL=urlService.js.map
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module hooks */ /** */
-	var predicates_1 = __webpack_require__(44);
-	var coreservices_1 = __webpack_require__(48);
-	var targetState_1 = __webpack_require__(56);
+	var predicates_1 = __webpack_require__(46);
+	var coreservices_1 = __webpack_require__(50);
+	var targetState_1 = __webpack_require__(58);
 	/**
 	 * A [[TransitionHookFn]] that redirects to a different state or params
 	 *
@@ -44205,7 +44208,7 @@
 	//# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -44267,16 +44270,16 @@
 	//# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module hooks */
 	/** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var resolveContext_1 = __webpack_require__(64);
-	var hof_1 = __webpack_require__(45);
+	var common_1 = __webpack_require__(45);
+	var resolveContext_1 = __webpack_require__(66);
+	var hof_1 = __webpack_require__(47);
 	/**
 	 * A [[TransitionHookFn]] which resolves all EAGER Resolvables in the To Path
 	 *
@@ -44315,14 +44318,14 @@
 	//# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module hooks */ /** for typedoc */
-	var common_1 = __webpack_require__(43);
-	var coreservices_1 = __webpack_require__(48);
+	var common_1 = __webpack_require__(45);
+	var coreservices_1 = __webpack_require__(50);
 	/**
 	 * A [[TransitionHookFn]] which waits for the views to load
 	 *
@@ -44367,12 +44370,12 @@
 	//# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var common_1 = __webpack_require__(43);
+	var common_1 = __webpack_require__(45);
 	/**
 	 * A [[TransitionHookFn]] which updates global UI-Router state
 	 *
@@ -44407,7 +44410,7 @@
 	//# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -44437,12 +44440,12 @@
 	//# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var coreservices_1 = __webpack_require__(48);
+	var coreservices_1 = __webpack_require__(50);
 	/**
 	 * A [[TransitionHookFn]] that performs lazy loading
 	 *
@@ -44539,12 +44542,12 @@
 	//# sourceMappingURL=lazyLoad.js.map
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var transitionHook_1 = __webpack_require__(55);
+	var transitionHook_1 = __webpack_require__(57);
 	/**
 	 * This class defines a type of hook, such as `onBefore` or `onEnter`.
 	 * Plugins can define custom hook types, such as sticky states does for `onInactive`.
@@ -44572,14 +44575,14 @@
 	//# sourceMappingURL=transitionEventType.js.map
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	/** @module hooks */ /** */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var trace_1 = __webpack_require__(53);
-	var rejectFactory_1 = __webpack_require__(51);
+	var trace_1 = __webpack_require__(55);
+	var rejectFactory_1 = __webpack_require__(53);
 	/**
 	 * A [[TransitionHookFn]] that skips a transition if it should be ignored
 	 *
@@ -44608,7 +44611,7 @@
 	//# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -44632,7 +44635,7 @@
 	//# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44654,42 +44657,14 @@
 	 * @preferred
 	 * @module transition
 	 */ /** for typedoc */
+	__export(__webpack_require__(56));
+	__export(__webpack_require__(60));
+	__export(__webpack_require__(59));
+	__export(__webpack_require__(53));
 	__export(__webpack_require__(54));
-	__export(__webpack_require__(58));
 	__export(__webpack_require__(57));
-	__export(__webpack_require__(51));
-	__export(__webpack_require__(52));
-	__export(__webpack_require__(55));
-	__export(__webpack_require__(94));
-	__export(__webpack_require__(77));
-	//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(81));
-	__export(__webpack_require__(80));
-	__export(__webpack_require__(82));
-	__export(__webpack_require__(83));
-	__export(__webpack_require__(86));
-	//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(84));
+	__export(__webpack_require__(96));
+	__export(__webpack_require__(79));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -44701,13 +44676,12 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	/**
-	 * @internalapi
-	 * @module vanilla
-	 */
-	/** */
-	__export(__webpack_require__(101));
-	//# sourceMappingURL=vanilla.js.map
+	__export(__webpack_require__(83));
+	__export(__webpack_require__(82));
+	__export(__webpack_require__(84));
+	__export(__webpack_require__(85));
+	__export(__webpack_require__(88));
+	//# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 101 */
@@ -44718,20 +44692,49 @@
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
 	Object.defineProperty(exports, "__esModule", { value: true });
-	__export(__webpack_require__(102));
-	__export(__webpack_require__(103));
-	__export(__webpack_require__(104));
-	__export(__webpack_require__(106));
-	__export(__webpack_require__(107));
-	__export(__webpack_require__(108));
-	__export(__webpack_require__(109));
-	__export(__webpack_require__(110));
-	__export(__webpack_require__(105));
-	__export(__webpack_require__(111));
+	__export(__webpack_require__(86));
 	//# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	/**
+	 * @internalapi
+	 * @module vanilla
+	 */
+	/** */
+	__export(__webpack_require__(103));
+	//# sourceMappingURL=vanilla.js.map
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	Object.defineProperty(exports, "__esModule", { value: true });
+	__export(__webpack_require__(104));
+	__export(__webpack_require__(105));
+	__export(__webpack_require__(106));
+	__export(__webpack_require__(108));
+	__export(__webpack_require__(109));
+	__export(__webpack_require__(110));
+	__export(__webpack_require__(111));
+	__export(__webpack_require__(112));
+	__export(__webpack_require__(107));
+	__export(__webpack_require__(113));
+	//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44741,7 +44744,7 @@
 	 * @module vanilla
 	 */
 	/** */
-	var index_1 = __webpack_require__(42);
+	var index_1 = __webpack_require__(44);
 	/**
 	 * An angular1-like promise api
 	 *
@@ -44791,7 +44794,7 @@
 	//# sourceMappingURL=q.js.map
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44801,7 +44804,7 @@
 	 * @module vanilla
 	 */
 	/** */
-	var index_1 = __webpack_require__(42);
+	var index_1 = __webpack_require__(44);
 	// globally available injectables
 	var globals = {};
 	var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
@@ -44896,7 +44899,7 @@
 	//# sourceMappingURL=injector.js.map
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44905,9 +44908,9 @@
 	 * @module vanilla
 	 */ /** */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var utils_1 = __webpack_require__(105);
-	var predicates_1 = __webpack_require__(44);
-	var common_1 = __webpack_require__(43);
+	var utils_1 = __webpack_require__(107);
+	var predicates_1 = __webpack_require__(46);
+	var common_1 = __webpack_require__(45);
 	/** A base `LocationServices` */
 	var BaseLocationServices = (function () {
 	    function BaseLocationServices(router, fireAfterUpdate) {
@@ -44946,7 +44949,7 @@
 	//# sourceMappingURL=baseLocationService.js.map
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -44956,8 +44959,8 @@
 	 * @module vanilla
 	 */
 	/** */
-	var index_1 = __webpack_require__(42);
-	var common_1 = __webpack_require__(43);
+	var index_1 = __webpack_require__(44);
+	var common_1 = __webpack_require__(45);
 	var beforeAfterSubstr = function (char) { return function (str) {
 	    if (!str)
 	        return ["", ""];
@@ -45019,7 +45022,7 @@
 	//# sourceMappingURL=utils.js.map
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45039,8 +45042,8 @@
 	 * @module vanilla
 	 */
 	/** */
-	var utils_1 = __webpack_require__(105);
-	var baseLocationService_1 = __webpack_require__(104);
+	var utils_1 = __webpack_require__(107);
+	var baseLocationService_1 = __webpack_require__(106);
 	/** A `LocationServices` that uses the browser hash "#" to get/set the current location */
 	var HashLocationService = (function (_super) {
 	    __extends(HashLocationService, _super);
@@ -45065,7 +45068,7 @@
 	//# sourceMappingURL=hashLocationService.js.map
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45085,7 +45088,7 @@
 	 * @module vanilla
 	 */
 	/** */
-	var baseLocationService_1 = __webpack_require__(104);
+	var baseLocationService_1 = __webpack_require__(106);
 	/** A `LocationServices` that gets/sets the current location from an in-memory object */
 	var MemoryLocationService = (function (_super) {
 	    __extends(MemoryLocationService, _super);
@@ -45104,7 +45107,7 @@
 	//# sourceMappingURL=memoryLocationService.js.map
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45119,8 +45122,8 @@
 	    };
 	})();
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var utils_1 = __webpack_require__(105);
-	var baseLocationService_1 = __webpack_require__(104);
+	var utils_1 = __webpack_require__(107);
+	var baseLocationService_1 = __webpack_require__(106);
 	/**
 	 * A `LocationServices` that gets/sets the current location using the browser's `location` and `history` apis
 	 *
@@ -45161,13 +45164,13 @@
 	//# sourceMappingURL=pushStateLocationService.js.map
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var predicates_1 = __webpack_require__(44);
-	var common_1 = __webpack_require__(43);
+	var predicates_1 = __webpack_require__(46);
+	var common_1 = __webpack_require__(45);
 	/** A `LocationConfig` mock that gets/sets all config from an in-memory object */
 	var MemoryLocationConfig = (function () {
 	    function MemoryLocationConfig() {
@@ -45191,7 +45194,7 @@
 	//# sourceMappingURL=memoryLocationConfig.js.map
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45201,7 +45204,7 @@
 	 * @module vanilla
 	 */
 	/** */
-	var predicates_1 = __webpack_require__(44);
+	var predicates_1 = __webpack_require__(46);
 	/** A `LocationConfig` that delegates to the browser's `location` object */
 	var BrowserLocationConfig = (function () {
 	    function BrowserLocationConfig(router, _isHtml5) {
@@ -45243,7 +45246,7 @@
 	//# sourceMappingURL=browserLocationConfig.js.map
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45253,15 +45256,15 @@
 	 * @module vanilla
 	 */
 	/** */
-	var browserLocationConfig_1 = __webpack_require__(110);
-	var hashLocationService_1 = __webpack_require__(106);
-	var utils_1 = __webpack_require__(105);
-	var pushStateLocationService_1 = __webpack_require__(108);
-	var memoryLocationService_1 = __webpack_require__(107);
-	var memoryLocationConfig_1 = __webpack_require__(109);
-	var injector_1 = __webpack_require__(103);
-	var q_1 = __webpack_require__(102);
-	var coreservices_1 = __webpack_require__(48);
+	var browserLocationConfig_1 = __webpack_require__(112);
+	var hashLocationService_1 = __webpack_require__(108);
+	var utils_1 = __webpack_require__(107);
+	var pushStateLocationService_1 = __webpack_require__(110);
+	var memoryLocationService_1 = __webpack_require__(109);
+	var memoryLocationConfig_1 = __webpack_require__(111);
+	var injector_1 = __webpack_require__(105);
+	var q_1 = __webpack_require__(104);
+	var coreservices_1 = __webpack_require__(50);
 	function servicesPlugin(router) {
 	    coreservices_1.services.$injector = injector_1.$injector;
 	    coreservices_1.services.$q = q_1.$q;
@@ -45277,7 +45280,7 @@
 	//# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -45303,7 +45306,7 @@
 	//# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45320,14 +45323,14 @@
 	 * @preferred
 	 */
 	/** for typedoc */
-	var angular_1 = __webpack_require__(114);
-	var core_1 = __webpack_require__(41);
-	var views_1 = __webpack_require__(115);
-	var templateFactory_1 = __webpack_require__(116);
-	var stateProvider_1 = __webpack_require__(117);
-	var onEnterExitRetain_1 = __webpack_require__(118);
-	var locationServices_1 = __webpack_require__(119);
-	var urlRouterProvider_1 = __webpack_require__(120);
+	var angular_1 = __webpack_require__(116);
+	var core_1 = __webpack_require__(43);
+	var views_1 = __webpack_require__(117);
+	var templateFactory_1 = __webpack_require__(118);
+	var stateProvider_1 = __webpack_require__(119);
+	var onEnterExitRetain_1 = __webpack_require__(120);
+	var locationServices_1 = __webpack_require__(121);
+	var urlRouterProvider_1 = __webpack_require__(122);
 	angular_1.ng.module("ui.router.angular1", []);
 	var mod_init = angular_1.ng.module('ui.router.init', []);
 	var mod_util = angular_1.ng.module('ui.router.util', ['ng', 'ui.router.init']);
@@ -45424,7 +45427,7 @@
 	//# sourceMappingURL=services.js.map
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45435,12 +45438,12 @@
 	//# sourceMappingURL=angular.js.map
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var core_1 = __webpack_require__(41);
+	var core_1 = __webpack_require__(43);
 	function getNg1ViewConfigFactory() {
 	    var templateFactory = null;
 	    return function (path, view) {
@@ -45549,15 +45552,15 @@
 	//# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module view */
 	/** for typedoc */
-	var angular_1 = __webpack_require__(114);
-	var core_1 = __webpack_require__(41);
+	var angular_1 = __webpack_require__(116);
+	var core_1 = __webpack_require__(43);
 	/**
 	 * Service which manages loading of templates from a ViewConfig.
 	 */
@@ -45748,13 +45751,13 @@
 	//# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module ng1 */ /** for typedoc */
-	var core_1 = __webpack_require__(41);
+	var core_1 = __webpack_require__(43);
 	/**
 	 * The Angular 1 `StateProvider`
 	 *
@@ -45893,14 +45896,14 @@
 	//# sourceMappingURL=stateProvider.js.map
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module ng1 */ /** */
-	var core_1 = __webpack_require__(41);
-	var services_1 = __webpack_require__(113);
+	var core_1 = __webpack_require__(43);
+	var services_1 = __webpack_require__(115);
 	/**
 	 * This is a [[StateBuilder.builder]] function for angular1 `onEnter`, `onExit`,
 	 * `onRetain` callback hooks on a [[Ng1StateDeclaration]].
@@ -45923,12 +45926,12 @@
 	//# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var core_1 = __webpack_require__(41);
+	var core_1 = __webpack_require__(43);
 	/**
 	 * Implements UI-Router LocationServices and LocationConfig using Angular 1's $location service
 	 */
@@ -46003,14 +46006,14 @@
 	//# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module url */ /** */
-	var core_1 = __webpack_require__(41);
-	var core_2 = __webpack_require__(41);
+	var core_1 = __webpack_require__(43);
+	var core_2 = __webpack_require__(43);
 	/**
 	 * Manages rules for client-side URL
 	 *
@@ -46214,7 +46217,7 @@
 	//# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -46587,7 +46590,7 @@
 	//# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46602,8 +46605,8 @@
 	 * @preferred
 	 * @module directives
 	 */ /** for typedoc */
-	var angular_1 = __webpack_require__(114);
-	var core_1 = __webpack_require__(41);
+	var angular_1 = __webpack_require__(116);
+	var core_1 = __webpack_require__(43);
 	/** @hidden */
 	function parseStateRef(ref) {
 	    var paramsOnly = ref.match(/^\s*({[^}]*})\s*$/), parsed;
@@ -47163,13 +47166,13 @@
 	//# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	/** @module ng1 */ /** for typedoc */
 	Object.defineProperty(exports, "__esModule", { value: true });
-	var angular_1 = __webpack_require__(114);
+	var angular_1 = __webpack_require__(116);
 	/**
 	 * `isState` Filter: truthy if the current state is the parameter
 	 *
@@ -47214,7 +47217,7 @@
 	//# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -47223,11 +47226,11 @@
 	 * @ng1api
 	 * @module directives
 	 */ /** for typedoc */
-	var angular_1 = __webpack_require__(114);
+	var angular_1 = __webpack_require__(116);
 	var angular_2 = __webpack_require__(1);
-	var core_1 = __webpack_require__(41);
-	var views_1 = __webpack_require__(115);
-	var services_1 = __webpack_require__(113);
+	var core_1 = __webpack_require__(43);
+	var views_1 = __webpack_require__(117);
+	var services_1 = __webpack_require__(115);
 	exports.uiView = ['$view', '$animate', '$uiViewScroll', '$interpolate', '$q',
 	    function $ViewDirective($view, $animate, $uiViewScroll, $interpolate, $q) {
 	        function getRenderer(attrs, scope) {
@@ -47509,13 +47512,13 @@
 	//# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	/** @module ng1 */ /** */
-	var angular_1 = __webpack_require__(114);
+	var angular_1 = __webpack_require__(116);
 	/** @hidden */
 	function $ViewScrollProvider() {
 	    var useAnchorScroll = false;
@@ -47537,7 +47540,7 @@
 	//# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	(function(root, factory) {
@@ -50991,7 +50994,7 @@
 	}));
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -51040,10 +51043,10 @@
 	    });
 	
 	    $stateProvider.state({
-	        name: 'addIncident',
-	        url: '/addIncident',
+	        name: 'addRun',
+	        url: '/addRun',
 	        data: { public: true },
-	        component: 'addIncident'
+	        component: 'addRun'
 	    });
 	
 	    $stateProvider.state({
@@ -51078,7 +51081,7 @@
 	}
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**

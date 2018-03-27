@@ -33,6 +33,9 @@ function controller(rootScope, runSvc, $state) {
     this.runTypes = ['Long Run', 'Intervals', 'Speed Work', 'Fartlek', 'Steady', 'Recovery'];
 
     this.criteria = ['type', 'miles', 'time'];
+    this.workouts = ['run', 'walk', 'strength training', 'sports/other'];
+
+    this.workoutType = 'run';
 
     this.addRun= ()=>{
         let count = 0;

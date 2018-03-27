@@ -11,6 +11,27 @@ controller.$inject = ['$scope', '$state', '$rootScope', 'userService', 'runServi
 function controller($scope, $state, rootScope, userSvc, runSvc, timeout) {
 
     this.loggedIn = rootScope.loggedIn = false;
+
+    rootScope.$on('login', (event, user)=>{
+        this.user = user.user;
+        rootScope.loggedIn = true;
+        this.loggedIn = true;
+        userSvc.getById(this.user.userId)
+            .then((user) => {
+                rootScope.user = user[0];
+                console.log('user is ', rootScope.user);
+                this.user = rootScope.user;
+            });
+    });
+
+    rootScope.$on('logout', (event)=>{
+        this.user = null;
+        this.loggedIn = false;
+        $state.go('home');
+        rootScope.user = null;
+        rootScope.loggedIn = false;
+    });
+    
     this.active = rootScope.active = {
         home: true,
         about: false,

@@ -34,7 +34,7 @@ function controller(rootScope, runSvc, $state) {
 
     this.criteria = ['type', 'miles', 'time'];
 
-    this.addThisRun= ()=>{
+    this.addRun= ()=>{
         let count = 0;
         for (let i = 0; i < this.criteria.length; i++){
             if (this.run[criteria[i]]){
@@ -45,8 +45,8 @@ function controller(rootScope, runSvc, $state) {
             console.log('adding this incident ', this.incident);
             this.showFormData = true;
             runSvc.addRun(this.run)
-                .then((incident)=>{
-                    console.log('this incident was added to the DB ', incident);
+                .then((run)=>{
+                    console.log('this run was added to the DB ', run);
                 });
         }
         else{

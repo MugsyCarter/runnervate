@@ -16,6 +16,7 @@ function controller($scope, $state, rootScope, userSvc, runSvc, timeout) {
         about: false,
         profile: false,
         calendar: false,
+        addRun: false,
         login: false,
         signup: false,
         logout: false
@@ -27,6 +28,7 @@ function controller($scope, $state, rootScope, userSvc, runSvc, timeout) {
             about: false,
             profile: false,
             calendar: false,
+            addRun: false,
             login: false,
             signup: false,
             logout: false

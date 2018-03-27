@@ -38,10 +38,10 @@ export default function routes($stateProvider, $urlRouterProvider) {
     });
 
     $stateProvider.state({
-        name: 'addIncident',
-        url: '/addIncident',
+        name: 'addRun',
+        url: '/addRun',
         data: { public: true },
-        component: 'addIncident' 
+        component: 'addRun' 
     });
 
     $stateProvider.state({

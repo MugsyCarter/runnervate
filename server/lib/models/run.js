@@ -15,6 +15,8 @@ const runSchema = new Schema({
     pain: Number,
     painLocation: String,
     hunger: Number,
+    ate: String,
+    drank: String,
     energy: Number,
     wind: Number,
     location: String,

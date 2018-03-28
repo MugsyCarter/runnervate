@@ -23,6 +23,8 @@ function controller(rootScope, runSvc, $state) {
         time: null,
         pain: null,
         hunger: null,
+        ate: null,
+        drank: null,
         energy: null,
         wind: null,
         location: null,

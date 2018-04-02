@@ -23,8 +23,8 @@ function controller(rootScope, runSvc, $state) {
         time: null,
         pain: null,
         hunger: null,
-        ate: null,
-        drank: null,
+        ate: false,
+        drank: false,
         energy: null,
         wind: null,
         location: null,
@@ -40,6 +40,7 @@ function controller(rootScope, runSvc, $state) {
     this.workoutType = 'run';
 
     this.addRun= ()=>{
+        console.log(this.run);
         let count = 0;
         for (let i = 0; i < this.criteria.length; i++){
             if (this.run[criteria[i]]){

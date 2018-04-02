@@ -1,85 +1,90 @@
-<section>
-    <h1>Add Workout</h1>
+<section id="addRun-page">
     <form class="form-horizontal">
       <fieldset>
         <div class ="form-section">
-          <div class="form-group">
-            <label for="inputCounty" class="col-lg-2 control-label">Workout Type</label>
-              <div class="col-lg-2">
-                <select class="custom-select" ng-model="$ctrl.workoutType" ng-options="state for state in $ctrl.workouts">
+          <div class="row" id="workoutBox">
+            <h1 id="whiteText">Add Workout</h1>
+            <div class="col-lg-3">
+            <label for="inputCounty" class="control-label" id="whiteText">Workout Type</label>
+                <select ng-model="$ctrl.workoutType" ng-options="workout for workout in $ctrl.workouts">
                   <option value="run">Run</option>
                 </select>
-              </div>
             </div>
 
+          <div class="col-lg-3">
+              <label for="inputCounty" class="control-label" id="whiteText">Workout Date</label>
+                  <input ng-model="$ctrl.run.date" class="form-control-lg" type="date" id="inputDate">
+            </div>
+          </div>
+
             <!-- run data go here -->
-            <div class="row" ng-if="$ctrl.workoutType==='run'">
+            <div class="row" ng-if="$ctrl.workoutType==='run'" id="runBox">
               <div class="col-lg-2">
-                <label for="inputCounty" class="control-label">Run Type</label><br>
-                <select class="custom-select" ng-model="$ctrl.run.runType" ng-options="type for type in $ctrl.runTypes">
+                <label for="inputCounty" class="control-label" id="whiteText">Run Type</label><br>
+                <select  ng-model="$ctrl.run.runType" ng-options="type for type in $ctrl.runTypes">
                 </select>
               </div>
 
-            <div class="col-lg-2">
-              <label for="inputLatDec" class="control-label">Miles</label><br>
+            <div class="col-lg-1">
+              <label for="inputLatDec" class="control-label" id="whiteText">Miles</label><br>
               <input ng-model="$ctrl.run.miles" class="form-control-lg" type="number" min="0" max="300" id="inputLatDec">
             </div>
 
-            <div class="col-lg-3"> 
-              <label for="inputLatDec" class="control-label">Time</label><br>
+            <div class="col-lg-3.5"> 
+              <label for="inputLatDec" class="control-label" id="whiteText">Time</label><br>
               <input ng-model="$ctrl.run.hour" type="number" min="0" max="300"  id="inputLatDec" class="form-control-lg" placeholder="hour">
               <input  class="form-control-lg" ng-model="$ctrl.run.min" type="number" min="0" max="2000"  id="inputLatDec" placeholder="min">
               <input  class="form-control-lg" ng-model="$ctrl.run.sec" type="number" min="0" max="2000"  id="inputLatDec" placeholder="sec">
             </div>
 
             <div class="col-lg-3"> 
-              <label for="inputStartLocation" class="col-lg-1 control-label">Place</label>
+              <label for="inputStartLocation" class="col-lg-1 control-label" id="whiteText">Place</label>
               <div class="col-lg-2">
                 <input ng-model="$ctrl.run.place" type="text" class="form-control-lg"  id="inputPlace" placeholder="Place">
               </div>
             </div> 
+
+            <div class="col-lg-2">
+                <label for="inputLatDec" class="control-label" id="whiteText" >Elevation Gain (feet)</label>
+                <div class="col-lg-2">
+                  <input class="form-control-lg" ng-model="$ctrl.run.location" type="number" name="elevation" min="0" max="20,000">
+              </div>
+              </div>
+
           </div>
 
-            <div class="row"  ng-if="$ctrl.run.place">
-              <label for="textArea" class="col-lg-4 control-label">Notes</label>
+            <div class="row"  ng-if="$ctrl.run.place" id="runBox">
+              <label for="textArea" class="col-lg-4 control-label" id="whiteText">Notes</label>
               <div class="col-lg-12">
                 <textarea ng-model="$ctrl.run.notes" class="form-control" rows="3" id="textArea"></textarea><br>
-                <span class="help-block">Write notes concerning the run here.</span>
+                <span class="help-block" id="whiteText">Write notes concerning the run here.</span>
               </div>
           </div>
 
-      <div class ="row">
+      <div class ="row" id="sliderBox">
         <div class="col-lg-2">
-          <label for="inputLatDec" class="col-lg-2 control-label">Elevation Gain </label>
-          <div class="col-lg-2">
-            <input class="form-control-lg" ng-model="$ctrl.run.location" type="number" name="elevation" min="0" max="20,000">
-        </div>
-        </div>
-    
-
-        <div class="col-lg-2">
-          <label for="inputLatDec" class="col-lg-2 control-label">Energy <span>{{$ctrl.run.energy}}/10</span></label>
+          <label for="inputLatDec" class="col-lg-2 control-label" id="whiteText">Energy <span>{{$ctrl.run.energy}}/10</span></label>
           <div class="col-lg-2"> 
             <input class="form-control-lg" ng-model="$ctrl.run.energy" type="range" name="elevation" min="0" max="10">
         </div>
       </div>
 
       <div class="col-lg-2">
-          <label for="inputLatDec" class="col-lg-2 control-label">Pain <span>{{$ctrl.run.pain}}/10</span></label>
+          <label for="inputLatDec" class="col-lg-2 control-label" id="whiteText">Pain <span>{{$ctrl.run.pain}}/10</span></label>
           <div class="col-lg-2"> 
             <input class="form-control-lg" ng-model="$ctrl.run.pain" type="range" name="pain" min="0" max="10">
         </div>
       </div>
 
       <div class="col-lg-2">
-          <label for="inputLatDec" class="col-lg-2 control-label">Hunger <span>{{$ctrl.run.hunger}}/10</span></label>
+          <label for="inputLatDec" class="col-lg-2 control-label" id="whiteText">Hunger <span>{{$ctrl.run.hunger}}/10</span></label>
           <div class="col-lg-2"> 
             <input class="form-control-lg" ng-model="$ctrl.run.hunger" type="range" name="pain" min="0" max="10">
         </div>
       </div>
 
       <div class="col-lg-2">
-          <label for="inputLatDec" class="col-lg-2 control-label">Breathing<span>{{$ctrl.run.wind}}/10</span></label>
+          <label for="inputLatDec" class="col-lg-2 control-label" id="whiteText">Breathing <span>{{$ctrl.run.wind}}/10</span></label>
           <div class="col-lg-2"> 
             <input class="form-control-lg" ng-model="$ctrl.run.wind" type="range" name="pain" min="0" max="10">
         </div>
@@ -103,7 +108,7 @@
 
         <div class="form-group">
           <div class="col-lg-10 col-lg-offset-2">
-            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
             <button ng-click="$ctrl.addRun()" type="submit" class="btn btn-primary">Add Run</button>
           </div>
         </div>

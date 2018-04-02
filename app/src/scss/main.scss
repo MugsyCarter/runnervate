@@ -10,6 +10,26 @@ select {
 ul{
   list-style: none;
 }
+#whiteText{
+  color: white;
+}
+
+//addWorkout page stuff 
+#addRun-page{
+  padding: 5vh;
+}
+
+#workoutBox{
+  background-color: $yellow;
+}
+
+#runBox{
+  background-color: $blue;
+}
+
+#sliderBox{
+  background-color: $green;
+}
 
 // .navbar{
 //   border-radius: 4px 4px 0px 0px;

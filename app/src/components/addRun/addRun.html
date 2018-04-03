@@ -37,23 +37,32 @@
               <input  class="form-control-lg" ng-model="$ctrl.run.sec" type="number" min="0" max="2000"  id="inputLatDec" placeholder="sec">
             </div>
 
+            <button type="button" ng-click="$ctrl.calculatePace()" class="btn btn-secondary">Calculate Pace</button>
+
             <div class="col-lg-3"> 
-              <label for="inputStartLocation" class="col-lg-1 control-label" id="whiteText">Place</label>
+              <label for="inputStartLocation" class="col-lg-1 control-label" id="whiteText">Location</label>
               <div class="col-lg-2">
-                <input ng-model="$ctrl.run.place" type="text" class="form-control-lg"  id="inputPlace" placeholder="Place">
+                <input ng-model="$ctrl.run.location" type="text" class="form-control-lg"  id="inputPlace" placeholder="Location">
               </div>
             </div> 
 
             <div class="col-lg-2">
                 <label for="inputLatDec" class="control-label" id="whiteText" >Elevation Gain (feet)</label>
                 <div class="col-lg-2">
-                  <input class="form-control-lg" ng-model="$ctrl.run.location" type="number" name="elevation" min="0" max="20,000">
+                  <input class="form-control-lg" ng-model="$ctrl.run.elevation" type="number" name="elevation" min="0" max="20,000">
               </div>
               </div>
 
           </div>
 
-            <div class="row"  ng-if="$ctrl.run.place" id="runBox">
+          <div class="row" id="runBox" ng-if="$ctrl.pace===true">
+            <span id="whiteText">Time: {{$ctrl.run.time}}</span>
+            <span id="whiteText" ng-if="$ctrl.run.pace">Pace: {{$ctrl.run.pace}}</span>
+            <span id="whiteText">speed:  {{$ctrl.run.speed}}</span>
+          </div>
+
+
+          <div class="row"  ng-if="$ctrl.run.place" id="runBox">
               <label for="textArea" class="col-lg-4 control-label" id="whiteText">Notes</label>
               <div class="col-lg-12">
                 <textarea ng-model="$ctrl.run.notes" class="form-control" rows="3" id="textArea"></textarea><br>
